@@ -1,9 +1,9 @@
-import Game.Levels.Union
+import Game.Levels.Combo.L02compint
 
 variable {U : Type}
 
 World "Combination"
-Level 1
+Level 3
 Title "Intersection distributes over union"
 
 Introduction
@@ -18,7 +18,7 @@ LemmaDoc inter_distrib_over_union as "inter_distrib_over_union" in "Set Theory"
 "For any sets `A`, `B`, and `C`, `inter_distrib_over_union A B C` is a proof of the
 statement `A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)`."
 
-/-- For any sets $A$., $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. -/
+/-- For any sets $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. -/
 Statement inter_distrib_over_union (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) := by
   apply sub_antisymm
   intro x h

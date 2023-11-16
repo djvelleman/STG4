@@ -1,15 +1,16 @@
-import Game.Levels.Comp.L02compsub
+import Game.Levels.Comp.L03compsub
 
 variable {U : Type}
 
 World "Complement"
-Level 3
+Level 4
 Title "Complement of a complement"
 
 Introduction
 "
 How do we prove that two sets `A` and `B` are equal?  We'll usually do it by using the theorem
-`sub_antisymm`.  If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then
+`sub_antisymm`.  This theorem is pre-defined in this game; you don't need to prove it.
+If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then
 `sub_antisymm h1 h2` is a proof of `A = B`.  The theorem `sub_antisymm` says that the
 subset relation has a property called *antisymmetry*.
 

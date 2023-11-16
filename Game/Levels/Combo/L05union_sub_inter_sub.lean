@@ -1,9 +1,9 @@
-import Game.Levels.Union.L07union_distrib_inter
+import Game.Levels.Combo.L04union_distrib_inter
 
 variable {U : Type}
 
-World "Union"
-Level 8
+World "Combination"
+Level 5
 Title "A tricky subset proof"
 
 Introduction

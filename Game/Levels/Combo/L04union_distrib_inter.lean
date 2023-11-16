@@ -1,9 +1,9 @@
-import Game.Levels.Combo.L01inter_distrib_union
+import Game.Levels.Combo.L03inter_distrib_union
 
 variable {U : Type}
 
 World "Combination"
-Level 2
+Level 4
 Title "Union distributes over intersection"
 
 Introduction

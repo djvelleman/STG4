@@ -1,9 +1,9 @@
-import Game.Levels.Comp.L03compcomp
+import Game.Levels.Comp.L04compcomp
 
 variable {U : Type}
 
 World "Complement"
-Level 4
+Level 5
 Title "Complement subsets equivalence"
 
 Introduction

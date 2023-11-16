@@ -22,7 +22,10 @@ LemmaDoc inter_sub_swap as "inter_sub_swap" in "Set Theory"
 Statement inter_sub_swap (A B : Set U) : A ∩ B ⊆ B ∩ A := by
   intro x h
   Hint (hidden := true) "It will help you see how to proceed if you
-  write out the definition of intersection in both the assumption {h} and the goal."
+  write out the definition of intersection in both the assumption {h} and the goal.
+  Using the `rewrite` tactic isn't necessary; you can just do the rewriting in
+  your head rather than asking Lean to do it.  But if it helps you to figure out the
+  proof, go ahead and use the `rewrite` tactic."
   rewrite [inter_def]
   rewrite [inter_def] at h
   Hint (hidden := true) "Now `And.intro {h}.right {h}.left` proves the goal."

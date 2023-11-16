@@ -89,4 +89,6 @@ Alternatively, if you experience issues / bugs you can also open github issues:
 -- Dependency Multiplication → AdvMultiplication
 -- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
 
+Dependency Intersection → Union
+
 MakeGame

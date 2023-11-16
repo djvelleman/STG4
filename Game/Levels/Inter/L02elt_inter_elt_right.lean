@@ -16,11 +16,15 @@ used to replace `x ∈ A ∩ B` in the goal with `x ∈ A ∧ x ∈ B`.  Usually
 `x`, `A`, and `B` on its own, so you can just write `rewrite [inter_def]`, and you can
 use `rewrite [inter_def] at h` to do the replacement in an assumption `h` rather than
 the goal.
+
+Like `comp_def`, `inter_def` can be proven by using the `rfl` tactic.  But we
+won't ask you to prove it; it is pre-defined in this game.  To enter the symbol `∩`, you
+can type `\\inter` or `\\cap`.
 "
 
 DefinitionDoc inter as "∩"
 "If `A` and `B` are sets, then `A ∩ B` is the intersection of `A` and `B`.
-To enter the symbol `∩`, type `\\inter`."
+To enter the symbol `∩`, type `\\inter` or `\\cap`."
 
 NewDefinition inter
 

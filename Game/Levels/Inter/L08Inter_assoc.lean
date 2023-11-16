@@ -24,7 +24,8 @@ Statement inter_assoc (A B C : Set U) : (A ∩ B) ∩ C = A ∩ (B ∩ C) := by
   intro x h1
   rewrite [inter_def]
   rewrite [inter_def] at h1
-  Hint (strict := true) (hidden := true) "It may help you see how to proceed if you separate
+  Hint (strict := true) (hidden := true) "If you're stuck at this point,
+  it may help you see how to proceed if you separate
   out the first half of `{h1}` as a separate assumption.
   You can do this with `have hAB : {x} ∈ A ∩ B := {h1}.left`."
   have h2 : x ∈ A ∩ B := h1.left

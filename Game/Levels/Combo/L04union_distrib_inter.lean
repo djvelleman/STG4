@@ -9,7 +9,13 @@ Title "Union distributes over intersection"
 Introduction
 "
 This is different from the previous theorem--the roles of union and intersection have
-been swapped.  But if you made it through the last one, you can do this one too!
+been swapped.
+
+Once again, there is a tricky shortcut: there is a way to use the theorem from the
+previous level to prove this theorem.
+
+But if you don't see the shortcut, you can use a straightforward approach.
+If you made it through the last one, you can do this one too!
 "
 
 LemmaTab "Set Theory"
@@ -20,34 +26,14 @@ statement `A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)`."
 
 /-- For any sets $A$, $B$, and $C$, $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$. -/
 Statement union_distrib_over_inter (A B C : Set U) : A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) := by
-  apply sub_antisymm
-  intro x h
-  rewrite [inter_def]
-  rewrite [union_def] at h
-  cases' h with hA hBC
-  apply And.intro
-  rewrite [union_def]
-  exact Or.inl hA
-  rewrite [union_def]
-  exact Or.inl hA
-  rewrite [inter_def] at hBC
-  apply And.intro
-  exact Or.inr hBC.left
-  exact Or.inr hBC.right
-  intro x h
-  rewrite [inter_def] at h
-  rewrite [union_def]
-  have hAB : x ∈ A ∪ B := h.left
-  have hAC : x ∈ A ∪ C := h.right
-  rewrite [union_def] at hAB
-  cases' hAB with hA hB
-  exact Or.inl hA
-  rewrite [union_def] at hAC
-  cases' hAC with hA hC
-  exact Or.inl hA
-  apply Or.inr
-  rewrite [inter_def]
-  exact And.intro hB hC
+  rewrite [← comp_comp (A ∪ (B ∩ C))]
+  rewrite [comp_union]
+  rewrite [comp_inter B C]
+  rewrite [inter_distrib_over_union]
+  rewrite [comp_union]
+  rewrite [comp_inter, comp_inter]
+  rewrite [comp_comp, comp_comp, comp_comp]
+  rfl
 
 NewLemma union_distrib_over_inter
 

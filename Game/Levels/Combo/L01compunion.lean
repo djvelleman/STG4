@@ -8,7 +8,9 @@ Title "Complement of a union"
 
 Introduction
 "
-
+As the proofs get harder, you may sometimes find that you want to use the `have` tactic
+to assert a statement whose proof is too hard to do in a single line.  For an explanation
+of how to do that, click on `have` in the list of tactics on the right.
 "
 
 LemmaTab "Set Theory"

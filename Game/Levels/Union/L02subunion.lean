@@ -16,7 +16,7 @@ That means you can use `rewrite [union_def]` to write out the definition of
 "
 
 DefinitionDoc union as "∪"
-"If `A` and `B` are sets, then `A ∪ B` is the unlon of `A` and `B`.
+"If `A` and `B` are sets, then `A ∪ B` is the union of `A` and `B`.
 To enter the symbol `∪`, type `\\union`."
 
 NewDefinition union

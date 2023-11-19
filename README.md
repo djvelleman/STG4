@@ -1,6 +1,6 @@
 # STG4
 
-This is the *Set Theory Game*. It uses the [Lean4 Game Engine](https://github.com/leanprover-community/lean4game) and someday it might be running live somewhere.
+This is the *Set Theory Game*. It uses the [Lean4 Game Engine](https://github.com/leanprover-community/lean4game) and it is hosted as [adam.math.hhu.de](https://adam.math.hhu.de).
 
 ## Getting Started
 

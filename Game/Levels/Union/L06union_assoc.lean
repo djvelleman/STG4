@@ -9,7 +9,7 @@ Title "Union is associative"
 Introduction
 "
 Here's an idea that you may find helpful for this proof:
-If you're proving an \"or\" statemeent and you think you'll be
+If you're proving an \"or\" statement and you think you'll be
 able to prove either the left or right side of the statement, then `apply Or.inl` or
 `apply Or.inr` will set the goal to be the left or right side.
 "

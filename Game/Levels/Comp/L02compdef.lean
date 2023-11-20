@@ -13,7 +13,7 @@ that are not elements of `A`.  That means that if you also have `x : U`, then th
 `x ∈ Aᶜ` and `x ∉ A` are equivalent.  We express this by saying that the statement
 `x ∈ Aᶜ ↔ x ∉ A` is true.  (The symbol `↔` means \"if and only if\", and you can enter it
 by typing `\\iff`.  You can enter the superscript `c` in the notation for the complement
-of a set by typing `\\^c`.)
+of a set by typing `\\compl`.)
 
 In this level, we're going to prove that the statement `x ∈ Aᶜ ↔ x ∉ A` is true, and to do
 it we'll use a new tactic: `rfl`.  The `rfl` tactic can prove any statement of the form
@@ -34,7 +34,7 @@ NewTactic rfl
 DefinitionDoc comp as "ᶜ"
 "If `A` is a of objects from the universe `U`, then `Aᶜ` is the complement of `A`; that is,
 `Aᶜ` is the set of objects from `U` that are not elements of `A`.  You can enter the symbol `ᶜ`
-by typing `\\^c`."
+by typing `\\compl`."
 
 DefinitionDoc iff as "↔"
 "`P ↔ Q` means \"P if and only if Q\".  You can enter the symbol `↔` by typing `\\iff`."

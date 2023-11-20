@@ -40,7 +40,7 @@ Statement (x : U) (A B C : Set U)
     (h1 : A ⊆ B) (h2 : B ⊆ C) (h3 : x ∈ A) : x ∈ C := by
   Hint "To get started on this proof, type `have h4 : x ∈ B := h1 h3`
   in the text box and click \"Execute\" or hit \"Return\" or \"Enter\".
-  Recall that you can enter the symbol `∈` by typing `\\in`."
+  Recall that you can enter the symbol `∈` by typing `\\mem`."
   have h4 : x ∈ B := h1 h3
   Hint "Notice that `{h4} : x ∈ B` has been added to the list of assumptions.
   Can you complete the proof now?"

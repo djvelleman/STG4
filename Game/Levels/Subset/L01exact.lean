@@ -41,7 +41,7 @@ NewTactic exact
 
 DefinitionDoc elt as "∈"
 "`x ∈ A` means that `x` is an element of `A`.  To enter the symbol `∈`, type
-`\\in`."
+`\\mem`."
 
 NewDefinition elt
 

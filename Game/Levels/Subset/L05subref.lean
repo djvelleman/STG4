@@ -30,7 +30,7 @@ Statement sub_ref (A : Set U) : A ⊆ A := by
   We have already seen that the `intro` tactic can be used to introduce a new *assumption* into a
   proof.  This step illustrates a second use of `intro`: introducing a new *object* into a proof."
   intro x
-  Hint "Notice that `x : U` has been added to the list of objects, and
+  Hint "Notice that `{x} : U` has been added to the list of objects, and
   the goal has changed to `{x} ∈ A → {x} ∈ A`.  Fortunately, you already know how to prove
   a goal of this form."
   Hint (hidden := true) "Use `intro` again to introduce the assumption `{x} ∈ A`."

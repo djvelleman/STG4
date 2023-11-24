@@ -21,7 +21,7 @@ The elements of the sets in this world will come from a universe called `U`.
 object `x` belongs to the universe `U`, we write `x : U`.  To specify
 that `A` is a set of objects from `U`, we write `A : Set U`.  To
 say that `x` is an element of `A`, we write `x ∈ A`.  (You can enter
-the symbol `∈` by typing `\\in`, followed by a space.)
+the symbol `∈` by typing `\\mem` or `\\in`, followed by a space.)
 
 You will prove theorems in this game by using tools called *tactics*.
 The aim is to prove the theorem by applying tactics

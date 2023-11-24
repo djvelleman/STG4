@@ -42,4 +42,8 @@ This example is a better illustration of how the `exact` tactic is usually
 used.  Often `exact` is followed by an expression that combines hypotheses
 to prove the goal.  In later levels, we will see other ways in which
 hypotheses can be combined to prove a goal.
+
+Note that in this proof, `h1` could be thought of as a function that can be
+applied to a proof of any statement of the form `x ∈ A` to produce a proof
+of `x ∈ B`.  Many proofs in Lean behave like functions.
 "

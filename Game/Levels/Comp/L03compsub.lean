@@ -63,10 +63,14 @@ Statement comp_sub_of_sub {A B : Set U} (h1 : A ⊆ B) : Bᶜ ⊆ Aᶜ := by
 
 NewLemma comp_sub_of_sub
 
+NewHiddenTactic rw
+
 Conclusion
 "
 The `rewrite` tactic is often useful for writing out definitions.  For more information about
-how it works, click on `rewrite` in the list of tactics on the right.
+how it works, click on `rewrite` in the list of tactics on the right.  You can also use `rw`
+instead of `rewrite`.  (There is actually a small difference between the tactics `rw` and
+`rewrite`, but the difference won't concern us in this game.)
 
 You'll find the theorem you proved in this level listed as `comp_sub_of_sub` in the list of
 theorems on the right.  This theorem will be useful in the last level of this world.

@@ -20,8 +20,9 @@ statement `A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)`."
 
 /-- For any sets $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. -/
 Statement inter_distrib_over_union (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) := by
-  apply sub_antisymm
-  intro x h
+  ext x
+  apply Iff.intro
+  intro h
   rewrite [inter_def] at h
   rewrite [union_def]
   Hint (strict := true) (hidden := true) "It may help you see how to proceed if you separate
@@ -34,7 +35,7 @@ Statement inter_distrib_over_union (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B)
   exact And.intro h.left hB
   apply Or.inr
   exact And.intro h.left hC
-  intro x h
+  intro h
   rewrite [union_def] at h
   rewrite [inter_def]
   cases' h with hB hC

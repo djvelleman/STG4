@@ -20,14 +20,14 @@ it we'll use a new tactic: `rfl`.  The `rfl` tactic can prove any statement of t
 `P ↔ Q` if `P` and `Q` are statements that are equivalent by virtue of the definitions of
 the symbols occurring in them.  (We say in this case that `P` and `Q` are *definitionally
 equivalent*.)  The `rfl` tactic can also prove statements of the form `X = Y`, if `X` and
-`Y` are definitionally equal.
+`Y` are definitionally equal--that is, equal by virtue of definitions.
 "
 
 TacticDoc rfl
 "If your goal is a statement of the form `P ↔ Q`, and `P` and `Q` are definitionally
 equivalent (that is, equivalent by virtue of the definitions of the symbols occurring in
 them), then the `rfl` tactic will close the goal.  It will also close a goal of the form
-`X = Y`, if `X` and `Y` are definitionally equal."
+`X = Y`, if `X` and `Y` are definitionally equal (that is, equal by virtue of definitions)."
 
 NewTactic rfl
 

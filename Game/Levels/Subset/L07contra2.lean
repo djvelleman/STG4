@@ -1,4 +1,5 @@
-import Game.Levels.Subset.L06contra
+--Unused--contradiction introduced in Complement World.
+--import Game.Levels.Subset.L06contra
 
 variable {U : Type}
 

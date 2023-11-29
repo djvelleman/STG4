@@ -1,7 +1,4 @@
-import GameServer.Commands
-import Mathlib.Tactic
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Lattice
+import Game.Metadata
 
 variable {U : Type}
 

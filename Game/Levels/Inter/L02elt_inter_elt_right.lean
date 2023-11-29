@@ -45,6 +45,8 @@ Statement (x : U) (A B : Set U) (h : x ∈ A ∩ B) : x ∈ B := by
   Hint "Now your situation is similar to the previous level."
   exact h.right
 
+/- Can we have no conclusion in a level?
 Conclusion
 "
 "
+-/

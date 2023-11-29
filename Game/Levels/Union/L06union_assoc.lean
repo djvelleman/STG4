@@ -11,7 +11,11 @@ Introduction
 Here's an idea that you may find helpful for this proof:
 If you're proving an \"or\" statement and you think you'll be
 able to prove either the left or right side of the statement, then `apply Or.inl` or
-`apply Or.inr` will set the goal to be the left or right side.
+`apply Or.inr` will set the goal to be the left or right side.  Alternatively, the tactic
+`left` has the same effect as `apply Or.inl`, and `right` has the same effect as
+`apply Or.inr`.
+
+You can start this proof with either `ext x` or `apply sub_antisymm`.
 "
 
 LemmaTab "Set Theory"
@@ -41,6 +45,8 @@ Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   exact Or.inr hC
 
 NewLemma union_comm
+
+NewHiddenTactic left right
 
 Conclusion
 "

@@ -54,7 +54,13 @@ Statement (A B : Set U) : A ⊆ B ↔ Bᶜ ⊆ Aᶜ := by
   rewrite [comp_comp A, comp_comp B] at h2
   exact h2
 
+NewHiddenTactic constructor
+
 Conclusion
 "
 The proof in this level illustrates how previously proven theorems can be used in proofs.
+
+There is another tactic you can use if your goal has the form `P ↔ Q`.  In this situation,
+the tactic `constructor` will have the same effect as `apply Iff.intro`; that is, it will
+set `P → Q` and `Q → P` as goals to be proven.
 "

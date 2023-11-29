@@ -8,7 +8,7 @@
 --import Game.Levels.Comp
 --import Game.Levels.Inter
 --import Game.Levels.Union
-import Game.Levels.Combo
+import Game.Levels.FamInter
 
 -- Here's what we'll put on the title screen
 Title "Set Theory Game"

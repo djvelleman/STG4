@@ -39,4 +39,7 @@ Conclusion
 In general, if you think that some theorem `t` could be used to prove the goal, the tactic
 `apply t` will work backwards from the goal, setting as new goals any hypotheses that are
 needed for the application of the theorem `t`.
+
+If your goal has the form `P ∧ Q`, then the `constructor` tactic will have the same
+effect as `apply And.intro`; that is, it will set `P` and `Q` as goals to be proven.
 "

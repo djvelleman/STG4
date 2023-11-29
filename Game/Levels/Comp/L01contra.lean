@@ -56,7 +56,8 @@ Statement {A B : Set U} {x : U} (h1 : x ∈ A) (h2 : x ∉ B) : ¬A ⊆ B := by
   Hint (strict := true) (hidden := true) "`{h3} h1` is a proof of `x ∈ B`."
   have h4 : x ∈ B := h3 h1
   Hint (strict := true) "You can think of `h2 : x ∉ B` (which is shorthand for `h2 : ¬x ∈ B`)
-  as meaning \"if `x ∈ B` were true, then that would lead to a contradiction.\"
+  as meaning \"if `x ∈ B` were true, then that would lead to a contradiction\"--in other
+  words, `x ∈ B → False`.
   Applying this to your new assumption `{h4} : x ∈ B` will give the contradiction
   you need.  In other words, `exact h2 {h4}` will close the goal."
   exact h2 h4

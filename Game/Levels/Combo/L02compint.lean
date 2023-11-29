@@ -8,7 +8,7 @@ Title "Complement of an intersection"
 
 Introduction
 "
-Of course, one way to start on the proof in this level is `apply sub_antisymm`.
+Of course, you could start the proof in this level with either `ext x` or `apply sub_antisymm`.
 But there is a shorter solution: you can use
 the theorem from the previous level (`comp_union`) to prove the
 theorem in this level.  For a hint on how to do that, click on \"Show more help!\".
@@ -32,5 +32,4 @@ NewLemma comp_inter
 
 Conclusion
 "
-
 "

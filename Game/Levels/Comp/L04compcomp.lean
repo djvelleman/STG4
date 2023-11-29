@@ -8,7 +8,7 @@ Title "Complement of a complement"
 
 Introduction
 "
-How do we prove that two sets `A` and `B` are equal?  We'll usually do it by using the theorem
+How do we prove that two sets `A` and `B` are equal?  One way to do it is to use the theorem
 `sub_antisymm`.  This theorem is pre-defined in this game; you don't need to prove it.
 If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then
 `sub_antisymm h1 h2` is a proof of `A = B`.  The theorem `sub_antisymm` says that the
@@ -19,8 +19,8 @@ tactic, `apply`.  If your goal is `A = B` and you write `apply sub_antisymm`, th
 figure out that the theorem `sub_antisymm` could be applied to prove the goal, if only you had
 proofs of `A ⊆ B` and `B ⊆ A`.  So it will set those *two* statements as goals.
 
-If your goal says that two sets are equal, it is usually a good idea to begin with
-`apply sub_antisymm`.
+If your goal says that two sets are equal, a good way to begin is with
+`apply sub_antisymm`.  (Later we'll see a second approach to proving sets are equal.)
 "
 
 TacticDoc apply

@@ -1,6 +1,9 @@
 import GameServer.Commands
+import Mathlib.Tactic
+import Mathlib.Data.Set.Basic
+import Mathlib.Data.Set.Lattice
 
-import Mathlib.Tactic.Common
+attribute [default_instance] Set.instSingletonSet
 
 /-! Use this file to add things that should be available in all levels.
 

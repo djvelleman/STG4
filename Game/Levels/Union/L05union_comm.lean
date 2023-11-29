@@ -8,8 +8,8 @@ Title "Union is commutative"
 
 Introduction
 "
-Recall that to prove that two sets are equal, we usually start with
-`apply sub_antisymm`.
+If you start your proof with `apply sub_antisymm`, then you'll be able to use
+the theorem `union_sub_swap` that you proved in the last level.
 "
 
 LemmaTab "Set Theory"

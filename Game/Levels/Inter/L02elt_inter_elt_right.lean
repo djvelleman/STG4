@@ -28,9 +28,9 @@ To enter the symbol `∩`, type `\\inter` or `\\cap`."
 
 NewDefinition inter
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc inter_def as "inter_def" in "Set Theory"
+LemmaDoc inter_def as "inter_def" in "∩∪"
 "If you have `x : U`, `A : Set U`, and `B : Set U`, then `inter_def x A B` is a proof of the
 statement `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`."
 

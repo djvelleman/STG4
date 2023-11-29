@@ -11,8 +11,6 @@ Introduction
 This proof is a bit tricky.  But you should know how to get started.
 "
 
-LemmaTab "Set Theory"
-
 /-- Suppose $A \cup C \subseteq B \cup C$ and $A \cap C \subseteq B \cap C$.  Then $A \subseteq B$. -/
 Statement (A B C : Set U) (h1 : A ∪ C ⊆ B ∪ C) (h2 : A ∩ C ⊆ B ∩ C) : A ⊆ B := by
   intro x h3

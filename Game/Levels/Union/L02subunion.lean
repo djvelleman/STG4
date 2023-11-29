@@ -21,9 +21,9 @@ To enter the symbol `∪`, type `\\union`."
 
 NewDefinition union
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc union_def as "union_def" in "Set Theory"
+LemmaDoc union_def as "union_def" in "∩∪"
 "If you have `x : U`, `A : Set U`, and `B : Set U`, then `union_def x A B` is a proof of the
 statement `x ∈ A ∪ B ↔ x ∈ A ∨ x ∈ B`."
 

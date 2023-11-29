@@ -14,9 +14,9 @@ In this level, the goal is `A ⊆ C`.  What does that
 tell you about how to proceed?
 "
 
-LemmaTab "Set Theory"
+LemmaTab "⊆"
 
-LemmaDoc sub_trans as "sub_trans" in "Set Theory"
+LemmaDoc sub_trans as "sub_trans" in "⊆"
 "
 If you have `h1 : A ⊆ B` and `h2 : B ⊆ C`, then `sub_trans h1 h2` is a proof of `A ⊆ C`.
 "

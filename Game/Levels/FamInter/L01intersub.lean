@@ -35,13 +35,13 @@ NewDefinition famint all
 
 lemma fam_inter_def (x : U) (F : Set (Set U)) : x ∈ ⋂₀ F ↔ ∀ S ∈ F, x ∈ S := by rfl
 
-LemmaDoc fam_inter_def as "fam_inter_def" in "Set Theory"
+LemmaDoc fam_inter_def as "fam_inter_def" in "⋂₀⋃₀"
 "If `F : Set (Set U)` and `x : U`, then `fam_inter_def x F` is a proof of the statement
 `x ∈ ⋂₀ F ↔ ∀ S ∈ F, x ∈ S`."
 
 NewLemma fam_inter_def
 
-LemmaTab "Set Theory"
+LemmaTab "⋂₀⋃₀"
 
 /-- Suppose $F$ is a family of sets and $A \in F$.  Then $\bigcap F \subseteq A$. -/
 Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : ⋂₀ F ⊆ A := by

@@ -24,8 +24,6 @@ assumption `h : ¬P` is added.
 
 NewTactic by_cases
 
-LemmaTab "Set Theory"
-
 /-- Suppose $A$ is a set, $F$ and $G$ are families of sets, and for every set $S$ in $F$,
 $A \cup S \in G$.  Then $\bigcap G \subseteq A \cup (\bigcap F)$.-/
 Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : ⋂₀ G ⊆ A ∪ (⋂₀ F) := by

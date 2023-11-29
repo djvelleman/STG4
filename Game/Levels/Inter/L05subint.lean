@@ -11,8 +11,6 @@ Introduction
 Of course, you know by now how to start a proof that one set is a subset of another.
 "
 
-LemmaTab "Logic"
-
 /-- Suppose $A \subseteq B$ and $A \subseteq C$.  Then $A \subseteq B \cap C$. -/
 Statement (A B C : Set U) (h1 : A ⊆ B) (h2 : A ⊆ C) : A ⊆ B ∩ C := by
   intro x h3

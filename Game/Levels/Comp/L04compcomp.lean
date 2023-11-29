@@ -35,14 +35,14 @@ establish the goal, then `apply t` will set all of the needed proofs as goals.
 
 NewTactic apply
 
-LemmaTab "Set Theory"
+LemmaTab "⊆"
 
 lemma sub_antisymm {A B : Set U} (h1 : A ⊆ B) (h2 : B ⊆ A) : A = B := Set.Subset.antisymm h1 h2
 
-LemmaDoc sub_antisymm as "sub_antisymm" in "Set Theory"
+LemmaDoc sub_antisymm as "sub_antisymm" in "⊆"
 "If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then `sub_antisymm h1 h2` is a proof of `A = B`."
 
-LemmaDoc comp_comp as "comp_comp" in "Set Theory"
+LemmaDoc comp_comp as "comp_comp" in "ᶜ"
 "If `A` is a set, then `comp_comp A` is a proof of `Aᶜᶜ = A`."
 
 /-- Suppose $A$ is a set.  Then $(A^c)^c = A$. -/

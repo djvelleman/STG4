@@ -19,8 +19,6 @@ your proof into cases.  In case 1, you'll have the new assumption `h1 : P`, and 
 
 NewTactic cases'
 
-LemmaTab "Set Theory"
-
 /-- Suppose $A \subseteq C$ and $B \subseteq C$.  Then $A \cup B \subseteq C$. -/
 Statement (A B C : Set U) (h1 : A ⊆ C) (h2 : B ⊆ C) : A ∪ B ⊆ C := by
   Hint "Of course, to start a subset proof you need to introduce an object `x` and an

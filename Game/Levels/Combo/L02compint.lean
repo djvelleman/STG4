@@ -14,9 +14,9 @@ the theorem from the previous level (`comp_union`) to prove the
 theorem in this level.  For a hint on how to do that, click on \"Show more help!\".
 "
 
-LemmaTab "Set Theory"
+LemmaTab "ᶜ"
 
-LemmaDoc comp_inter as "comp_inter" in "Set Theory"
+LemmaDoc comp_inter as "comp_inter" in "ᶜ"
 "For any sets `A` and `B`, `comp_inter A B` is a proof of the
 statement `(A ∩ B)ᶜ = Aᶜ ∪ Bᶜ`."
 

@@ -13,9 +13,9 @@ to assert a statement whose proof is too hard to do in a single line.  For an ex
 of how to do that, click on `have` in the list of tactics on the right.
 "
 
-LemmaTab "Set Theory"
+LemmaTab "ᶜ"
 
-LemmaDoc comp_union as "comp_union" in "Set Theory"
+LemmaDoc comp_union as "comp_union" in "ᶜ"
 "For any sets `A` and `B`, `comp_union A B` is a proof of the
 statement `(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ`."
 
@@ -28,6 +28,7 @@ Statement comp_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by
   rewrite [inter_def, comp_def, comp_def]
   apply And.intro
   by_contra h2
+  Hint (hidden := true) "To get a contradiction, prove `{x} ∈ A ∪ B`."
   have h3 : x ∈ A ∪ B := Or.inl h2
   exact h1 h3
   by_contra h2

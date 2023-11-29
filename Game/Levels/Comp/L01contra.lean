@@ -42,8 +42,6 @@ type `\\not`."
 
 NewDefinition not
 
-LemmaTab "Set Theory"
-
 /-- Suppose $x \in A$ and $x \notin B$.  Then $\neg A \subseteq B$. -/
 Statement {A B : Set U} {x : U} (h1 : x ∈ A) (h2 : x ∉ B) : ¬A ⊆ B := by
   Hint "For the theorem in this level, your goal is `¬A ⊆ B`.  To use proof by contradiction

@@ -15,7 +15,7 @@ proof with `apply Iff.intro`.  Lean will set `P → Q` and `Q → P` as the goal
 to complete the proof.
 "
 
-LemmaTab "Logic"
+LemmaTab "ᶜ"
 
 LemmaDoc Iff.intro as "Iff.intro" in "Logic"
 "If you have `h1 : P → Q` and `h2 : Q → P`, then `Iff.intro h1 h2` is a proof of `P ↔ Q`."

@@ -12,9 +12,9 @@ If you start your proof with `apply sub_antisymm`, then you'll be able to use
 the theorem `union_sub_swap` that you proved in the last level.
 "
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc union_comm as "union_comm" in "Set Theory"
+LemmaDoc union_comm as "union_comm" in "∩∪"
 "For any sets `A` and `B`, `union_comm A B` is a proof of the
 statement `A ∪ B = B ∪ A`."
 

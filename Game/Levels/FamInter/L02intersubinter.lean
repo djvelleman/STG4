@@ -16,8 +16,6 @@ leads to a smaller result; more precisely, you're going to prove that `⋂₀ G 
 Of course, by now you know how to start a proof that one set is a subset of another.
 "
 
-LemmaTab "Set Theory"
-
 /-- Suppose $F$ and $G$ are families of sets and $F \subseteq G$.
 Then $\bigcap G \subseteq \bigcap F$. -/
 Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋂₀ G ⊆ ⋂₀ F := by

@@ -18,9 +18,9 @@ But if you don't see the shortcut, you can use a straightforward approach.
 If you made it through the last one, you can do this one too!
 "
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc union_distrib_over_inter as "union_distrib_over_inter" in "Set Theory"
+LemmaDoc union_distrib_over_inter as "union_distrib_over_inter" in "∩∪"
 "For any sets `A`, `B`, and `C`, `union_distrib_over_inter A B C` is a proof of the
 statement `A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)`."
 

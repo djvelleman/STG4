@@ -31,9 +31,9 @@ this:  `rewrite [t1, t2]`."
 
 NewTactic rewrite
 
-LemmaTab "Set Theory"
+LemmaTab "ᶜ"
 
-LemmaDoc comp_sub_of_sub as "comp_sub_of_sub" in "Set Theory"
+LemmaDoc comp_sub_of_sub as "comp_sub_of_sub" in "ᶜ"
 "If you have `h : A ⊆ B`, then `comp_sub_of_sub h` is a proof of `Bᶜ ⊆ Aᶜ`."
 
 /-- Suppose $A \subseteq B$.  Then $B^c \subseteq A^c$. -/

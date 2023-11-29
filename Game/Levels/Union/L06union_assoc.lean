@@ -18,9 +18,9 @@ able to prove either the left or right side of the statement, then `apply Or.inl
 You can start this proof with either `ext x` or `apply sub_antisymm`.
 "
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc union_assoc as "union_assoc" in "Set Theory"
+LemmaDoc union_assoc as "union_assoc" in "∩∪"
 "For any sets `A`, `B`, and `C`, `union_assoc A B C` is a proof of the
 statement `(A ∪ B) ∪ C = A ∪ (B ∪ C)`."
 
@@ -28,9 +28,12 @@ statement `(A ∪ B) ∪ C = A ∪ (B ∪ C)`."
 Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   apply sub_antisymm
   intro x h
+  rewrite [union_def]
+  rewrite [union_def] at h
   cases' h with hAB hC
   cases' hAB with hA hB
   exact Or.inl hA
+  Hint "Do you know which half of the goal you're going to prove now?"
   apply Or.inr
   exact Or.inl hB
   apply Or.inr

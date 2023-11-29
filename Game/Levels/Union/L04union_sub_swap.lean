@@ -13,9 +13,9 @@ In the next level we're going to prove that union is commutative; that is,
 to prove that intersection is commutative.  We begin by proving `A ∪ B ⊆ B ∪ A`.
 "
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc union_sub_swap as "union_sub_swap" in "Set Theory"
+LemmaDoc union_sub_swap as "union_sub_swap" in "∩∪"
 "For any sets `A` and `B`, `union_sub_swap A B` is a proof of
 `A ∪ B ⊆ B ∪ A`."
 

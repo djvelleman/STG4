@@ -14,9 +14,9 @@ two goals: `A ∩ B ⊆ B ∩ A` and `B ∩ A ⊆ A ∩ B`.  Fortunately, you ca
 goals by using the theorem `inter_sub_swap` from the last level.
 "
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc inter_comm as "inter_comm" in "Set Theory"
+LemmaDoc inter_comm as "inter_comm" in "∩∪"
 "For any sets `A` and `B`, `inter_comm A B` is a proof of the
 statement `A ∩ B = B ∩ A`."
 

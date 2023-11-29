@@ -12,9 +12,9 @@ In the next level we're going to prove that intersection is commutative; that is
 `A ∩ B = B ∩ A`.  As a warm-up, in this level we prove `A ∩ B ⊆ B ∩ A`.
 "
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc inter_sub_swap as "inter_sub_swap" in "Set Theory"
+LemmaDoc inter_sub_swap as "inter_sub_swap" in "∩∪"
 "For any sets `A` and `B`, `inter_sub_swap A B` is a proof of
 `A ∩ B ⊆ B ∩ A`."
 

@@ -11,8 +11,6 @@ Introduction
 You should be able to combine ideas from previous levels to solve this one.
 "
 
-LemmaTab "Set Theory"
-
 /-- For any sets $A$ and $B$, $A \cap B \subseteq A$. -/
 Statement (A B : Set U) : A ∩ B ⊆ A := by
   Hint (hidden := true) "Since the goal is a subset statement, you should start by

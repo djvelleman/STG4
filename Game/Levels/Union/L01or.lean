@@ -36,6 +36,7 @@ NewLemma Or.inl Or.inr
 
 /-- Suppose $x \in A$, and $B$ is any set.  Then $x \in A ∨ x ∈ B$. -/
 Statement (x : U) (A B : Set U) (h : x ∈ A) : x ∈ A ∨ x ∈ B := by
+  Hint (hidden := true) "`Or.inl h` is a proof of the goal."
   exact Or.inl h
 
 Conclusion

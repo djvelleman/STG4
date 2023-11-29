@@ -26,9 +26,9 @@ See if you can use the theorems and tactics you learned in previous levels to co
 this last theorem of Intersection World on your own.
 -/
 
-LemmaTab "Set Theory"
+LemmaTab "∩∪"
 
-LemmaDoc inter_assoc as "inter_assoc" in "Set Theory"
+LemmaDoc inter_assoc as "inter_assoc" in "∩∪"
 "For any sets `A`, `B`, and `C`, `inter_assoc A B C` is a proof of the
 statement `(A ∩ B) ∩ C = A ∩ (B ∩ C)`."
 

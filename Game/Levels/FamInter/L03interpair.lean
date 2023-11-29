@@ -27,7 +27,7 @@ LemmaDoc pair_def as "pair_def" in "{}"
 
 NewLemma pair_def
 
-LemmaTab "Set Theory"
+LemmaTab "{}"
 
 /-- Suppose $A$ and $B$ are sets.  Then $A \cap B = \bigcap \{A, B\}$. -/
 Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by

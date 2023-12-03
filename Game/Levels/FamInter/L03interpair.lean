@@ -15,7 +15,7 @@ we studied in Intersection World.  You'll prove that if `A` and `B` are sets, th
 
 We'll need notation for the family of sets consisting of just `A` and `B`; we'll denote
 this family by `{A, B}`.  And, as usual, we'll need a theorem stating the definition of
-this notation.  For any sets ``S`, `A`, and `B`, `pair_def S A B` is a proof of the
+this notation.  For any sets `S`, `A`, and `B`, `pair_def S A B` is a proof of the
 statement `S ∈ {A, B} ↔ S = A ∨ S = B`.
 "
 
@@ -39,6 +39,8 @@ Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by
   intro S h2
   rewrite [pair_def] at h2
   cases' h2 with hA hB
+  Hint "Now that you have `{hA} : {S} = A`, you can use `rewrite [{hA}]` to replace `{S}` with
+  `A` in the goal."
   rewrite [hA]
   exact h1.left
   rewrite [hB]
@@ -47,6 +49,8 @@ Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by
   rewrite [inter_def]
   rewrite [fam_inter_def] at h1
   apply And.intro
+  Hint (strict := true) (hidden := true) "It would be helpful if you knew that `A ∈ \{A, B}`.
+  You can use `have` to assert it."
   have h2 : A ∈ {A, B}
   rewrite [pair_def]
   apply Or.inl
@@ -57,8 +61,3 @@ Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by
   apply Or.inr
   rfl
   exact h1 B h2
-
-Conclusion
-"
-
-"

@@ -43,7 +43,7 @@ Statement comp_sub_of_sub {A B : Set U} (h1 : A ⊆ B) : Bᶜ ⊆ Aᶜ := by
   intro x h2
   Hint "Now `comp_def {x} A` is a proof of the statement `{x} ∈ Aᶜ ↔ {x} ∉ A`, which tells us
   that we can reexpress the goal `{x} ∈ Aᶜ` as `{x} ∉ A`.  To do this reexpression,
-  use the tactic `rewrite [comp_def x A]`."
+  use the tactic `rewrite [comp_def {x} A]`."
   rewrite [comp_def x A]
   Hint "The `rewrite` tactic is smart enough to figure out some things on its own.  If you
   had just written `rewrite [comp_def]`, then Lean would have figured out how to apply the

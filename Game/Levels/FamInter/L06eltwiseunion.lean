@@ -30,12 +30,12 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : �
   intro x h2
   Hint "Writing out the meaning of the goal will make the proof easier to understand."
   rewrite [union_def]
-  Hint (strict := true) "If `{x} ∈ A`, then the goal is easy to prove.  This suggests breaking the proof into
-  cases depending on whether or not `{x} ∈ A`.  You can do this with the tactic
-  `by_cases h3 : {x} ∈ A`."
-  by_cases h3 : x ∈ A
+  Hint (strict := true) "If `{x} ∈ A`, then the goal is easy to prove.  This suggests breaking
+  the proof into cases depending on whether or not `{x} ∈ A`.  You can do this with the tactic
+  `by_cases hA : {x} ∈ A`."
+  by_cases hA : x ∈ A
   Hint "The first case is the easy one."
-  exact Or.inl h3
+  exact Or.inl hA
   Hint "For the second case, which half of the goal do you think you should try to prove?
   You can use `apply Or.inl` or `apply Or.inr` (or the equivalent tactics `left` or `right`)
   to specify what goal you're going to prove."
@@ -50,12 +50,14 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : �
   Hint (strict := true) (hidden := true) "Note that you can apply `h2` to `(A ∪ {S})`."
   have h6 : x ∈ A ∪ S := h2 (A ∪ S) h5
   rewrite [union_def] at h6
-  cases' h6 with hA hS
+  cases' h6 with hA2 hS
   by_contra h6
-  exact h3 hA
+  exact hA hA2
   exact hS
 
 Conclusion
 "
-
+You've finished Family Intersection World!  As you might guess, you can also take the union of
+a family of sets.  Can you guess how to define it?  Continue on to Family Union World to see
+if your guess is right.
 "

@@ -29,7 +29,8 @@ DefinitionDoc famint as "⋂₀"
 "`⋂₀ F` is the intersection of the family of sets `F`.  To enter the symbol `⋂₀`, type `\\I0`."
 
 DefinitionDoc all as "∀"
-"`∀ x, ...` means \"for all `x`, ...\".  To enter the symbol `∀`, type `\\forall`."
+"If `P x` represents a statement about `x`, then `∀ x, P x` means \"for all `x`, `P x` is true\".
+To enter the symbol `∀`, type `\\forall`."
 
 NewDefinition famint all
 
@@ -64,6 +65,8 @@ Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : ⋂₀ F ⊆ A := by
 Conclusion
 "
 The last two steps could have been combined into one step.  In general, if you have
-`h1 : A ∈ F` and `h2 : ∀ S ∈ F, ...S...`, then `h2 A` is a proof of `A ∈ F → ...A...`, and
-applying that proof to `h1` we conclude that `h2 A h1` is a proof of `...A...`.
+`h1 : A ∈ F` and `h2 : ∀ S ∈ F, P S`, where `P S` is some statement about `S`, then `h2 A`
+is a proof of `A ∈ F → P A`, and
+applying that proof to `h1` we conclude that `h2 A h1` is a proof of `P A`.  For example,
+if you have `h1 : A ∈ F` and `h2 : ∀ S ∈ F, x ∈ S`, then `h2 A h1` is a proof of `x ∈ A`.
 "

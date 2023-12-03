@@ -28,8 +28,3 @@ Statement (A : Set U) (F : Set (Set U)) : A ⊆ ⋂₀ F ↔ ∀ B ∈ F, A ⊆ 
   intro S h3
   have h4 : A ⊆ S := h1 S h3
   exact h4 h2
-
-Conclusion
-"
-
-"

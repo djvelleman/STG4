@@ -8,7 +8,7 @@
 --import Game.Levels.Comp
 --import Game.Levels.Inter
 --import Game.Levels.Union
-import Game.Levels.FamInter
+import Game.Levels.FamUnion
 
 -- Here's what we'll put on the title screen
 Title "Set Theory Game"
@@ -90,5 +90,6 @@ Alternatively, if you experience issues / bugs you can also open github issues:
 -- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
 
 Dependency Intersection → Union
+Dependency FamInter → FamUnion
 
 MakeGame

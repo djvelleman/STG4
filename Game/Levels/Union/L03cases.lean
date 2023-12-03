@@ -13,9 +13,13 @@ tactic to implement that technique in Lean: `cases'`.
 "
 
 TacticDoc cases'
-"If you have an assumption `h : P ∨ Q`, then the tactic `cases' h with h1 h2` will break
+"In this game, there are two situations in which we will use the `cases'` tactic.
+* If you have an assumption `h : P ∨ Q`, then the tactic `cases' h with h1 h2` will break
 your proof into cases.  In case 1, you'll have the new assumption `h1 : P`, and in case
-2 you'll have `h2 : Q`.  In both cases you have to prove the original goal."
+2 you'll have `h2 : Q`.  In both cases you have to prove the original goal.
+* If you have an assumption `h : ∃ x, P x`, then the tactic `cases' h with w hw` will
+introduce a new object `w` and a new assumption `hw : P w` into the proof.
+"
 
 NewTactic cases'
 

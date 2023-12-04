@@ -13,7 +13,7 @@ to `⋃₀ F` and `⋃₀ G`.
 "
 
 /-- Suppose $F$ and $G$ are families of sets.  Then $\bigcup (F \cup G) =
-(\bigcup F) \cup (\bigcup G)$ . -/
+(\bigcup F) \cup (\bigcup G)$. -/
 Statement (F G : Set (Set U)) : ⋃₀ (F ∪ G) = (⋃₀ F) ∪ (⋃₀ G) := by
   ext x
   apply Iff.intro

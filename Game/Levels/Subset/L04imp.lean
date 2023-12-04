@@ -28,9 +28,9 @@ There are two situations in which you can use the `intro` tactic:
 * If you are proving a statement of the form `P → Q`, then you can use
 the tactic `intro h` to introduce the assumption `h : P` and set `Q` as the goal.  Be
 sure to use an identifier that is not already in use.
-* If you are proving a statement of the form `∀ x, ...` then you can use
-the tactic `intro x` to introduce a new object `x` into the proof.  Be sure to
-use a variable name that is not already in use.
+* If you are proving a statement of the form `∀ x, P x`, where `P x` is some statement
+about `x`, then you can use the tactic `intro x` to introduce a new object `x` into the proof.
+Be sure to use a variable name that is not already in use.  The goal will then be `P x`.
 
 You can do multiple introductions in one step: for example, `intro x h` has the same
 effect as doing `intro x` followed by `intro h`.

@@ -54,7 +54,8 @@ Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : A ⊆ ⋃₀ F := by
   rewrite [fam_union_def]
   Hint "Remember that the goal `∃ S ∈ F, {x} ∈ S` is an abbreviation for
   `∃ S, S ∈ F ∧ {x} ∈ S`.  As we saw in the last level, we can prove this by coming up with
-  a value for `S` that will make the statement `S ∈ F ∧ {x} ∈ S` come out true.  Looking at
+  a witness--that is, a value for `S` that will make the statement `S ∈ F ∧ {x} ∈ S` come out
+  true.  Looking at
   `h1` and `{h2}`, it looks like `S = A` would work.  That suggests a way to proceed:
   `Exists.intro A hA` would prove the goal, if `hA` were a proof of `A ∈ F ∧ {x} ∈ A`.  In
   other words, if `Exists.intro A` is applied to a proof of `A ∈ F ∧ {x} ∈ A`, then it will

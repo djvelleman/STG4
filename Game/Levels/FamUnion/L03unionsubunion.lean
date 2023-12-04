@@ -26,8 +26,8 @@ Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋃₀ F ⊆ ⋃₀ G := by
   in this situation, because this is not an example of proof by cases.  Nevertheless, the
   `cases'` tactic does what we need.)"
   cases' h2 with B hB
-  Hint (hidden := true) "Do you see why `B` is the value to use for `S` in the goal?  Your next
-  step can be either `apply Exists.intro B` or `use B`."
+  Hint (hidden := true) "Do you see why `B` is the value to use as a witness for `S` in the goal?
+  Your next step can be either `apply Exists.intro B` or `use B`."
   apply Exists.intro B
   have h2 : B ∈ G := h1 hB.left
   exact And.intro h2 hB.right

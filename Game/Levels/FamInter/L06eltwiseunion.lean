@@ -8,7 +8,7 @@ Title "Intersection of a Family of Unions"
 
 Introduction
 "
-In this level you'll use a new kind of proof by cases.  For any statement `P`, the
+In this level you'll need a new kind of proof by cases.  For any statement `P`, the
 tactic `by_cases h : P` will break the proof into two cases.  In the first case, the new
 assumption `h : P` is added to the list of assumptions, and in second the new
 assumption `h : ¬P` is added.  Since `P` must be either true or false, these two cases cover

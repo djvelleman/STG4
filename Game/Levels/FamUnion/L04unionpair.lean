@@ -33,10 +33,12 @@ Statement (A B : Set U) : A ∪ B = ⋃₀ {A, B}:= by
   rfl
   exact hB
   intro h1
+  rewrite [union_def]
   rewrite [fam_union_def] at h1
+  Hint "Remember, you can use `cases'` to introduce a name for the set that is asserted to
+  exist in `{h1}`."
   cases' h1 with S h1
   rewrite [pair_def] at h1
-  rewrite [union_def]
   cases' h1.left with hA hB
   rewrite [← hA]
   exact Or.inl h1.right

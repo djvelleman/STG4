@@ -12,7 +12,7 @@ If `A` is a set and `F` is a family of sets, under what circumstances is it the 
 that `A ⊆ ⋂₀ F`?  In this level you'll discover the answer to that question.
 "
 
-/-- Suppose $A$ is a set and $F$ is a family of sets.  Then $A \subseteq \bigcap F$ if
+/-- Suppose $A$ is a set and $F$ is a family of sets.  Then $A$ is a subset of $\bigcap F$ if
 and only if $A$ is a subset of every element of $F$.-/
 Statement (A : Set U) (F : Set (Set U)) : A ⊆ ⋂₀ F ↔ ∀ B ∈ F, A ⊆ B := by
   apply Iff.intro

@@ -16,7 +16,8 @@ at least one `x` such that `P x` is true\".  The symbol `∃` is called the
 The easiest way to prove the statement `∃ x, P x` is to specify a value of `x`, and give a
 proof of `P x` for that value of `x`.  The theorem that allows you to do that is called
 `Exists.intro`.  If you have `h : P a`, for some object `a`, then `Exists.intro a h` is a
-proof of the statement `∃ x, P x`.  In this level, you'll try out this theorem.
+proof of the statement `∃ x, P x`.  (The object `a` is sometimes called a *witness* for
+the existential statement.)  In this level, you'll try out this theorem.
 "
 
 DefinitionDoc ex as "∃"
@@ -33,9 +34,10 @@ NewLemma Exists.intro
 
 /--Suppose $A$ is a set.  Then there is some set $S$ such that $S \subseteq A$.-/
 Statement (A : Set U) : ∃ S, S ⊆ A := by
-  Hint (strict := true) "Your goal says that there is a set that is a subset of `A`.  Can you think of such a set?"
-  Hint (strict := true) (hidden := true) "Recall that `sub_ref A` is a proof of `A ⊆ A`.  So start your proof
-  with `have h : A ⊆ A := sub_ref A`."
+  Hint (strict := true) "Your goal says that there is a set that is a subset of `A`.
+  Can you think of such a set?"
+  Hint (strict := true) (hidden := true) "Recall that `sub_ref A` is a proof of `A ⊆ A`.
+  So start your proof with `have h : A ⊆ A := sub_ref A`."
   have h : A ⊆ A := sub_ref A
   Hint "Now you can use `Exists.intro` to complete the proof."
   Hint (hidden := true) "Exists.intro A {h}` proves the goal."
@@ -43,6 +45,11 @@ Statement (A : Set U) : ∃ S, S ⊆ A := by
 
 Conclusion
 "
+By the way, another set that would have worked as a witness for the existential goal in this
+theorem is the empty set, denoted `∅`.  However, to justify the use of that witness you would
+have had to prove `∅ ⊆ A`.  Since we already have the theorem `sub_ref`, it was easier to use
+`A` as the witness.
+
 Now that you know how to prove existential statements, you're ready to start working with
 unions of families.
 "

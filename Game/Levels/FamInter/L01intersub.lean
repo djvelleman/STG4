@@ -29,8 +29,8 @@ DefinitionDoc famint as "⋂₀"
 "`⋂₀ F` is the intersection of the family of sets `F`.  To enter the symbol `⋂₀`, type `\\I0`."
 
 DefinitionDoc all as "∀"
-"If `P x` represents a statement about `x`, then `∀ x, P x` means \"for all `x`, `P x` is true\".
-To enter the symbol `∀`, type `\\forall`."
+"If `P x` represents a statement about an unspecified object `x`, then `∀ x, P x` means
+\"for all `x`, `P x` is true\".  To enter the symbol `∀`, type `\\forall`."
 
 NewDefinition famint all
 

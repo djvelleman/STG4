@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamInter"
 Level 3
-Title "Intersection of a Pair"
+Title "Intersection of a pair"
 
 Introduction
 "

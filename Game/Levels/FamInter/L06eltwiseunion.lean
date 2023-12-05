@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamInter"
 Level 6
-Title "Intersection of a Family of Unions"
+Title "Intersection of a family of unions"
 
 Introduction
 "

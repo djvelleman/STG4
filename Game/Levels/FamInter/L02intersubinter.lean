@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamInter"
 Level 2
-Title "Intersection of Larger Family is Smaller"
+Title "Intersection of larger family is smaller"
 
 Introduction
 "

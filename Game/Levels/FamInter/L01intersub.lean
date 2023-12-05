@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamInter"
 Level 1
-Title "Family Intersection is Subset"
+Title "Family intersection is subset"
 
 Introduction
 "
@@ -55,7 +55,9 @@ Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : ⋂₀ F ⊆ A := by
   set--that is, we can plug in any set for `S` in `{h2}`.
   In particular, applying it to the set `A`, we can conclude that `A ∈ F → {x} ∈ A`.
   To apply `{h2}` to `A`, we just write `{h2}` followed by `A`, with a space between them.
-  Thus, your next step can be `have h3 : A ∈ F → {x} ∈ A := {h2} A`."
+  Thus, your next step can be `have h3 : A ∈ F → {x} ∈ A := {h2} A`.  You can save yourself
+  a little typing by writing `have h3 := {h2} A`; Lean will figure out what statement is
+  proven by `{h2} A`."
   have h3 : A ∈ F → x ∈ A := h2 A
   Hint "Since we also have `h1 : A ∈ F`, you can apply `{h3}` to `h1` to prove that `{x} ∈ A`.
   This means that `{h3} h1` is a proof of the goal."

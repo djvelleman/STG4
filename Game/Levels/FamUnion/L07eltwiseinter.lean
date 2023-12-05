@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamUnion"
 Level 7
-Title "Union of a Family of Intersections"
+Title "Union of a family of intersections"
 
 Introduction
 "
@@ -27,6 +27,8 @@ Lean will recognize `set_builder_def` as a proof of any statement of the form
 "
 
 NewLemma set_builder_def
+
+LemmaTab "{}"
 
 /--Suppose $A$ is a set and $F$ is a family of sets.  Then $A \cap (\bigcup F) =
 \bigcup\{B \mid \exists S \in F, B = A \cap S\}$.-/

@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamInter"
 Level 5
-Title "Subset of an Intersection"
+Title "Subset of an intersection"
 
 Introduction
 "

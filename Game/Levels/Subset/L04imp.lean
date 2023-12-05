@@ -54,20 +54,6 @@ Statement {x : U} {A B C : Set U} (h1 : A ⊆ B) (h2 : x ∈ B → x ∈ C) : x 
   you can now apply `h2` to `{h4}` to prove the goal."
   exact h2 h4
 
-/-
-/-- Suppose $A \subseteq B$ and $x$ is any object in the universe $U$.
-Then $x \in A \to x \in B$. -/
-Statement {A B : Set U} (h1 : A ⊆ B) (x : U) : x ∈ A → x ∈ B := by
-  Hint "Since our goal in this level is the statement `x ∈ A → x ∈ B`, our first step for
-  this proof is to assume `x ∈ A`.  To introduce that assumption,
-  assigning it the identifier `h2`, type `intro h2`."
-  intro h2
-  Hint "Notice that `{h2} : x ∈ A` is now listed under *Assumptions*, and your new goal is
-  `x ∈ B`."
-  Hint (hidden := true) "h1 {h2} is now a proof of the goal."
-  exact h1 h2
--/
-
 Conclusion
 "
 In general, if your goal has the form `P → Q`, then the tactic `intro h` will add `h : P` to

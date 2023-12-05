@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamUnion"
 Level 2
-Title "Subset of Family Union"
+Title "Subset of family union"
 
 Introduction
 "
@@ -35,6 +35,8 @@ LemmaDoc fam_union_def as "fam_union_def" in "⋂₀⋃₀"
 `x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S`."
 
 NewLemma fam_union_def
+
+LemmaTab "⋂₀⋃₀"
 
 TacticDoc use
 "

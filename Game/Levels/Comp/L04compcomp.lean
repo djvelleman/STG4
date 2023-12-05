@@ -60,12 +60,13 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   contradiction might work: if you assume the opposite of the goal, you might be able to
   achieve a contradiction by proving `{x} ∈ Aᶜ`."
   by_contra h2
-  Hint "Can you prove `{x} ∈ Aᶜ` from your new assumption `{h2} : {x} ∉ A`?  The tactic
-  `rewrite [comp_def] at {h2}` would rewrite `{x} ∈ Aᶜ` as `{x} ∉ A`, but we want to go in
-  the opposite direction, rewriting `{x} ∉ A` as `{x} ∈ Aᶜ`.  To do that, use
-  `rewrite [← comp_def] at {h2}`.  (To enter the left-pointing arrow, type `\\l`.)"
-  rewrite [← comp_def] at h2
-  exact h1 h2
+  Hint "Since `{h1}` is a negative statement, applying `{h1}` to a proof of `{x} ∈ Aᶜ` would
+  prove the goal `False`.  So the tactic `apply {h1}` will set `{x} ∈ Aᶜ` as the goal.
+  This is a useful technique any time you're doing a proof by contradiction and one of your
+  assumptions is a negative statement."
+  apply h1
+  rewrite [comp_def]
+  exact h2
   Hint "The proof of the second goal is similar."
   intro x h1
   rewrite [comp_def]

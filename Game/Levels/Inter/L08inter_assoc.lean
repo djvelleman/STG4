@@ -15,17 +15,6 @@ of *extensionality* for sets, which says that if
 two sets have exactly the same elements, then they are equal.
 "
 
-/-
-If your goal is `A = B`, where `A` and `B` are sets, and you use the tactic `ext x`, then Lean
-will introduce a new arbitrary object `x` into the proof
-and set the goal to be `x ∈ A ↔ x ∈ B`.  Proving that goal will show that
-`A` and `B` have exactly the same elements, and by the principle of
-extensionality, this shows that the sets are equal.
-
-See if you can use the theorems and tactics you learned in previous levels to complete
-this last theorem of Intersection World on your own.
--/
-
 LemmaTab "∩∪"
 
 LemmaDoc inter_assoc as "inter_assoc" in "∩∪"

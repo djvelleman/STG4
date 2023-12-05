@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamUnion"
 Level 4
-Title "Union of a Pair"
+Title "Union of a pair"
 
 Introduction
 "
@@ -40,7 +40,7 @@ Statement (A B : Set U) : A ∪ B = ⋃₀ {A, B}:= by
   cases' h1 with S h1
   rewrite [pair_def] at h1
   cases' h1.left with hA hB
-  rewrite [← hA]
+  rewrite [hA] at h1
   exact Or.inl h1.right
-  rewrite [← hB]
+  rewrite [hB] at h1
   exact Or.inr h1.right

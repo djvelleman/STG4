@@ -25,12 +25,16 @@ If some expression `t` is a proof of a statement `P`, and `h` is an
 identifier that is not in use, then `have h : P := t` will add `h : P`
 to the list of assumptions.
 
-Sometimes you want to assert a statement `P`, but the proof of `P` is too
+There are two variations on the `have` tactic:
+* Sometimes you want to assert a statement `P`, but the proof of `P` is too
 difficult to be given in one line.  In that situation, you can simply write
 `have h : P`.  Of course, you must still justify the assertion of `P`, so
 the proof of `P` becomes your immediate goal.
 Once the goal of proving `P` has been closed, you will be able to return to
 your original goal, with `h : P` added to the assumption list.
+* If you write `have h := t`, then Lean will try to figure out what statement
+`P` is proven by the expression `t` and, if it can figure it out, it will fill
+it in for you.
 "
 
 NewTactic «have»

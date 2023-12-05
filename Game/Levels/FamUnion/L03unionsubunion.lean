@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamUnion"
 Level 3
-Title "Union of Larger Family is Larger"
+Title "Union of larger family is larger"
 
 Introduction
 "

@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamUnion"
 Level 5
-Title "Union of a Union"
+Title "Union of a union"
 
 Introduction
 "

@@ -4,7 +4,7 @@ variable {U : Type}
 
 World "FamUnion"
 Level 6
-Title "Union Subset of a Set"
+Title "Union subset of a set"
 
 Introduction
 "

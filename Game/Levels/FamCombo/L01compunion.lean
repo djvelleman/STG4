@@ -23,9 +23,9 @@ Statement (F : Set (Set U)) : (⋃₀ F)ᶜ = ⋂₀ {A | Aᶜ ∈ F} := by
   rewrite [comp_def] at h1
   rewrite [set_builder_def] at h2
   by_contra h3
-  Hint "Applying `{h1}` to a proof of `{x} ∈ ⋃₀ F` would prove the goal `False`.  So the tactic
-  `apply {h1}` will set `{x} ∈ ⋃₀ F` as the goal.  This is a useful technique any time you're
-  doing a proof by contradiction and one of your assumptions is a negative statement."
+  Hint "Since `{h1}` is a negative statement, a good way to reach a contradiction
+  would be to contradict it.  As we've seen before, `apply {h1}` will set the goal to be
+  `x ∈ ⋃₀ F`."
   apply h1
   use Sᶜ
   apply And.intro h2

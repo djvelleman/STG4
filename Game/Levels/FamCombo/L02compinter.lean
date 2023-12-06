@@ -21,25 +21,21 @@ Statement (F : Set (Set U)) : (⋂₀ F)ᶜ = ⋃₀ {A | Aᶜ ∈ F} := by
   Branch
     rewrite [fam_union_def]
     by_contra h2
-    Hint (strict := true) "Since `{h1}` is a negative statement, a good way to reach a contradiction would
-    be to contradict it.  As we saw in the last level, `apply {h1}` will set the goal to be
-    `x ∈ ⋂₀ F`."
+    Hint (strict := true) "What statement would you like to contradict to complete the proof?  As
+    in the last level, you can use `apply` to set a goal to achieve a contradiction."
     apply h1
     rewrite [fam_inter_def]
     intro S h3
     by_contra h4
-    Hint "Now what statement would you like to contradict to complete the proof?  Once again,
-    you can use `apply` to set a new goal."
+    Hint "Now what statement would you like to contradict to complete the proof?"
   by_contra h2
-  Hint (strict := true) "Since `{h1}` is a negative statement, a good way to reach a contradiction would
-    be to contradict it.  As we saw in the last level, `apply {h1}` will set the goal to be
-    `x ∈ ⋂₀ F`."
+  Hint (strict := true) "What statement would you like to contradict to complete the proof?  As
+    in the last level, you can use `apply` to set a goal to achieve a contradiction."
   apply h1
   rewrite [fam_inter_def]
   intro S h3
   by_contra h4
-  Hint "Now what statement would you like to contradict to complete the proof?  Once again,
-  you can use `apply` to set a new goal."
+  Hint "Now what statement would you like to contradict to complete the proof?"
   apply h2
   use Sᶜ
   apply And.intro

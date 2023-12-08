@@ -92,4 +92,9 @@ Alternatively, if you experience issues / bugs you can also open github issues:
 Dependency Intersection → Union
 Dependency FamInter → FamUnion
 
+/-! Information to be displayed on the servers landing page. -/
+Languages "English"
+CaptionShort "A game about set theory"
+CaptionLong "This game teaches you the basics of lean using sets."
+
 MakeGame

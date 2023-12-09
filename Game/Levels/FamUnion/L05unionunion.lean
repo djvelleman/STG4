@@ -19,7 +19,7 @@ Statement (F G : Set (Set U)) : ⋃₀ (F ∪ G) = (⋃₀ F) ∪ (⋃₀ G) := 
   apply Iff.intro
   intro h1
   rewrite [fam_union_def] at h1
-  cases' h1 with S h1
+  obtain ⟨S, h1⟩ := h1
   rewrite [union_def]
   rewrite [union_def] at h1
   cases' h1.left with hF hG
@@ -34,12 +34,12 @@ Statement (F G : Set (Set U)) : ⋃₀ (F ∪ G) = (⋃₀ F) ∪ (⋃₀ G) := 
   rewrite [union_def] at h1
   rewrite [fam_union_def]
   cases' h1 with hF hG
-  cases' hF with S h1
+  obtain ⟨S, h1⟩ := hF
   use S
   apply And.intro
   exact Or.inl h1.left
   exact h1.right
-  cases' hG with S h1
+  obtain ⟨S, h1⟩ := hG
   use S
   apply And.intro
   exact Or.inr h1.left

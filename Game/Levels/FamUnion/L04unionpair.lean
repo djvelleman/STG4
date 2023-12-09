@@ -35,12 +35,12 @@ Statement (A B : Set U) : A ∪ B = ⋃₀ {A, B}:= by
   intro h1
   rewrite [union_def]
   rewrite [fam_union_def] at h1
-  Hint "Remember, you can use `cases'` to introduce a name for the set that is asserted to
+  Hint "Remember, you can use `obtain` to introduce a name for the set that is asserted to
   exist in `{h1}`."
-  cases' h1 with S h1
-  rewrite [pair_def] at h1
-  cases' h1.left with hA hB
-  rewrite [hA] at h1
-  exact Or.inl h1.right
-  rewrite [hB] at h1
-  exact Or.inr h1.right
+  obtain ⟨S, hS⟩ := h1
+  rewrite [pair_def] at hS
+  cases' hS.left with hA hB
+  rewrite [hA] at hS
+  exact Or.inl hS.right
+  rewrite [hB] at hS
+  exact Or.inr hS.right

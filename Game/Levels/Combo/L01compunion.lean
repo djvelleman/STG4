@@ -29,11 +29,11 @@ Statement comp_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by
   apply And.intro
   by_contra h2
   Hint (hidden := true) "To get a contradiction, prove `{x} ∈ A ∪ B`."
-  have h3 : x ∈ A ∪ B := Or.inl h2
-  exact h1 h3
+  apply h1
+  exact Or.inl h2
   by_contra h2
-  have h3 : x ∈ A ∪ B := Or.inr h2
-  exact h1 h3
+  apply h1
+  exact Or.inr h2
   intro h1
   rewrite [inter_def, comp_def, comp_def] at h1
   rewrite [comp_def]

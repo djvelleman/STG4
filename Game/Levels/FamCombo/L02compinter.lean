@@ -10,6 +10,8 @@ Introduction
 "
 Perhaps you have already guessed that there is a theorem about the complement
 of an intersection of a family that is similar to the theorem in the last level.
+
+If you get stuck, consider using proof by contradiction.
 "
 
 /-- For any family of sets $F$, $(\bigcap F)^c = \bigcup \{A \mid A^c \in F\}$. -/
@@ -46,9 +48,9 @@ Statement (F : Set (Set U)) : (⋂₀ F)ᶜ = ⋃₀ {A | Aᶜ ∈ F} := by
   intro h1
   rewrite [comp_def]
   by_contra h2
-  cases' h1 with S hS
+  obtain ⟨S, hS⟩ := h1
   have hSl := hS.left
   rewrite [set_builder_def] at hSl
   rewrite [fam_inter_def] at h2
-  have h3 := h2 Sᶜ hSl
+  have h3 : x ∈ Sᶜ := h2 Sᶜ hSl
   exact h3 hS.right

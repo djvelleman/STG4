@@ -19,9 +19,9 @@ Statement (F G H : Set (Set U)) (h1 : ∀ A ∈ F, ∃ B ∈ G, A ∩ B ∈ H) :
   have h2l := h2.left
   have h2r := h2.right
   rewrite [fam_union_def] at h2l
-  cases' h2l with A hA
+  obtain ⟨A, hA⟩ := h2l
   have h3 := h1 A hA.left
-  cases' h3 with B hB
+  obtain ⟨B, hB⟩ := h3
   rewrite [fam_inter_def] at h2r
   have h3 := h2r B hB.left
   rewrite [fam_union_def]

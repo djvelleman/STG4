@@ -10,7 +10,7 @@ Introduction
 "
 In this level you'll need a new kind of proof by cases.  For any statement `P`, the
 tactic `by_cases h : P` will break the proof into two cases.  In the first case, the new
-assumption `h : P` is added to the list of assumptions, and in second the new
+assumption `h : P` is added to the list of assumptions, and in second, the new
 assumption `h : ¬P` is added.  Since `P` must be either true or false, these two cases cover
 all possibilities.
 "
@@ -44,13 +44,14 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : �
   intro S h4
   Hint (strict := true) (hidden := true) "Now use `h1`."
   have h5 : A ∪ S ∈ G := h1 S h4
-  Hint (strict := true) (hidden := true) "You haven't used `h2` yet.  If you don't see how to use it,
+  Hint (strict := true) (hidden := true) "You haven't used `{h2}` yet.  If you don't see how to use it,
   write out its definition."
   rewrite [fam_inter_def] at h2
-  Hint (strict := true) (hidden := true) "Note that you can apply `h2` to `(A ∪ {S})`."
+  Hint (strict := true) (hidden := true) "Note that you can apply `{h2}` to `(A ∪ {S})`."
   have h6 : x ∈ A ∪ S := h2 (A ∪ S) h5
   rewrite [union_def] at h6
   cases' h6 with hA2 hS
+  Hint (hidden := true) "Notice that you have contradictory assumptions."
   by_contra h6
   exact hA hA2
   exact hS

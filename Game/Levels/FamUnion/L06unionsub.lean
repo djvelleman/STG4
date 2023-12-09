@@ -27,5 +27,5 @@ Statement (A : Set U) (F : Set (Set U)) : ⋃₀ F ⊆ A ↔ ∀ B ∈ F, B ⊆ 
   intro h1
   intro x h2
   rewrite [fam_union_def] at h2
-  cases' h2 with B h2
-  exact h1 B h2.left h2.right
+  obtain ⟨B, hB⟩ := h2
+  exact h1 B hB.left hB.right

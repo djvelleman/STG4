@@ -94,7 +94,8 @@ Dependency FamInter → FamUnion
 
 /-! Information to be displayed on the servers landing page. -/
 Languages "English"
-CaptionShort "A game about set theory"
-CaptionLong "This game teaches you the basics of lean using sets."
+CaptionShort "A game about set theory."
+CaptionLong "In this game you will learn the basics of theorem proving in Lean by proving
+theorems about unions, intersections, and complements of sets."
 
 MakeGame

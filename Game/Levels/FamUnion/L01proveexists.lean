@@ -35,12 +35,17 @@ NewLemma Exists.intro
 /--Suppose $A$ is a set.  Then there is some set $S$ such that $S \subseteq A$.-/
 Statement (A : Set U) : ∃ S, S ⊆ A := by
   Hint (strict := true) "Your goal says that there is a set that is a subset of `A`.
-  Can you think of such a set?"
+  The theorem `sub_ref` suggests such a set."
   Hint (strict := true) (hidden := true) "Recall that `sub_ref A` is a proof of `A ⊆ A`.
   So start your proof with `have h : A ⊆ A := sub_ref A`."
+  Branch
+    use ∅
+    Hint "Although `∅` is a reasonable choice for a set that is a subset of `A`, it is difficult
+    to complete the proof with this choice using only methods developed so far in this game.
+    Go back and try a different choice."
   have h : A ⊆ A := sub_ref A
   Hint "Now you can use `Exists.intro` to complete the proof."
-  Hint (hidden := true) "Exists.intro A {h}` proves the goal."
+  Hint (hidden := true) "`Exists.intro A {h}` proves the goal."
   exact Exists.intro A h
 
 Conclusion

@@ -17,7 +17,7 @@ The trick to get started on this proof is to rewrite `Aᶜ ∪ Bᶜ` as `(Aᶜ �
 know, `comp_comp (Aᶜ ∪ Bᶜ)` is a proof of the theorem `(Aᶜ ∪ Bᶜ)ᶜᶜ = Aᶜ ∪ Bᶜ`, and therefore
 `rewrite [comp_comp (Aᶜ ∪ Bᶜ)]` could be used to rewrite `(Aᶜ ∪ Bᶜ)ᶜᶜ` as `Aᶜ ∪ Bᶜ`; but we
 want to go in the opposite direction, rewriting `Aᶜ ∪ Bᶜ` as `(Aᶜ ∪ Bᶜ)ᶜᶜ`. To do that, use
-rewrite [← comp_comp (Aᶜ ∪ Bᶜ)]`. (To enter the left-pointing arrow, type `\\l`.)
+`rewrite [← comp_comp (Aᶜ ∪ Bᶜ)]`. (To enter the left-pointing arrow, type `\\l`.)
 "
 
 LemmaTab "ᶜ"

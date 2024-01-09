@@ -50,7 +50,7 @@ Statement {A B : Set U} {x : U} (h1 : x ∈ A) (h2 : x ∉ B) : ¬A ⊆ B := by
   by_contra h3
   Hint (strict := true) "Notice that the goal is now `False`.  To achieve that goal,
   you must prove contradictory statements.  You can do that by
-  using `have` to assert `h4 : x ∈ B`, which will contradict `h2 : x ∉ B`."
+  using `have` to assert `x ∈ B`, which will contradict `h2 : x ∉ B`."
   Hint (strict := true) (hidden := true) "`{h3} h1` is a proof of `x ∈ B`."
   have h4 : x ∈ B := h3 h1
   Hint (strict := true) "You can think of `h2 : x ∉ B` (which is shorthand for `h2 : ¬x ∈ B`)

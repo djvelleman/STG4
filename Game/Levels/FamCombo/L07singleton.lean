@@ -27,7 +27,7 @@ Then $A$ must be a singleton set.-/
 Statement (A : Set U) (h1 : ∀ F, (⋃₀ F = A → A ∈ F)) : ∃ x, A = {x} := by
   Hint (strict := true) "Start with `have h2 := h1 \{S | ...}`.  The hard part is figuring out
   how to fill in the `...`."
-  Hint (strict := true) (hidden := true) "You need to apply h1 to a family of sets with two
+  Hint (strict := true) (hidden := true) "You need to apply `h1` to a family of sets with two
   properties: the union of the family must be `A`, and knowing that `A` belongs to the
   family must help you prove that `A` is a singleton."
   have h2 := h1 {S | ∃ x ∈ A, S = {x}}

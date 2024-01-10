@@ -22,7 +22,7 @@ Statement (A B C : Set U) (h1 : A ∪ C ⊆ B ∪ C) (h2 : A ∩ C ⊆ B ∩ C) 
   exact Or.inl h3
   Hint (strict := true) (hidden := true) "Use `h1`."
   have h5 : x ∈ B ∪ C := h1 h4
-  Hint (strict := true) (hidden := true) "Now that you know `x ∈ B ∪ C`, you can use that
+  Hint (strict := true) (hidden := true) "Now that you know `{x} ∈ B ∪ C`, you can use that
   statement as the basis for breaking your proof into cases."
   rewrite [union_def] at h5
   cases' h5 with h5B h5C

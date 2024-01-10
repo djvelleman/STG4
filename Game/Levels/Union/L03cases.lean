@@ -25,9 +25,9 @@ Statement (A B C : Set U) (h1 : A ⊆ C) (h2 : B ⊆ C) : A ∪ B ⊆ C := by
   assumption `h3`."
   intro x h3
   Hint "To understand the logic of this proof, it will help to write out the definition
-  of union in {h3}."
+  of union in `{h3}`."
   rewrite [union_def] at h3
-  Hint "Now the assumption {h3} is an \"or\" statement.  The easiest way to use such an
+  Hint "Now the assumption `{h3}` is an \"or\" statement.  The easiest way to use such an
   assumption is to break your proof into cases.  To do this in lean, use the tactic
   `cases' {h3} with {h3}A {h3}B`."
   cases' h3 with h3A h3B

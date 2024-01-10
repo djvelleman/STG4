@@ -34,7 +34,7 @@ Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋂₀ G ⊆ ⋂₀ F := by
   Hint (hidden := true) "It looks like `{h2}` could get you to the goal, if only
   you knew that `{S} ∈ G`.  Can you prove that?"
   have h4 : S ∈ G := h1 h3
-  Hint "You can now combine {h2} and {h4} to reach the goal in one step."
+  Hint "You can now combine `{h2}` and `{h4}` to reach the goal in one step."
   Hint (hidden := true) "`{h2} {S} {h4}` is now a proof of the goal."
   exact h2 S h4
 

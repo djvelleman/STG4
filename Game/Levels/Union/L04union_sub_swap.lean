@@ -23,10 +23,10 @@ LemmaDoc union_sub_swap as "union_sub_swap" in "∩∪"
 Statement union_sub_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by
   intro x h
   Hint (hidden := true) "It will help you see how to proceed if you
-  write out the definition of union in both the assumption {h} and the goal."
+  write out the definition of union in both the assumption `{h}` and the goal."
   rewrite [union_def]
   rewrite [union_def] at h
-  Hint (hidden := true) "The form of the assumption {h} now suggests proof by cases."
+  Hint (hidden := true) "The form of the assumption `{h}` now suggests proof by cases."
   cases' h with hA hB
   exact Or.inr hA
   exact Or.inl hB

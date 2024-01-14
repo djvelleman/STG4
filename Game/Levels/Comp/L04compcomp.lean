@@ -54,6 +54,12 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   you'll be asked to prove the second goal, `A ⊆ Aᶜᶜ`."
   intro x h1
   Hint (hidden := true) "Try writing out the definition of complement in {h1}."
+  Branch
+    rewrite [comp_def, comp_def] at h1
+    Hint "Even though your goal is not a negative statement, the assumption `{h1}` is now the
+  negative statement `¬{x} ∉ A`.  This suggests that proof by
+  contradiction might work: if you assume the opposite of the goal, you might be able to
+  achieve a contradiction by proving `{x} ∉ A`."
   rewrite [comp_def] at h1
   Hint "Even though your goal is not a negative statement, the assumption `{h1}` is now the
   negative statement `{x} ∉ Aᶜ`.  This suggests that proof by

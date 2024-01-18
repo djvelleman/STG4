@@ -41,10 +41,3 @@ Statement comp_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by
   cases' h2 with h2A h2B
   exact h1.left h2A
   exact h1.right h2B
-
-NewLemma comp_union
-
-Conclusion
-"
-
-"

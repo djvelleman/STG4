@@ -50,8 +50,6 @@ Statement inter_distrib_over_union (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B)
   rewrite [union_def]
   exact Or.inr hC.right
 
-NewLemma inter_distrib_over_union
-
 Conclusion
 "
 Whew!

@@ -35,8 +35,6 @@ Statement union_distrib_over_inter (A B C : Set U) : A ∪ (B ∩ C) = (A ∪ B)
   rewrite [comp_comp, comp_comp, comp_comp]
   rfl
 
-NewLemma union_distrib_over_inter
-
 Conclusion
 "
 To finish off Union World, we'll do one more tricky theorem.

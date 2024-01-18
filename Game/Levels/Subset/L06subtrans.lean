@@ -33,8 +33,6 @@ Statement sub_trans {A B C : Set U}
   have h4 : x ∈ B := h1 h3
   exact h2 h4
 
-NewLemma sub_trans
-
 Conclusion
 "
 The theorem you have proven in this level shows that the subset relation has

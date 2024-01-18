@@ -47,8 +47,6 @@ Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   exact Or.inr hB
   exact Or.inr hC
 
-NewLemma union_comm
-
 NewHiddenTactic left right
 
 Conclusion

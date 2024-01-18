@@ -61,8 +61,6 @@ Statement comp_sub_of_sub {A B : Set U} (h1 : A ⊆ B) : Bᶜ ⊆ Aᶜ := by
   have h4 : x ∈ B := h1 h3
   exact h2 h4
 
-NewLemma comp_sub_of_sub
-
 NewHiddenTactic rw
 
 Conclusion

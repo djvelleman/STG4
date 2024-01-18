@@ -31,8 +31,6 @@ Statement union_sub_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by
   exact Or.inr hA
   exact Or.inl hB
 
-NewLemma union_sub_swap
-
 Conclusion
 "
 You'll be able to use the theorem `union_sub_swap` in the next level to prove

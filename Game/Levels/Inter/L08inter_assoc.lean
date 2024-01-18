@@ -59,8 +59,6 @@ Statement inter_assoc (A B C : Set U) : (A ∩ B) ∩ C = A ∩ (B ∩ C) := by
   exact And.intro h1.left h1.right.left
   exact h1.right.right
 
-NewLemma inter_assoc
-
 Conclusion
 "
 Well done!  You're ready to move on to Union World.

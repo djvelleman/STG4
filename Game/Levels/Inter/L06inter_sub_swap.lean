@@ -31,8 +31,6 @@ Statement inter_sub_swap (A B : Set U) : A ∩ B ⊆ B ∩ A := by
   Hint (hidden := true) "Now `And.intro {h}.right {h}.left` proves the goal."
   exact And.intro h.right h.left
 
-NewLemma inter_sub_swap
-
 Conclusion
 "
 We have given this theorem the name `inter_sub_swap`.  Thus, from now on, for

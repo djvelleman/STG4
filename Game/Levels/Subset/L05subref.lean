@@ -40,8 +40,6 @@ Statement sub_ref (A : Set U) : A ⊆ A := by
   Hint (hidden := true) "Notice that {h} is now a proof of the goal."
   exact h
 
-NewLemma sub_ref
-
 Conclusion
 "
 The theorem you have proven in this level shows that the subset relation has

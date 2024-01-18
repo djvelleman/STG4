@@ -80,7 +80,7 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   rewrite [comp_def] at h2
   exact h2 h1
 
-NewLemma sub_antisymm comp_comp
+NewLemma sub_antisymm
 
 Conclusion
 "

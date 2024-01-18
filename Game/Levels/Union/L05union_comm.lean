@@ -24,8 +24,6 @@ Statement union_comm (A B : Set U) : A ∪ B = B ∪ A := by
   exact union_sub_swap A B
   exact union_sub_swap B A
 
-NewLemma union_comm
-
 Conclusion
 "
 Next we'll prove the associative law for unions.

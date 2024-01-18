@@ -33,5 +33,3 @@ Statement comp_inter (A B : Set U) : (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ := by
   rewrite [comp_union]
   rewrite [comp_comp, comp_comp]
   rfl
-
-NewLemma comp_inter

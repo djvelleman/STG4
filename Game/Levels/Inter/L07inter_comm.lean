@@ -26,8 +26,6 @@ Statement inter_comm (A B : Set U) : A ∩ B = B ∩ A := by
   exact inter_sub_swap A B
   exact inter_sub_swap B A
 
-NewLemma inter_comm
-
 Conclusion
 "
 We'll prove one more property of intersections in the next level.

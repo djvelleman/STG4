@@ -54,8 +54,6 @@ Statement comp_def (x : U) (A : Set U) : x ∈ Aᶜ ↔ x ∉ A := by
   Since `x ∈ Aᶜ` and `x ∉ A` are definitionally equivalent, `rfl` will close the goal."
   rfl
 
-NewLemma comp_def
-
 Conclusion
 "
 We have given the theorem proven in this level the name `comp_def`, since it expresses

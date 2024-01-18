@@ -65,7 +65,7 @@ Conclusion
 You can use the `by_contra` tactic in any proof to assume the
 opposite of your goal.  But it is most useful when the goal
 starts with the symbol `¬`.  After using the `by_contra` tactic,
-you goal will be `False`.
+your goal will be `False`.
 
 To complete a proof by contradiction, you must prove contradictory statements.
 If your goal is `False` and you have assumptions `h1 : P` and `h2 : ¬P`, for

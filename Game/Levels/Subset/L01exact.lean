@@ -51,7 +51,7 @@ Statement (x : U) (A : Set U) (h : x ∈ A) : x ∈ A := by
 
 Conclusion
 "
-Congratulations! You completed your first verified proof!
+Congratulations! You have completed your first verified proof!
 
 Although this theorem was trivial, it illustrates an important fact: although we
 called `h` an *identifier* for the assumption `x ∈ A`, it is also recognized by Lean

@@ -56,6 +56,9 @@ Statement comp_def (x : U) (A : Set U) : x ∈ Aᶜ ↔ x ∉ A := by
 
 Conclusion
 "
+The name of the tactic `rfl` is short for \"reflexivity\", which is the property of
+both `=` and `↔` that is the basis for the tactic.
+
 We have given the theorem proven in this level the name `comp_def`, since it expresses
 the definition of complement.  In the next level,
 we will see how we can use it to prove theorems about complements.

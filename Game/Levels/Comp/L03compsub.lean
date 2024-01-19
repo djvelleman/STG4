@@ -16,10 +16,9 @@ in a proof, you can replace it with `x ∉ A`.  There is a tactic called `rewrit
 used to perform such replacements.  You'll get to try out the `rewrite` tactic in this level.
 "
 
-TacticDoc rewrite
-"If the expression `t` is a proof of a statement of the form `P ↔ Q`, then the tactic
+/-- If the expression `t` is a proof of a statement of the form `P ↔ Q`, then the tactic
 `rewrite [t]` will replace `P` anywhere that it occurs in the goal with `Q`.  If you want to
-replace `Q` with `P`, use `rewrite [← t]`.  (Type `\\l` to enter the symbol `←`.)  To do the
+replace `Q` with `P`, use `rewrite [← t]`.  (Type `\l` to enter the symbol `←`.)  To do the
 replacement in an assumption `h`, use `rewrite [t] at h`.
 
 The `rewrite` tactic can also be used with equations.  If `t` is a proof of an equation
@@ -27,14 +26,15 @@ The `rewrite` tactic can also be used with equations.  If `t` is a proof of an e
 will replace `q` with `p`.
 
 To do multiple replacements, one after another, put a list of proofs inside the brackets, like
-this:  `rewrite [t1, t2]`."
+this:  `rewrite [t1, t2]`. -/
+TacticDoc rewrite
 
 NewTactic rewrite
 
-LemmaTab "ᶜ"
+TheoremTab "ᶜ"
 
-LemmaDoc comp_sub_of_sub as "comp_sub_of_sub" in "ᶜ"
-"If you have `h : A ⊆ B`, then `comp_sub_of_sub h` is a proof of `Bᶜ ⊆ Aᶜ`."
+/-- If you have `h : A ⊆ B`, then `comp_sub_of_sub h` is a proof of `Bᶜ ⊆ Aᶜ`. -/
+TheoremDoc comp_sub_of_sub as "comp_sub_of_sub" in "ᶜ"
 
 /-- Suppose $A \subseteq B$.  Then $B^c \subseteq A^c$. -/
 Statement comp_sub_of_sub {A B : Set U} (h1 : A ⊆ B) : Bᶜ ⊆ Aᶜ := by

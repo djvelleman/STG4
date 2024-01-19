@@ -20,9 +20,7 @@ and then show that this assumption leads to a contradiction.  The tactic to use 
 kind of proof is `by_contra`.
 "
 
-TacticDoc by_contra
-"
-If your goal is `¬P`, for some statement `P`, then the tactic
+/-- If your goal is `¬P`, for some statement `P`, then the tactic
 `by_contra h` will introduce the new assumption `h : P`, and set the
 goal to be `False`.  If your goal is a statement `P` that is not a negative
 statement, then `by_contra h` will introduce the new assumption
@@ -31,14 +29,14 @@ statement, then `by_contra h` will introduce the new assumption
 To achieve your new goal, you will need to establish
 `h1 : Q` and `h2 : ¬Q`, for some statement `Q`.  If you can do that,
 then `h2 h1` will prove the goal `False`.  Notice that `h1 h2` will not be
-recognized as a proof of `False`; the negative statement must come first.
-"
+recognized as a proof of `False`; the negative statement must come first. -/
+TacticDoc by_contra
 
 NewTactic by_contra
 
+/-- `¬P` means \"it is not the case that P\".  To enter the symbol `¬`,
+type `\\not`. -/
 DefinitionDoc not as "¬"
-"`¬P` means \"it is not the case that P\".  To enter the symbol `¬`,
-type `\\not`."
 
 NewDefinition not
 

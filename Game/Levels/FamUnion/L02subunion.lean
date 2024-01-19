@@ -23,32 +23,30 @@ As with other set theory operations, we have a theorem that expresses this defin
 In this level, you'll try out these ideas.
 "
 
+/-- `⋃₀ F` is the union of the family of sets `F`.  To enter the symbol `⋃₀`, type `\U0`. -/
 DefinitionDoc famunion as "⋃₀"
-"`⋃₀ F` is the union of the family of sets `F`.  To enter the symbol `⋃₀`, type `\\U0`."
 
 NewDefinition famunion
 
 lemma fam_union_def (x : U) (F : Set (Set U)) : x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S := by rfl
 
-LemmaDoc fam_union_def as "fam_union_def" in "⋂₀⋃₀"
-"If `F : Set (Set U)` and `x : U`, then `fam_union_def x F` is a proof of the statement
-`x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S`."
+/-- If you have `F : Set (Set U)` and `x : U`, then `fam_union_def x F` is a proof of
+the statement `x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S`. -/
+TheoremDoc fam_union_def as "fam_union_def" in "⋂₀⋃₀"
 
-NewLemma fam_union_def
+NewTheorem fam_union_def
 
-LemmaTab "⋂₀⋃₀"
+TheoremTab "⋂₀⋃₀"
 
-TacticDoc use
-"
-If your goal is `∃ x, P x`, where `P x` represents some statement about `x`, and `a` is a
+/-- If your goal is `∃ x, P x`, where `P x` represents some statement about `x`, and `a` is a
 value that could be assigned to `x`, then the tactic `use a` will
 set `P a` to be the goal.  It will then see if this new goal follows easily from your
-assumptions, and if so it will close the goal.
-"
+assumptions, and if so it will close the goal. -/
+TacticDoc use
 
 NewTactic use
 
-LemmaTab "⋂₀⋃₀"
+TheoremTab "⋂₀⋃₀"
 
 /-- Suppose $F$ is a family of sets and $A \in F$.  Then $A \subseteq \bigcup F$. -/
 Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : A ⊆ ⋃₀ F := by

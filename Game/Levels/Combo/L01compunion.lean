@@ -13,11 +13,11 @@ to assert a statement whose proof is too hard to do in a single line.  For an ex
 of how to do that, click on `have` in the list of tactics on the right.
 "
 
-LemmaTab "ᶜ"
+TheoremTab "ᶜ"
 
-LemmaDoc comp_union as "comp_union" in "ᶜ"
-"For any sets `A` and `B`, `comp_union A B` is a proof of the
-statement `(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ`."
+/-- For any sets `A` and `B`, `comp_union A B` is a proof of the
+statement `(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ`. -/
+TheoremDoc comp_union as "comp_union" in "ᶜ"
 
 /-- For any sets $A$ and $B$, $(A \cup B)^c = A^c \cap B^c$. -/
 Statement comp_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by

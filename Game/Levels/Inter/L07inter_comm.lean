@@ -14,11 +14,11 @@ two goals: `A ∩ B ⊆ B ∩ A` and `B ∩ A ⊆ A ∩ B`.  Fortunately, you ca
 goals by using the theorem `inter_sub_swap` from the last level.
 "
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc inter_comm as "inter_comm" in "∩∪"
-"For any sets `A` and `B`, `inter_comm A B` is a proof of the
-statement `A ∩ B = B ∩ A`."
+/-- For any sets `A` and `B`, `inter_comm A B` is a proof of the
+statement `A ∩ B = B ∩ A`. -/
+TheoremDoc inter_comm as "inter_comm" in "∩∪"
 
 /-- For any sets $A$ and $B$, $A \cap B = B \cap A$. -/
 Statement inter_comm (A B : Set U) : A ∩ B = B ∩ A := by

@@ -13,11 +13,11 @@ In the next level we're going to prove that union is commutative; that is,
 to prove that intersection is commutative.  We begin by proving `A ∪ B ⊆ B ∪ A`.
 "
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc union_sub_swap as "union_sub_swap" in "∩∪"
-"For any sets `A` and `B`, `union_sub_swap A B` is a proof of
-`A ∪ B ⊆ B ∪ A`."
+/-- For any sets `A` and `B`, `union_sub_swap A B` is a proof of
+`A ∪ B ⊆ B ∪ A`. -/
+TheoremDoc union_sub_swap as "union_sub_swap" in "∩∪"
 
 /-- For any sets $A$ and $B$, $A \cup B \subseteq B \cup A$. -/
 Statement union_sub_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by

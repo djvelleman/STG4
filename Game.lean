@@ -1,16 +1,5 @@
--- Here's the import to make Lean know about things called `Game`s
---import GameServer.Commands  --unnecessary because imported by first level
+import Game.Levels.FamCombo  --Everything else needed is imported by this
 
--- Here are the imports defining many worlds for the game `Game`.
--- Each world consists of a finite number of levels, and levels
--- are numbered 1,2,3,4... inside the level files.
---import Game.Levels.Subset   --only need to import last level
---import Game.Levels.Comp
---import Game.Levels.Inter
---import Game.Levels.Union
-import Game.Levels.FamCombo
-
--- Here's what we'll put on the title screen
 Title "Set Theory Game"
 Introduction
 "
@@ -40,8 +29,9 @@ Open \"Game Info\" in the \"≡\" menu on the top right for resources,
 links, and ways to interact with the Lean community.
 "
 
-Info "
-*Game version: 4.1*
+Info
+"
+*Game version: 4.4*
 
 ## Progress saving
 
@@ -78,17 +68,6 @@ Alternatively, if you experience issues / bugs you can also open github issues:
 [issue at the STG repo](https://github.com/djvelleman/STG4/issues).
 "
 
--- Here we could add additional connections between the worlds
--- The game automatically computes connections between worlds based on introduced
--- tactics and theorems, but for example it cannot detect introduced definitions
-
--- Dependency Implication → Power -- `Power` uses `≠` which is introduced in `Implication`
-
--- Future plan for the game:
--- Dependency AdvAddition → AdvMultiplication → Inequality → Prime → Hard
--- Dependency Multiplication → AdvMultiplication
--- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
-
 Dependency Intersection → Union
 Dependency FamInter → FamUnion
 
@@ -97,5 +76,6 @@ Languages "English"
 CaptionShort "A game about set theory."
 CaptionLong "In this game you will learn the basics of theorem proving in Lean by proving
 theorems about unions, intersections, and complements of sets."
+CoverImage "images/cover.png"
 
 MakeGame

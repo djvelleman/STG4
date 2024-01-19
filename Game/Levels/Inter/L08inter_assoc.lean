@@ -15,17 +15,15 @@ of *extensionality* for sets, which says that if
 two sets have exactly the same elements, then they are equal.
 "
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc inter_assoc as "inter_assoc" in "∩∪"
-"For any sets `A`, `B`, and `C`, `inter_assoc A B C` is a proof of the
-statement `(A ∩ B) ∩ C = A ∩ (B ∩ C)`."
+/-- For any sets `A`, `B`, and `C`, `inter_assoc A B C` is a proof of the
+statement `(A ∩ B) ∩ C = A ∩ (B ∩ C)`. -/
+TheoremDoc inter_assoc as "inter_assoc" in "∩∪"
 
+/-- If your goal is `A = B`, where `A` and `B` are sets, then the tactic `ext x` will introduce
+a new arbitrary object `x` into the proof and set the goal to be `x ∈ A ↔ x ∈ B`. -/
 TacticDoc ext
-"
-If your goal is `A = B`, where `A` and `B` are sets, then the tactic `ext x` will introduce
-a new arbitrary object `x` into the proof and set the goal to be `x ∈ A ↔ x ∈ B`.
-"
 
 NewTactic ext
 

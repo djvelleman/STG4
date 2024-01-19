@@ -15,19 +15,19 @@ we studied in Intersection World.  You'll prove that if `A` and `B` are sets, th
 
 We'll need notation for the family of sets consisting of just `A` and `B`; we'll denote
 this family by `{A, B}`.  And, as usual, we'll need a theorem stating the definition of
-this notation.  For any sets `S`, `A`, and `B`, `pair_def S A B` is a proof of the
+this notation.  For any `S`, `A`, and `B`, `pair_def S A B` is a proof of the
 statement `S ∈ {A, B} ↔ S = A ∨ S = B`.
 "
 
-lemma pair_def (S A B : Set U) : S ∈ {A, B} ↔ S = A ∨ S = B := by rfl
+lemma pair_def (S A B : U) : S ∈ {A, B} ↔ S = A ∨ S = B := by rfl
 
-LemmaDoc pair_def as "pair_def" in "{}"
-"For any sets `S`, `A`, and `B`, `pair_def S A B` is a proof of the statement
-`S ∈ {A, B} ↔ S = A ∨ S = B`."
+/-- For any `S`, `A`, and `B`, `pair_def S A B` is a proof of the statement
+`S ∈ {A, B} ↔ S = A ∨ S = B`. -/
+TheoremDoc pair_def as "pair_def" in "{}"
 
-NewLemma pair_def
+NewTheorem pair_def
 
-LemmaTab "{}"
+TheoremTab "{}"
 
 /-- Suppose $A$ and $B$ are sets.  Then $A \cap B = \bigcap \{A, B\}$. -/
 Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by

@@ -20,17 +20,17 @@ proof of the statement `∃ x, P x`.  (The object `a` is sometimes called a *wit
 the existential statement.)  In this level, you'll try out this theorem.
 "
 
+/-- If `P x` represents a statement about `x`, then `∃ x, P x` means "there is at least one
+`x` such that `P x` is true".  To enter the symbol `∃`, type `\exists`.-/
 DefinitionDoc ex as "∃"
-"If `P x` represents a statement about `x`, then `∃ x, P x` means \"there is at least one
-`x` such that `P x` is true\".  To enter the symbol `∃`, type `\\exists`."
 
 NewDefinition ex
 
-LemmaDoc Exists.intro as "Exists.intro" in "Logic"
-"If `P x` represents a statement about `x` and you have `h : P a`, for some object `a`, then
-`Exists.intro a h` is a proof of `∃ x, P x`."
+/-- If `P x` represents a statement about `x` and you have `h : P a`, for some object `a`, then
+`Exists.intro a h` is a proof of `∃ x, P x`. -/
+TheoremDoc Exists.intro as "Exists.intro" in "Logic"
 
-NewLemma Exists.intro
+NewTheorem Exists.intro
 
 /--Suppose $A$ is a set.  Then there is some set $S$ such that $S \subseteq A$.-/
 Statement (A : Set U) : ∃ S, S ⊆ A := by

@@ -15,14 +15,12 @@ The most straightforward way to prove a statement of the form `P → Q` is to as
 `P` is true and then prove `Q`.  To do that, we'll need a new tactic: `intro`.
 "
 
+/-- `P → Q` means "if `P` then `Q`".  You can enter the symbol `→` by typing `\imp`. -/
 DefinitionDoc imp as "→"
-"`P → Q` means \"if `P` then `Q`\".  You can enter the symbol `→` by typing `\\imp`."
 
 NewDefinition imp
 
-TacticDoc intro
-"
-Use `intro` to introduce either a new assumption or a new object into your proof.
+/-- Use `intro` to introduce either a new assumption or a new object into your proof.
 
 There are two situations in which you can use the `intro` tactic:
 * If you are proving a statement of the form `P → Q`, then you can use
@@ -33,8 +31,8 @@ about `x`, then you can use the tactic `intro x` to introduce a new object `x` i
 Be sure to use a variable name that is not already in use.  The goal will then be `P x`.
 
 You can do multiple introductions in one step: for example, `intro x h` has the same
-effect as doing `intro x` followed by `intro h`.
-"
+effect as doing `intro x` followed by `intro h`. -/
+TacticDoc intro
 
 NewTactic intro
 

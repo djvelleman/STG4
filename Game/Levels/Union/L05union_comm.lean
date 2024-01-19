@@ -12,11 +12,11 @@ If you start your proof with `apply sub_antisymm`, then you'll be able to use
 the theorem `union_sub_swap` that you proved in the last level.
 "
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc union_comm as "union_comm" in "∩∪"
-"For any sets `A` and `B`, `union_comm A B` is a proof of the
-statement `A ∪ B = B ∪ A`."
+/-- For any sets `A` and `B`, `union_comm A B` is a proof of the
+statement `A ∪ B = B ∪ A`. -/
+TheoremDoc union_comm as "union_comm" in "∩∪"
 
 /-- For any sets $A$ and $B$, $A \cup B = B \cup A$. -/
 Statement union_comm (A B : Set U) : A ∪ B = B ∪ A := by

@@ -15,21 +15,21 @@ That means you can use `rewrite [union_def]` to write out the definition of
 `x ∈ A ∪ B` if it appears in any assumption or the goal.
 "
 
+/-- If `A` and `B` are sets, then `A ∪ B` is the union of `A` and `B`.
+To enter the symbol `∪`, type `\union`. -/
 DefinitionDoc union as "∪"
-"If `A` and `B` are sets, then `A ∪ B` is the union of `A` and `B`.
-To enter the symbol `∪`, type `\\union`."
 
 NewDefinition union
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc union_def as "union_def" in "∩∪"
-"If you have `x : U`, `A : Set U`, and `B : Set U`, then `union_def x A B` is a proof of the
-statement `x ∈ A ∪ B ↔ x ∈ A ∨ x ∈ B`."
+/-- If you have `x : U`, `A : Set U`, and `B : Set U`, then `union_def x A B` is a proof of the
+statement `x ∈ A ∪ B ↔ x ∈ A ∨ x ∈ B`. -/
+TheoremDoc union_def as "union_def" in "∩∪"
 
 lemma union_def (x : U) (A B : Set U) : x ∈ A ∪ B ↔ x ∈ A ∨ x ∈ B := by rfl
 
-NewLemma union_def
+NewTheorem union_def
 
 /-- Suppose $A$ and $B$ are sets.  Then $B \subseteq A \cup B$. -/
 Statement (A B : Set U) : B ⊆ A ∪ B := by

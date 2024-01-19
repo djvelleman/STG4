@@ -17,8 +17,8 @@ the statement `P ∧ Q`--then in Lean, `h.left` is a proof of `P` and `h.right` 
 a proof of `Q`.  That should be all you need to know to solve this level.
 "
 
+/-- `P ∧ Q` means "P and Q".  To enter the symbol `∧`, type `\and`. -/
 DefinitionDoc and as "∧"
-"`P ∧ Q` means \"P and Q\".  To enter the symbol `∧`, type `\\and`."
 
 NewDefinition and
 

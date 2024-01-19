@@ -18,12 +18,10 @@ In this level, we start with a simple example of this kind of proof.  We're goin
 to show that if `A` is a set, then `A ⊆ A`.
 "
 
-LemmaTab "⊆"
+TheoremTab "⊆"
 
-LemmaDoc sub_ref as "sub_ref" in "⊆"
-"
-If you have `A : Set U`, then `sub_ref A` is a proof of `A ⊆ A`.
-"
+/-- If you have `A : Set U`, then `sub_ref A` is a proof of `A ⊆ A`. -/
+TheoremDoc sub_ref as "sub_ref" in "⊆"
 
 /-- Let $A$ be any set.  Then $A \subseteq A$. -/
 Statement sub_ref (A : Set U) : A ⊆ A := by

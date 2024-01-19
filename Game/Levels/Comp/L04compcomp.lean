@@ -23,27 +23,27 @@ If your goal says that two sets are equal, a good way to begin is with
 `apply sub_antisymm`.  (Later we'll see a second approach to proving sets are equal.)
 "
 
-TacticDoc apply
-"
-You can use the `apply` tactic to work backwards from the goal.  Suppose you think that you
+/-- You can use the `apply` tactic to work backwards from the goal.  Suppose you think that you
 will be able to use some theorem `t` to prove the goal.  In other words, you think there
 is a proof of the goal of the form `t ?`, where the question mark needs to be replaced
 with a proof of some statement `P` to which the theorem `t` must be applied.  The tactic
 `apply t` will then set `P` as your goal.  If `t` must be applied to more than one proof to
-establish the goal, then `apply t` will set all of the needed proofs as goals.
-"
+establish the goal, then `apply t` will set all of the needed proofs as goals. -/
+TacticDoc apply
 
 NewTactic apply
 
-LemmaTab "⊆"
+TheoremTab "⊆"
 
 lemma sub_antisymm {A B : Set U} (h1 : A ⊆ B) (h2 : B ⊆ A) : A = B := Set.Subset.antisymm h1 h2
 
-LemmaDoc sub_antisymm as "sub_antisymm" in "⊆"
-"If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then `sub_antisymm h1 h2` is a proof of `A = B`."
+/-- If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then `sub_antisymm h1 h2` is a proof of `A = B`. -/
+TheoremDoc sub_antisymm as "sub_antisymm" in "⊆"
 
-LemmaDoc comp_comp as "comp_comp" in "ᶜ"
-"If `A` is a set, then `comp_comp A` is a proof of `Aᶜᶜ = A`."
+NewTheorem sub_antisymm
+
+/-- If `A` is a set, then `comp_comp A` is a proof of `Aᶜᶜ = A`. -/
+TheoremDoc comp_comp as "comp_comp" in "ᶜ"
 
 /-- Suppose $A$ is a set.  Then $(A^c)^c = A$. -/
 Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
@@ -79,8 +79,6 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   by_contra h2
   rewrite [comp_def] at h2
   exact h2 h1
-
-NewLemma sub_antisymm
 
 Conclusion
 "

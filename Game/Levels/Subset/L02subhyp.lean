@@ -23,9 +23,9 @@ See if you can use this to complete this level.  If you need a hint, click on
 \"Show more help!\".
 "
 
+/-- `A ⊆ B` means that `A` is a subset of `B`.  To enter the symbol `⊆`,
+type `\sub`. -/
 DefinitionDoc sub as "⊆"
-"`A ⊆ B` means that `A` is a subset of `B`.  To enter the symbol `⊆`,
-type `\\sub`."
 
 NewDefinition sub
 

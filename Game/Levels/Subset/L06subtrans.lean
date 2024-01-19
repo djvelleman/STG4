@@ -14,12 +14,10 @@ In this level, the goal is `A ⊆ C`.  What does that
 tell you about how to proceed?
 "
 
-LemmaTab "⊆"
+TheoremTab "⊆"
 
-LemmaDoc sub_trans as "sub_trans" in "⊆"
-"
-If you have `h1 : A ⊆ B` and `h2 : B ⊆ C`, then `sub_trans h1 h2` is a proof of `A ⊆ C`.
-"
+/-- If you have `h1 : A ⊆ B` and `h2 : B ⊆ C`, then `sub_trans h1 h2` is a proof of `A ⊆ C`. -/
+TheoremDoc sub_trans as "sub_trans" in "⊆"
 
 /-- Suppose $A \subseteq B$ and $B \subseteq C$.  Then $A \subseteq C$. -/
 Statement sub_trans {A B C : Set U}

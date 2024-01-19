@@ -25,24 +25,24 @@ As with other set theory operations, we have a theorem that expresses this defin
 In this level, you'll try out these ideas.
 "
 
+/-- `⋂₀ F` is the intersection of the family of sets `F`.  To enter the symbol `⋂₀`, type `\I0`. -/
 DefinitionDoc famint as "⋂₀"
-"`⋂₀ F` is the intersection of the family of sets `F`.  To enter the symbol `⋂₀`, type `\\I0`."
 
+/-- If `P x` represents a statement about an unspecified object `x`, then `∀ x, P x` means
+"for all `x`, `P x` is true".  To enter the symbol `∀`, type `\forall`. -/
 DefinitionDoc all as "∀"
-"If `P x` represents a statement about an unspecified object `x`, then `∀ x, P x` means
-\"for all `x`, `P x` is true\".  To enter the symbol `∀`, type `\\forall`."
 
 NewDefinition famint all
 
 lemma fam_inter_def (x : U) (F : Set (Set U)) : x ∈ ⋂₀ F ↔ ∀ S ∈ F, x ∈ S := by rfl
 
-LemmaDoc fam_inter_def as "fam_inter_def" in "⋂₀⋃₀"
-"If `F : Set (Set U)` and `x : U`, then `fam_inter_def x F` is a proof of the statement
-`x ∈ ⋂₀ F ↔ ∀ S ∈ F, x ∈ S`."
+/-- If you have `F : Set (Set U)` and `x : U`, then `fam_inter_def x F` is a proof of
+the statement `x ∈ ⋂₀ F ↔ ∀ S ∈ F, x ∈ S`. -/
+TheoremDoc fam_inter_def as "fam_inter_def" in "⋂₀⋃₀"
 
-NewLemma fam_inter_def
+NewTheorem fam_inter_def
 
-LemmaTab "⋂₀⋃₀"
+TheoremTab "⋂₀⋃₀"
 
 /-- Suppose $F$ is a family of sets and $A \in F$.  Then $\bigcap F \subseteq A$. -/
 Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : ⋂₀ F ⊆ A := by

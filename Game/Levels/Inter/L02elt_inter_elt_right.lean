@@ -22,21 +22,21 @@ won't ask you to prove it; it is pre-defined in this game.  To enter the symbol 
 can type `\\inter` or `\\cap`.
 "
 
+/-- If `A` and `B` are sets, then `A ∩ B` is the intersection of `A` and `B`.
+To enter the symbol `∩`, type `\inter` or `\cap`. -/
 DefinitionDoc inter as "∩"
-"If `A` and `B` are sets, then `A ∩ B` is the intersection of `A` and `B`.
-To enter the symbol `∩`, type `\\inter` or `\\cap`."
 
 NewDefinition inter
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc inter_def as "inter_def" in "∩∪"
-"If you have `x : U`, `A : Set U`, and `B : Set U`, then `inter_def x A B` is a proof of the
-statement `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`."
+/-- If you have `x : U`, `A : Set U`, and `B : Set U`, then `inter_def x A B` is a proof of the
+statement `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`. -/
+TheoremDoc inter_def as "inter_def" in "∩∪"
 
 lemma inter_def (x : U) (A B : Set U) : x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B := by rfl
 
-NewLemma inter_def
+NewTheorem inter_def
 
 /-- Suppose $x \in A ∩ B$.  Then $x \in B$. -/
 Statement (x : U) (A B : Set U) (h : x ∈ A ∩ B) : x ∈ B := by

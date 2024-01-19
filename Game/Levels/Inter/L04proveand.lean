@@ -13,12 +13,12 @@ another theorem: `And.intro`.  If you have `h1 : P` and `h2 : Q`, then
 `And.intro h1 h2` is a proof of `P ∧ Q`.
 "
 
-LemmaTab "Logic"
+TheoremTab "Logic"
 
-LemmaDoc And.intro as "And.intro" in "Logic"
-"If you have `h1 : P` and `h2 : Q`, then `And.intro h1 h2` is a proof of `P ∧ Q`."
+/-- If you have `h1 : P` and `h2 : Q`, then `And.intro h1 h2` is a proof of `P ∧ Q`. -/
+TheoremDoc And.intro as "And.intro" in "Logic"
 
-NewLemma And.intro
+NewTheorem And.intro
 
 /-- Suppose $x \in A$ and $x \in B$.  Then $x \in A \cap B$. -/
 Statement (x : U) (A B : Set U) (h1 : x ∈ A) (h2 : x ∈ B) : x ∈ A ∩ B := by

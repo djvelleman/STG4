@@ -25,20 +25,17 @@ going to learn is called `exact`, and it is used to close the goal.
 You can close the goal by typing `exact` followed by a proof of the goal.
 "
 
-TacticDoc exact
-"
-Use `exact` to close a goal.  If some expression `t` is a proof of
+/-- Use `exact` to close a goal.  If some expression `t` is a proof of
 the goal, then `exact t` will close the goal.
 
-Think of \"exact\" as meaning
-\"this is exactly what is needed to prove the goal.\"
-"
+Think of "exact" as meaning "this is exactly what is needed to prove the goal." -/
+TacticDoc exact
 
 NewTactic exact
 
+/-- `x ∈ A` means that `x` is an element of `A`.  To enter the symbol `∈`, type
+`\mem` or `\in`. -/
 DefinitionDoc elt as "∈"
-"`x ∈ A` means that `x` is an element of `A`.  To enter the symbol `∈`, type
-`\\mem` or `\\in`."
 
 NewDefinition elt
 

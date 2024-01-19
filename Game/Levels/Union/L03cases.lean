@@ -12,10 +12,10 @@ In this proof, we'll need a new proof technique: proof by cases.  And we'll need
 tactic to implement that technique in Lean: `cases'`.
 "
 
-TacticDoc cases'
-"If you have an assumption `h : P ∨ Q`, then the tactic `cases' h with h1 h2` will break
+/-- If you have an assumption `h : P ∨ Q`, then the tactic `cases' h with h1 h2` will break
 your proof into cases.  In case 1, you'll have the new assumption `h1 : P`, and in case
-2 you'll have `h2 : Q`.  In both cases you have to prove the original goal."
+2 you'll have `h2 : Q`.  In both cases you have to prove the original goal. -/
+TacticDoc cases'
 
 NewTactic cases'
 

@@ -23,29 +23,29 @@ equivalent*.)  The `rfl` tactic can also prove statements of the form `X = Y`, i
 `Y` are definitionally equal--that is, equal by virtue of definitions.
 "
 
-TacticDoc rfl
-"If your goal is a statement of the form `P ↔ Q`, and `P` and `Q` are definitionally
+/-- If your goal is a statement of the form `P ↔ Q`, and `P` and `Q` are definitionally
 equivalent (that is, equivalent by virtue of the definitions of the symbols occurring in
 them), then the `rfl` tactic will close the goal.  It will also close a goal of the form
-`X = Y`, if `X` and `Y` are definitionally equal (that is, equal by virtue of definitions)."
+`X = Y`, if `X` and `Y` are definitionally equal (that is, equal by virtue of definitions). -/
+TacticDoc rfl
 
 NewTactic rfl
 
-DefinitionDoc comp as "ᶜ"
-"If `A` is a of objects from the universe `U`, then `Aᶜ` is the complement of `A`; that is,
+/-- If `A` is a of objects from the universe `U`, then `Aᶜ` is the complement of `A`; that is,
 `Aᶜ` is the set of objects from `U` that are not elements of `A`.  You can enter the symbol `ᶜ`
-by typing `\\compl` or `\\^c`."
+by typing `\compl` or `\^c`. -/
+DefinitionDoc comp as "ᶜ"
 
+/-- `P ↔ Q` means "P if and only if Q".  You can enter the symbol `↔` by typing `\iff`. -/
 DefinitionDoc iff as "↔"
-"`P ↔ Q` means \"P if and only if Q\".  You can enter the symbol `↔` by typing `\\iff`."
 
 NewDefinition comp iff
 
-LemmaTab "ᶜ"
+TheoremTab "ᶜ"
 
-LemmaDoc comp_def as "comp_def" in "ᶜ"
-"If you have `x : U` and `A : Set U`, then `comp_def x A` is a proof of the statement
-`x ∈ Aᶜ ↔ x ∉ A`."
+/-- If you have `x : U` and `A : Set U`, then `comp_def x A` is a proof of the statement
+`x ∈ Aᶜ ↔ x ∉ A`. -/
+TheoremDoc comp_def as "comp_def" in "ᶜ"
 
 /-- Let $x$ be an object in the universe $U$, and let $A$ be a set whose elements
 come from $U$.  Then $x \in A^c \leftrightarrow x \notin A$. -/

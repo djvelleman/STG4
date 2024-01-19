@@ -17,22 +17,22 @@ be true.  This gives us two ways to prove a statement of this form.  If you have
 `Or.inr h` proves `P ∨ Q`.
 "
 
+/-- `P ∨ Q` means "P or Q or both".  To enter the symbol `∨`, type `\or`. -/
 DefinitionDoc or as "∨"
-"`P ∨ Q` means \"P or Q or both\".  To enter the symbol `∨`, type `\\or`."
 
 NewDefinition or
 
-LemmaTab "Logic"
+TheoremTab "Logic"
 
-LemmaDoc Or.inl as "Or.inl" in "Logic"
-"If you have `h : P`, then `Or.inl h` can be used as a proof of `P ∨ Q`, for
-any statement `Q`."
+/-- If you have `h : P`, then `Or.inl h` can be used as a proof of `P ∨ Q`, for
+any statement `Q`. -/
+TheoremDoc Or.inl as "Or.inl" in "Logic"
 
-LemmaDoc Or.inr as "Or.inr" in "Logic"
-"If you have `h : Q`, then `Or.inr h` can be used as a proof of `P ∨ Q`, for
-any statement `P`."
+/-- If you have `h : Q`, then `Or.inr h` can be used as a proof of `P ∨ Q`, for
+any statement `P`. -/
+TheoremDoc Or.inr as "Or.inr" in "Logic"
 
-NewLemma Or.inl Or.inr
+NewTheorem Or.inl Or.inr
 
 /-- Suppose $x \in A$, and $B$ is any set.  Then $x \in A ∨ x ∈ B$. -/
 Statement (x : U) (A B : Set U) (h : x ∈ A) : x ∈ A ∨ x ∈ B := by

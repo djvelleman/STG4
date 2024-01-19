@@ -21,10 +21,10 @@ in the `obtain` tactic, `w` and `hw` must be enclosed in angle brackets: `⟨ �
 enter these by typing either `\\<` and `\\>` or `\\langle` and `\\rangle`.
 "
 
-TacticDoc obtain
-"If you have an assumption `h : ∃ x, P x`, then the tactic `obtain ⟨w, hw⟩ := h` will
+/-- If you have an assumption `h : ∃ x, P x`, then the tactic `obtain ⟨w, hw⟩ := h` will
 introduce a new object `w` and a new assumption `hw : P w` into the proof.  To enter the
-angle brackets `⟨ ⟩`, type either `\\<` and `\\>` or `\\langle` and `\\rangle`."
+angle brackets `⟨ ⟩`, type either `\<` and `\>` or `\langle` and `\rangle`. -/
+TacticDoc obtain
 
 NewTactic obtain
 

@@ -15,12 +15,10 @@ assumption `h : ¬P` is added.  Since `P` must be either true or false, these tw
 all possibilities.
 "
 
-TacticDoc by_cases
-"
-The tactic `by_cases h : P` breaks the proof into two cases.  In the first case, the
+/-- The tactic `by_cases h : P` breaks the proof into two cases.  In the first case, the
 assumption `h : P` is added to the list of assumptions, and in the second case, the
-assumption `h : ¬P` is added.
-"
+assumption `h : ¬P` is added. -/
+TacticDoc by_cases
 
 NewTactic by_cases
 

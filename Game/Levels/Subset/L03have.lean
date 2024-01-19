@@ -15,9 +15,7 @@ However, we can use the proof `h1 h3` to justify adding `h4 : x ∈ B` to our
 list of assumptions.  To do that, we'll use a new tactic: `have`.
 "
 
-TacticDoc «have»
-"
-Use `have` to assert a statement that you can prove from your current
+/-- Use `have` to assert a statement that you can prove from your current
 assumptions.  You must give the new assertion an identifier; be sure to
 use an identifier that is different from those already in use.
 
@@ -34,8 +32,8 @@ Once the goal of proving `P` has been closed, you will be able to return to
 your original goal, with `h : P` added to the assumption list.
 * If you write `have h := t`, then Lean will try to figure out what statement
 `P` is proven by the expression `t` and, if it can figure it out, it will fill
-it in for you.
-"
+it in for you. -/
+TacticDoc «have»
 
 NewTactic «have»
 

@@ -12,11 +12,11 @@ This proof is longer than previous ones, but it doesn't require any new tactics 
 Just stick with it and keep applying the ideas from previous levels!
 "
 
-LemmaTab "∩∪"
+TheoremTab "∩∪"
 
-LemmaDoc inter_distrib_over_union as "inter_distrib_over_union" in "∩∪"
-"For any sets `A`, `B`, and `C`, `inter_distrib_over_union A B C` is a proof of the
-statement `A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)`."
+/-- For any sets `A`, `B`, and `C`, `inter_distrib_over_union A B C` is a proof of the
+statement `A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)`. -/
+TheoremDoc inter_distrib_over_union as "inter_distrib_over_union" in "∩∪"
 
 /-- For any sets $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. -/
 Statement inter_distrib_over_union (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) := by

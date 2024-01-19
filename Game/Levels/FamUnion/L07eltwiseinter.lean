@@ -20,15 +20,13 @@ And that means that `rewrite [set_builder_def]` will rewrite `a ∈ {x | P x}` a
 
 lemma set_builder_def {P : U → Prop} {a : U} : a ∈ {x | P x} ↔ P a := by rfl
 
-LemmaDoc set_builder_def as "set_builder_def" in "{}"
-"
-Lean will recognize `set_builder_def` as a proof of any statement of the form
-`a ∈ {x | P x} ↔ P a`.
-"
+/-- Lean will recognize `set_builder_def` as a proof of any statement of the form
+`a ∈ {x | P x} ↔ P a`. -/
+TheoremDoc set_builder_def as "set_builder_def" in "{}"
 
-NewLemma set_builder_def
+NewTheorem set_builder_def
 
-LemmaTab "{}"
+TheoremTab "{}"
 
 /--Suppose $A$ is a set and $F$ is a family of sets.  Then $A \cap (\bigcup F) =
 \bigcup\{B \mid \exists S \in F, B = A \cap S\}$.-/

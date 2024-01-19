@@ -15,12 +15,12 @@ a proof of the statement `x ∈ {a} ↔ x = a`.
 
 lemma single_def (x a : U) : x ∈ {a} ↔ x = a := by rfl
 
-LemmaDoc single_def as "single_def" in "{}"
-"For any `x` and `a`, `single_def x a` is a proof of the statement `x ∈ {a} ↔ x = a`."
+/-- For any `x` and `a`, `single_def x a` is a proof of the statement `x ∈ {a} ↔ x = a`. -/
+TheoremDoc single_def as "single_def" in "{}"
 
-NewLemma single_def
+NewTheorem single_def
 
-LemmaTab "{}"
+TheoremTab "{}"
 
 /-- Suppose $A$ is a set, and for every family of sets $F$, if $\bigcup F = A$ then $A \in F$.
 Then $A$ must be a singleton set.-/

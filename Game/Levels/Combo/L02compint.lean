@@ -20,11 +20,11 @@ want to go in the opposite direction, rewriting `Aᶜ ∪ Bᶜ` as `(Aᶜ ∪ B�
 `rewrite [← comp_comp (Aᶜ ∪ Bᶜ)]`. (To enter the left-pointing arrow, type `\\l`.)
 "
 
-LemmaTab "ᶜ"
+TheoremTab "ᶜ"
 
-LemmaDoc comp_inter as "comp_inter" in "ᶜ"
-"For any sets `A` and `B`, `comp_inter A B` is a proof of the
-statement `(A ∩ B)ᶜ = Aᶜ ∪ Bᶜ`."
+/-- For any sets `A` and `B`, `comp_inter A B` is a proof of the
+statement `(A ∩ B)ᶜ = Aᶜ ∪ Bᶜ`. -/
+TheoremDoc comp_inter as "comp_inter" in "ᶜ"
 
 /-- For any sets $A$ and $B$, $(A \cap B)^c = A^c \cup B^c$. -/
 Statement comp_inter (A B : Set U) : (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ := by

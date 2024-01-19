@@ -50,12 +50,6 @@ package Game where
     ⟨`tactic.hygienic, false⟩,
     ⟨`linter.unusedVariables.funArgs, true⟩,
     ⟨`trace.debug, true⟩]
-  /-
-  moreServerArgs := #[
-    "-Dtactic.hygienic=false",
-    "-Dlinter.unusedVariables.funArgs=true",
-    "-Dtrace.debug=true"]
-  -/
   weakLeanArgs := #[]
 
 @[default_target]

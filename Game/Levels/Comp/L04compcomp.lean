@@ -68,8 +68,10 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   by_contra h2
   Hint "Since `{h1}` is a negative statement, applying `{h1}` to a proof of `{x} ∈ Aᶜ` would
   prove the goal `False`.  So the tactic `apply {h1}` will set `{x} ∈ Aᶜ` as the goal.
+
   This is a useful technique any time you're doing a proof by contradiction and one of your
-  assumptions is a negative statement."
+  assumptions is a negative statement.  If your goal is `False` and you have an assumption
+  `h : ¬P`, then the tactic `apply h` will set your goal to be `P`."
   apply h1
   rewrite [comp_def]
   exact h2

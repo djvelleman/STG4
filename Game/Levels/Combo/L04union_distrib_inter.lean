@@ -28,6 +28,14 @@ TheoremDoc union_distrib_over_inter as "union_distrib_over_inter" in "∩∪"
 Statement union_distrib_over_inter (A B C : Set U) : A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) := by
   rewrite [← comp_comp (A ∪ (B ∩ C))]
   rewrite [comp_union]
+  Hint "You might be tempted to use `rewrite [comp_inter]` as your next step.  But
+  in this situation, `rewrite [comp_inter]` is ambiguous, because there are
+  two ways that the theorem `comp_inter` could be applied to rewrite the goal: `comp_inter B C`
+  is a proof of `(B ∩ C)ᶜ = Bᶜ ∪ Cᶜ` and `comp_inter Aᶜ (B ∩ C)ᶜ` is a proof of
+  `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶝᶜ ∪ (B ∩ C)ᶜᶜ`, and either one of those equations could be used to
+  rewrite the goal.  If you say `rewrite [comp_inter]`, then Lean will pick one of those two
+  rewriting steps, and it might not pick the one you wanted.  So you'd better say explicitly
+  what you want Lean to apply the theorem `comp_inter` to."
   rewrite [comp_inter B C]
   rewrite [inter_distrib_over_union]
   rewrite [comp_union]

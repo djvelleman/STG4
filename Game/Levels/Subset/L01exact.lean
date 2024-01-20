@@ -59,5 +59,8 @@ recognize `h` as a proof of the statement `P`.
 Remember that `exact` is a *tactic*. If you ever want information about the `exact` tactic,
 you can click on `exact` in the list of tactics on the right.
 
+Note that, although `h` was a proof of the goal `x ∈ A`, you could not have closed the goal by
+simply typing `h` in the text box.  Throughout this game, every move you make must invoke a tactic.
+
 Now click on \"Next\" to see a more interesting use of the `exact` tactic.
 "

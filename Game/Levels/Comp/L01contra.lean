@@ -12,7 +12,7 @@ To work with complements, we'll need to understand negative statements--that is,
 that say that something is *not* the case.
 
 If `P` is a statement, then `¬P` means \"it is not the case that P\".  To enter the symbol
-`¬`, type `\not`.
+`¬`, type `\\not`.
 
 A common method of proving a negative statement is *proof by
 contradiction*: to prove a statement of the form `¬P`, you can assume that `P` is true
@@ -35,7 +35,7 @@ TacticDoc by_contra
 NewTactic by_contra
 
 /-- `¬P` means \"it is not the case that P\".  To enter the symbol `¬`,
-type `\\not`. -/
+type `\not`. -/
 DefinitionDoc not as "¬"
 
 NewDefinition not

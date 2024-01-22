@@ -20,6 +20,9 @@ TheoremDoc inter_distrib_over_union as "inter_distrib_over_union" in "∩∪"
 
 /-- For any sets $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. -/
 Statement inter_distrib_over_union (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) := by
+  Hint "Once again, Lean has left out some parentheses that it regards as unnecessary.
+  Lean gives intersection higher precedence than union, so it interprets
+  `A ∩ B ∪ A ∩ C` as `(A ∩ B) ∪ (A ∩ C)`."
   ext x
   apply Iff.intro
   intro h

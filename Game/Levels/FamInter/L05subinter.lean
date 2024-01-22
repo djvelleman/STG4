@@ -22,6 +22,9 @@ Statement (A : Set U) (F : Set (Set U)) : A ⊆ ⋂₀ F ↔ ∀ B ∈ F, A ⊆ 
   have h4 : x ∈ ⋂₀ F := h1 h3
   rewrite [fam_inter_def] at h4
   exact h4 B h2
+  Hint "Notice that the parentheses in the next goal are necessary, to indicate that the universal
+  quantifier applies only to the subset statement.  Without the parentheses, Lean would interpret
+  the universal quantifier as applying to the entire rest of the statement."
   intro h1
   intro x h2
   rewrite [fam_inter_def]

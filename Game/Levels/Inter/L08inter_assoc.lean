@@ -29,11 +29,16 @@ NewTactic ext
 
 /-- For any sets $A$, $B$, and $C$, $(A \cap B) \cap C = A \cap (B \cap C)$. -/
 Statement inter_assoc (A B C : Set U) : (A ∩ B) ∩ C = A ∩ (B ∩ C) := by
-  Hint "To start this proof, use the tactic `ext x`."
+  Hint "Notice that Lean has written the goal as `A ∩ B ∩ C = A ∩ (B ∩ C)`, with no
+  parentheses on the left.  When an intersection of more than two sets is written
+  without parentheses, Lean groups the intersections to the left, so this means
+  `(A ∩ B) ∩ C = A ∩ (B ∩ C)`.
+
+  To start this proof, use the tactic `ext x`."
   ext x
   Hint "Notice that Lean has introduced the new object `{x} : U` into the proof, and
-  your goal is now `{x} ∈ (A ∩ B) ∩ C ↔ {x} ∈ A ∩ (B ∩ C)`.  Proving this goal will show that
-  `(A ∩ B) ∩ C` and `A ∩ (B ∩ C)` have exactly the same elements, and by the principle of
+  your goal is now `{x} ∈ A ∩ B ∩ C ↔ {x} ∈ A ∩ (B ∩ C)`.  Proving this goal will show that
+  `A ∩ B ∩ C` and `A ∩ (B ∩ C)` have exactly the same elements, and by the principle of
   extensionality, that will show that the sets are equal."
   Hint (hidden := true) "Since your goal is an \"if and only if\" statement, a good next step
   is `apply Iff.intro`."

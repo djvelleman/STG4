@@ -26,6 +26,8 @@ TheoremDoc union_assoc as "union_assoc" in "∩∪"
 
 /-- For any sets $A$, $B$, and $C$, $(A \cup B) \cup C = A \cup (B \cup C)$. -/
 Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
+  Hint "Notice that, as with intersections, Lean groups unions to the left, so
+  `A ∪ B ∪ C` means `(A ∪ B) ∪ C`."
   apply sub_antisymm
   intro x h
   rewrite [union_def]

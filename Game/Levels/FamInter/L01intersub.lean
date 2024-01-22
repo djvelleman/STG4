@@ -16,7 +16,10 @@ Suppose we have `F : Set (Set U)` and `x : U`.  Then `x ∈ ⋂₀ F` means that
 `S` is in `F`, then `x ∈ S`.  To write this statement in Lean, we write `∀ S, S ∈ F → x ∈ S`.
 Lean abbreviates this statement as `∀ S ∈ F, x ∈ S`.
 The symbol `∀` is called the *universal quantifier*, and you can enter it in Lean by typing
-`\\forall`.
+`\\forall`.  Note that `∀ S, S ∈ F → x ∈ S` means `∀ S, (S ∈ F → x ∈ S)`, not
+`(∀ S, S ∈ F) → x ∈ S`.  In other words, Lean interprets the universal quantifier as applying
+to the entire rest of the statement.  If you want it to apply to less than that, you have to
+use parentheses to indicate that.
 
 As with other set theory operations, we have a theorem that expresses this definition.  If
 `F : Set (Set U)` and `x : U`, then `fam_inter_def x F` is a proof of the statement

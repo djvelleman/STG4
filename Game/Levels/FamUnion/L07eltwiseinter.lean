@@ -36,15 +36,20 @@ Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {B | ∃ T �
   intro h1
   Hint (strict := true) "It will help to get as much information as you can out of `{h1}`
   before addressing the goal."
-  rewrite [inter_def] at h1
-  Hint (strict := true) "You may find it useful to separate out the right half of `{h1}`.
-  You can do that with `have {h1}r := {h1}.right`."
+  Branch
+    rewrite [inter_def] at h1
+    Hint (strict := true) "You may find it useful to separate out the right half of `{h1}`.
+    You can do that with `have {h1}r := {h1}.right`."
   have h2 : x ∈ ⋃₀ F := h1.right
   rewrite [fam_union_def] at h2
   obtain ⟨S, hS⟩ := h2
   rewrite [fam_union_def]
   Hint "Your goal is an existential statement.  Do you see what value to use as a witness?"
   Hint (hidden := true) "Try `apply Exists.intro (A ∩ {S})` or `use A ∩ {S}`."
+  Branch
+    rewrite [inter_def] at h1
+    Hint "Your goal is an existential statement.  Do you see what value to use as a witness?"
+    Hint (hidden := true) "Try `apply Exists.intro (A ∩ {S})` or `use A ∩ {S}`."
   use A ∩ S
   apply And.intro
   Hint "You can use `rewrite [set_builder_def]` to write out the meaning of the goal."

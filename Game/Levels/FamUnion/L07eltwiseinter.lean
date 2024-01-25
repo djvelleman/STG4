@@ -29,8 +29,8 @@ NewTheorem set_builder_def
 TheoremTab "{}"
 
 /--Suppose $A$ is a set and $F$ is a family of sets.  Then $A \cap (\bigcup F) =
-\bigcup\{B \mid \exists S \in F, B = A \cap S\}$.-/
-Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {B | ∃ S ∈ F, B = A ∩ S} := by
+\bigcup\{B \mid \exists T \in F, B = A \cap T\}$.-/
+Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {B | ∃ T ∈ F, B = A ∩ T} := by
   ext x
   apply Iff.intro
   intro h1
@@ -50,7 +50,8 @@ Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {B | ∃ S �
   Hint "You can use `rewrite [set_builder_def]` to write out the meaning of the goal."
   rewrite [set_builder_def]
   use S
-  apply And.intro hS.left
+  apply And.intro
+  exact hS.left
   rfl
   exact And.intro h1.left hS.right
   intro h1
@@ -59,12 +60,13 @@ Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {B | ∃ S �
   Hint (strict := true) "You can separate out the first half of `{hB}` with `have {hB}l := {hB}.left`."
   have hBl := hB.left
   rewrite [set_builder_def] at hBl
-  obtain ⟨S, hS⟩ := hBl
-  Hint (hidden := true) "You know `{x} ∈ {B}` and `{B} = A ∩ {S}`.  So you can use `rewrite`
-  to get `{x} ∈ A ∩ {S}`."
+  obtain ⟨T, hT⟩ := hBl
+  Hint (hidden := true) "You know `{x} ∈ {B}` and `{B} = A ∩ {T}`.  So you can use `rewrite`
+  to get `{x} ∈ A ∩ {T}`."
+  rewrite [hT.right, inter_def] at hB
   rewrite [inter_def]
-  rewrite [hS.right, inter_def] at hB
-  apply And.intro hB.right.left
+  apply And.intro
+  exact hB.right.left
   rewrite [fam_union_def]
-  use S
-  exact And.intro hS.left hB.right.right
+  use T
+  exact And.intro hT.left hB.right.right

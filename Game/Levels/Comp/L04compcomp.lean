@@ -21,6 +21,8 @@ proofs of `A ⊆ B` and `B ⊆ A`.  So it will set those *two* statements as goa
 
 If your goal says that two sets are equal, a good way to begin is with
 `apply sub_antisymm`.  (Later we'll see a second approach to proving sets are equal.)
+
+This level also introduces another new tactic, `push_neg`.
 "
 
 /-- You can use the `apply` tactic to work backwards from the goal.  Suppose you think that you
@@ -31,7 +33,20 @@ with a proof of some statement `P` to which the theorem `t` must be applied.  Th
 establish the goal, then `apply t` will set all of the needed proofs as goals. -/
 TacticDoc apply
 
-NewTactic apply
+/-- If your goal is a negative statement, then the tactic `push_neg` will try to reexpress it as
+an equivalent positive statement.  Similarly, if an assumption `h` is a negative
+statement, then `push_neg at h` will try to reexpress `h`.  Here are some examples of
+reexpressions performed by the `push_neg` tactic:
+* `¬¬P` is converted to `P`.
+* `¬(P ∨ Q)` is converted to `¬P ∧ ¬Q`.
+* `¬(P ∧ Q)` is converted to `P → ¬Q`.
+* `¬(P → Q)` is converted to `P ∧ ¬Q`.
+* `¬∀ x, P x` is converted to `∃ x, ¬P x`.
+* `¬∃ x, P x` is converted to `∀ x, ¬P x`.
+-/
+TacticDoc push_neg
+
+NewTactic apply push_neg
 
 TheoremTab "⊆"
 
@@ -53,39 +68,36 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   Hint "Your immediate goal now is to prove that `Aᶜᶜ ⊆ A`.  Once you close that goal,
   you'll be asked to prove the second goal, `A ⊆ Aᶜᶜ`."
   intro x h1
-  Hint (hidden := true) "Try writing out the definition of complement in {h1}."
-  Branch
-    rewrite [comp_def, comp_def] at h1
-    Hint "Even though your goal is not a negative statement, the assumption `{h1}` is now the
-  negative statement `¬{x} ∉ A`.  This suggests that proof by
-  contradiction might work: if you assume the opposite of the goal, you might be able to
-  achieve a contradiction by proving `{x} ∉ A`."
+  Hint "Now write out the definition of complement in `{h1}`."
   rewrite [comp_def] at h1
-  Hint "Even though your goal is not a negative statement, the assumption `{h1}` is now the
-  negative statement `{x} ∉ Aᶜ`.  This suggests that proof by
-  contradiction might work: if you assume the opposite of the goal, you might be able to
-  achieve a contradiction by proving `{x} ∈ Aᶜ`."
-  by_contra h2
-  Hint "Since `{h1}` is a negative statement, applying `{h1}` to a proof of `{x} ∈ Aᶜ` would
-  prove the goal `False`.  So the tactic `apply {h1}` will set `{x} ∈ Aᶜ` as the goal.
-
-  This is a useful technique any time you're doing a proof by contradiction and one of your
-  assumptions is a negative statement.  If your goal is `False` and you have an assumption
-  `h : ¬P`, then the tactic `apply h` will set your goal to be `P`."
-  apply h1
-  rewrite [comp_def]
-  exact h2
+  Hint "The assumption `{h1}` now says `x ∉ Aᶜ`, which means `¬x ∈ Aᶜ`.  It will be helpful to
+  write out the definition of complement again in this assumption."
+  rewrite [comp_def] at h1
+  Hint "Now `{h1}` says `¬x ∉ A`, which means `¬¬x ∈ A`.  Of course, this can be simplified to
+  `x ∈ A`.  To perform this simplification, you'll need a new tactic, `push_neg`.  To simplify
+  the assumption `{h1}`, write `push_neg at {h1}`."
+  push_neg at h1
+  exact h1
   Hint "The proof of the second goal is similar."
   intro x h1
   rewrite [comp_def]
-  by_contra h2
-  rewrite [comp_def] at h2
-  exact h2 h1
+  Hint "There are two ways to complete the proof now.  Since your goal is a negative statement,
+  one natural strategy to use would be proof by contradiction.  A second possibility is to
+  imitate the approach in the first half: write out the meaning of complement again in the goal,
+  and then use the `push_neg` tactic to simplify the resulting double-negative goal.  Either
+  approach will work."
+  rewrite [comp_def]
+  push_neg
+  exact h1
 
 Conclusion
 "
-We'll see many more uses of the `apply` tactic.  For more details about the use of the tactic,
-click on `apply` under the list of tactics on the right.
+The `push_neg` tactic can reexpress a number of different kinds of negative statements as
+equivalent positive statements; use
+`push_neg` to reexpress a negative goal, and `push_neg at h` to reexpress a negative assumption `h`.
+We'll see many more uses of the `apply` tactic in this game.
+For more details about the use of these tactics,
+click on `push_neg` or `apply` under the list of tactics on the right.
 
 We have given this theorem the name `comp_comp`.  Both this theorem and the one in the previous
 level will be useful in the next level.

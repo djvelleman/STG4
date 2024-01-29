@@ -8,7 +8,7 @@ Title "The have tactic"
 
 Introduction
 "
-In this level, we have hypotheses `h1 : A ⊆ B`, `h2 : B ⊆ C`, and `h3 : x ∈ A`.
+In this level, we have assumptions `h1 : A ⊆ B`, `h2 : B ⊆ C`, and `h3 : x ∈ A`.
 As we saw in the last level, `h1 h3` is a proof that `x ∈ B`.  Unfortunately,
 that is not the goal, so we can't use `exact h1 h3` to close the goal.
 However, we can use the proof `h1 h3` to justify adding `h4 : x ∈ B` to our

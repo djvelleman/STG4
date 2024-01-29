@@ -49,7 +49,8 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : �
   have h6 : x ∈ A ∪ S := h2 (A ∪ S) h5
   rewrite [union_def] at h6
   cases' h6 with hA2 hS
-  Hint (hidden := true) "Notice that you have contradictory assumptions."
+  Hint (hidden := true) "Notice that you have contradictory assumptions.  You can prove anything
+  from contradictory assumptions.  Do you see how?"
   by_contra h6
   exact hA hA2
   exact hS

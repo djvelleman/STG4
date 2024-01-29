@@ -28,9 +28,8 @@ Statement (F G : Set (Set U)) : (⋃₀ F) ∩ (⋃₀ G)ᶜ ⊆ ⋃₀ (F ∩ G
   rewrite [comp_def]
   by_contra h2
   have h1r := h1.right
-  rewrite [comp_def] at h1r
-  apply h1r
-  rewrite [fam_union_def]
-  use S
-  exact And.intro h2 hS.right
+  rewrite [comp_def, fam_union_def] at h1r
+  push_neg at h1r
+  have hnS := h1r S h2
+  exact hnS hS.right
   exact hS.right

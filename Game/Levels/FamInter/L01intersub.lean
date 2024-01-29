@@ -18,7 +18,7 @@ Lean abbreviates this statement as `∀ S ∈ F, x ∈ S`.
 The symbol `∀` is called the *universal quantifier*, and you can enter it in Lean by typing
 `\\forall`.  Note that `∀ S, S ∈ F → x ∈ S` means `∀ S, (S ∈ F → x ∈ S)`, not
 `(∀ S, S ∈ F) → x ∈ S`.  In other words, Lean interprets the universal quantifier as applying
-to the entire rest of the statement.  If you want it to apply to less than that, you have to
+to the entire rest of the statement.  If you want it to apply to less, you have to
 use parentheses to indicate that.
 
 As with other set theory operations, we have a theorem that expresses this definition.  If

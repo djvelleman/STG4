@@ -30,7 +30,7 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : �
   rewrite [union_def]
   Hint (strict := true) "If `{x} ∈ A`, then the goal is easy to prove.  This suggests breaking
   the proof into cases depending on whether or not `{x} ∈ A`.  You can do this with the tactic
-  `by_cases hA : {x} ∈ A`."
+  `by_cases h{x}A : {x} ∈ A`."
   by_cases hA : x ∈ A
   Hint "The first case is the easy one."
   exact Or.inl hA

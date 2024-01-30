@@ -54,3 +54,10 @@ Statement (A : Set U) (h1 : ∀ F, (⋃₀ F = A → A ∈ F)) : ∃ x, A = {x} 
   obtain ⟨y, hy⟩ := h4
   use y
   exact hy.right
+
+Conclusion
+"
+Congratulations!  You have completed the set theorem game.
+
+If you want to learn more about Lean, check out the [Lean Community](https://leanprover-community.github.io).
+"

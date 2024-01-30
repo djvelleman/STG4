@@ -40,7 +40,7 @@ Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋂₀ G ⊆ ⋂₀ F := by
 
 Conclusion
 "
-Note that, as we saw in proofs that one set is a subset of another, the two `intro` steps
-could be combined into one step.  Click on `intro` in the list of tactics on the right for
+You probably used `intro` several times in this proof.  Recall that two `intro` steps in a row
+can be combined into one step.  Click on `intro` in the list of tactics on the right for
 further details.
 "

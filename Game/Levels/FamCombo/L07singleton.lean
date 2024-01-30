@@ -57,7 +57,7 @@ Statement (A : Set U) (h1 : ∀ F, (⋃₀ F = A → A ∈ F)) : ∃ x, A = {x} 
 
 Conclusion
 "
-Congratulations!  You have completed the set theorem game.
+Congratulations!  You have completed Family Combination World.
 
 If you want to learn more about Lean, check out the [Lean Community](https://leanprover-community.github.io).
 "

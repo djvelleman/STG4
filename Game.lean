@@ -70,6 +70,7 @@ Alternatively, if you experience issues / bugs you can also open github issues:
 
 Dependency Intersection → Union
 Dependency FamInter → FamUnion
+Dependency Combination → FamCombo
 
 /-! Information to be displayed on the servers landing page. -/
 Languages "English"

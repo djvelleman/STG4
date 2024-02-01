@@ -1,9 +1,9 @@
-import Game.Levels.FamCombo.L06unionintcompint
+import Game.Levels.FamCombo.L07unionintcompint
 
 variable {U : Type}
 
 World "FamCombo"
-Level 7
+Level 8
 Title "A set that must be a singleton"
 
 Introduction
@@ -57,7 +57,7 @@ Statement (A : Set U) (h1 : ∀ F, (⋃₀ F = A → A ∈ F)) : ∃ x, A = {x} 
 
 Conclusion
 "
-Congratulations!  You have completed Family Combination World.
+Congratulations!  You have completed the Set Theory Game!
 
 If you want to learn more about Lean, check out the [Lean Community](https://leanprover-community.github.io).
 "

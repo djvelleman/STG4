@@ -22,7 +22,8 @@ Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋂₀ G ⊆ ⋂₀ F := by
   intro x h2
   Hint (hidden := true) "As usual, if you're not sure how to proceed then writing
   out definitions can help."
-  rewrite [fam_inter_def]; rewrite [fam_inter_def] at h2
+  rewrite [fam_inter_def]
+  rewrite [fam_inter_def] at h2
   Hint "Now your goal starts with `∀ S`.  To prove it, you'll need to introduce
   a set `S` into the proof, using the tactic `intro S`.  Recall that the set `S` is
   *arbitrary*--that is, `S` could stand for any set--so whatever we prove about `S` will

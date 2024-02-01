@@ -24,5 +24,11 @@ TheoremDoc comp_union as "comp_union" in "ᶜ"
 Statement comp_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by
   ext x
   rewrite [comp_def, union_def]
+  rewrite [inter_def, comp_def, comp_def]
+  apply Iff.intro
+  intro h
+  push_neg at h
+  exact h
+  intro h
   push_neg
-  rfl
+  exact h

@@ -1,9 +1,9 @@
-import Game.Levels.FamCombo.L03threefam
+import Game.Levels.FamCombo.L04threefam
 
 variable {U : Type}
 
 World "FamCombo"
-Level 4
+Level 5
 Title "A union intersected with the complement of another is a subset"
 
 Introduction

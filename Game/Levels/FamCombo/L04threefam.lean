@@ -1,9 +1,9 @@
-import Game.Levels.FamCombo.L02compinter
+import Game.Levels.FamCombo.L03commonelt
 
 variable {U : Type}
 
 World "FamCombo"
-Level 3
+Level 4
 Title "A theorem about three families"
 
 Introduction

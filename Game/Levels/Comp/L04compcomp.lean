@@ -70,11 +70,11 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   intro x h1
   Hint "Now write out the definition of complement in `{h1}`."
   rewrite [comp_def] at h1
-  Hint "The assumption `{h1}` now says `x ∉ Aᶜ`, which means `¬x ∈ Aᶜ`.  It will be helpful to
+  Hint "The assumption `{h1}` now says `{x} ∉ Aᶜ`, which means `¬{x} ∈ Aᶜ`.  It will be helpful to
   write out the definition of complement again in this assumption."
   rewrite [comp_def] at h1
-  Hint "Now `{h1}` says `¬x ∉ A`, which means `¬¬x ∈ A`.  Of course, this can be simplified to
-  `x ∈ A`.  To perform this simplification, you'll need a new tactic, `push_neg`.  To simplify
+  Hint "Now `{h1}` says `¬{x} ∉ A`, which means `¬¬{x} ∈ A`.  Of course, this can be simplified to
+  `{x} ∈ A`.  To perform this simplification, you'll need a new tactic, `push_neg`.  To simplify
   the assumption `{h1}`, write `push_neg at {h1}`."
   push_neg at h1
   exact h1

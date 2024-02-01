@@ -1,9 +1,9 @@
-import Game.Levels.FamCombo.L05unionintunion
+import Game.Levels.FamCombo.L06unionintunion
 
 variable {U : Type}
 
 World "FamCombo"
-Level 6
+Level 7
 Title "A union intersected with the complement of an intersection"
 
 Introduction

@@ -1,5 +1,9 @@
 import Game.Levels.FamCombo.L05unionintcompunion
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamCombo"
@@ -18,23 +22,23 @@ Statement (F G : Set (Set U)) (h1 : ⋃₀ (F ∩ Gᶜ) ⊆ (⋃₀ F) ∩ (⋃�
   intro x h2
   have h2l := h2.left
   have h2r := h2.right
-  rewrite [fam_union_def] at h2l
-  obtain ⟨S, hS⟩ := h2l
-  use S
+  rewrite [mem_sUnion] at h2l
+  obtain ⟨t, ht⟩ := h2l
+  use t
   apply And.intro
   apply And.intro
-  exact hS.left
+  exact ht.left
   by_contra h3
   have h4 : x ∈ ⋃₀ (F ∩ Gᶜ)
-  use S
+  use t
   apply And.intro
   apply And.intro
-  exact hS.left
-  rewrite [comp_def]
+  exact ht.left
+  rewrite [mem_compl_iff]
   exact h3
-  exact hS.right
+  exact ht.right
   have h5 := h1 h4
   have h5r := h5.right
-  rewrite [comp_def] at h5r
+  rewrite [mem_compl_iff] at h5r
   exact h5r h2r
-  exact hS.right
+  exact ht.right

@@ -1,5 +1,9 @@
 import Game.Levels.FamCombo.L04threefam
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamCombo"
@@ -15,21 +19,21 @@ What happens if you intersect `⋃₀ F` with `(⋃₀ G)ᶜ`, for two families 
 \bigcup (F \cap G^c)$.-/
 Statement (F G : Set (Set U)) : (⋃₀ F) ∩ (⋃₀ G)ᶜ ⊆ ⋃₀ (F ∩ Gᶜ) := by
   intro x h1
-  rewrite [inter_def] at h1
+  rewrite [mem_inter_iff] at h1
   have h1l := h1.left
-  rewrite [fam_union_def] at h1l
-  obtain ⟨S, hS⟩ := h1l
-  rewrite [fam_union_def]
-  use S
+  rewrite [mem_sUnion] at h1l
+  obtain ⟨t, ht⟩ := h1l
+  rewrite [mem_sUnion]
+  use t
   apply And.intro
-  rewrite [inter_def]
+  rewrite [mem_inter_iff]
   apply And.intro
-  exact hS.left
-  rewrite [comp_def]
+  exact ht.left
+  rewrite [mem_compl_iff]
   by_contra h2
   have h1r := h1.right
-  rewrite [comp_def, fam_union_def] at h1r
+  rewrite [mem_compl_iff, mem_sUnion] at h1r
   push_neg at h1r
-  have hnS := h1r S h2
-  exact hnS hS.right
-  exact hS.right
+  have hnt := h1r t h2
+  exact hnt ht.right
+  exact ht.right

@@ -1,5 +1,9 @@
 import Game.Levels.FamCombo.L03commonelt
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamCombo"
@@ -11,21 +15,21 @@ Introduction
 Here's a theorem about three related families of sets.
 "
 
-/-- Suppose that for every $A \in F$ there is some $B \in G$ such that $A \cap B \in H$.
+/-- Suppose that for every $s \in F$ there is some $u \in G$ such that $s \cap u \in H$.
 Then $(\bigcup F) \cap (\bigcap G) \subseteq \bigcup H$. -/
-Statement (F G H : Set (Set U)) (h1 : ∀ A ∈ F, ∃ B ∈ G, A ∩ B ∈ H) : (⋃₀ F) ∩ (⋂₀ G) ⊆ ⋃₀ H := by
+Statement (F G H : Set (Set U)) (h1 : ∀ s ∈ F, ∃ u ∈ G, s ∩ u ∈ H) : (⋃₀ F) ∩ (⋂₀ G) ⊆ ⋃₀ H := by
   intro x h2
-  rewrite [inter_def] at h2
+  rewrite [mem_inter_iff] at h2
   have h2l := h2.left
   have h2r := h2.right
-  rewrite [fam_union_def] at h2l
-  obtain ⟨A, hA⟩ := h2l
-  have h3 := h1 A hA.left
-  obtain ⟨B, hB⟩ := h3
-  rewrite [fam_inter_def] at h2r
-  have h3 := h2r B hB.left
-  rewrite [fam_union_def]
-  use A ∩ B
-  apply And.intro hB.right
-  rewrite [inter_def]
-  exact And.intro hA.right h3
+  rewrite [mem_sUnion] at h2l
+  obtain ⟨t, ht⟩ := h2l
+  have h3 := h1 t ht.left
+  obtain ⟨u, hu⟩ := h3
+  rewrite [mem_sInter] at h2r
+  have h3 := h2r u hu.left
+  rewrite [mem_sUnion]
+  use t ∩ u
+  apply And.intro hu.right
+  rewrite [mem_inter_iff]
+  exact And.intro ht.right h3

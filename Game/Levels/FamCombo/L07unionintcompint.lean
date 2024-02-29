@@ -1,5 +1,9 @@
 import Game.Levels.FamCombo.L06unionintunion
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamCombo"
@@ -12,26 +16,26 @@ This time we'll study the intersection of `(⋃₀ F)` and `(⋂₀ G)ᶜ`.
 "
 
 /-- Suppose $F$ and $G$ are families of sets.  Then $(\bigcup F) \cap (\bigcap G)^c \subseteq
-\bigcup \{S \mid \exists A \in F, \exists B \in G, S = A \cap B^c\}$.-/
-Statement (F G : Set (Set U)) : (⋃₀ F) ∩ (⋂₀ G)ᶜ ⊆ ⋃₀ {S | ∃ A ∈ F, ∃ B ∈ G, S = A ∩ Bᶜ} := by
+\bigcup \{s \mid \exists u \in F, \exists v \in G, s = u \cap v^c\}$.-/
+Statement (F G : Set (Set U)) : (⋃₀ F) ∩ (⋂₀ G)ᶜ ⊆ ⋃₀ {s | ∃ u ∈ F, ∃ v ∈ G, s = u ∩ vᶜ} := by
   intro x h1
   have h1l := h1.left
   have h1r := h1.right
-  rewrite [fam_union_def] at h1l
-  obtain ⟨A, hA⟩ := h1l
-  rewrite [comp_def, fam_inter_def] at h1r
+  rewrite [mem_sUnion] at h1l
+  obtain ⟨u, hu⟩ := h1l
+  rewrite [mem_compl_iff, mem_sInter] at h1r
   push_neg at h1r
-  obtain ⟨B, hB⟩ := h1r
-  rewrite [fam_union_def]
-  use A ∩ Bᶜ
+  obtain ⟨v, hv⟩ := h1r
+  rewrite [mem_sUnion]
+  use u ∩ vᶜ
   apply And.intro
-  rewrite [set_builder_def]
-  use A
+  rewrite [mem_setOf]
+  use u
   apply And.intro
-  exact hA.left
-  use B
+  exact hu.left
+  use v
   apply And.intro
-  exact hB.left
+  exact hv.left
   rfl
-  rewrite [inter_def, comp_def]
-  exact And.intro hA.right hB.right
+  rewrite [mem_inter_iff, mem_compl_iff]
+  exact And.intro hu.right hv.right

@@ -1,5 +1,9 @@
 import Game.Levels.Subset.L05subref
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Subset"
@@ -16,11 +20,12 @@ tell you about how to proceed?
 
 TheoremTab "⊆"
 
-/-- If you have `h1 : A ⊆ B` and `h2 : B ⊆ C`, then `sub_trans h1 h2` is a proof of `A ⊆ C`. -/
-TheoremDoc sub_trans as "sub_trans" in "⊆"
+/-- If you have `h1 : A ⊆ B` and `h2 : B ⊆ C`, then `Subset.trans h1 h2` is a proof of `A ⊆ C`.
+In Mathlib, the name of this theorem is `Set.Subset.trans`. -/
+TheoremDoc STG4.Subset.trans as "Subset.trans" in "⊆"
 
 /-- Suppose $A \subseteq B$ and $B \subseteq C$.  Then $A \subseteq C$. -/
-Statement sub_trans {A B C : Set U}
+Statement Subset.trans {A B C : Set U}
     (h1 : A ⊆ B) (h2 : B ⊆ C) : A ⊆ C := by
   Hint (hidden := true) "To get started, you'll need to introduce first
   an object `x` and then the assumption that `x ∈ A`."
@@ -34,5 +39,5 @@ Statement sub_trans {A B C : Set U}
 Conclusion
 "
 The theorem you have proven in this level shows that the subset relation has
-a property called *transitivity*.  We have given the theorem the name `sub_trans`.
+a property called *transitivity*.  We have given the theorem the name `Subset.trans`.
 "

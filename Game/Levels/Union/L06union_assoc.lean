@@ -1,5 +1,9 @@
 import Game.Levels.Union.L05union_comm
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Union"
@@ -15,23 +19,23 @@ able to prove either the left or right side of the statement, then `apply Or.inl
 `left` has the same effect as `apply Or.inl`, and `right` has the same effect as
 `apply Or.inr`.
 
-You can start this proof with either `ext x` or `apply sub_antisymm`.
+You can start this proof with either `ext x` or `apply Subset.antisymm`.
 "
 
 TheoremTab "∩∪"
 
 /-- For any sets `A`, `B`, and `C`, `union_assoc A B C` is a proof of the
-statement `(A ∪ B) ∪ C = A ∪ (B ∪ C)`. -/
-TheoremDoc union_assoc as "union_assoc" in "∩∪"
+statement `(A ∪ B) ∪ C = A ∪ (B ∪ C)`.  In Mathlib, the name of this theorem is `Set.union_assoc`. -/
+TheoremDoc STG4.union_assoc as "union_assoc" in "∩∪"
 
 /-- For any sets $A$, $B$, and $C$, $(A \cup B) \cup C = A \cup (B \cup C)$. -/
 Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   Hint "Notice that, as with intersections, Lean groups unions to the left, so
   `A ∪ B ∪ C` means `(A ∪ B) ∪ C`."
-  apply sub_antisymm
+  apply Subset.antisymm
   intro x h
-  rewrite [union_def]
-  rewrite [union_def] at h
+  rewrite [mem_union]
+  rewrite [mem_union] at h
   cases' h with hAB hC
   cases' hAB with hA hB
   exact Or.inl hA

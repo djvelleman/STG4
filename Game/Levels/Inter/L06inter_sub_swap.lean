@@ -1,5 +1,9 @@
 import Game.Levels.Inter.L05subint
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Intersection"
@@ -14,25 +18,25 @@ In the next level we're going to prove that intersection is commutative; that is
 
 TheoremTab "∩∪"
 
-/-- For any sets `A` and `B`, `inter_sub_swap A B` is a proof of
+/-- For any sets `A` and `B`, `inter_subset_swap A B` is a proof of
 `A ∩ B ⊆ B ∩ A`. -/
-TheoremDoc inter_sub_swap as "inter_sub_swap" in "∩∪"
+TheoremDoc STG4.inter_subset_swap as "inter_subset_swap" in "∩∪"
 
 /-- For any sets $A$ and $B$, $A \cap B \subseteq B \cap A$. -/
-Statement inter_sub_swap (A B : Set U) : A ∩ B ⊆ B ∩ A := by
+Statement inter_subset_swap (A B : Set U) : A ∩ B ⊆ B ∩ A := by
   intro x h
   Hint (hidden := true) "It will help you see how to proceed if you
   write out the definition of intersection in both the assumption {h} and the goal.
   Using the `rewrite` tactic isn't necessary; you can just do the rewriting in
   your head rather than asking Lean to do it.  But if it helps you to figure out the
   proof, go ahead and use the `rewrite` tactic."
-  rewrite [inter_def]
-  rewrite [inter_def] at h
+  rewrite [mem_inter_iff]
+  rewrite [mem_inter_iff] at h
   Hint (hidden := true) "Now `And.intro {h}.right {h}.left` proves the goal."
   exact And.intro h.right h.left
 
 Conclusion
 "
-We have given this theorem the name `inter_sub_swap`.  Thus, from now on, for
-any sets `A` and `B`, `inter_sub_swap A B` is a proof of `A ∩ B ⊆ B ∩ A`.
+We have given this theorem the name `inter_subset_swap`.  Thus, from now on, for
+any sets `A` and `B`, `inter_subset_swap A B` is a proof of `A ∩ B ⊆ B ∩ A`.
 "

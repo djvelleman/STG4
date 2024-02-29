@@ -1,5 +1,9 @@
 import Game.Levels.Subset.L01exact
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Subset"

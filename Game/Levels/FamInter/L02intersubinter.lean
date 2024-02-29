@@ -1,5 +1,9 @@
 import Game.Levels.FamInter.L01intersub
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamInter"
@@ -22,22 +26,22 @@ Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋂₀ G ⊆ ⋂₀ F := by
   intro x h2
   Hint (hidden := true) "As usual, if you're not sure how to proceed then writing
   out definitions can help."
-  rewrite [fam_inter_def]
-  rewrite [fam_inter_def] at h2
-  Hint "Now your goal starts with `∀ S`.  To prove it, you'll need to introduce
-  a set `S` into the proof, using the tactic `intro S`.  Recall that the set `S` is
-  *arbitrary*--that is, `S` could stand for any set--so whatever we prove about `S` will
-  be true for *all* sets `S`."
-  intro S
+  rewrite [mem_sInter]
+  rewrite [mem_sInter] at h2
+  Hint "Now your goal starts with `∀ t`.  To prove it, you'll need to introduce
+  a set `t` into the proof, using the tactic `intro t`.  Recall that the set `t` is
+  *arbitrary*--that is, `t` could stand for any set--so whatever we prove about `t` will
+  be true for *all* sets `t`."
+  intro t
   Hint (hidden := true) "Now your goal is an if-then statement; that means `intro` is
-  appropriate again, to introduce `{S} ∈ F` as a new assumption."
+  appropriate again, to introduce `{t} ∈ F` as a new assumption."
   intro h3
   Hint (hidden := true) "It looks like `{h2}` could get you to the goal, if only
-  you knew that `{S} ∈ G`.  Can you prove that?"
-  have h4 : S ∈ G := h1 h3
+  you knew that `{t} ∈ G`.  Can you prove that?"
+  have h4 : t ∈ G := h1 h3
   Hint "You can now combine `{h2}` and `{h4}` to reach the goal in one step."
-  Hint (hidden := true) "`{h2} {S} {h4}` is now a proof of the goal."
-  exact h2 S h4
+  Hint (hidden := true) "`{h2} {t} {h4}` is now a proof of the goal."
+  exact h2 t h4
 
 Conclusion
 "

@@ -1,5 +1,9 @@
 import Game.Levels.Inter.L03inter_sub_left
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Intersection"
@@ -24,7 +28,7 @@ NewTheorem And.intro
 Statement (x : U) (A B : Set U) (h1 : x ∈ A) (h2 : x ∈ B) : x ∈ A ∩ B := by
   Hint "Writing out the meaning of intersection in the goal will help you see what to do to
   complete this level."
-  rewrite [inter_def]
+  rewrite [mem_inter_iff]
   Hint "Now you can use `And.intro` to prove the goal."
   Hint (hidden := true) "`exact And.intro h1 h2` will close the goal."
   exact And.intro h1 h2

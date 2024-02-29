@@ -1,5 +1,9 @@
 import Game.Levels.FamInter
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamUnion"
@@ -33,17 +37,17 @@ TheoremDoc Exists.intro as "Exists.intro" in "Logic"
 NewTheorem Exists.intro
 
 /--Suppose $A$ is a set.  Then there is some set $S$ such that $S \subseteq A$.-/
-Statement (A : Set U) : ∃ S, S ⊆ A := by
+Statement (A : Set U) : ∃ s, s ⊆ A := by
   Hint (strict := true) "Your goal says that there is a set that is a subset of `A`.
-  The theorem `sub_ref` suggests such a set."
-  Hint (strict := true) (hidden := true) "Recall that `sub_ref A` is a proof of `A ⊆ A`.
-  So start your proof with `have h : A ⊆ A := sub_ref A`."
+  The theorem `Subset.refl` suggests such a set."
+  Hint (strict := true) (hidden := true) "Recall that `Subset.refl A` is a proof of `A ⊆ A`.
+  So start your proof with `have h : A ⊆ A := Subset.refl A`."
   Branch
     use ∅
     Hint "Although `∅` is a reasonable choice for a set that is a subset of `A`, it is difficult
     to complete the proof with this choice using only methods developed so far in this game.
     Go back and try a different choice."
-  have h : A ⊆ A := sub_ref A
+  have h : A ⊆ A := Subset.refl A
   Hint "Now you can use `Exists.intro` to complete the proof."
   Hint (hidden := true) "`Exists.intro A {h}` proves the goal."
   exact Exists.intro A h
@@ -52,7 +56,7 @@ Conclusion
 "
 By the way, another set that would have worked as a witness for the existential goal in this
 theorem is the empty set, denoted `∅`.  However, to justify the use of that witness you would
-have had to prove `∅ ⊆ A`.  Since we already have the theorem `sub_ref`, it was easier to use
+have had to prove `∅ ⊆ A`.  Since we already have the theorem `Subset.refl`, it was easier to use
 `A` as the witness.
 
 Now that you know how to prove existential statements, you're ready to start working with

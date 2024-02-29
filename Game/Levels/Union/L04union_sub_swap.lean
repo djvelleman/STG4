@@ -1,5 +1,9 @@
 import Game.Levels.Union.L03cases
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Union"
@@ -17,15 +21,15 @@ TheoremTab "∩∪"
 
 /-- For any sets `A` and `B`, `union_sub_swap A B` is a proof of
 `A ∪ B ⊆ B ∪ A`. -/
-TheoremDoc union_sub_swap as "union_sub_swap" in "∩∪"
+TheoremDoc STG4.union_subset_swap as "union_subset_swap" in "∩∪"
 
 /-- For any sets $A$ and $B$, $A \cup B \subseteq B \cup A$. -/
-Statement union_sub_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by
+Statement union_subset_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by
   intro x h
   Hint (hidden := true) "It will help you see how to proceed if you
   write out the definition of union in both the assumption `{h}` and the goal."
-  rewrite [union_def]
-  rewrite [union_def] at h
+  rewrite [mem_union]
+  rewrite [mem_union] at h
   Hint (hidden := true) "The form of the assumption `{h}` now suggests proof by cases."
   cases' h with hA hB
   exact Or.inr hA
@@ -33,6 +37,6 @@ Statement union_sub_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by
 
 Conclusion
 "
-You'll be able to use the theorem `union_sub_swap` in the next level to prove
+You'll be able to use the theorem `union_subset_swap` in the next level to prove
 that union is commutative.
 "

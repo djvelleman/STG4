@@ -1,5 +1,9 @@
 import Game.Levels.FamInter.L05subinter
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamInter"
@@ -22,15 +26,15 @@ TacticDoc by_cases
 
 NewTactic by_cases
 
-/-- Suppose $A$ is a set, $F$ and $G$ are families of sets, and for every set $S$ in $F$,
-$A \cup S \in G$.  Then $\bigcap G \subseteq A \cup (\bigcap F)$.-/
-Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : ⋂₀ G ⊆ A ∪ (⋂₀ F) := by
+/-- Suppose $A$ is a set, $F$ and $G$ are families of sets, and for every set $s$ in $F$,
+$A \cup s \in G$.  Then $\bigcap G \subseteq A \cup (\bigcap F)$.-/
+Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ s ∈ F, A ∪ s ∈ G) : ⋂₀ G ⊆ A ∪ (⋂₀ F) := by
   intro x h2
   Hint "Writing out the meaning of the goal will make the proof easier to understand."
-  rewrite [union_def]
+  rewrite [mem_union]
   Hint (strict := true) "If `{x} ∈ A`, then the goal is easy to prove.  This suggests breaking
   the proof into cases depending on whether or not `{x} ∈ A`.  You can do this with the tactic
-  `by_cases h{x}A : {x} ∈ A`."
+  `by_cases hA : {x} ∈ A`."
   by_cases hA : x ∈ A
   Hint "The first case is the easy one."
   exact Or.inl hA
@@ -38,22 +42,23 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ S ∈ F, A ∪ S ∈ G) : �
   You can use `apply Or.inl` or `apply Or.inr` (or the equivalent tactics `left` or `right`)
   to specify what goal you're going to prove."
   apply Or.inr
-  rewrite [fam_inter_def]
-  intro S h4
+  rewrite [mem_sInter]
+  intro t h4
   Hint (strict := true) (hidden := true) "Now use `h1`."
-  have h5 : A ∪ S ∈ G := h1 S h4
+  have h5 : A ∪ t ∈ G := h1 t h4
   Hint (strict := true) (hidden := true) "You haven't used `{h2}` yet.  If you don't see how to use it,
   write out its definition."
-  rewrite [fam_inter_def] at h2
-  Hint (strict := true) (hidden := true) "Note that you can apply `{h2}` to `(A ∪ {S})`."
-  have h6 : x ∈ A ∪ S := h2 (A ∪ S) h5
-  rewrite [union_def] at h6
-  cases' h6 with hA2 hS
+  rewrite [mem_sInter] at h2
+  Hint (strict := true) (hidden := true) "Note that you can apply `{h2}` to `(A ∪ {t})`.
+  You'll need to include the parentheses around `A ∪ {t}` when you do that."
+  have h6 : x ∈ A ∪ t := h2 (A ∪ t) h5
+  rewrite [mem_union] at h6
+  cases' h6 with hA2 ht
   Hint (hidden := true) "Notice that you have contradictory assumptions.  You can prove anything
   from contradictory assumptions.  Do you see how?"
   by_contra h6
   exact hA hA2
-  exact hS
+  exact ht
 
 Conclusion
 "

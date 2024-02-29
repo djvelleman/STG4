@@ -1,5 +1,9 @@
 import Game.Levels.FamUnion.L04unionpair
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamUnion"
@@ -18,29 +22,29 @@ Statement (F G : Set (Set U)) : ⋃₀ (F ∪ G) = (⋃₀ F) ∪ (⋃₀ G) := 
   ext x
   apply Iff.intro
   intro h1
-  rewrite [fam_union_def] at h1
-  obtain ⟨S, h1⟩ := h1
-  rewrite [union_def]
-  rewrite [union_def] at h1
+  rewrite [mem_sUnion] at h1
+  obtain ⟨t, h1⟩ := h1
+  rewrite [mem_union]
+  rewrite [mem_union] at h1
   cases' h1.left with hF hG
   left
-  rewrite [fam_union_def]
-  use S
+  rewrite [mem_sUnion]
+  use t
   exact And.intro hF h1.right
   right
-  use S
+  use t
   exact And.intro hG h1.right
   intro h1
-  rewrite [union_def] at h1
-  rewrite [fam_union_def]
+  rewrite [mem_union] at h1
+  rewrite [mem_sUnion]
   cases' h1 with hF hG
-  obtain ⟨S, h1⟩ := hF
-  use S
+  obtain ⟨t, h1⟩ := hF
+  use t
   apply And.intro
   exact Or.inl h1.left
   exact h1.right
-  obtain ⟨S, h1⟩ := hG
-  use S
+  obtain ⟨t, h1⟩ := hG
+  use t
   apply And.intro
   exact Or.inr h1.left
   exact h1.right

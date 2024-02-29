@@ -1,5 +1,9 @@
 import Game.Levels.FamUnion.L01proveexists
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamUnion"
@@ -13,12 +17,11 @@ In Lean, the union of a family `F` is denoted `⋃₀ F`.  (You can enter the sy
 `⋃₀` by typing `\\U0`.)
 
 Suppose we have `F : Set (Set U)` and `x : U`.  Then `x ∈ ⋃₀ F` means that there is at least
-one set `S` such that `S ∈ F` and `x ∈ S`.  To write this statement in Lean, we write
-`∃ S, S ∈ F ∧ x ∈ S`.  Lean abbreviates this statement as `∃ S ∈ F, x ∈ S`.
+one set `t` such that `t ∈ F` and `x ∈ t`.  To write this statement in Lean, we write
+`∃ t, t ∈ F ∧ x ∈ t`.  Lean abbreviates this statement as `∃ t ∈ F, x ∈ t`.
 
-As with other set theory operations, we have a theorem that expresses this definition.  If
-`F : Set (Set U)` and `x : U`, then `fam_union_def x F` is a proof of the statement
-`x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S`.
+As with other set theory operations, we have a theorem that expresses this definition.  Lean will
+recognize `mem_sUnion` as a proof of any statement of the form `x ∈ ⋃₀ F ↔ ∃ t ∈ F, x ∈ t`.
 
 In this level, you'll try out these ideas.
 "
@@ -28,13 +31,11 @@ DefinitionDoc famunion as "⋃₀"
 
 NewDefinition famunion
 
-lemma fam_union_def (x : U) (F : Set (Set U)) : x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S := by rfl
+/-- Lean will recognize `mem_sUnion` as a proof of any statement of the form
+`x ∈ ⋃₀ F ↔ ∃ t ∈ F, x ∈ t`.  In Mathlib, the name of this theorem is `Set.mem_sUnion`. -/
+TheoremDoc Set.mem_sUnion as "mem_sUnion" in "⋂₀⋃₀"
 
-/-- If you have `F : Set (Set U)` and `x : U`, then `fam_union_def x F` is a proof of
-the statement `x ∈ ⋃₀ F ↔ ∃ S ∈ F, x ∈ S`. -/
-TheoremDoc fam_union_def as "fam_union_def" in "⋂₀⋃₀"
-
-NewTheorem fam_union_def
+NewTheorem Set.mem_sUnion
 
 TheoremTab "⋂₀⋃₀"
 
@@ -51,12 +52,12 @@ TheoremTab "⋂₀⋃₀"
 /-- Suppose $F$ is a family of sets and $A \in F$.  Then $A \subseteq \bigcup F$. -/
 Statement (A : Set U) (F : Set (Set U)) (h1 : A ∈ F) : A ⊆ ⋃₀ F := by
   intro x h2
-  rewrite [fam_union_def]
-  Hint "Remember that the goal `∃ S ∈ F, {x} ∈ S` is an abbreviation for
-  `∃ S, S ∈ F ∧ {x} ∈ S`.  As we saw in the last level, we can prove this by coming up with
-  a witness--that is, a value for `S` that will make the statement `S ∈ F ∧ {x} ∈ S` come out
+  rewrite [mem_sUnion]
+  Hint "Remember that the goal `∃ t ∈ F, {x} ∈ t` is an abbreviation for
+  `∃ t, t ∈ F ∧ {x} ∈ t`.  As we saw in the last level, we can prove this by coming up with
+  a witness--that is, a value for `t` that will make the statement `t ∈ F ∧ {x} ∈ t` come out
   true.  Looking at
-  `h1` and `{h2}`, it looks like `S = A` would work.  That suggests a way to proceed:
+  `h1` and `{h2}`, it looks like `t = A` would work.  That suggests a way to proceed:
   `Exists.intro A hA` would prove the goal, if `hA` were a proof of `A ∈ F ∧ {x} ∈ A`.  In
   other words, if `Exists.intro A` is applied to a proof of `A ∈ F ∧ {x} ∈ A`, then it will
   prove the goal.  So if you use the tactic `apply Exists.intro A`, then Lean will
@@ -68,6 +69,6 @@ Conclusion
 "
 There is another tactic you could have used to complete this proof.  Instead of
 `apply Exists.intro A`, you could write `use A`.  The `use` tactic is actually a powerful
-tactic.  Not only does it fill in `A` for `S` in the existential goal, it then tries to
+tactic.  Not only does it fill in `A` for `t` in the existential goal, it then tries to
 complete the proof on its own--and in this case, it would have succeeded!
 "

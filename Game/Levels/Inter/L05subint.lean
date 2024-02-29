@@ -1,5 +1,9 @@
 import Game.Levels.Inter.L04proveand
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Intersection"
@@ -15,7 +19,7 @@ Of course, you know by now how to start a proof that one set is a subset of anot
 Statement (A B C : Set U) (h1 : A ⊆ B) (h2 : A ⊆ C) : A ⊆ B ∩ C := by
   intro x h3
   Hint "Writing out the definition of intersection in the goal will help."
-  rewrite [inter_def]
+  rewrite [mem_inter_iff]
   Hint "If you had `hB : {x} ∈ B` and `hC : {x} ∈ C`, then `And.intro hB hC`
   would prove the goal.  So there are two ways to proceed.  One possibility is to use
   `have` to introduce the assumptions `{x} ∈ B` and `{x} ∈ C`--that is, if you can see

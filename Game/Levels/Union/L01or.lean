@@ -1,5 +1,9 @@
 import Game.Levels.Inter
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Union"

@@ -1,5 +1,9 @@
 import Game.Levels.FamUnion.L03unionsubunion
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamUnion"
@@ -17,30 +21,30 @@ Statement (A B : Set U) : A ∪ B = ⋃₀ {A, B}:= by
   ext x
   apply Iff.intro
   intro h1
-  rewrite [fam_union_def]
-  rewrite [union_def] at h1
+  rewrite [mem_sUnion]
+  rewrite [mem_union] at h1
   cases' h1 with hA hB
   use A
   apply And.intro
-  rewrite [pair_def]
+  rewrite [mem_pair]
   apply Or.inl
   rfl
   exact hA
   use B
   apply And.intro
-  rewrite [pair_def]
+  rewrite [mem_pair]
   right
   rfl
   exact hB
   intro h1
-  rewrite [union_def]
-  rewrite [fam_union_def] at h1
+  rewrite [mem_union]
+  rewrite [mem_sUnion] at h1
   Hint "Remember, you can use `obtain` to introduce a name for the set that is asserted to
   exist in `{h1}`."
-  obtain ⟨S, hS⟩ := h1
-  rewrite [pair_def] at hS
-  cases' hS.left with hA hB
-  rewrite [hA] at hS
-  exact Or.inl hS.right
-  rewrite [hB] at hS
-  exact Or.inr hS.right
+  obtain ⟨t, ht⟩ := h1
+  rewrite [mem_pair] at ht
+  cases' ht.left with hA hB
+  rewrite [hA] at ht
+  exact Or.inl ht.right
+  rewrite [hB] at ht
+  exact Or.inr ht.right

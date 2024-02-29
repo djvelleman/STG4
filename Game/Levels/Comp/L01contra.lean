@@ -1,5 +1,9 @@
 import Game.Levels.Subset
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Complement"
@@ -24,7 +28,7 @@ kind of proof is `by_contra`.
 `by_contra h` will introduce the new assumption `h : P`, and set the
 goal to be `False`.  If your goal is a statement `P` that is not a negative
 statement, then `by_contra h` will introduce the new assumption
-`¬P`.
+`h : ¬P`.
 
 To achieve your new goal, you will need to establish
 `h1 : Q` and `h2 : ¬Q`, for some statement `Q`.  If you can do that,

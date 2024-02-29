@@ -1,5 +1,9 @@
 import Game.Levels.Comp
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Intersection"

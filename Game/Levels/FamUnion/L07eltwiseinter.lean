@@ -1,5 +1,9 @@
 import Game.Levels.FamUnion.L06unionsub
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "FamUnion"
@@ -18,60 +22,59 @@ recognize `set_builder_def` as a proof of any statement of the form `a ∈ {x | 
 And that means that `rewrite [set_builder_def]` will rewrite `a ∈ {x | P x}` as `P a`.
 "
 
-lemma set_builder_def {P : U → Prop} {a : U} : a ∈ {x | P x} ↔ P a := by rfl
+/-- Lean will recognize `mem_setOf` as a proof of any statement of the form
+`a ∈ {x | P x} ↔ P a`.  In Mathlib, the name of this theorem is `Set.mem_setOf`. -/
+TheoremDoc Set.mem_setOf as "mem_setOf" in "{}"
 
-/-- Lean will recognize `set_builder_def` as a proof of any statement of the form
-`a ∈ {x | P x} ↔ P a`. -/
-TheoremDoc set_builder_def as "set_builder_def" in "{}"
-
-NewTheorem set_builder_def
+NewTheorem Set.mem_setOf
 
 TheoremTab "{}"
 
 /--Suppose $A$ is a set and $F$ is a family of sets.  Then $A \cap (\bigcup F) =
-\bigcup\{B \mid \exists T \in F, B = A \cap T\}$.-/
-Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {B | ∃ T ∈ F, B = A ∩ T} := by
+\bigcup\{s \mid \exists u \in F, s = A \cap u\}$.-/
+Statement (A : Set U) (F : Set (Set U)) : A ∩ (⋃₀ F) = ⋃₀ {s | ∃ u ∈ F, s = A ∩ u} := by
   ext x
   apply Iff.intro
   intro h1
   Hint (strict := true) "It will help to get as much information as you can out of `{h1}`
   before addressing the goal."
   Branch
-    rewrite [inter_def] at h1
+    rewrite [mem_inter_iff] at h1
     Hint (strict := true) "You may find it useful to separate out the right half of `{h1}`.
     You can do that with `have {h1}r := {h1}.right`."
   have h2 : x ∈ ⋃₀ F := h1.right
-  rewrite [fam_union_def] at h2
-  obtain ⟨S, hS⟩ := h2
-  rewrite [fam_union_def]
-  Hint "Your goal is an existential statement.  Do you see what value to use as a witness?"
-  Hint (hidden := true) "Try `apply Exists.intro (A ∩ {S})` or `use A ∩ {S}`."
+  rewrite [mem_sUnion] at h2
+  obtain ⟨t, ht⟩ := h2
   Branch
-    rewrite [inter_def] at h1
+    rewrite [mem_inter_iff] at h1
+    rewrite [mem_sUnion]
     Hint "Your goal is an existential statement.  Do you see what value to use as a witness?"
-    Hint (hidden := true) "Try `apply Exists.intro (A ∩ {S})` or `use A ∩ {S}`."
-  use A ∩ S
+    Hint (hidden := true) "Try `apply Exists.intro (A ∩ {t})` or `use A ∩ {t}`."
+  rewrite [mem_sUnion]
+  Hint "Your goal is an existential statement.  Do you see what value to use as a witness?"
+  Hint (hidden := true) "Try `apply Exists.intro (A ∩ {t})` or `use A ∩ {t}`."
+  use A ∩ t
   apply And.intro
-  Hint "You can use `rewrite [set_builder_def]` to write out the meaning of the goal."
-  rewrite [set_builder_def]
-  use S
+  Hint "You can use `rewrite [mem_setOf]` to write out the meaning of the goal."
+  rewrite [mem_setOf]
+  use t
   apply And.intro
-  exact hS.left
+  exact ht.left
   rfl
-  exact And.intro h1.left hS.right
+  exact And.intro h1.left ht.right
   intro h1
   Hint (strict := true) "Again, work out the consequences of `{h1}` first."
-  obtain ⟨B, hB⟩ := h1
-  Hint (strict := true) "You can separate out the first half of `{hB}` with `have {hB}l := {hB}.left`."
-  have hBl := hB.left
-  rewrite [set_builder_def] at hBl
-  obtain ⟨T, hT⟩ := hBl
-  Hint (hidden := true) "You know `{x} ∈ {B}` and `{B} = A ∩ {T}`.  So you can use `rewrite`
-  to get `{x} ∈ A ∩ {T}`."
-  rewrite [hT.right, inter_def] at hB
-  rewrite [inter_def]
+  obtain ⟨t, ht⟩ := h1
+  Hint (strict := true) "You can separate out the first half of `{ht}` with `have {ht}l := {ht}.left`."
+  have htl := ht.left
+  rewrite [mem_setOf] at htl
+  obtain ⟨u, hu⟩ := htl
+  Hint (hidden := true) "You know `{x} ∈ {t}` and `{t} = A ∩ {u}`.  So you can use `rewrite`
+  to get `{x} ∈ A ∩ {u}`."
+  rewrite [hu.right, mem_inter_iff] at ht
+  rewrite [mem_inter_iff]
   apply And.intro
-  exact hB.right.left
-  rewrite [fam_union_def]
-  use T
-  exact And.intro hT.left hB.right.right
+  exact ht.right.left
+  rewrite [mem_sUnion]
+  use u
+  exact And.intro hu.left ht.right.right

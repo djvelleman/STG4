@@ -1,5 +1,9 @@
 import Game.Levels.Comp.L01contra
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Complement"
@@ -43,13 +47,13 @@ NewDefinition comp iff
 
 TheoremTab "ᶜ"
 
-/-- If you have `x : U` and `A : Set U`, then `comp_def x A` is a proof of the statement
-`x ∈ Aᶜ ↔ x ∉ A`. -/
-TheoremDoc comp_def as "comp_def" in "ᶜ"
+/-- If you have `A : Set U` and `x : U`, then `mem_compl_iff A x` is a proof of the statement
+`x ∈ Aᶜ ↔ x ∉ A`.  In Mathlib, the name of this theorem is `Set.mem_compl_iff`. -/
+TheoremDoc STG4.mem_compl_iff as "mem_compl_iff" in "ᶜ"
 
 /-- Let $x$ be an object in the universe $U$, and let $A$ be a set whose elements
 come from $U$.  Then $x \in A^c \leftrightarrow x \notin A$. -/
-Statement comp_def (x : U) (A : Set U) : x ∈ Aᶜ ↔ x ∉ A := by
+Statement mem_compl_iff (A : Set U) (x : U) : x ∈ Aᶜ ↔ x ∉ A := by
   Hint "The proof of the theorem in this level is very easy.
   Since `x ∈ Aᶜ` and `x ∉ A` are definitionally equivalent, `rfl` will close the goal."
   rfl
@@ -59,7 +63,6 @@ Conclusion
 The name of the tactic `rfl` is short for \"reflexivity\", which is the property of
 both `=` and `↔` that is the basis for the tactic.
 
-We have given the theorem proven in this level the name `comp_def`, since it expresses
-the definition of complement.  In the next level,
+We have given the theorem proven in this level the name `mem_compl_iff`.  In the next level,
 we will see how we can use it to prove theorems about complements.
 "

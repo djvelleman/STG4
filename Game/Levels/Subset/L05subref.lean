@@ -1,5 +1,9 @@
 import Game.Levels.Subset.L04imp
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Subset"
@@ -20,11 +24,12 @@ to show that if `A` is a set, then `A ⊆ A`.
 
 TheoremTab "⊆"
 
-/-- If you have `A : Set U`, then `sub_ref A` is a proof of `A ⊆ A`. -/
-TheoremDoc sub_ref as "sub_ref" in "⊆"
+/-- If you have `A : Set U`, then `Subset.refl A` is a proof of `A ⊆ A`.
+In Mathlib, the name of this theorem is `Set.Subset.refl`. -/
+TheoremDoc STG4.Subset.refl as "Subset.refl" in "⊆"
 
 /-- Let $A$ be any set.  Then $A \subseteq A$. -/
-Statement sub_ref (A : Set U) : A ⊆ A := by
+Statement Subset.refl (A : Set U) : A ⊆ A := by
   Hint "Our first step is to introduce an object `x` into the proof.  To do this, type `intro x`.
   We have already seen that the `intro` tactic can be used to introduce a new *assumption* into a
   proof.  This step illustrates a second use of `intro`: introducing a new *object* into a proof."
@@ -41,6 +46,9 @@ Statement sub_ref (A : Set U) : A ⊆ A := by
 Conclusion
 "
 The theorem you have proven in this level shows that the subset relation has
-a property called *reflexivity*.  We have given the theorem the name `sub_ref`.  You
-will see it in the list of theorems on the right.
+a property called *reflexivity*.  We have given the theorem the name `Subset.refl`.  You
+will see it in the list of theorems on the right.  (This theorem is included in Lean's
+mathematical library, Mathlib.  In Mathlib, the name of the theorem is `Set.Subset.refl`.
+Many other set-theoretic theorems in this game have `Set.` at the beginnings of their names
+in Mathlib.)
 "

@@ -1,6 +1,8 @@
 import Game.Levels.FamUnion.L02subunion
 
-variable {U : Type}
+open Set
+
+namespace STG4
 
 World "FamUnion"
 Level 3
@@ -32,15 +34,15 @@ NewTactic obtain
 Then $\bigcup F \subseteq \bigcup G$. -/
 Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋃₀ F ⊆ ⋃₀ G := by
   intro x h2
-  rewrite [fam_union_def]
-  rewrite [fam_union_def] at h2
-  Hint "The assumption `{h2}` is now an existential statement.  Thus, `obtain ⟨B, hB⟩ := {h2}`
-  will introduce a new object `B` and a new assumption `hB : B ∈ F ∧ {x} ∈ B` into the proof.
-  Once the witness `B` has been introduced, the assumption `{h2}` becomes redundant, so it is
+  rewrite [mem_sUnion]
+  rewrite [mem_sUnion] at h2
+  Hint "The assumption `{h2}` is now an existential statement.  Thus, `obtain ⟨s, hs⟩ := {h2}`
+  will introduce a new object `s` and a new assumption `hs : s ∈ F ∧ {x} ∈ s` into the proof.
+  Once the witness `s` has been introduced, the assumption `{h2}` becomes redundant, so it is
   deleted."
-  obtain ⟨B, hB⟩ := h2
-  Hint (hidden := true) "Do you see why `{B}` is the value to use as a witness for `S` in the goal?
-  Your next step can be either `apply Exists.intro {B}` or `use {B}`."
-  apply Exists.intro B
-  have h2 : B ∈ G := h1 hB.left
-  exact And.intro h2 hB.right
+  obtain ⟨s, hs⟩ := h2
+  Hint (hidden := true) "Do you see why `{s}` is the value to use as a witness for `t` in the goal?
+  Your next step can be either `apply Exists.intro {s}` or `use {s}`."
+  apply Exists.intro s
+  have h2 : s ∈ G := h1 hs.left
+  exact And.intro h2 hs.right

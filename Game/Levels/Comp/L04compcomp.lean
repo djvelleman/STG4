@@ -1,5 +1,9 @@
 import Game.Levels.Comp.L03compsub
 
+open Set
+
+namespace STG4
+
 variable {U : Type}
 
 World "Complement"
@@ -9,18 +13,18 @@ Title "Complement of a complement"
 Introduction
 "
 How do we prove that two sets `A` and `B` are equal?  One way to do it is to use the theorem
-`sub_antisymm`.  This theorem is pre-defined in this game; you don't need to prove it.
+`Subset.antisymm`.  This theorem is pre-defined in this game; you don't need to prove it.
 If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then
-`sub_antisymm h1 h2` is a proof of `A = B`.  The theorem `sub_antisymm` says that the
+`Subset.antisymm h1 h2` is a proof of `A = B`.  The theorem `Subset.antisymm` says that the
 subset relation has a property called *antisymmetry*.
 
 But what if you don't already know `A ⊆ B` and `B ⊆ A`?  In that case, you can use a new
-tactic, `apply`.  If your goal is `A = B` and you write `apply sub_antisymm`, then Lean will
-figure out that the theorem `sub_antisymm` could be applied to prove the goal, if only you had
+tactic, `apply`.  If your goal is `A = B` and you write `apply Subset.antisymm`, then Lean will
+figure out that the theorem `Subset.antisymm` could be applied to prove the goal, if only you had
 proofs of `A ⊆ B` and `B ⊆ A`.  So it will set those *two* statements as goals.
 
 If your goal says that two sets are equal, a good way to begin is with
-`apply sub_antisymm`.  (Later we'll see a second approach to proving sets are equal.)
+`apply Subset.antisymm`.  (Later we'll see a second approach to proving sets are equal.)
 
 This level also introduces another new tactic, `push_neg`.
 "
@@ -50,29 +54,28 @@ NewTactic apply push_neg
 
 TheoremTab "⊆"
 
-lemma sub_antisymm {A B : Set U} (h1 : A ⊆ B) (h2 : B ⊆ A) : A = B := Set.Subset.antisymm h1 h2
+/-- If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then `Subset.antisymm h1 h2` is a proof of `A = B`.
+In Mathlib, the name of this theorem is `Set.Subset.antisymm`. -/
+TheoremDoc Set.Subset.antisymm as "Subset.antisymm" in "⊆"
 
-/-- If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then `sub_antisymm h1 h2` is a proof of `A = B`. -/
-TheoremDoc sub_antisymm as "sub_antisymm" in "⊆"
+NewTheorem Set.Subset.antisymm
 
-NewTheorem sub_antisymm
-
-/-- If `A` is a set, then `comp_comp A` is a proof of `Aᶜᶜ = A`. -/
-TheoremDoc comp_comp as "comp_comp" in "ᶜ"
+/-- If `A` is a set, then `compl_compl A` is a proof of `Aᶜᶜ = A`. -/
+TheoremDoc STG4.compl_compl as "compl_compl" in "ᶜ"
 
 /-- Suppose $A$ is a set.  Then $(A^c)^c = A$. -/
-Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
+Statement compl_compl (A : Set U) : Aᶜᶜ = A := by
   Hint "In this level, your goal is `Aᶜᶜ = A`--that is, the complement of `Aᶜ` is equal to `A`.
-  So `apply sub_antisymm` is a good way to start."
-  apply sub_antisymm
+  So `apply Subset.antisymm` is a good way to start."
+  apply Subset.antisymm
   Hint "Your immediate goal now is to prove that `Aᶜᶜ ⊆ A`.  Once you close that goal,
   you'll be asked to prove the second goal, `A ⊆ Aᶜᶜ`."
   intro x h1
   Hint "Now write out the definition of complement in `{h1}`."
-  rewrite [comp_def] at h1
+  rewrite [mem_compl_iff] at h1
   Hint "The assumption `{h1}` now says `{x} ∉ Aᶜ`, which means `¬{x} ∈ Aᶜ`.  It will be helpful to
   write out the definition of complement again in this assumption."
-  rewrite [comp_def] at h1
+  rewrite [mem_compl_iff] at h1
   Hint "Now `{h1}` says `¬{x} ∉ A`, which means `¬¬{x} ∈ A`.  Of course, this can be simplified to
   `{x} ∈ A`.  To perform this simplification, you'll need a new tactic, `push_neg`.  To simplify
   the assumption `{h1}`, write `push_neg at {h1}`."
@@ -80,13 +83,13 @@ Statement comp_comp (A : Set U) : Aᶜᶜ = A := by
   exact h1
   Hint "The proof of the second goal is similar."
   intro x h1
-  rewrite [comp_def]
+  rewrite [mem_compl_iff]
   Hint "There are two ways to complete the proof now.  Since your goal is a negative statement,
   one natural strategy to use would be proof by contradiction.  A second possibility is to
   imitate the approach in the first half: write out the meaning of complement again in the goal,
   and then use the `push_neg` tactic to simplify the resulting double-negative goal.  Either
   approach will work."
-  rewrite [comp_def]
+  rewrite [mem_compl_iff]
   push_neg
   exact h1
 
@@ -99,6 +102,6 @@ We'll see many more uses of the `apply` tactic in this game.
 For more details about the use of these tactics,
 click on `push_neg` or `apply` under the list of tactics on the right.
 
-We have given this theorem the name `comp_comp`.  Both this theorem and the one in the previous
+We have given this theorem the name `compl_compl`.  Both this theorem and the one in the previous
 level will be useful in the next level.
 "

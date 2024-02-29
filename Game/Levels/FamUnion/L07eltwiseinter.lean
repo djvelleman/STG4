@@ -18,8 +18,8 @@ come out true.  This is often called *set-builder notation*.  For example,
 `{x | x ∈ A ∧ x ∈ B}` is another way to write `A ∩ B`.
 
 As usual, we have a theorem that states the meaning of set-builder notation.  Lean will
-recognize `set_builder_def` as a proof of any statement of the form `a ∈ {x | P x} ↔ P a`.
-And that means that `rewrite [set_builder_def]` will rewrite `a ∈ {x | P x}` as `P a`.
+recognize `mem_setOf` as a proof of any statement of the form `a ∈ {x | P x} ↔ P a`.
+And that means that `rewrite [mem_setOf]` will rewrite `a ∈ {x | P x}` as `P a`.
 "
 
 /-- Lean will recognize `mem_setOf` as a proof of any statement of the form

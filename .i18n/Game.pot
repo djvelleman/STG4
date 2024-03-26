@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat Mar 16 20:08:37 2024\n"
+"POT-Creation-Date: Tue Mar 26 16:56:37 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -779,7 +779,7 @@ msgid "You can use `compl_subset_compl_of_subset «{h1}»` to\n"
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
-msgid "Fortunately, we can use the theorem `comlp_compl` to prove `Aᶜᶜ = A` and\n"
+msgid "Fortunately, we can use the theorem `compl_compl` to prove `Aᶜᶜ = A` and\n"
 "`Bᶜᶜ = B`, and those statements should get us from `«{h2}»` to the goal.\n"
 "We have seen in previous levels that the `rewrite` tactic can be applied to a proof of a\n"
 "statement of the form `P ↔ Q` to replace `P` with `Q`.  The tactic can also be applied to\n"

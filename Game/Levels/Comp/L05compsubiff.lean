@@ -46,7 +46,7 @@ Statement (A B : Set U) : A ⊆ B ↔ Bᶜ ⊆ Aᶜ := by
   Hint (strict := true) (hidden := true) "You can use `compl_subset_compl_of_subset {h1}` to
   justify the assertion `Aᶜᶜ ⊆ Bᶜᶜ`."
   have h2 : Aᶜᶜ ⊆ Bᶜᶜ := compl_subset_compl_of_subset h1
-  Hint (strict := true) "Fortunately, we can use the theorem `comlp_compl` to prove `Aᶜᶜ = A` and
+  Hint (strict := true) "Fortunately, we can use the theorem `compl_compl` to prove `Aᶜᶜ = A` and
   `Bᶜᶜ = B`, and those statements should get us from `{h2}` to the goal.
   We have seen in previous levels that the `rewrite` tactic can be applied to a proof of a
   statement of the form `P ↔ Q` to replace `P` with `Q`.  The tactic can also be applied to

@@ -1,22 +1,33 @@
 msgid ""
-msgstr "Project-Id-Version: Game v4.6.0\n"
+msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Mar 26 16:56:37 2024\n"
+"POT-Creation-Date: Wed Apr 10 17:24:48 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
+#: GameServer.RpcHandlers
+msgid "level completed! 🎉"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
+msgstr ""
+
 #: Game.Levels.Subset.L01exact
 msgid "The exact tactic"
 msgstr ""
 
 #: Game.Levels.Subset.L01exact
-msgid "\n"
-"# Read this first\n"
+msgid "# Read this first\n"
 "\n"
-"Each level in this game involves proving a mathematical statement (the "Goal").\n"
+"Each level in this game involves proving a mathematical statement (the \"Goal\").\n"
 "When you give a proof of this statement that\n"
 "is accepted by Lean, we say that you have *closed* the goal.\n"
 "\n"
@@ -28,35 +39,33 @@ msgid "\n"
 "\n"
 "You will prove goals in Lean using *tactics*.  The first tactic you're\n"
 "going to learn is called `exact`, and it is used to close the goal.\n"
-"You can close the goal by typing `exact` followed by a proof of the goal.\n"
-""
+"You can close the goal by typing `exact` followed by a proof of the goal."
 msgstr ""
 
 #: Game.Levels.Subset.L01exact
 msgid "Use `exact` to close a goal.  If some expression `t` is a proof of\n"
 "the goal, then `exact t` will close the goal.\n"
 "\n"
-"Think of "exact" as meaning "this is exactly what is needed to prove the goal.""
+"Think of \"exact\" as meaning \"this is exactly what is needed to prove the goal.\""
 msgstr ""
 
 #: Game.Levels.Subset.L01exact
 msgid "`x ∈ A` means that `x` is an element of `A`.  To enter the symbol `∈`, type\n"
-"`\mem` or `\in`."
+"`\\mem` or `\\in`."
 msgstr ""
 
 #: Game.Levels.Subset.L01exact
 msgid "Let $x$ be an object in the universe $U$, and let $A$ be a set whose elements\n"
-"come from $U$.  Suppose that $x ∈ A$.  Then $x \in A$."
+"come from $U$.  Suppose that $x ∈ A$.  Then $x \\in A$."
 msgstr ""
 
 #: Game.Levels.Subset.L01exact
 msgid "In order to complete this proof, type `exact h` in the text box\n"
-"under the goal and click on "Execute" or hit the "Return" or "Enter" key."
+"under the goal and click on \"Execute\" or hit the \"Return\" or \"Enter\" key."
 msgstr ""
 
 #: Game.Levels.Subset.L01exact
-msgid "\n"
-"Congratulations! You have completed your first verified proof!\n"
+msgid "Congratulations! You have completed your first verified proof!\n"
 "\n"
 "Although this theorem was trivial, it illustrates an important fact: although we\n"
 "called `h` an *identifier* for the assumption `x ∈ A`, it is also recognized by Lean\n"
@@ -70,8 +79,7 @@ msgid "\n"
 "Note that, although `h` was a proof of the goal `x ∈ A`, you could not have closed the goal by\n"
 "simply typing `h` in the text box.  Throughout this game, every move you make must invoke a tactic.\n"
 "\n"
-"Now click on "Next" to see a more interesting use of the `exact` tactic.\n"
-""
+"Now click on \"Next\" to see a more interesting use of the `exact` tactic."
 msgstr ""
 
 #: Game.Levels.Subset.L02subhyp
@@ -79,10 +87,9 @@ msgid "A subset hypothesis"
 msgstr ""
 
 #: Game.Levels.Subset.L02subhyp
-msgid "\n"
-"If `A` and `B` are sets, then we say that `A` is a *subset* of `B` if\n"
+msgid "If `A` and `B` are sets, then we say that `A` is a *subset* of `B` if\n"
 "every element of `A` is also an element of `B`.  The notation `A ⊆ B` means\n"
-"that `A` is a subset of `B`.  (To enter the symbol `⊆`, type `\sub`,\n"
+"that `A` is a subset of `B`.  (To enter the symbol `⊆`, type `\\sub`,\n"
 "followed by a space.)\n"
 "\n"
 "If you have `h1 : A ⊆ B`, then `h1` is a proof that, if something is an element\n"
@@ -92,18 +99,17 @@ msgid "\n"
 "this situation, `h1 h2` is a proof of `x ∈ B`.\n"
 "\n"
 "See if you can use this to complete this level.  If you need a hint, click on\n"
-""Show more help!".\n"
-""
+"\"Show more help!\"."
 msgstr ""
 
 #: Game.Levels.Subset.L02subhyp
 msgid "`A ⊆ B` means that `A` is a subset of `B`.  To enter the symbol `⊆`,\n"
-"type `\sub`."
+"type `\\sub`."
 msgstr ""
 
 #: Game.Levels.Subset.L02subhyp
-msgid "Suppose $A$ and $B$ are sets, $A \subseteq B$, and $x \in A$.\n"
-"Then $x \in B$."
+msgid "Suppose $A$ and $B$ are sets, $A \\subseteq B$, and $x \\in A$.\n"
+"Then $x \\in B$."
 msgstr ""
 
 #: Game.Levels.Subset.L02subhyp
@@ -112,16 +118,14 @@ msgid "Since `h1 h2` is a proof of `x ∈ B`, you can\n"
 msgstr ""
 
 #: Game.Levels.Subset.L02subhyp
-msgid "\n"
-"This example is a better illustration of how the `exact` tactic is usually\n"
+msgid "This example is a better illustration of how the `exact` tactic is usually\n"
 "used.  Often `exact` is followed by an expression that combines assumptions\n"
 "to prove the goal.  In later levels, we will see other ways in which\n"
 "assumptions can be combined to prove a goal.\n"
 "\n"
 "Note that in this proof, `h1` could be thought of as a function that can be\n"
 "applied to a proof of any statement of the form `x ∈ A` to produce a proof\n"
-"of `x ∈ B`.  Many proofs in Lean behave like functions.\n"
-""
+"of `x ∈ B`.  Many proofs in Lean behave like functions."
 msgstr ""
 
 #: Game.Levels.Subset.L03have
@@ -129,13 +133,11 @@ msgid "The have tactic"
 msgstr ""
 
 #: Game.Levels.Subset.L03have
-msgid "\n"
-"In this level, we have assumptions `h1 : A ⊆ B`, `h2 : B ⊆ C`, and `h3 : x ∈ A`.\n"
+msgid "In this level, we have assumptions `h1 : A ⊆ B`, `h2 : B ⊆ C`, and `h3 : x ∈ A`.\n"
 "As we saw in the last level, `h1 h3` is a proof that `x ∈ B`.  Unfortunately,\n"
 "that is not the goal, so we can't use `exact h1 h3` to close the goal.\n"
 "However, we can use the proof `h1 h3` to justify adding `h4 : x ∈ B` to our\n"
-"list of assumptions.  To do that, we'll use a new tactic: `have`.\n"
-""
+"list of assumptions.  To do that, we'll use a new tactic: `have`."
 msgstr ""
 
 #: Game.Levels.Subset.L03have
@@ -160,13 +162,13 @@ msgid "Use `have` to assert a statement that you can prove from your current\n"
 msgstr ""
 
 #: Game.Levels.Subset.L03have
-msgid "Suppose $A \subseteq B$, $B \subseteq C$, and $x \in A$.  Then $x \in C$."
+msgid "Suppose $A \\subseteq B$, $B \\subseteq C$, and $x \\in A$.  Then $x \\in C$."
 msgstr ""
 
 #: Game.Levels.Subset.L03have
 msgid "To get started on this proof, type `have h4 : x ∈ B := h1 h3`\n"
-"in the text box and click "Execute" or hit "Return" or "Enter".\n"
-"Recall that you can enter the symbol `∈` by typing `\mem` or `\in`."
+"in the text box and click \"Execute\" or hit \"Return\" or \"Enter\".\n"
+"Recall that you can enter the symbol `∈` by typing `\\mem` or `\\in`."
 msgstr ""
 
 #: Game.Levels.Subset.L03have
@@ -180,11 +182,9 @@ msgid "As we saw in the last level, `h2 «{h4}»` is now\n"
 msgstr ""
 
 #: Game.Levels.Subset.L03have
-msgid "\n"
-"You can use the `have` tactic to add a new statement to your list of\n"
+msgid "You can use the `have` tactic to add a new statement to your list of\n"
 "assumptions, as long as you can justify it with a proof.  For further\n"
-"information, click on `have` in the list of tactics on the right.\n"
-""
+"information, click on `have` in the list of tactics on the right."
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
@@ -192,17 +192,15 @@ msgid "Implication"
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
-msgid "\n"
-"If `P` and `Q` are statements, then `P → Q` means "if P then Q".\n"
-"To enter the symbol `→`, type `\imp` (short for "implies").\n"
+msgid "If `P` and `Q` are statements, then `P → Q` means \"if P then Q\".\n"
+"To enter the symbol `→`, type `\\imp` (short for \"implies\").\n"
 "\n"
 "The most straightforward way to prove a statement of the form `P → Q` is to assume that\n"
-"`P` is true and then prove `Q`.  To do that, we'll need a new tactic: `intro`.\n"
-""
+"`P` is true and then prove `Q`.  To do that, we'll need a new tactic: `intro`."
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
-msgid "`P → Q` means "if `P` then `Q`".  You can enter the symbol `→` by typing `\imp`."
+msgid "`P → Q` means \"if `P` then `Q`\".  You can enter the symbol `→` by typing `\\imp`."
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
@@ -222,7 +220,7 @@ msgstr ""
 
 #: Game.Levels.Subset.L04imp
 msgid "Let $x$ be an object from the universe $U$, and let $A$, $B$, and $C$ be sets\n"
-"such that $A \subseteq B$ and $x \in B \to x \in C$.  Then $x \in A → x \in C$."
+"such that $A \\subseteq B$ and $x \\in B \\to x \\in C$.  Then $x \\in A → x \\in C$."
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
@@ -247,16 +245,14 @@ msgid "Just as you were able to apply `h1` to `«{h3}»` in the last step,\n"
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
-msgid "\n"
-"In general, if your goal has the form `P → Q`, then the tactic `intro h` will add `h : P` to\n"
+msgid "In general, if your goal has the form `P → Q`, then the tactic `intro h` will add `h : P` to\n"
 "the list of assumptions and set `Q` to be the goal.  If you have assumptions\n"
 "`h1 : P → Q` and `h2 : P`, then `h1 h2` is a proof of `Q`.  This is another example of a proof\n"
 "acting like a function: a proof of `P → Q` can be thought of as a function which, when\n"
 "applied to a proof of `P`, produces a proof of `Q`.\n"
 "\n"
 "As usual, for more information about the new tactic `intro`, you can click on `intro`\n"
-"in the list of tactics on the right.\n"
-""
+"in the list of tactics on the right."
 msgstr ""
 
 #: Game.Levels.Subset.L05subref
@@ -264,16 +260,14 @@ msgid "Subset is reflexive"
 msgstr ""
 
 #: Game.Levels.Subset.L05subref
-msgid "\n"
-"How do you prove that one set is a subset of another?  To prove that `A ⊆ B`,\n"
+msgid "How do you prove that one set is a subset of another?  To prove that `A ⊆ B`,\n"
 "you have to show that if some object `x` is an element of `A`, then it is also\n"
 "an element of `B`.  To do that, you'll have to introduce an object called `x` into\n"
 "the proof.  The object denoted by `x` could be anything, so we say that it is\n"
 "*arbitrary*.\n"
 "\n"
 "In this level, we start with a simple example of this kind of proof.  We're going\n"
-"to show that if `A` is a set, then `A ⊆ A`.\n"
-""
+"to show that if `A` is a set, then `A ⊆ A`."
 msgstr ""
 
 #: Game.Levels.Subset.L05subref
@@ -282,7 +276,7 @@ msgid "If you have `A : Set U`, then `Subset.refl A` is a proof of `A ⊆ A`.\n"
 msgstr ""
 
 #: Game.Levels.Subset.L05subref
-msgid "Let $A$ be any set.  Then $A \subseteq A$."
+msgid "Let $A$ be any set.  Then $A \\subseteq A$."
 msgstr ""
 
 #: Game.Levels.Subset.L05subref
@@ -310,14 +304,12 @@ msgid "Notice that «{h}» is now a proof of the goal."
 msgstr ""
 
 #: Game.Levels.Subset.L05subref
-msgid "\n"
-"The theorem you have proven in this level shows that the subset relation has\n"
+msgid "The theorem you have proven in this level shows that the subset relation has\n"
 "a property called *reflexivity*.  We have given the theorem the name `Subset.refl`.  You\n"
 "will see it in the list of theorems on the right.  (This theorem is included in Lean's\n"
 "mathematical library, Mathlib.  In Mathlib, the name of the theorem is `Set.Subset.refl`.\n"
 "Many other set-theoretic theorems in this game have `Set.` at the beginnings of their names\n"
-"in Mathlib.)\n"
-""
+"in Mathlib.)"
 msgstr ""
 
 #: Game.Levels.Subset.L06subtrans
@@ -325,12 +317,10 @@ msgid "Subset is transitive"
 msgstr ""
 
 #: Game.Levels.Subset.L06subtrans
-msgid "\n"
-"To start a proof, you should look first at the goal.\n"
+msgid "To start a proof, you should look first at the goal.\n"
 "What needs to be done to prove the goal?\n"
 "In this level, the goal is `A ⊆ C`.  What does that\n"
-"tell you about how to proceed?\n"
-""
+"tell you about how to proceed?"
 msgstr ""
 
 #: Game.Levels.Subset.L06subtrans
@@ -339,7 +329,7 @@ msgid "If you have `h1 : A ⊆ B` and `h2 : B ⊆ C`, then `Subset.trans h1 h2` 
 msgstr ""
 
 #: Game.Levels.Subset.L06subtrans
-msgid "Suppose $A \subseteq B$ and $B \subseteq C$.  Then $A \subseteq C$."
+msgid "Suppose $A \\subseteq B$ and $B \\subseteq C$.  Then $A \\subseteq C$."
 msgstr ""
 
 #: Game.Levels.Subset.L06subtrans
@@ -357,10 +347,8 @@ msgid "First use `have` to assert that `«{x}» ∈ B`, and\n"
 msgstr ""
 
 #: Game.Levels.Subset.L06subtrans
-msgid "\n"
-"The theorem you have proven in this level shows that the subset relation has\n"
-"a property called *transitivity*.  We have given the theorem the name `Subset.trans`.\n"
-""
+msgid "The theorem you have proven in this level shows that the subset relation has\n"
+"a property called *transitivity*.  We have given the theorem the name `Subset.trans`."
 msgstr ""
 
 #: Game.Levels.Subset
@@ -377,15 +365,14 @@ msgid "Welcome to Subset World! In this world you will learn about sets and\n"
 "that `A` is a set of objects from `U`, we write `A : Set U`.  (The terminology used\n"
 "in Lean is that `x` has *type* `U` and `A` has *type* `Set U`.)  To\n"
 "say that `x` is an element of `A`, we write `x ∈ A`.  (You can enter\n"
-"the symbol `∈` by typing `\mem` or `\in`, followed by a space.)\n"
+"the symbol `∈` by typing `\\mem` or `\\in`, followed by a space.)\n"
 "\n"
 "You will prove theorems in this game by using tools called *tactics*.\n"
 "The aim is to prove the theorem by applying tactics\n"
 "in the right order.\n"
 "\n"
-"Let's learn some basic tactics. Click on "Start" below\n"
-"to get started.\n"
-""
+"Let's learn some basic tactics. Click on \"Start\" below\n"
+"to get started."
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
@@ -393,18 +380,16 @@ msgid "Proof by contradiction"
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
-msgid "\n"
-"To work with complements, we'll need to understand negative statements--that is, statements\n"
+msgid "To work with complements, we'll need to understand negative statements--that is, statements\n"
 "that say that something is *not* the case.\n"
 "\n"
-"If `P` is a statement, then `¬P` means "it is not the case that P".  To enter the symbol\n"
-"`¬`, type `\not`.\n"
+"If `P` is a statement, then `¬P` means \"it is not the case that P\".  To enter the symbol\n"
+"`¬`, type `\\not`.\n"
 "\n"
 "A common method of proving a negative statement is *proof by\n"
 "contradiction*: to prove a statement of the form `¬P`, you can assume that `P` is true\n"
 "and then show that this assumption leads to a contradiction.  The tactic to use for this\n"
-"kind of proof is `by_contra`.\n"
-""
+"kind of proof is `by_contra`."
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
@@ -421,12 +406,12 @@ msgid "If your goal is `¬P`, for some statement `P`, then the tactic\n"
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
-msgid "`¬P` means \"it is not the case that P\".  To enter the symbol `¬`,\n"
-"type `\not`."
+msgid "`¬P` means \\\"it is not the case that P\\\".  To enter the symbol `¬`,\n"
+"type `\\not`."
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
-msgid "Suppose $x \in A$ and $x \notin B$.  Then $\neg A \subseteq B$."
+msgid "Suppose $x \\in A$ and $x \\notin B$.  Then $\\neg A \\subseteq B$."
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
@@ -447,15 +432,14 @@ msgstr ""
 
 #: Game.Levels.Comp.L01contra
 msgid "You can think of `h2 : x ∉ B` (which is shorthand for `h2 : ¬x ∈ B`)\n"
-"as meaning "if `x ∈ B` were true, then that would lead to a contradiction"--in other\n"
+"as meaning \"if `x ∈ B` were true, then that would lead to a contradiction\"--in other\n"
 "words, `x ∈ B → False`.\n"
 "Applying this to your new assumption `«{h4}» : x ∈ B` will give the contradiction\n"
 "you need.  In other words, `exact h2 «{h4}»` will close the goal."
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
-msgid "\n"
-"You can use the `by_contra` tactic in any proof to assume the\n"
+msgid "You can use the `by_contra` tactic in any proof to assume the\n"
 "opposite of your goal.  But it is most useful when the goal\n"
 "starts with the symbol `¬`.  After using the `by_contra` tactic,\n"
 "your goal will be `False`.\n"
@@ -463,8 +447,7 @@ msgid "\n"
 "To complete a proof by contradiction, you must prove contradictory statements.\n"
 "If your goal is `False` and you have assumptions `h1 : P` and `h2 : ¬P`, for\n"
 "some statement `P`, then `exact h2 h1` will close the goal.  Note that `exact h1 h2` won't\n"
-"work; you must list the negative statement first to establish a contradiction.\n"
-""
+"work; you must list the negative statement first to establish a contradiction."
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
@@ -472,21 +455,19 @@ msgid "Definition of complement"
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
-msgid "\n"
-"If you have `A : Set U`, then `Aᶜ` is defined to be the set of all objects in the universe `U`\n"
+msgid "If you have `A : Set U`, then `Aᶜ` is defined to be the set of all objects in the universe `U`\n"
 "that are not elements of `A`.  That means that if you also have `x : U`, then the statements\n"
 "`x ∈ Aᶜ` and `x ∉ A` are equivalent.  We express this by saying that the statement\n"
-"`x ∈ Aᶜ ↔ x ∉ A` is true.  (The symbol `↔` means "if and only if", and you can enter it\n"
-"by typing `\iff`.  You can enter the superscript `c` in the notation for the complement\n"
-"of a set by typing `\compl` or `\^c`.)\n"
+"`x ∈ Aᶜ ↔ x ∉ A` is true.  (The symbol `↔` means \"if and only if\", and you can enter it\n"
+"by typing `\\iff`.  You can enter the superscript `c` in the notation for the complement\n"
+"of a set by typing `\\compl` or `\\^c`.)\n"
 "\n"
 "In this level, we're going to prove that the statement `x ∈ Aᶜ ↔ x ∉ A` is true, and to do\n"
 "it we'll use a new tactic: `rfl`.  The `rfl` tactic can prove any statement of the form\n"
 "`P ↔ Q` if `P` and `Q` are statements that are equivalent by virtue of the definitions of\n"
 "the symbols occurring in them.  (We say in this case that `P` and `Q` are *definitionally\n"
 "equivalent*.)  The `rfl` tactic can also prove statements of the form `X = Y`, if `X` and\n"
-"`Y` are definitionally equal--that is, equal by virtue of definitions.\n"
-""
+"`Y` are definitionally equal--that is, equal by virtue of definitions."
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
@@ -499,11 +480,11 @@ msgstr ""
 #: Game.Levels.Comp.L02compdef
 msgid "If `A` is a of objects from the universe `U`, then `Aᶜ` is the complement of `A`; that is,\n"
 "`Aᶜ` is the set of objects from `U` that are not elements of `A`.  You can enter the symbol `ᶜ`\n"
-"by typing `\compl` or `\^c`."
+"by typing `\\compl` or `\\^c`."
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
-msgid "`P ↔ Q` means "P if and only if Q".  You can enter the symbol `↔` by typing `\iff`."
+msgid "`P ↔ Q` means \"P if and only if Q\".  You can enter the symbol `↔` by typing `\\iff`."
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
@@ -513,7 +494,7 @@ msgstr ""
 
 #: Game.Levels.Comp.L02compdef
 msgid "Let $x$ be an object in the universe $U$, and let $A$ be a set whose elements\n"
-"come from $U$.  Then $x \in A^c \leftrightarrow x \notin A$."
+"come from $U$.  Then $x \\in A^c \\leftrightarrow x \\notin A$."
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
@@ -522,13 +503,11 @@ msgid "The proof of the theorem in this level is very easy.\n"
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
-msgid "\n"
-"The name of the tactic `rfl` is short for "reflexivity", which is the property of\n"
+msgid "The name of the tactic `rfl` is short for \"reflexivity\", which is the property of\n"
 "both `=` and `↔` that is the basis for the tactic.\n"
 "\n"
 "We have given the theorem proven in this level the name `mem_compl_iff`.  In the next level,\n"
-"we will see how we can use it to prove theorems about complements.\n"
-""
+"we will see how we can use it to prove theorems about complements."
 msgstr ""
 
 #: Game.Levels.Comp.L03compsub
@@ -536,20 +515,18 @@ msgid "Complement subsets from subsets"
 msgstr ""
 
 #: Game.Levels.Comp.L03compsub
-msgid "\n"
-"In the last level, you proved the theorem `mem_compl_iff`.  If you have `A : Set U` and `x : U`,\n"
+msgid "In the last level, you proved the theorem `mem_compl_iff`.  If you have `A : Set U` and `x : U`,\n"
 "then `mem_compl_iff A x` is a proof of the statement `x ∈ Aᶜ ↔ x ∉ A`.\n"
 "\n"
 "You could think of the statement `x ∈ Aᶜ ↔ x ∉ A` as saying that if `x ∈ Aᶜ` occurs anywhere\n"
 "in a proof, you can replace it with `x ∉ A`.  There is a tactic called `rewrite` that can be\n"
-"used to perform such replacements.  You'll get to try out the `rewrite` tactic in this level.\n"
-""
+"used to perform such replacements.  You'll get to try out the `rewrite` tactic in this level."
 msgstr ""
 
 #: Game.Levels.Comp.L03compsub
 msgid "If the expression `t` is a proof of a statement of the form `P ↔ Q`, then the tactic\n"
 "`rewrite [t]` will replace `P` anywhere that it occurs in the goal with `Q`.  If you want to\n"
-"replace `Q` with `P`, use `rewrite [← t]`.  (Type `\l` to enter the symbol `←`.)  To do the\n"
+"replace `Q` with `P`, use `rewrite [← t]`.  (Type `\\l` to enter the symbol `←`.)  To do the\n"
 "replacement in an assumption `h`, use `rewrite [t] at h`.\n"
 "\n"
 "The `rewrite` tactic can also be used with equations.  If `t` is a proof of an equation\n"
@@ -566,7 +543,7 @@ msgid "If you have `h : A ⊆ B`, then `compl_subset_compl_of_subset h` is a pro
 msgstr ""
 
 #: Game.Levels.Comp.L03compsub
-msgid "Suppose $A \subseteq B$.  Then $B^c \subseteq A^c$."
+msgid "Suppose $A \\subseteq B$.  Then $B^c \\subseteq A^c$."
 msgstr ""
 
 #: Game.Levels.Comp.L03compsub
@@ -601,15 +578,13 @@ msgid "This should remind you of the first level of this world.  To get a contra
 msgstr ""
 
 #: Game.Levels.Comp.L03compsub
-msgid "\n"
-"The `rewrite` tactic is often useful for writing out definitions.  For more information about\n"
+msgid "The `rewrite` tactic is often useful for writing out definitions.  For more information about\n"
 "how it works, click on `rewrite` in the list of tactics on the right.  You can also use `rw`\n"
 "instead of `rewrite`.  (There is actually a small difference between the tactics `rw` and\n"
 "`rewrite`, but the difference won't concern us in this game.)\n"
 "\n"
 "You'll find the theorem you proved in this level listed as `compl_subset_compl_of_subset` in the list of\n"
-"theorems on the right.  This theorem will be useful in the last level of this world.\n"
-""
+"theorems on the right.  This theorem will be useful in the last level of this world."
 msgstr ""
 
 #: Game.Levels.Comp.L04compcomp
@@ -617,8 +592,7 @@ msgid "Complement of a complement"
 msgstr ""
 
 #: Game.Levels.Comp.L04compcomp
-msgid "\n"
-"How do we prove that two sets `A` and `B` are equal?  One way to do it is to use the theorem\n"
+msgid "How do we prove that two sets `A` and `B` are equal?  One way to do it is to use the theorem\n"
 "`Subset.antisymm`.  This theorem is pre-defined in this game; you don't need to prove it.\n"
 "If you have `h1 : A ⊆ B` and `h2 : B ⊆ A`, then\n"
 "`Subset.antisymm h1 h2` is a proof of `A = B`.  The theorem `Subset.antisymm` says that the\n"
@@ -632,8 +606,7 @@ msgid "\n"
 "If your goal says that two sets are equal, a good way to begin is with\n"
 "`apply Subset.antisymm`.  (Later we'll see a second approach to proving sets are equal.)\n"
 "\n"
-"This level also introduces another new tactic, `push_neg`.\n"
-""
+"This level also introduces another new tactic, `push_neg`."
 msgstr ""
 
 #: Game.Levels.Comp.L04compcomp
@@ -709,8 +682,7 @@ msgid "There are two ways to complete the proof now.  Since your goal is a negat
 msgstr ""
 
 #: Game.Levels.Comp.L04compcomp
-msgid "\n"
-"The `push_neg` tactic can reexpress a number of different kinds of negative statements as\n"
+msgid "The `push_neg` tactic can reexpress a number of different kinds of negative statements as\n"
 "equivalent positive statements; use\n"
 "`push_neg` to reexpress a negative goal, and `push_neg at h` to reexpress a negative assumption `h`.\n"
 "We'll see many more uses of the `apply` tactic in this game.\n"
@@ -718,8 +690,7 @@ msgid "\n"
 "click on `push_neg` or `apply` under the list of tactics on the right.\n"
 "\n"
 "We have given this theorem the name `compl_compl`.  Both this theorem and the one in the previous\n"
-"level will be useful in the next level.\n"
-""
+"level will be useful in the next level."
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
@@ -727,13 +698,11 @@ msgid "Complement subsets equivalence"
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
-msgid "\n"
-"In this last level of Complement World, you'll prove a statement of the form `P ↔ Q`.  The most\n"
+msgid "In this last level of Complement World, you'll prove a statement of the form `P ↔ Q`.  The most\n"
 "useful theorem for this purpose is `Iff.intro`.  If you have `h1 : P → Q` and `h2 : Q → P`, then\n"
 "`Iff.intro h1 h2` is a proof of `P ↔ Q`.  As we saw in the last level, that means you can start your\n"
 "proof with `apply Iff.intro`.  Lean will set `P → Q` and `Q → P` as the goals that are needed\n"
-"to complete the proof.\n"
-""
+"to complete the proof."
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
@@ -741,7 +710,7 @@ msgid "If you have `h1 : P → Q` and `h2 : Q → P`, then `Iff.intro h1 h2` is 
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
-msgid "Suppose $A$ and $B$ are sets.  Then $A \subseteq B$ if and only if $B^c \subseteq A^c$."
+msgid "Suppose $A$ and $B$ are sets.  Then $A \\subseteq B$ if and only if $B^c \\subseteq A^c$."
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
@@ -794,13 +763,11 @@ msgid "`rewrite [compl_compl A] at «{h2}»` will change `Aᶜᶜ` to\n"
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
-msgid "\n"
-"The proof in this level illustrates how previously proven theorems can be used in proofs.\n"
+msgid "The proof in this level illustrates how previously proven theorems can be used in proofs.\n"
 "\n"
 "There is another tactic you can use if your goal has the form `P ↔ Q`.  In this situation,\n"
 "the tactic `constructor` will have the same effect as `apply Iff.intro`; that is, it will\n"
-"set `P → Q` and `Q → P` as goals to be proven.\n"
-""
+"set `P → Q` and `Q → P` as goals to be proven."
 msgstr ""
 
 #: Game.Levels.Comp
@@ -815,8 +782,7 @@ msgid "If `A` is a set of objects from the universe `U`, then the *complement* o
 "For example, if `U` consists of all people and `A` is the set of people who are more than\n"
 "6 feet tall, then `Aᶜ` is the set of all people who are at most 6 feet tall.\n"
 "\n"
-"In this world, we'll see how to prove theorems about complements.\n"
-""
+"In this world, we'll see how to prove theorems about complements."
 msgstr ""
 
 #: Game.Levels.Inter.L01and
@@ -824,29 +790,25 @@ msgid "And"
 msgstr ""
 
 #: Game.Levels.Inter.L01and
-msgid "\n"
-"To work with intersections, we'll need to understand the word "and".\n"
+msgid "To work with intersections, we'll need to understand the word \"and\".\n"
 "\n"
-"If `P` and `Q` are statements, then `P ∧ Q` means "P and Q".  To enter the\n"
-"symbol `∧`, type `\and`.  For the statement `P ∧ Q` to be true, `P` and `Q` must\n"
+"If `P` and `Q` are statements, then `P ∧ Q` means \"P and Q\".  To enter the\n"
+"symbol `∧`, type `\\and`.  For the statement `P ∧ Q` to be true, `P` and `Q` must\n"
 "both be true.  If you have `h : P ∧ Q`--that is, `h` is a proof of\n"
 "the statement `P ∧ Q`--then in Lean, `h.left` is a proof of `P` and `h.right` is\n"
-"a proof of `Q`.  That should be all you need to know to solve this level.\n"
-""
+"a proof of `Q`.  That should be all you need to know to solve this level."
 msgstr ""
 
 #: Game.Levels.Inter.L01and
-msgid "`P ∧ Q` means "P and Q".  To enter the symbol `∧`, type `\and`."
+msgid "`P ∧ Q` means \"P and Q\".  To enter the symbol `∧`, type `\\and`."
 msgstr ""
 
 #: Game.Levels.Inter.L01and
-msgid "Suppose $x \in A$ and $x \in B$.  Then $x \in A$."
+msgid "Suppose $x \\in A$ and $x \\in B$.  Then $x \\in A$."
 msgstr ""
 
 #: Game.Levels.Inter.L01and
-msgid "\n"
-"Now we're ready to start proving theorems about intersections.\n"
-""
+msgid "Now we're ready to start proving theorems about intersections."
 msgstr ""
 
 #: Game.Levels.Inter.L02elt_inter_elt_right
@@ -854,8 +816,7 @@ msgid "Element of an intersection"
 msgstr ""
 
 #: Game.Levels.Inter.L02elt_inter_elt_right
-msgid "\n"
-"In this level, we'll need to use the definition of "intersection".  The theorem that\n"
+msgid "In this level, we'll need to use the definition of \"intersection\".  The theorem that\n"
 "expresses that definition is called `mem_inter_iff`.  If you have `x : U`, `A : Set U`, and\n"
 "`B : Set U`, then `mem_inter_iff x A B` is a proof of the statement `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`.\n"
 "As we saw in Complement World, that means that the tactic `rewrite [mem_inter_iff x A B]` can be\n"
@@ -866,13 +827,12 @@ msgid "\n"
 "\n"
 "Like `mem_compl_iff`, `mem_inter_iff` can be proven by using the `rfl` tactic.  But we\n"
 "won't ask you to prove it; it is pre-defined in this game.  To enter the symbol `∩`, you\n"
-"can type `\inter` or `\cap`.\n"
-""
+"can type `\\inter` or `\\cap`."
 msgstr ""
 
 #: Game.Levels.Inter.L02elt_inter_elt_right
 msgid "If `A` and `B` are sets, then `A ∩ B` is the intersection of `A` and `B`.\n"
-"To enter the symbol `∩`, type `\inter` or `\cap`."
+"To enter the symbol `∩`, type `\\inter` or `\\cap`."
 msgstr ""
 
 #: Game.Levels.Inter.L02elt_inter_elt_right
@@ -882,7 +842,7 @@ msgid "If you have `x : U`, `A : Set U`, and `B : Set U`, then `mem_inter_iff x 
 msgstr ""
 
 #: Game.Levels.Inter.L02elt_inter_elt_right
-msgid "Suppose $x \in A ∩ B$.  Then $x \in B$."
+msgid "Suppose $x \\in A ∩ B$.  Then $x \\in B$."
 msgstr ""
 
 #: Game.Levels.Inter.L02elt_inter_elt_right
@@ -898,13 +858,11 @@ msgid "Intersection is a subset"
 msgstr ""
 
 #: Game.Levels.Inter.L03inter_sub_left
-msgid "\n"
-"You should be able to combine ideas from previous levels to solve this one.\n"
-""
+msgid "You should be able to combine ideas from previous levels to solve this one."
 msgstr ""
 
 #: Game.Levels.Inter.L03inter_sub_left
-msgid "For any sets $A$ and $B$, $A \cap B \subseteq A$."
+msgid "For any sets $A$ and $B$, $A \\cap B \\subseteq A$."
 msgstr ""
 
 #: Game.Levels.Inter.L03inter_sub_left
@@ -913,13 +871,11 @@ msgid "Since the goal is a subset statement, you should start by\n"
 msgstr ""
 
 #: Game.Levels.Inter.L03inter_sub_left
-msgid "\n"
-"You probably used a step like `rewrite [mem_inter_iff] at h` in this proof.  That step is\n"
+msgid "You probably used a step like `rewrite [mem_inter_iff] at h` in this proof.  That step is\n"
 "actually optional.  Writing out the definition of intersection probably helps *you*\n"
 "understand how to proceed with the proof, but *Lean* doesn't need to be told to\n"
 "write out the definition.  It will do that on its own.  In other words, if you\n"
-"have `h : x ∈ A ∩ B`, Lean will accept `h.left` as a proof of `x ∈ A`.\n"
-""
+"have `h : x ∈ A ∩ B`, Lean will accept `h.left` as a proof of `x ∈ A`."
 msgstr ""
 
 #: Game.Levels.Inter.L04proveand
@@ -927,11 +883,9 @@ msgid "Proving a conjunction"
 msgstr ""
 
 #: Game.Levels.Inter.L04proveand
-msgid "\n"
-"In this level we'll prove a statement of the form `P ∧ Q`.  To do this, we'll need\n"
+msgid "In this level we'll prove a statement of the form `P ∧ Q`.  To do this, we'll need\n"
 "another theorem: `And.intro`.  If you have `h1 : P` and `h2 : Q`, then\n"
-"`And.intro h1 h2` is a proof of `P ∧ Q`.\n"
-""
+"`And.intro h1 h2` is a proof of `P ∧ Q`."
 msgstr ""
 
 #: Game.Levels.Inter.L04proveand
@@ -939,7 +893,7 @@ msgid "If you have `h1 : P` and `h2 : Q`, then `And.intro h1 h2` is a proof of `
 msgstr ""
 
 #: Game.Levels.Inter.L04proveand
-msgid "Suppose $x \in A$ and $x \in B$.  Then $x \in A \cap B$."
+msgid "Suppose $x \\in A$ and $x \\in B$.  Then $x \\in A \\cap B$."
 msgstr ""
 
 #: Game.Levels.Inter.L04proveand
@@ -956,10 +910,8 @@ msgid "`exact And.intro h1 h2` will close the goal."
 msgstr ""
 
 #: Game.Levels.Inter.L04proveand
-msgid "\n"
-"Once again, the use of `rewrite` was not really necessary.  You could prove this\n"
-"theorem with the single step `exact And.intro h1 h2`.\n"
-""
+msgid "Once again, the use of `rewrite` was not really necessary.  You could prove this\n"
+"theorem with the single step `exact And.intro h1 h2`."
 msgstr ""
 
 #: Game.Levels.Inter.L05subint
@@ -967,13 +919,11 @@ msgid "Subset of an intersection"
 msgstr ""
 
 #: Game.Levels.Inter.L05subint
-msgid "\n"
-"Of course, you know by now how to start a proof that one set is a subset of another.\n"
-""
+msgid "Of course, you know by now how to start a proof that one set is a subset of another."
 msgstr ""
 
 #: Game.Levels.Inter.L05subint
-msgid "Suppose $A \subseteq B$ and $A \subseteq C$.  Then $A \subseteq B \cap C$."
+msgid "Suppose $A \\subseteq B$ and $A \\subseteq C$.  Then $A \\subseteq B \\cap C$."
 msgstr ""
 
 #: Game.Levels.Inter.L05subint
@@ -999,14 +949,12 @@ msgid "Your immediate goal now is to prove that `«{x}» ∈ B`.  Once you close
 msgstr ""
 
 #: Game.Levels.Inter.L05subint
-msgid "\n"
-"In general, if you think that some theorem `t` could be used to prove the goal, the tactic\n"
+msgid "In general, if you think that some theorem `t` could be used to prove the goal, the tactic\n"
 "`apply t` will work backwards from the goal, setting as new goals any hypotheses that are\n"
 "needed for the application of the theorem `t`.\n"
 "\n"
 "If your goal has the form `P ∧ Q`, then the `constructor` tactic will have the same\n"
-"effect as `apply And.intro`; that is, it will set `P` and `Q` as goals to be proven.\n"
-""
+"effect as `apply And.intro`; that is, it will set `P` and `Q` as goals to be proven."
 msgstr ""
 
 #: Game.Levels.Inter.L06inter_sub_swap
@@ -1014,10 +962,8 @@ msgid "Intersection subset of swap"
 msgstr ""
 
 #: Game.Levels.Inter.L06inter_sub_swap
-msgid "\n"
-"In the next level we're going to prove that intersection is commutative; that is,\n"
-"`A ∩ B = B ∩ A`.  As a warm-up, in this level we prove `A ∩ B ⊆ B ∩ A`.\n"
-""
+msgid "In the next level we're going to prove that intersection is commutative; that is,\n"
+"`A ∩ B = B ∩ A`.  As a warm-up, in this level we prove `A ∩ B ⊆ B ∩ A`."
 msgstr ""
 
 #: Game.Levels.Inter.L06inter_sub_swap
@@ -1026,7 +972,7 @@ msgid "For any sets `A` and `B`, `inter_subset_swap A B` is a proof of\n"
 msgstr ""
 
 #: Game.Levels.Inter.L06inter_sub_swap
-msgid "For any sets $A$ and $B$, $A \cap B \subseteq B \cap A$."
+msgid "For any sets $A$ and $B$, $A \\cap B \\subseteq B \\cap A$."
 msgstr ""
 
 #: Game.Levels.Inter.L06inter_sub_swap
@@ -1042,10 +988,8 @@ msgid "Now `And.intro «{h}».right «{h}».left` proves the goal."
 msgstr ""
 
 #: Game.Levels.Inter.L06inter_sub_swap
-msgid "\n"
-"We have given this theorem the name `inter_subset_swap`.  Thus, from now on, for\n"
-"any sets `A` and `B`, `inter_subset_swap A B` is a proof of `A ∩ B ⊆ B ∩ A`.\n"
-""
+msgid "We have given this theorem the name `inter_subset_swap`.  Thus, from now on, for\n"
+"any sets `A` and `B`, `inter_subset_swap A B` is a proof of `A ∩ B ⊆ B ∩ A`."
 msgstr ""
 
 #: Game.Levels.Inter.L07inter_comm
@@ -1053,12 +997,10 @@ msgid "Intersection is commutative"
 msgstr ""
 
 #: Game.Levels.Inter.L07inter_comm
-msgid "\n"
-"As we saw in Complement World, a good first step when your goal is an equation between\n"
+msgid "As we saw in Complement World, a good first step when your goal is an equation between\n"
 "sets is `apply Subset.antisymm`.  For the theorem in this level, that will leave you with\n"
 "two goals: `A ∩ B ⊆ B ∩ A` and `B ∩ A ⊆ A ∩ B`.  Fortunately, you can prove *both* of these\n"
-"goals by using the theorem `inter_subset_swap` from the last level.\n"
-""
+"goals by using the theorem `inter_subset_swap` from the last level."
 msgstr ""
 
 #: Game.Levels.Inter.L07inter_comm
@@ -1067,13 +1009,11 @@ msgid "For any sets `A` and `B`, `inter_comm A B` is a proof of the\n"
 msgstr ""
 
 #: Game.Levels.Inter.L07inter_comm
-msgid "For any sets $A$ and $B$, $A \cap B = B \cap A$."
+msgid "For any sets $A$ and $B$, $A \\cap B = B \\cap A$."
 msgstr ""
 
 #: Game.Levels.Inter.L07inter_comm
-msgid "\n"
-"We'll prove one more property of intersections in the next level.\n"
-""
+msgid "We'll prove one more property of intersections in the next level."
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
@@ -1081,13 +1021,11 @@ msgid "Intersection is associative"
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
-msgid "\n"
-"Our goal in this level is again an equation between sets.  In previous proofs of this kind,\n"
+msgid "Our goal in this level is again an equation between sets.  In previous proofs of this kind,\n"
 "we've started with the tactic `apply Subset.antisymm`, and that would work here as well.\n"
 "But we're going to try out an alternative: the tactic `ext`.  This tactic applies the principle\n"
 "of *extensionality* for sets, which says that if\n"
-"two sets have exactly the same elements, then they are equal.\n"
-""
+"two sets have exactly the same elements, then they are equal."
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
@@ -1101,7 +1039,7 @@ msgid "If your goal is `A = B`, where `A` and `B` are sets, then the tactic `ext
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
-msgid "For any sets $A$, $B$, and $C$, $(A \cap B) \cap C = A \cap (B \cap C)$."
+msgid "For any sets $A$, $B$, and $C$, $(A \\cap B) \\cap C = A \\cap (B \\cap C)$."
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
@@ -1121,12 +1059,12 @@ msgid "Notice that Lean has introduced the new object `«{x}» : U` into the pro
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
-msgid "Since your goal is an "if and only if" statement, a good next step\n"
+msgid "Since your goal is an \"if and only if\" statement, a good next step\n"
 "is `apply Iff.intro`."
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
-msgid "Since your goal is an "if-then" statement, a good next step\n"
+msgid "Since your goal is an \"if-then\" statement, a good next step\n"
 "is `intro h1`."
 msgstr ""
 
@@ -1138,9 +1076,7 @@ msgid "If you're stuck at this point,\n"
 msgstr ""
 
 #: Game.Levels.Inter.L08inter_assoc
-msgid "\n"
-"Well done!  You're ready to move on to Union World.\n"
-""
+msgid "Well done!  You're ready to move on to Union World."
 msgstr ""
 
 #: Game.Levels.Inter
@@ -1155,8 +1091,7 @@ msgid "If `A` and `B` are sets, then the *intersection* of `A` and `B`, denoted\
 "For example, if `A` is the set of all round things, and `B` is the set of all red things,\n"
 "then `A ∩ B` is the set of all round red things.\n"
 "\n"
-"In this world you'll prove some basic properties of intersections of sets.\n"
-""
+"In this world you'll prove some basic properties of intersections of sets."
 msgstr ""
 
 #: Game.Levels.Union.L01or
@@ -1164,19 +1099,17 @@ msgid "Or"
 msgstr ""
 
 #: Game.Levels.Union.L01or
-msgid "\n"
-"For working with unions, the important logical word is "or".\n"
+msgid "For working with unions, the important logical word is \"or\".\n"
 "\n"
-"If `P` and `Q` are statements, then `P ∨ Q` means "P or Q or both".  To enter the\n"
-"symbol `∨`, type `\or`.  For the statement `P ∨ Q` to be true, either `P` or `Q` must\n"
+"If `P` and `Q` are statements, then `P ∨ Q` means \"P or Q or both\".  To enter the\n"
+"symbol `∨`, type `\\or`.  For the statement `P ∨ Q` to be true, either `P` or `Q` must\n"
 "be true.  This gives us two ways to prove a statement of this form.  If you have\n"
 "`h : P`, then `Or.inl h` can be used to prove `P ∨ Q`.  If you have `h : Q`, then\n"
-"`Or.inr h` proves `P ∨ Q`.\n"
-""
+"`Or.inr h` proves `P ∨ Q`."
 msgstr ""
 
 #: Game.Levels.Union.L01or
-msgid "`P ∨ Q` means "P or Q or both".  To enter the symbol `∨`, type `\or`."
+msgid "`P ∨ Q` means \"P or Q or both\".  To enter the symbol `∨`, type `\\or`."
 msgstr ""
 
 #: Game.Levels.Union.L01or
@@ -1190,7 +1123,7 @@ msgid "If you have `h : Q`, then `Or.inr h` can be used as a proof of `P ∨ Q`,
 msgstr ""
 
 #: Game.Levels.Union.L01or
-msgid "Suppose $x \in A$, and $B$ is any set.  Then $x \in A ∨ x ∈ B$."
+msgid "Suppose $x \\in A$, and $B$ is any set.  Then $x \\in A ∨ x ∈ B$."
 msgstr ""
 
 #: Game.Levels.Union.L01or
@@ -1198,9 +1131,7 @@ msgid "`Or.inl h` is a proof of the goal."
 msgstr ""
 
 #: Game.Levels.Union.L01or
-msgid "\n"
-"Now we're ready to start proving theorems about unions.\n"
-""
+msgid "Now we're ready to start proving theorems about unions."
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
@@ -1208,20 +1139,18 @@ msgid "Subset of a union"
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
-msgid "\n"
-"As with complements and intersections, one of the key tools for proving theorems about unions\n"
+msgid "As with complements and intersections, one of the key tools for proving theorems about unions\n"
 "is a theorem stating the definition.  If you have `x : U`, `A : Set U`, and `B : Set U`,\n"
 "then `mem_union x A B` is a proof of the statement `x ∈ A ∪ B ↔ x ∈ A ∨ x ∈ B`.\n"
 "That means you can use `rewrite [mem_union]` to write out the definition of\n"
 "`x ∈ A ∪ B` if it appears in any assumption or the goal.  (The similar theorem about intersections\n"
 "was called `mem_inter_iff`.  Why isn't this one called `mem_union_iff`?  I don't know.  The\n"
-"naming of theorems in Lean is systematic, but there are occasional surprises.)\n"
-""
+"naming of theorems in Lean is systematic, but there are occasional surprises.)"
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
 msgid "If `A` and `B` are sets, then `A ∪ B` is the union of `A` and `B`.\n"
-"To enter the symbol `∪`, type `\union`."
+"To enter the symbol `∪`, type `\\union`."
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
@@ -1230,7 +1159,7 @@ msgid "If you have `x : U`, `A : Set U`, and `B : Set U`, then `mem_union x A B`
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
-msgid "Suppose $A$ and $B$ are sets.  Then $B \subseteq A \cup B$."
+msgid "Suppose $A$ and $B$ are sets.  Then $B \\subseteq A \\cup B$."
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
@@ -1243,9 +1172,7 @@ msgid "Writing out the definition of union in the goal should help you see how t
 msgstr ""
 
 #: Game.Levels.Union.L02subunion
-msgid "\n"
-"Next, we'll see how to prove that a union is a subset of another set.\n"
-""
+msgid "Next, we'll see how to prove that a union is a subset of another set."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
@@ -1253,10 +1180,8 @@ msgid "Proof by cases"
 msgstr ""
 
 #: Game.Levels.Union.L03cases
-msgid "\n"
-"In this proof, we'll need a new proof technique: proof by cases.  And we'll need a new\n"
-"tactic to implement that technique in Lean: `cases'`.\n"
-""
+msgid "In this proof, we'll need a new proof technique: proof by cases.  And we'll need a new\n"
+"tactic to implement that technique in Lean: `cases'`."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
@@ -1271,7 +1196,7 @@ msgid "If `h` is a proof of a statement of the form `P ∨ Q`, then the tactic\n
 msgstr ""
 
 #: Game.Levels.Union.L03cases
-msgid "Suppose $A \subseteq C$ and $B \subseteq C$.  Then $A \cup B \subseteq C$."
+msgid "Suppose $A \\subseteq C$ and $B \\subseteq C$.  Then $A \\cup B \\subseteq C$."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
@@ -1285,7 +1210,7 @@ msgid "To understand the logic of this proof, it will help to write out the defi
 msgstr ""
 
 #: Game.Levels.Union.L03cases
-msgid "Now the assumption `«{h3}»` is an "or" statement.  The easiest way to use such an\n"
+msgid "Now the assumption `«{h3}»` is an \"or\" statement.  The easiest way to use such an\n"
 "assumption is to break your proof into cases.  To do this in Lean, use the tactic\n"
 "`cases' «{h3}» with «{h3}»A «{h3}»B`."
 msgstr ""
@@ -1298,13 +1223,11 @@ msgid "Now you have *two* goals.  For the first, the assumption `«{x}» ∈ A �
 msgstr ""
 
 #: Game.Levels.Union.L03cases
-msgid "\n"
-"Note that Lean also has a `cases` tactic, but the syntax is a little more complicated.\n"
+msgid "Note that Lean also has a `cases` tactic, but the syntax is a little more complicated.\n"
 "That's why we have chosen to use the `cases'` tactic.\n"
 "\n"
 "The `cases'` tactic has other uses.  However, in this game we will be using it only with\n"
-"assumptions that are "or" statements, to break the proof into cases.\n"
-""
+"assumptions that are \"or\" statements, to break the proof into cases."
 msgstr ""
 
 #: Game.Levels.Union.L04union_sub_swap
@@ -1312,11 +1235,9 @@ msgid "Union subset of swap"
 msgstr ""
 
 #: Game.Levels.Union.L04union_sub_swap
-msgid "\n"
-"In the next level we're going to prove that union is commutative; that is,\n"
+msgid "In the next level we're going to prove that union is commutative; that is,\n"
 "`A ∪ B = B ∪ A`.  We're going to imitate the approach we used in Intersection World\n"
-"to prove that intersection is commutative.  We begin by proving `A ∪ B ⊆ B ∪ A`.\n"
-""
+"to prove that intersection is commutative.  We begin by proving `A ∪ B ⊆ B ∪ A`."
 msgstr ""
 
 #: Game.Levels.Union.L04union_sub_swap
@@ -1325,7 +1246,7 @@ msgid "For any sets `A` and `B`, `union_sub_swap A B` is a proof of\n"
 msgstr ""
 
 #: Game.Levels.Union.L04union_sub_swap
-msgid "For any sets $A$ and $B$, $A \cup B \subseteq B \cup A$."
+msgid "For any sets $A$ and $B$, $A \\cup B \\subseteq B \\cup A$."
 msgstr ""
 
 #: Game.Levels.Union.L04union_sub_swap
@@ -1338,10 +1259,8 @@ msgid "The form of the assumption `«{h}»` now suggests proof by cases."
 msgstr ""
 
 #: Game.Levels.Union.L04union_sub_swap
-msgid "\n"
-"You'll be able to use the theorem `union_subset_swap` in the next level to prove\n"
-"that union is commutative.\n"
-""
+msgid "You'll be able to use the theorem `union_subset_swap` in the next level to prove\n"
+"that union is commutative."
 msgstr ""
 
 #: Game.Levels.Union.L05union_comm
@@ -1349,10 +1268,8 @@ msgid "Union is commutative"
 msgstr ""
 
 #: Game.Levels.Union.L05union_comm
-msgid "\n"
-"If you start your proof with `apply Subset.antisymm`, then you'll be able to use\n"
-"the theorem `union_subset_swap` that you proved in the last level.\n"
-""
+msgid "If you start your proof with `apply Subset.antisymm`, then you'll be able to use\n"
+"the theorem `union_subset_swap` that you proved in the last level."
 msgstr ""
 
 #: Game.Levels.Union.L05union_comm
@@ -1361,13 +1278,11 @@ msgid "For any sets `A` and `B`, `union_comm A B` is a proof of the\n"
 msgstr ""
 
 #: Game.Levels.Union.L05union_comm
-msgid "For any sets $A$ and $B$, $A \cup B = B \cup A$."
+msgid "For any sets $A$ and $B$, $A \\cup B = B \\cup A$."
 msgstr ""
 
 #: Game.Levels.Union.L05union_comm
-msgid "\n"
-"Next we'll prove the associative law for unions.\n"
-""
+msgid "Next we'll prove the associative law for unions."
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
@@ -1375,16 +1290,14 @@ msgid "Union is associative"
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
-msgid "\n"
-"Here's an idea that you may find helpful for this proof:\n"
-"If you're proving an "or" statement and you think you'll be\n"
+msgid "Here's an idea that you may find helpful for this proof:\n"
+"If you're proving an \"or\" statement and you think you'll be\n"
 "able to prove either the left or right side of the statement, then `apply Or.inl` or\n"
 "`apply Or.inr` will set the goal to be the left or right side.  Alternatively, the tactic\n"
 "`left` has the same effect as `apply Or.inl`, and `right` has the same effect as\n"
 "`apply Or.inr`.\n"
 "\n"
-"You can start this proof with either `ext x` or `apply Subset.antisymm`.\n"
-""
+"You can start this proof with either `ext x` or `apply Subset.antisymm`."
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
@@ -1393,7 +1306,7 @@ msgid "For any sets `A`, `B`, and `C`, `union_assoc A B C` is a proof of the\n"
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
-msgid "For any sets $A$, $B$, and $C$, $(A \cup B) \cup C = A \cup (B \cup C)$."
+msgid "For any sets $A$, $B$, and $C$, $(A \\cup B) \\cup C = A \\cup (B \\cup C)$."
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
@@ -1406,10 +1319,8 @@ msgid "Do you know which half of the goal you're going to prove now?"
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
-msgid "\n"
-"You've mastered reasoning about complements, intersections, and unions.  In the next world,\n"
-"we'll start mixing them up!\n"
-""
+msgid "You've mastered reasoning about complements, intersections, and unions.  In the next world,\n"
+"we'll start mixing them up!"
 msgstr ""
 
 #: Game.Levels.Union
@@ -1425,8 +1336,7 @@ msgid "If `A` and `B` are sets, then the *union* of `A` and `B`, denoted\n"
 "For example, if `A` is the set of all people under 30, and `B` is the set of\n"
 "all people over 20, then `A ∪ B` is the set of all people.\n"
 "\n"
-"In this world you'll prove some basic properties of unions of sets.\n"
-""
+"In this world you'll prove some basic properties of unions of sets."
 msgstr ""
 
 #: Game.Levels.Combo.L01compunion
@@ -1434,12 +1344,10 @@ msgid "Complement of a union"
 msgstr ""
 
 #: Game.Levels.Combo.L01compunion
-msgid "\n"
-"There is more than one way to do the proof in this level.  Since the proof involves complements of\n"
+msgid "There is more than one way to do the proof in this level.  Since the proof involves complements of\n"
 "sets, negative statements will arise in the course of the proof.  This suggests two possible techniques.\n"
 "You may be able to use the `push_neg` tactic to reexpress some negative statements as equivalent\n"
-"positive statements.  And you may find proof by contradiction useful.\n"
-""
+"positive statements.  And you may find proof by contradiction useful."
 msgstr ""
 
 #: Game.Levels.Combo.L01compunion
@@ -1448,7 +1356,7 @@ msgid "For any sets `A` and `B`, `compl_union A B` is a proof of the\n"
 msgstr ""
 
 #: Game.Levels.Combo.L01compunion
-msgid "For any sets $A$ and $B$, $(A \cup B)^c = A^c \cap B^c$."
+msgid "For any sets $A$ and $B$, $(A \\cup B)^c = A^c \\cap B^c$."
 msgstr ""
 
 #: Game.Levels.Combo.L02compint
@@ -1456,8 +1364,7 @@ msgid "Complement of an intersection"
 msgstr ""
 
 #: Game.Levels.Combo.L02compint
-msgid "\n"
-"Of course, you could start the proof in this level with either `ext x` or `apply Subset.antisymm`.\n"
+msgid "Of course, you could start the proof in this level with either `ext x` or `apply Subset.antisymm`.\n"
 "But there is a shorter solution: you can use\n"
 "the theorem from the previous level (`compl_union`) to prove the\n"
 "theorem in this level.\n"
@@ -1466,8 +1373,7 @@ msgid "\n"
 "know, `compl_compl (Aᶜ ∪ Bᶜ)` is a proof of the theorem `(Aᶜ ∪ Bᶜ)ᶜᶜ = Aᶜ ∪ Bᶜ`, and therefore\n"
 "`rewrite [compl_compl (Aᶜ ∪ Bᶜ)]` could be used to rewrite `(Aᶜ ∪ Bᶜ)ᶜᶜ` as `Aᶜ ∪ Bᶜ`; but we\n"
 "want to go in the opposite direction, rewriting `Aᶜ ∪ Bᶜ` as `(Aᶜ ∪ Bᶜ)ᶜᶜ`. To do that, use\n"
-"`rewrite [← compl_compl (Aᶜ ∪ Bᶜ)]`. (To enter the left-pointing arrow, type `\l`.)\n"
-""
+"`rewrite [← compl_compl (Aᶜ ∪ Bᶜ)]`. (To enter the left-pointing arrow, type `\\l`.)"
 msgstr ""
 
 #: Game.Levels.Combo.L02compint
@@ -1476,7 +1382,7 @@ msgid "For any sets `A` and `B`, `compl_inter A B` is a proof of the\n"
 msgstr ""
 
 #: Game.Levels.Combo.L02compint
-msgid "For any sets $A$ and $B$, $(A \cap B)^c = A^c \cup B^c$."
+msgid "For any sets $A$ and $B$, $(A \\cap B)^c = A^c \\cup B^c$."
 msgstr ""
 
 #: Game.Levels.Combo.L02compint
@@ -1488,10 +1394,8 @@ msgid "Intersection distributes over union"
 msgstr ""
 
 #: Game.Levels.Combo.L03inter_distrib_union
-msgid "\n"
-"This proof is longer than previous ones, but it doesn't require any new tactics or theorems.\n"
-"Just stick with it and keep applying the ideas from previous levels!\n"
-""
+msgid "This proof is longer than previous ones, but it doesn't require any new tactics or theorems.\n"
+"Just stick with it and keep applying the ideas from previous levels!"
 msgstr ""
 
 #: Game.Levels.Combo.L03inter_distrib_union
@@ -1501,7 +1405,7 @@ msgid "For any sets `A`, `B`, and `C`, `inter_distrib_left A B C` is a proof of 
 msgstr ""
 
 #: Game.Levels.Combo.L03inter_distrib_union
-msgid "For any sets $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$."
+msgid "For any sets $A$, $B$, and $C$, $A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$."
 msgstr ""
 
 #: Game.Levels.Combo.L03inter_distrib_union
@@ -1517,9 +1421,7 @@ msgid "It may help you see how to proceed if you separate\n"
 msgstr ""
 
 #: Game.Levels.Combo.L03inter_distrib_union
-msgid "\n"
-"Whew!\n"
-""
+msgid "Whew!"
 msgstr ""
 
 #: Game.Levels.Combo.L04union_distrib_inter
@@ -1527,16 +1429,14 @@ msgid "Union distributes over intersection"
 msgstr ""
 
 #: Game.Levels.Combo.L04union_distrib_inter
-msgid "\n"
-"This is different from the previous theorem--the roles of union and intersection have\n"
+msgid "This is different from the previous theorem--the roles of union and intersection have\n"
 "been swapped.\n"
 "\n"
 "Once again, there is a tricky shortcut: there is a way to use the theorem from the\n"
 "previous level to prove this theorem.\n"
 "\n"
 "But if you don't see the shortcut, you can use a straightforward approach.\n"
-"If you made it through the last one, you can do this one too!\n"
-""
+"If you made it through the last one, you can do this one too!"
 msgstr ""
 
 #: Game.Levels.Combo.L04union_distrib_inter
@@ -1546,7 +1446,7 @@ msgid "For any sets `A`, `B`, and `C`, `union_distrib_left A B C` is a proof of 
 msgstr ""
 
 #: Game.Levels.Combo.L04union_distrib_inter
-msgid "For any sets $A$, $B$, and $C$, $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$."
+msgid "For any sets $A$, $B$, and $C$, $A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)$."
 msgstr ""
 
 #: Game.Levels.Combo.L04union_distrib_inter
@@ -1561,9 +1461,7 @@ msgid "You might be tempted to use `rewrite [compl_inter]` as your next step.  B
 msgstr ""
 
 #: Game.Levels.Combo.L04union_distrib_inter
-msgid "\n"
-"To finish off Combination World, we'll do one more tricky theorem.\n"
-""
+msgid "To finish off Combination World, we'll do one more tricky theorem."
 msgstr ""
 
 #: Game.Levels.Combo.L05union_sub_inter_sub
@@ -1571,13 +1469,11 @@ msgid "A tricky subset proof"
 msgstr ""
 
 #: Game.Levels.Combo.L05union_sub_inter_sub
-msgid "\n"
-"This proof is a bit tricky.  But you should know how to get started.\n"
-""
+msgid "This proof is a bit tricky.  But you should know how to get started."
 msgstr ""
 
 #: Game.Levels.Combo.L05union_sub_inter_sub
-msgid "Suppose $A \cup C \subseteq B \cup C$ and $A \cap C \subseteq B \cap C$.  Then $A \subseteq B$."
+msgid "Suppose $A \\cup C \\subseteq B \\cup C$ and $A \\cap C \\subseteq B \\cap C$.  Then $A \\subseteq B$."
 msgstr ""
 
 #: Game.Levels.Combo.L05union_sub_inter_sub
@@ -1603,9 +1499,7 @@ msgid "Notice that you haven't used `h2` yet..."
 msgstr ""
 
 #: Game.Levels.Combo.L05union_sub_inter_sub
-msgid "\n"
-"You've finished Combination World!\n"
-""
+msgid "You've finished Combination World!"
 msgstr ""
 
 #: Game.Levels.Combo
@@ -1613,10 +1507,8 @@ msgid "Combination World"
 msgstr ""
 
 #: Game.Levels.Combo
-msgid "\n"
-"In this world you'll prove theorems combining complements, intersections, and unions.  For\n"
-"the most part, we'll leave you on your own to figure out these proofs.\n"
-""
+msgid "In this world you'll prove theorems combining complements, intersections, and unions.  For\n"
+"the most part, we'll leave you on your own to figure out these proofs."
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
@@ -1624,16 +1516,15 @@ msgid "Family intersection is subset"
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
-msgid "\n"
-"In mathematical writing, the intersection of the family $F$ is usually denoted $\bigcap F$.\n"
+msgid "In mathematical writing, the intersection of the family $F$ is usually denoted $\\bigcap F$.\n"
 "In Lean, the intersection of a family `F` is denoted `⋂₀ F`.  (You can enter the symbol\n"
-"`⋂₀` by typing `\I0`.)\n"
+"`⋂₀` by typing `\\I0`.)\n"
 "\n"
 "Suppose we have `F : Set (Set U)` and `x : U`.  Then `x ∈ ⋂₀ F` means that for every set `t`, if\n"
 "`t` is in `F`, then `x ∈ t`.  To write this statement in Lean, we write `∀ t, t ∈ F → x ∈ t`.\n"
 "Lean abbreviates this statement as `∀ t ∈ F, x ∈ t`.\n"
 "The symbol `∀` is called the *universal quantifier*, and you can enter it in Lean by typing\n"
-"`\forall`.  Note that `∀ t, t ∈ F → x ∈ t` means `∀ t, (t ∈ F → x ∈ t)`, not\n"
+"`\\forall`.  Note that `∀ t, t ∈ F → x ∈ t` means `∀ t, (t ∈ F → x ∈ t)`, not\n"
 "`(∀ t, t ∈ F) → x ∈ t`.  In other words, Lean interprets the universal quantifier as applying\n"
 "to the entire rest of the statement.  If you want it to apply to less, you have to\n"
 "use parentheses to indicate that.\n"
@@ -1641,17 +1532,16 @@ msgid "\n"
 "As with other set theory operations, we have a theorem that expresses this definition.  Lean will\n"
 "recognize `mem_sInter` as a proof of any statement of the form `x ∈ ⋂₀ F ↔ ∀ t ∈ F, x ∈ t`.\n"
 "\n"
-"In this level, you'll try out these ideas.\n"
-""
+"In this level, you'll try out these ideas."
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
-msgid "`⋂₀ F` is the intersection of the family of sets `F`.  To enter the symbol `⋂₀`, type `\I0`."
+msgid "`⋂₀ F` is the intersection of the family of sets `F`.  To enter the symbol `⋂₀`, type `\\I0`."
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
 msgid "If `P x` represents a statement about an unspecified object `x`, then `∀ x, P x` means\n"
-""for all `x`, `P x` is true".  To enter the symbol `∀`, type `\forall`."
+"\"for all `x`, `P x` is true\".  To enter the symbol `∀`, type `\\forall`."
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
@@ -1660,7 +1550,7 @@ msgid "Lean will recognize `mem_sInter` as a proof of any statement of the form\
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
-msgid "Suppose $F$ is a family of sets and $A \in F$.  Then $\bigcap F \subseteq A$."
+msgid "Suppose $F$ is a family of sets and $A \\in F$.  Then $\\bigcap F \\subseteq A$."
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
@@ -1670,7 +1560,7 @@ msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
 msgid "Remember that `«{h2}» : ∀ t ∈ F, «{x}» ∈ t` is an abbreviation for\n"
-"`«{h2}» : ∀ t, t ∈ F → «{x}» ∈ t`.  Since `∀` means "for all", `«{h2}»` can be applied to any\n"
+"`«{h2}» : ∀ t, t ∈ F → «{x}» ∈ t`.  Since `∀` means \"for all\", `«{h2}»` can be applied to any\n"
 "set--that is, we can plug in any set for `t` in `«{h2}»`.\n"
 "In particular, applying it to the set `A`, we can conclude that `A ∈ F → «{x}» ∈ A`.\n"
 "To apply `«{h2}»` to `A`, we just write `«{h2}»` followed by `A`, with a space between them.\n"
@@ -1685,13 +1575,11 @@ msgid "Since we also have `h1 : A ∈ F`, you can apply `«{h2A}»` to `h1` to p
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
-msgid "\n"
-"The last two steps could have been combined into one step.  In general, if you have\n"
+msgid "The last two steps could have been combined into one step.  In general, if you have\n"
 "`h1 : A ∈ F` and `h2 : ∀ t ∈ F, P t`, where `P t` is some statement about `t`, then `h2 A`\n"
 "is a proof of `A ∈ F → P A`, and\n"
 "applying that proof to `h1` we conclude that `h2 A h1` is a proof of `P A`.  For example,\n"
-"if you have `h1 : A ∈ F` and `h2 : ∀ t ∈ F, x ∈ t`, then `h2 A h1` is a proof of `x ∈ A`.\n"
-""
+"if you have `h1 : A ∈ F` and `h2 : ∀ t ∈ F, x ∈ t`, then `h2 A h1` is a proof of `x ∈ A`."
 msgstr ""
 
 #: Game.Levels.FamInter.L02intersubinter
@@ -1699,19 +1587,17 @@ msgid "Intersection of larger family is smaller"
 msgstr ""
 
 #: Game.Levels.FamInter.L02intersubinter
-msgid "\n"
-"In this level we have two families of sets, `F` and `G`, with `F ⊆ G`.  That means that\n"
+msgid "In this level we have two families of sets, `F` and `G`, with `F ⊆ G`.  That means that\n"
 "`⋂₀ G` is the intersection of a family of sets that includes all the sets in `F`, plus\n"
 "perhaps more sets.  You're going to prove that intersecting this larger collection of sets\n"
 "leads to a smaller result; more precisely, you're going to prove that `⋂₀ G ⊆ ⋂₀ F`.\n"
 "\n"
-"Of course, by now you know how to start a proof that one set is a subset of another.\n"
-""
+"Of course, by now you know how to start a proof that one set is a subset of another."
 msgstr ""
 
 #: Game.Levels.FamInter.L02intersubinter
-msgid "Suppose $F$ and $G$ are families of sets and $F \subseteq G$.\n"
-"Then $\bigcap G \subseteq \bigcap F$."
+msgid "Suppose $F$ and $G$ are families of sets and $F \\subseteq G$.\n"
+"Then $\\bigcap G \\subseteq \\bigcap F$."
 msgstr ""
 
 #: Game.Levels.FamInter.L02intersubinter
@@ -1745,11 +1631,9 @@ msgid "`«{h2}» «{t}» «{h4}»` is now a proof of the goal."
 msgstr ""
 
 #: Game.Levels.FamInter.L02intersubinter
-msgid "\n"
-"You probably used `intro` several times in this proof.  Recall that two `intro` steps in a row\n"
+msgid "You probably used `intro` several times in this proof.  Recall that two `intro` steps in a row\n"
 "can be combined into one step.  Click on `intro` in the list of tactics on the right for\n"
-"further details.\n"
-""
+"further details."
 msgstr ""
 
 #: Game.Levels.FamInter.L03interpair
@@ -1757,8 +1641,7 @@ msgid "Intersection of a pair"
 msgstr ""
 
 #: Game.Levels.FamInter.L03interpair
-msgid "\n"
-"This level shows that family intersections are a generalization of the intersections\n"
+msgid "This level shows that family intersections are a generalization of the intersections\n"
 "we studied in Intersection World.  You'll prove that if `A` and `B` are sets, then\n"
 "`A ∩ B` is equal to the intersection of the family of sets that contains just `A` and\n"
 "`B` and nothing else.\n"
@@ -1766,8 +1649,7 @@ msgid "\n"
 "We'll need notation for the family of sets consisting of just `A` and `B`; we'll denote\n"
 "this family by `{A, B}`.  And, as usual, we'll need a theorem stating the definition of\n"
 "this notation.  For any `t`, `A`, and `B`, `mem_pair t A B` is a proof of the\n"
-"statement `t ∈ {A, B} ↔ t = A ∨ t = B`.\n"
-""
+"statement `t ∈ {A, B} ↔ t = A ∨ t = B`."
 msgstr ""
 
 #: Game.Levels.FamInter.L03interpair
@@ -1776,7 +1658,7 @@ msgid "For any `t`, `A`, and `B`, `mem_pair t A B` is a proof of the statement\n
 msgstr ""
 
 #: Game.Levels.FamInter.L03interpair
-msgid "Suppose $A$ and $B$ are sets.  Then $A \cap B = \bigcap \{A, B\}$."
+msgid "Suppose $A$ and $B$ are sets.  Then $A \\cap B = \\bigcap \\{A, B\\}$."
 msgstr ""
 
 #: Game.Levels.FamInter.L03interpair
@@ -1794,14 +1676,12 @@ msgid "Intersection of a union of families"
 msgstr ""
 
 #: Game.Levels.FamInter.L04interunion
-msgid "\n"
-"If `F` and `G` are families of sets, what is `⋂₀ (F ∪ G)`?  In this level, you'll find out!\n"
-""
+msgid "If `F` and `G` are families of sets, what is `⋂₀ (F ∪ G)`?  In this level, you'll find out!"
 msgstr ""
 
 #: Game.Levels.FamInter.L04interunion
 msgid "Suppose $F$ and $G$ are families of sets.  Then\n"
-"$\bigcap (F \cup G) = (\bigcap F) \cap (\bigcap G)$."
+"$\\bigcap (F \\cup G) = (\\bigcap F) \\cap (\\bigcap G)$."
 msgstr ""
 
 #: Game.Levels.FamInter.L04interunion
@@ -1816,14 +1696,12 @@ msgid "Subset of an intersection"
 msgstr ""
 
 #: Game.Levels.FamInter.L05subinter
-msgid "\n"
-"If `A` is a set and `F` is a family of sets, under what circumstances is it the case\n"
-"that `A ⊆ ⋂₀ F`?  In this level you'll discover the answer to that question.\n"
-""
+msgid "If `A` is a set and `F` is a family of sets, under what circumstances is it the case\n"
+"that `A ⊆ ⋂₀ F`?  In this level you'll discover the answer to that question."
 msgstr ""
 
 #: Game.Levels.FamInter.L05subinter
-msgid "Suppose $A$ is a set and $F$ is a family of sets.  Then $A$ is a subset of $\bigcap F$ if\n"
+msgid "Suppose $A$ is a set and $F$ is a family of sets.  Then $A$ is a subset of $\\bigcap F$ if\n"
 "and only if $A$ is a subset of every element of $F$."
 msgstr ""
 
@@ -1838,13 +1716,11 @@ msgid "Intersection of a family of unions"
 msgstr ""
 
 #: Game.Levels.FamInter.L06eltwiseunion
-msgid "\n"
-"In this level you'll need a new kind of proof by cases.  For any statement `P`, the\n"
+msgid "In this level you'll need a new kind of proof by cases.  For any statement `P`, the\n"
 "tactic `by_cases h : P` will break the proof into two cases.  In the first case, the new\n"
 "assumption `h : P` is added to the list of assumptions, and in second, the new\n"
 "assumption `h : ¬P` is added.  Since `P` must be either true or false, these two cases cover\n"
-"all possibilities.\n"
-""
+"all possibilities."
 msgstr ""
 
 #: Game.Levels.FamInter.L06eltwiseunion
@@ -1855,7 +1731,7 @@ msgstr ""
 
 #: Game.Levels.FamInter.L06eltwiseunion
 msgid "Suppose $A$ is a set, $F$ and $G$ are families of sets, and for every set $s$ in $F$,\n"
-"$A \cup s \in G$.  Then $\bigcap G \subseteq A \cup (\bigcap F)$."
+"$A \\cup s \\in G$.  Then $\\bigcap G \\subseteq A \\cup (\\bigcap F)$."
 msgstr ""
 
 #: Game.Levels.FamInter.L06eltwiseunion
@@ -1898,11 +1774,9 @@ msgid "Notice that you have contradictory assumptions.  You can prove anything\n
 msgstr ""
 
 #: Game.Levels.FamInter.L06eltwiseunion
-msgid "\n"
-"You've finished Family Intersection World!  As you might guess, you can also take the union of\n"
+msgid "You've finished Family Intersection World!  As you might guess, you can also take the union of\n"
 "a family of sets.  Can you guess how to define it?  Continue on to Family Union World to see\n"
-"if your guess is right.\n"
-""
+"if your guess is right."
 msgstr ""
 
 #: Game.Levels.FamInter
@@ -1926,8 +1800,7 @@ msgid "So far the elements of all of our sets have been objects in the universe 
 "\n"
 "In this world we extend the idea of intersections to families of sets.  If `F` is a family of\n"
 "sets from `U`, then the *intersection* of the family `F` is the set of all objects from `U`\n"
-"that belong to every element of `F`.\n"
-""
+"that belong to every element of `F`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
@@ -1935,23 +1808,21 @@ msgid "Proving existential statements"
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
-msgid "\n"
-"To work with unions of families, we'll need to know how to work with existential statements.\n"
-"If `P x` is a statement about an unspecified object `x`, then `∃ x, P x` means "there is\n"
-"at least one `x` such that `P x` is true".  The symbol `∃` is called the\n"
-"*existential quantifier*, and you can enter it in Lean by typing `\exists`.\n"
+msgid "To work with unions of families, we'll need to know how to work with existential statements.\n"
+"If `P x` is a statement about an unspecified object `x`, then `∃ x, P x` means \"there is\n"
+"at least one `x` such that `P x` is true\".  The symbol `∃` is called the\n"
+"*existential quantifier*, and you can enter it in Lean by typing `\\exists`.\n"
 "\n"
 "The easiest way to prove the statement `∃ x, P x` is to specify a value of `x`, and give a\n"
 "proof of `P x` for that value of `x`.  The theorem that allows you to do that is called\n"
 "`Exists.intro`.  If you have `h : P a`, for some object `a`, then `Exists.intro a h` is a\n"
 "proof of the statement `∃ x, P x`.  (The object `a` is sometimes called a *witness* for\n"
-"the existential statement.)  In this level, you'll try out this theorem.\n"
-""
+"the existential statement.)  In this level, you'll try out this theorem."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
-msgid "If `P x` represents a statement about `x`, then `∃ x, P x` means "there is at least one\n"
-"`x` such that `P x` is true".  To enter the symbol `∃`, type `\exists`."
+msgid "If `P x` represents a statement about `x`, then `∃ x, P x` means \"there is at least one\n"
+"`x` such that `P x` is true\".  To enter the symbol `∃`, type `\\exists`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
@@ -1960,7 +1831,7 @@ msgid "If `P x` represents a statement about `x` and you have `h : P a`, for som
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
-msgid "Suppose $A$ is a set.  Then there is some set $S$ such that $S \subseteq A$."
+msgid "Suppose $A$ is a set.  Then there is some set $S$ such that $S \\subseteq A$."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
@@ -1988,15 +1859,13 @@ msgid "`Exists.intro A «{h}»` proves the goal."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
-msgid "\n"
-"By the way, another set that would have worked as a witness for the existential goal in this\n"
+msgid "By the way, another set that would have worked as a witness for the existential goal in this\n"
 "theorem is the empty set, denoted `∅`.  However, to justify the use of that witness you would\n"
 "have had to prove `∅ ⊆ A`.  Since we already have the theorem `Subset.refl`, it was easier to use\n"
 "`A` as the witness.\n"
 "\n"
 "Now that you know how to prove existential statements, you're ready to start working with\n"
-"unions of families.\n"
-""
+"unions of families."
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
@@ -2004,10 +1873,9 @@ msgid "Subset of family union"
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
-msgid "\n"
-"In mathematical writing, the union of the family $F$ is usually denoted $\bigcup F$.\n"
+msgid "In mathematical writing, the union of the family $F$ is usually denoted $\\bigcup F$.\n"
 "In Lean, the union of a family `F` is denoted `⋃₀ F`.  (You can enter the symbol\n"
-"`⋃₀` by typing `\U0`.)\n"
+"`⋃₀` by typing `\\U0`.)\n"
 "\n"
 "Suppose we have `F : Set (Set U)` and `x : U`.  Then `x ∈ ⋃₀ F` means that there is at least\n"
 "one set `t` such that `t ∈ F` and `x ∈ t`.  To write this statement in Lean, we write\n"
@@ -2016,12 +1884,11 @@ msgid "\n"
 "As with other set theory operations, we have a theorem that expresses this definition.  Lean will\n"
 "recognize `mem_sUnion` as a proof of any statement of the form `x ∈ ⋃₀ F ↔ ∃ t ∈ F, x ∈ t`.\n"
 "\n"
-"In this level, you'll try out these ideas.\n"
-""
+"In this level, you'll try out these ideas."
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
-msgid "`⋃₀ F` is the union of the family of sets `F`.  To enter the symbol `⋃₀`, type `\U0`."
+msgid "`⋃₀ F` is the union of the family of sets `F`.  To enter the symbol `⋃₀`, type `\\U0`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
@@ -2037,7 +1904,7 @@ msgid "If your goal is `∃ x, P x`, where `P x` represents some statement about
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
-msgid "Suppose $F$ is a family of sets and $A \in F$.  Then $A \subseteq \bigcup F$."
+msgid "Suppose $F$ is a family of sets and $A \\in F$.  Then $A \\subseteq \\bigcup F$."
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
@@ -2053,12 +1920,10 @@ msgid "Remember that the goal `∃ t ∈ F, «{x}» ∈ t` is an abbreviation fo
 msgstr ""
 
 #: Game.Levels.FamUnion.L02subunion
-msgid "\n"
-"There is another tactic you could have used to complete this proof.  Instead of\n"
+msgid "There is another tactic you could have used to complete this proof.  Instead of\n"
 "`apply Exists.intro A`, you could write `use A`.  The `use` tactic is actually a powerful\n"
 "tactic.  Not only does it fill in `A` for `t` in the existential goal, it then tries to\n"
-"complete the proof on its own--and in this case, it would have succeeded!\n"
-""
+"complete the proof on its own--and in this case, it would have succeeded!"
 msgstr ""
 
 #: Game.Levels.FamUnion.L03unionsubunion
@@ -2066,8 +1931,7 @@ msgid "Union of larger family is larger"
 msgstr ""
 
 #: Game.Levels.FamUnion.L03unionsubunion
-msgid "\n"
-"In this level we have two families of sets, `F` and `G`, with `F ⊆ G`.  In Family Intersection\n"
+msgid "In this level we have two families of sets, `F` and `G`, with `F ⊆ G`.  In Family Intersection\n"
 "World, you proved that in this situation, `⋂₀ G ⊆ ⋂₀ F`.  In this level, you'll prove that\n"
 "with family unions, it works the other way: `⋃₀ F ⊆ ⋃₀ G`.\n"
 "\n"
@@ -2077,19 +1941,18 @@ msgid "\n"
 "you write `obtain ⟨w, hw⟩ := h`, then Lean will introduce a new object `w` and a new assumption\n"
 "`hw : P w`.  Thus, the object `w` is a witness for the existential assumption `h`.  Note that\n"
 "in the `obtain` tactic, `w` and `hw` must be enclosed in angle brackets: `⟨ ⟩`.  You can\n"
-"enter these by typing either `\<` and `\>` or `\langle` and `\rangle`.\n"
-""
+"enter these by typing either `\\<` and `\\>` or `\\langle` and `\\rangle`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L03unionsubunion
 msgid "If you have an assumption `h : ∃ x, P x`, then the tactic `obtain ⟨w, hw⟩ := h` will\n"
 "introduce a new object `w` and a new assumption `hw : P w` into the proof.  To enter the\n"
-"angle brackets `⟨ ⟩`, type either `\<` and `\>` or `\langle` and `\rangle`."
+"angle brackets `⟨ ⟩`, type either `\\<` and `\\>` or `\\langle` and `\\rangle`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L03unionsubunion
-msgid "Suppose $F$ and $G$ are families of sets and $F \subseteq G$.\n"
-"Then $\bigcup F \subseteq \bigcup G$."
+msgid "Suppose $F$ and $G$ are families of sets and $F \\subseteq G$.\n"
+"Then $\\bigcup F \\subseteq \\bigcup G$."
 msgstr ""
 
 #: Game.Levels.FamUnion.L03unionsubunion
@@ -2109,14 +1972,12 @@ msgid "Union of a pair"
 msgstr ""
 
 #: Game.Levels.FamUnion.L04unionpair
-msgid "\n"
-"In this level, you'll show that, as with intersections, family unions generalize the\n"
-"unions we studied in Union World.\n"
-""
+msgid "In this level, you'll show that, as with intersections, family unions generalize the\n"
+"unions we studied in Union World."
 msgstr ""
 
 #: Game.Levels.FamUnion.L04unionpair
-msgid "Suppose $A$ and $B$ are sets.  Then $A \cup B = \bigcup \{A, B\}$."
+msgid "Suppose $A$ and $B$ are sets.  Then $A \\cup B = \\bigcup \\{A, B\\}$."
 msgstr ""
 
 #: Game.Levels.FamUnion.L04unionpair
@@ -2129,15 +1990,13 @@ msgid "Union of a union"
 msgstr ""
 
 #: Game.Levels.FamUnion.L05unionunion
-msgid "\n"
-"In this level, `F` and `G` are families of sets, and you'll work out how `⋃₀ (F ∪ G)` is related\n"
-"to `⋃₀ F` and `⋃₀ G`.\n"
-""
+msgid "In this level, `F` and `G` are families of sets, and you'll work out how `⋃₀ (F ∪ G)` is related\n"
+"to `⋃₀ F` and `⋃₀ G`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L05unionunion
-msgid "Suppose $F$ and $G$ are families of sets.  Then $\bigcup (F \cup G) =\n"
-"(\bigcup F) \cup (\bigcup G)$."
+msgid "Suppose $F$ and $G$ are families of sets.  Then $\\bigcup (F \\cup G) =\n"
+"(\\bigcup F) \\cup (\\bigcup G)$."
 msgstr ""
 
 #: Game.Levels.FamUnion.L06unionsub
@@ -2145,14 +2004,12 @@ msgid "Union subset of a set"
 msgstr ""
 
 #: Game.Levels.FamUnion.L06unionsub
-msgid "\n"
-"Suppose `A` is a set and `F` is a family of sets.  In this level you'll determine the conditions\n"
-"under which `⋃₀ F` is a subset of `A`.\n"
-""
+msgid "Suppose `A` is a set and `F` is a family of sets.  In this level you'll determine the conditions\n"
+"under which `⋃₀ F` is a subset of `A`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L06unionsub
-msgid "Suppose $A$ is a set and $F$ is a family of sets.  Then $\bigcup F$ is a subset of $A$\n"
+msgid "Suppose $A$ is a set and $F$ is a family of sets.  Then $\\bigcup F$ is a subset of $A$\n"
 "if and only if every element of $F$ is a subset of $A$."
 msgstr ""
 
@@ -2166,16 +2023,14 @@ msgid "Union of a family of intersections"
 msgstr ""
 
 #: Game.Levels.FamUnion.L07eltwiseinter
-msgid "\n"
-"In this level, we introduce another way to define sets.  If `P x` is a statement about an\n"
+msgid "In this level, we introduce another way to define sets.  If `P x` is a statement about an\n"
 "unspecified object `x`, then `{x | P x}` denotes the set of all values of `x` that make `P x`\n"
 "come out true.  This is often called *set-builder notation*.  For example,\n"
 "`{x | x ∈ A ∧ x ∈ B}` is another way to write `A ∩ B`.\n"
 "\n"
 "As usual, we have a theorem that states the meaning of set-builder notation.  Lean will\n"
 "recognize `mem_setOf` as a proof of any statement of the form `a ∈ {x | P x} ↔ P a`.\n"
-"And that means that `rewrite [mem_setOf]` will rewrite `a ∈ {x | P x}` as `P a`.\n"
-""
+"And that means that `rewrite [mem_setOf]` will rewrite `a ∈ {x | P x}` as `P a`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L07eltwiseinter
@@ -2184,8 +2039,8 @@ msgid "Lean will recognize `mem_setOf` as a proof of any statement of the form\n
 msgstr ""
 
 #: Game.Levels.FamUnion.L07eltwiseinter
-msgid "Suppose $A$ is a set and $F$ is a family of sets.  Then $A \cap (\bigcup F) =\n"
-"\bigcup\{s \mid \exists u \in F, s = A \cap u\}$."
+msgid "Suppose $A$ is a set and $F$ is a family of sets.  Then $A \\cap (\\bigcup F) =\n"
+"\\bigcup\\{s \\mid \\exists u \\in F, s = A \\cap u\\}$."
 msgstr ""
 
 #: Game.Levels.FamUnion.L07eltwiseinter
@@ -2236,11 +2091,9 @@ msgid "Family Union World"
 msgstr ""
 
 #: Game.Levels.FamUnion
-msgid "\n"
-"If `F` is a family of sets from `U`, then the *union* of `F` is the set of all objects from\n"
+msgid "If `F` is a family of sets from `U`, then the *union* of `F` is the set of all objects from\n"
 "`U` that belong to at least one element of `F`.  We'll investigate unions of families in this\n"
-"world.\n"
-""
+"world."
 msgstr ""
 
 #: Game.Levels.FamCombo.L01compunion
@@ -2248,19 +2101,17 @@ msgid "Complement of a family union"
 msgstr ""
 
 #: Game.Levels.FamCombo.L01compunion
-msgid "\n"
-"In this level you'll prove a generalization of the theorem `compl_union` that you proved\n"
+msgid "In this level you'll prove a generalization of the theorem `compl_union` that you proved\n"
 "in Combination World.  That theorem was about the complement of a union of two sets; the\n"
 "theorem in this level is about the complement of a union of a family of sets.\n"
 "\n"
 "As in the case of `compl_union`, you have a choice about how to deal with the negations that\n"
 "arise when you write out the meaning of complement.  You can use the `push_neg` tactic to\n"
-"reexpress negative statements, or you can use proof by contradiction.\n"
-""
+"reexpress negative statements, or you can use proof by contradiction."
 msgstr ""
 
 #: Game.Levels.FamCombo.L01compunion
-msgid "For any family of sets $F$, $(\bigcup F)^c = \bigcap \{s \mid s^c \in F\}$."
+msgid "For any family of sets $F$, $(\\bigcup F)^c = \\bigcap \\{s \\mid s^c \\in F\\}$."
 msgstr ""
 
 #: Game.Levels.FamCombo.L01compunion
@@ -2301,14 +2152,12 @@ msgid "Complement of a family intersection"
 msgstr ""
 
 #: Game.Levels.FamCombo.L02compinter
-msgid "\n"
-"Perhaps you have already guessed that there is a theorem about the complement\n"
-"of an intersection of a family that is similar to the theorem in the last level.\n"
-""
+msgid "Perhaps you have already guessed that there is a theorem about the complement\n"
+"of an intersection of a family that is similar to the theorem in the last level."
 msgstr ""
 
 #: Game.Levels.FamCombo.L02compinter
-msgid "For any family of sets $F$, $(\bigcap F)^c = \bigcup \{s \mid s^c \in F\}$."
+msgid "For any family of sets $F$, $(\\bigcap F)^c = \\bigcup \\{s \\mid s^c \\in F\\}$."
 msgstr ""
 
 #: Game.Levels.FamCombo.L02compinter
@@ -2332,16 +2181,14 @@ msgid "Two families with an element in common"
 msgstr ""
 
 #: Game.Levels.FamCombo.L03commonelt
-msgid "\n"
-"This level is an exercise in handling sequences of quantifiers that alternate between\n"
-"`∀` and `∃`.  A good way to start is to decide which assumption to use first.\n"
-""
+msgid "This level is an exercise in handling sequences of quantifiers that alternate between\n"
+"`∀` and `∃`.  A good way to start is to decide which assumption to use first."
 msgstr ""
 
 #: Game.Levels.FamCombo.L03commonelt
-msgid "Suppose $F$ and $G$ are families of sets such that for every $s \in F$ there is some $t \in G$\n"
-"such that $s \subseteq t$, and also there is some $s \in F$ such that for every $t \in G$,\n"
-"$t \subseteq s$.  Then $F$ and $G$ have an element in common."
+msgid "Suppose $F$ and $G$ are families of sets such that for every $s \\in F$ there is some $t \\in G$\n"
+"such that $s \\subseteq t$, and also there is some $s \\in F$ such that for every $t \\in G$,\n"
+"$t \\subseteq s$.  Then $F$ and $G$ have an element in common."
 msgstr ""
 
 #: Game.Levels.FamCombo.L03commonelt
@@ -2353,14 +2200,12 @@ msgid "A theorem about three families"
 msgstr ""
 
 #: Game.Levels.FamCombo.L04threefam
-msgid "\n"
-"Here's a theorem about three related families of sets.\n"
-""
+msgid "Here's a theorem about three related families of sets."
 msgstr ""
 
 #: Game.Levels.FamCombo.L04threefam
-msgid "Suppose that for every $s \in F$ there is some $u \in G$ such that $s \cap u \in H$.\n"
-"Then $(\bigcup F) \cap (\bigcap G) \subseteq \bigcup H$."
+msgid "Suppose that for every $s \\in F$ there is some $u \\in G$ such that $s \\cap u \\in H$.\n"
+"Then $(\\bigcup F) \\cap (\\bigcap G) \\subseteq \\bigcup H$."
 msgstr ""
 
 #: Game.Levels.FamCombo.L05unionintcompunion
@@ -2368,14 +2213,12 @@ msgid "A union intersected with the complement of another is a subset"
 msgstr ""
 
 #: Game.Levels.FamCombo.L05unionintcompunion
-msgid "\n"
-"What happens if you intersect `⋃₀ F` with `(⋃₀ G)ᶜ`, for two families `F` and `G`?\n"
-""
+msgid "What happens if you intersect `⋃₀ F` with `(⋃₀ G)ᶜ`, for two families `F` and `G`?"
 msgstr ""
 
 #: Game.Levels.FamCombo.L05unionintcompunion
-msgid "Suppose $F$ and $G$ are families of sets.  Then $(\bigcup F) \cap (\bigcup G)^c \subseteq\n"
-"\bigcup (F \cap G^c)$."
+msgid "Suppose $F$ and $G$ are families of sets.  Then $(\\bigcup F) \\cap (\\bigcup G)^c \\subseteq\n"
+"\\bigcup (F \\cap G^c)$."
 msgstr ""
 
 #: Game.Levels.FamCombo.L06unionintunion
@@ -2383,14 +2226,12 @@ msgid "A subset of a union intersected with the complement of another"
 msgstr ""
 
 #: Game.Levels.FamCombo.L06unionintunion
-msgid "\n"
-"What happens if the subset statement in the last level is reversed?\n"
-""
+msgid "What happens if the subset statement in the last level is reversed?"
 msgstr ""
 
 #: Game.Levels.FamCombo.L06unionintunion
-msgid "Suppose $F$ and $G$ are families of sets and $\bigcup (F \cap G^c) \subseteq (\bigcup F)\n"
-"\cap (\bigcup G)^c$.  Then $(\bigcup F) \cap (\bigcup G) \subseteq \bigcup (F \cap G)$."
+msgid "Suppose $F$ and $G$ are families of sets and $\\bigcup (F \\cap G^c) \\subseteq (\\bigcup F)\n"
+"\\cap (\\bigcup G)^c$.  Then $(\\bigcup F) \\cap (\\bigcup G) \\subseteq \\bigcup (F \\cap G)$."
 msgstr ""
 
 #: Game.Levels.FamCombo.L07unionintcompint
@@ -2398,14 +2239,12 @@ msgid "A union intersected with the complement of an intersection"
 msgstr ""
 
 #: Game.Levels.FamCombo.L07unionintcompint
-msgid "\n"
-"This time we'll study the intersection of `(⋃₀ F)` and `(⋂₀ G)ᶜ`.\n"
-""
+msgid "This time we'll study the intersection of `(⋃₀ F)` and `(⋂₀ G)ᶜ`."
 msgstr ""
 
 #: Game.Levels.FamCombo.L07unionintcompint
-msgid "Suppose $F$ and $G$ are families of sets.  Then $(\bigcup F) \cap (\bigcap G)^c \subseteq\n"
-"\bigcup \{s \mid \exists u \in F, \exists v \in G, s = u \cap v^c\}$."
+msgid "Suppose $F$ and $G$ are families of sets.  Then $(\\bigcup F) \\cap (\\bigcap G)^c \\subseteq\n"
+"\\bigcup \\{s \\mid \\exists u \\in F, \\exists v \\in G, s = u \\cap v^c\\}$."
 msgstr ""
 
 #: Game.Levels.FamCombo.L08singleton
@@ -2413,11 +2252,9 @@ msgid "A set that must be a singleton"
 msgstr ""
 
 #: Game.Levels.FamCombo.L08singleton
-msgid "\n"
-"The notation `{a}` denotes a set whose only element is `a`; such a set is called a *singleton*\n"
+msgid "The notation `{a}` denotes a set whose only element is `a`; such a set is called a *singleton*\n"
 "set.  The theorem `mem_singleton_iff` expresses the definition of singleton sets: `mem_singleton_iff` is\n"
-"a proof of any statement of the form `x ∈ {a} ↔ x = a`.\n"
-""
+"a proof of any statement of the form `x ∈ {a} ↔ x = a`."
 msgstr ""
 
 #: Game.Levels.FamCombo.L08singleton
@@ -2426,7 +2263,7 @@ msgid "Lean will recognize `mem_singleton_iff` is a proof of any statement of th
 msgstr ""
 
 #: Game.Levels.FamCombo.L08singleton
-msgid "Suppose $A$ is a set, and for every family of sets $F$, if $\bigcup F = A$ then $A \in F$.\n"
+msgid "Suppose $A$ is a set, and for every family of sets $F$, if $\\bigcup F = A$ then $A \\in F$.\n"
 "Then $A$ must be a singleton set."
 msgstr ""
 
@@ -2442,11 +2279,9 @@ msgid "You need to apply `h1` to a family of sets with two\n"
 msgstr ""
 
 #: Game.Levels.FamCombo.L08singleton
-msgid "\n"
-"Congratulations!  You have completed the Set Theory Game!\n"
+msgid "Congratulations!  You have completed the Set Theory Game!\n"
 "\n"
-"If you want to learn more about Lean, check out the [Lean Community](https://leanprover-community.github.io).\n"
-""
+"If you want to learn more about Lean, check out the [Lean Community](https://leanprover-community.github.io)."
 msgstr ""
 
 #: Game.Levels.FamCombo
@@ -2454,10 +2289,8 @@ msgid "Family Combination World"
 msgstr ""
 
 #: Game.Levels.FamCombo
-msgid "\n"
-"In this world we combine family unions and intersections with each other, and with complements.\n"
-"This level contains some of the hardest proofs in the game!\n"
-""
+msgid "In this world we combine family unions and intersections with each other, and with complements.\n"
+"This level contains some of the hardest proofs in the game!"
 msgstr ""
 
 #: Game
@@ -2465,8 +2298,7 @@ msgid "Set Theory Game"
 msgstr ""
 
 #: Game
-msgid "\n"
-"# Welcome to the Set Theory Game\n"
+msgid "# Welcome to the Set Theory Game\n"
 "#### An introduction to mathematical proof.\n"
 "\n"
 "In this game, you will solve a sequence of levels by proving theorems.  The game\n"
@@ -2484,18 +2316,16 @@ msgid "\n"
 "You will get the most out of this game if you\n"
 "read the help texts like this one.\n"
 "\n"
-"To start, click on "Subset World".\n"
+"To start, click on \"Subset World\".\n"
 "\n"
 "## More\n"
 "\n"
-"Open "Game Info" in the "≡" menu on the top right for resources,\n"
-"links, and ways to interact with the Lean community.\n"
-""
+"Open \"Game Info\" in the \"≡\" menu on the top right for resources,\n"
+"links, and ways to interact with the Lean community."
 msgstr ""
 
 #: Game
-msgid "\n"
-"*Game version: 4.4*\n"
+msgid "*Game version: 4.4*\n"
 "\n"
 "## Progress saving\n"
 "\n"
@@ -2503,7 +2333,7 @@ msgid "\n"
 "If you delete it, your progress will be lost!\n"
 "\n"
 "Warning: In most browsers, deleting cookies will also clear the local storage\n"
-"(or "local site data"). Make sure to download your game progress first!\n"
+"(or \"local site data\"). Make sure to download your game progress first!\n"
 "\n"
 "## Credits\n"
 "\n"
@@ -2518,7 +2348,7 @@ msgid "\n"
 "\n"
 "Please ask any questions about this game in the\n"
 "[Lean Zulip chat](https://leanprover.zulipchat.com/) forum, for example in\n"
-"the stream "New Members". The community will happily help. Note that\n"
+"the stream \"New Members\". The community will happily help. Note that\n"
 "the Lean Zulip chat is a professional research forum.\n"
 "Please use your full real name there, stay on topic, and be nice. If you're\n"
 "looking for somewhere less formal (e.g. you want to post set theory\n"
@@ -2529,8 +2359,7 @@ msgid "\n"
 "* For issues with the game engine, please open an\n"
 "[issue at the lean4game repo](https://github.com/leanprover-community/lean4game/issues).\n"
 "* For issues about the game's content, please open an\n"
-"[issue at the STG repo](https://github.com/djvelleman/STG4/issues).\n"
-""
+"[issue at the STG repo](https://github.com/djvelleman/STG4/issues)."
 msgstr ""
 
 #: Game

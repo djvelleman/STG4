@@ -73,7 +73,7 @@ Dependency FamInter → FamUnion
 Dependency Combination → FamCombo
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "en" -- "es"
+Languages "en" "es"
 CaptionShort "A game about set theory."
 CaptionLong "In this game you will learn the basics of theorem proving in Lean by proving
 theorems about unions, intersections, and complements of sets."

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri May 31 13:30:04 2024\n"
+"POT-Creation-Date: Mon Jul 15 17:11:45 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -763,6 +763,14 @@ msgid "`rewrite [compl_compl A] at «{h2}»` will change `Aᶜᶜ` to\n"
 msgstr ""
 
 #: Game.Levels.Comp.L05compsubiff
+msgid "If your goal has the form `P ↔ Q`, then the tactic `constructor` will replace this\n"
+"goal with the two goals `P → Q` and `Q → P`.  If your goal has the form `P ∧ Q`, then\n"
+"`constructor` will replace this goal with the two goals `P` and `Q`.  There are other\n"
+"situations in which the `constructor` tactic can be used, but these two are the ones\n"
+"that are most relevant for the set theory game."
+msgstr ""
+
+#: Game.Levels.Comp.L05compsubiff
 msgid "The proof in this level illustrates how previously proven theorems can be used in proofs.\n"
 "\n"
 "There is another tactic you can use if your goal has the form `P ↔ Q`.  In this situation,\n"
@@ -1316,6 +1324,18 @@ msgstr ""
 
 #: Game.Levels.Union.L06union_assoc
 msgid "Do you know which half of the goal you're going to prove now?"
+msgstr ""
+
+#: Game.Levels.Union.L06union_assoc
+msgid "If your goal has the form `P ∨ Q`, then the tactic `left` will set your goal to be `P`.\n"
+"There are other situations in which the `left` tactic can be used, but this is the one\n"
+"that is most relevant for the set theory game."
+msgstr ""
+
+#: Game.Levels.Union.L06union_assoc
+msgid "If your goal has the form `P ∨ Q`, then the tactic `right` will set your goal to be `Q`.\n"
+"There are other situations in which the `right` tactic can be used, but this is the one\n"
+"that is most relevant for the set theory game."
 msgstr ""
 
 #: Game.Levels.Union.L06union_assoc

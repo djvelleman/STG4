@@ -58,7 +58,14 @@ Statement (A B : Set U) : A ⊆ B ↔ Bᶜ ⊆ Aᶜ := by
   rewrite [compl_compl A, compl_compl B] at h2
   exact h2
 
-NewHiddenTactic constructor
+/-- If your goal has the form `P ↔ Q`, then the tactic `constructor` will replace this
+goal with the two goals `P → Q` and `Q → P`.  If your goal has the form `P ∧ Q`, then
+`constructor` will replace this goal with the two goals `P` and `Q`.  There are other
+situations in which the `constructor` tactic can be used, but these two are the ones
+that are most relevant for the set theory game. -/
+TacticDoc constructor
+
+NewTactic constructor
 
 Conclusion
 "

@@ -53,7 +53,17 @@ Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   exact Or.inr hB
   exact Or.inr hC
 
-NewHiddenTactic left right
+/-- If your goal has the form `P ∨ Q`, then the tactic `left` will set your goal to be `P`.
+There are other situations in which the `left` tactic can be used, but this is the one
+that is most relevant for the set theory game. -/
+TacticDoc left
+
+/-- If your goal has the form `P ∨ Q`, then the tactic `right` will set your goal to be `Q`.
+There are other situations in which the `right` tactic can be used, but this is the one
+that is most relevant for the set theory game. -/
+TacticDoc right
+
+NewTactic left right
 
 Conclusion
 "

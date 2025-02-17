@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Jul 15 17:11:45 2024\n"
+"POT-Creation-Date: Mon Feb 17 21:14:43 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1189,18 +1189,18 @@ msgstr ""
 
 #: Game.Levels.Union.L03cases
 msgid "In this proof, we'll need a new proof technique: proof by cases.  And we'll need a new\n"
-"tactic to implement that technique in Lean: `cases'`."
+"tactic to implement that technique in Lean: `rcases`."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
 msgid "If `h` is a proof of a statement of the form `P ∨ Q`, then the tactic\n"
-"`cases' h with h1 h2` will break your proof into cases.  In case 1, you'll have the new\n"
+"`rcases h with h1 | h2` will break your proof into cases.  In case 1, you'll have the new\n"
 "assumption `h1 : P`, and in case 2 you'll have `h2 : Q`.  In both cases you have to prove\n"
 "the original goal.\n"
 "\n"
-"The `cases'` tactic has other uses.  In particular, it can be applied to proofs of statements\n"
+"The `rcases` tactic has other uses.  In particular, it can be applied to proofs of statements\n"
 "that do not have the form `P ∨ Q`.  However, we will not discuss these other uses of the\n"
-"`cases'` tactic in this game."
+"`rcases` tactic in this game."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
@@ -1220,21 +1220,21 @@ msgstr ""
 #: Game.Levels.Union.L03cases
 msgid "Now the assumption `«{h3}»` is an \"or\" statement.  The easiest way to use such an\n"
 "assumption is to break your proof into cases.  To do this in Lean, use the tactic\n"
-"`cases' «{h3}» with «{h3}»A «{h3}»B`."
+"`rcases «{h3}» with «{h3}»A | «{h3}»B`."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
 msgid "Now you have *two* goals.  For the first, the assumption `«{x}» ∈ A ∨ «{x}» ∈ B` has been\n"
 "replaced with `«{x}» ∈ A`, and for the second it has been replaced with `«{x}» ∈ B`.  In both\n"
-"cases, you must prove `«{x}» ∈ C`.  The two identifiers after `with` in the `cases'` tactic\n"
+"cases, you must prove `«{x}» ∈ C`.  The two identifiers after `with` in the `rcases` tactic\n"
 "are used as the identifiers of the new assumptions in the two cases."
 msgstr ""
 
 #: Game.Levels.Union.L03cases
 msgid "Note that Lean also has a `cases` tactic, but the syntax is a little more complicated.\n"
-"That's why we have chosen to use the `cases'` tactic.\n"
+"That's why we have chosen to use the `rcases` tactic.\n"
 "\n"
-"The `cases'` tactic has other uses.  However, in this game we will be using it only with\n"
+"The `rcases` tactic has other uses.  However, in this game we will be using it only with\n"
 "assumptions that are \"or\" statements, to break the proof into cases."
 msgstr ""
 

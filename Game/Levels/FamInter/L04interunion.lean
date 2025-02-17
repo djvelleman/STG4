@@ -43,6 +43,6 @@ Statement (F G : Set (Set U)) : ⋂₀ (F ∪ G) = (⋂₀ F) ∩ (⋂₀ G) := 
   rewrite [mem_inter_iff] at h1
   rewrite [mem_sInter, mem_sInter] at h1
   rewrite [mem_union] at h2
-  cases' h2 with htF htG
+  rcases h2 with htF | htG
   exact h1.left t htF
   exact h1.right t htG

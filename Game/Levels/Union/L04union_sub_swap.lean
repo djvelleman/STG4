@@ -31,7 +31,7 @@ Statement union_subset_swap (A B : Set U) : A ∪ B ⊆ B ∪ A := by
   rewrite [mem_union]
   rewrite [mem_union] at h
   Hint (hidden := true) "The form of the assumption `{h}` now suggests proof by cases."
-  cases' h with hA hB
+  rcases h with hA | hB
   exact Or.inr hA
   exact Or.inl hB
 

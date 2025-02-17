@@ -26,7 +26,7 @@ Statement (F G : Set (Set U)) : ⋃₀ (F ∪ G) = (⋃₀ F) ∪ (⋃₀ G) := 
   obtain ⟨t, h1⟩ := h1
   rewrite [mem_union]
   rewrite [mem_union] at h1
-  cases' h1.left with hF hG
+  rcases h1.left with hF | hG
   left
   rewrite [mem_sUnion]
   use t
@@ -37,7 +37,7 @@ Statement (F G : Set (Set U)) : ⋃₀ (F ∪ G) = (⋃₀ F) ∪ (⋃₀ G) := 
   intro h1
   rewrite [mem_union] at h1
   rewrite [mem_sUnion]
-  cases' h1 with hF hG
+  rcases h1 with hF | hG
   obtain ⟨t, h1⟩ := hF
   use t
   apply And.intro

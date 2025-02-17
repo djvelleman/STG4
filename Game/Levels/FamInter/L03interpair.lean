@@ -42,7 +42,7 @@ Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by
   rewrite [mem_sInter]
   intro t h2
   rewrite [mem_pair] at h2
-  cases' h2 with hA hB
+  rcases h2 with hA | hB
   Hint "Now that you have `{hA} : {t} = A`, you can use `rewrite [{hA}]` to replace `{t}` with
   `A` in the goal."
   rewrite [hA]

@@ -53,7 +53,7 @@ Statement (A : Set U) (F G : Set (Set U)) (h1 : ∀ s ∈ F, A ∪ s ∈ G) : �
   You'll need to include the parentheses around `A ∪ {t}` when you do that."
   have h6 : x ∈ A ∪ t := h2 (A ∪ t) h5
   rewrite [mem_union] at h6
-  cases' h6 with hA2 ht
+  rcases h6 with hA2 | ht
   Hint (hidden := true) "Notice that you have contradictory assumptions.  You can prove anything
   from contradictory assumptions.  Do you see how?"
   by_contra h6

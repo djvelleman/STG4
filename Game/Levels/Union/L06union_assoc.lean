@@ -36,8 +36,8 @@ Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   intro x h
   rewrite [mem_union]
   rewrite [mem_union] at h
-  cases' h with hAB hC
-  cases' hAB with hA hB
+  rcases h with hAB | hC
+  rcases hAB with hA | hB
   exact Or.inl hA
   Hint "Do you know which half of the goal you're going to prove now?"
   apply Or.inr
@@ -45,10 +45,10 @@ Statement union_assoc (A B C : Set U) : (A ∪ B) ∪ C = A ∪ (B ∪ C) := by
   apply Or.inr
   exact Or.inr hC
   intro x h
-  cases' h with hA hBC
+  rcases h with hA | hBC
   apply Or.inl
   exact Or.inl hA
-  cases' hBC with hB hC
+  rcases hBC with hB | hC
   apply Or.inl
   exact Or.inr hB
   exact Or.inr hC

@@ -23,7 +23,7 @@ Statement (A B : Set U) : A ∪ B = ⋃₀ {A, B}:= by
   intro h1
   rewrite [mem_sUnion]
   rewrite [mem_union] at h1
-  cases' h1 with hA hB
+  rcases h1 with hA | hB
   use A
   apply And.intro
   rewrite [mem_pair]
@@ -43,7 +43,7 @@ Statement (A B : Set U) : A ∪ B = ⋃₀ {A, B}:= by
   exist in `{h1}`."
   obtain ⟨t, ht⟩ := h1
   rewrite [mem_pair] at ht
-  cases' ht.left with hA hB
+  rcases ht.left with hA | hB
   rewrite [hA] at ht
   exact Or.inl ht.right
   rewrite [hB] at ht

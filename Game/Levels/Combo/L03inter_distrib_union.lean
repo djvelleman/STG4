@@ -38,7 +38,7 @@ Statement inter_distrib_left (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B) ∪ (
   You can do this with `have {h}BC : {x} ∈ B ∪ C := {h}.right`."
   have hBC : x ∈ B ∪ C := h.right
   rewrite [mem_union] at hBC
-  cases' hBC with hB hC
+  rcases hBC with hB | hC
   apply Or.inl
   exact And.intro h.left hB
   apply Or.inr
@@ -46,7 +46,7 @@ Statement inter_distrib_left (A B C : Set U) : A ∩ (B ∪ C) = (A ∩ B) ∪ (
   intro h
   rewrite [mem_union] at h
   rewrite [mem_inter_iff]
-  cases' h with hB hC
+  rcases h with hB | hC
   rewrite [mem_inter_iff] at hB
   apply And.intro
   exact hB.left

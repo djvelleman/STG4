@@ -1,5 +1,6 @@
 import GameServer.Commands
-import Mathlib.Tactic
+import Mathlib.Tactic.Common
+import Mathlib.Tactic.Have
 import Mathlib.Data.Set.Basic
 import Mathlib.Data.Set.Lattice
 

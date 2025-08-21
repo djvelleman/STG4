@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Feb 20 14:37:03 2025\n"
+"POT-Creation-Date: Thu Aug 21 19:35:58 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -200,7 +200,17 @@ msgid "If `P` and `Q` are statements, then `P → Q` means \"if P then Q\".\n"
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
-msgid "`P → Q` means \"if `P` then `Q`\".  You can enter the symbol `→` by typing `\\imp`."
+msgid "`P → Q` means \"if `P` then `Q`\".  You can enter the symbol `→` by typing `\\imp`.\n"
+"\n"
+"### If your goal is `P → Q`\n"
+"\n"
+"The tactic `intro h` will introduce the new assumption `h : P` into the proof, and set the goal\n"
+"to be `Q`.  Be sure to use an identifier `h` that is not already being used to stand for\n"
+"some assumption.\n"
+"\n"
+"### If you have an assumption `h : P → Q`\n"
+"\n"
+"If you also have `hP : P`, then `h hP` is a proof of `Q`."
 msgstr ""
 
 #: Game.Levels.Subset.L04imp
@@ -407,7 +417,20 @@ msgstr ""
 
 #: Game.Levels.Comp.L01contra
 msgid "`¬P` means \\\"it is not the case that P\\\".  To enter the symbol `¬`,\n"
-"type `\\not`."
+"type `\\not`.\n"
+"\n"
+"### If your goal is `¬ P`\n"
+"\n"
+"You may be able to use the `push_neg` tactic to reexpress the goal as an equivalent\n"
+"positive statement.  If not, then a good strategy is to use proof by contradiction.  The\n"
+"tactic `by_contra h` will introduce the assumption `h : P`, and set the goal to be `False`.\n"
+"\n"
+"### If you have an assumption `h : ¬ P`\n"
+"\n"
+"You may be able to use the tactic `push_neg at h` to reexpress this assumption as an equivalent\n"
+"positive statement.  Lean treats `¬ P` as meaning `P → False`, so if you also have `hP : P`,\n"
+"then `h hP` will be a proof of `False`.  That means that if you are doing a proof by\n"
+"contradiction, so your goal is `False`, then `exact h hP` will close the goal."
 msgstr ""
 
 #: Game.Levels.Comp.L01contra
@@ -484,7 +507,21 @@ msgid "If `A` is a of objects from the universe `U`, then `Aᶜ` is the compleme
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
-msgid "`P ↔ Q` means \"P if and only if Q\".  You can enter the symbol `↔` by typing `\\iff`."
+msgid "`P ↔ Q` means \"P if and only if Q\".  You can enter the symbol `↔` by typing `\\iff`.\n"
+"\n"
+"### If your goal is `P ↔ Q`\n"
+"\n"
+"If `P` and `Q` are definitionally equivalent, then `rfl` will close the goal.\n"
+"If you have `h1 : P → Q` and `h2 : Q → P`, then `Iff.intro h1 h2` is a proof of `P ↔ Q`,\n"
+"so `exact Iff.intro h1 h2` will close the goal.\n"
+"If you don't yet have proofs of `P → Q` and `Q → P`, then `apply Iff.intro` will set `P → Q`\n"
+"and `Q → P` as your goals.  In this situation, the tactic `constructor` has the same effect as\n"
+"`apply Iff.intro`.\n"
+"\n"
+"### If you have an assumption `h : P ↔ Q`\n"
+"\n"
+"Lean will recognize `h.mp` as a proof of `P → Q` and `h.mpr` as a proof of `Q → P`.  You may\n"
+"also find it helpful to use `h` in the `rewrite` tactic."
 msgstr ""
 
 #: Game.Levels.Comp.L02compdef
@@ -808,7 +845,19 @@ msgid "To work with intersections, we'll need to understand the word \"and\".\n"
 msgstr ""
 
 #: Game.Levels.Inter.L01and
-msgid "`P ∧ Q` means \"P and Q\".  To enter the symbol `∧`, type `\\and`."
+msgid "`P ∧ Q` means \"P and Q\".  To enter the symbol `∧`, type `\\and`.\n"
+"\n"
+"### If your goal is `P ∧ Q`\n"
+"\n"
+"If you have `hP : P` and `hQ : Q`, then `And.intro hP hQ` is a proof of `P ∧ Q`,\n"
+"so `exact And.intro hP hQ` will close the goal.\n"
+"If you don't yet have proofs of `P` and `Q`, then `apply And.intro` will set `P` and `Q`\n"
+"as separate goals.  In this situation, the tactic `constructor` has the same effect as\n"
+"`apply And.intro`.\n"
+"\n"
+"### If you have an assumption `h : P ∧ Q`\n"
+"\n"
+"Lean will recognize `h.left` as a proof of `P` and `h.right` as a proof of `Q`."
 msgstr ""
 
 #: Game.Levels.Inter.L01and
@@ -1117,7 +1166,24 @@ msgid "For working with unions, the important logical word is \"or\".\n"
 msgstr ""
 
 #: Game.Levels.Union.L01or
-msgid "`P ∨ Q` means \"P or Q or both\".  To enter the symbol `∨`, type `\\or`."
+msgid "`P ∨ Q` means \"P or Q or both\".  To enter the symbol `∨`, type `\\or`.\n"
+"\n"
+"### If your goal is `P ∨ Q`\n"
+"\n"
+"If you have `hP : P`, then `Or.inl hP` is a proof of `P ∨ Q`, so `exact Or.inl hP`\n"
+"will close the goal.  Similarly, if you have `hQ : Q`, then `Or.inr hQ` is a proof\n"
+"of `P ∨ Q`.  If you don't have a proof of either `P` or `Q`, but you think you know\n"
+"which one is true, then you can use `apply Or.inl` to set the goal to be `P`, or\n"
+"`apply Or.inr` to set the goal to be `Q`.  Alternatively, the tactic `left` will have\n"
+"the same effect as `apply Or.inl`, and `right` will have the same effect as\n"
+"`apply Or.inr`.\n"
+"\n"
+"### If you have an assumption `h : P ∨ Q`\n"
+"\n"
+"A good strategy would be to use proof by cases.  The tactic `rcases h with hP | hQ`\n"
+"will break the proof into two cases.  In case 1, the assumption `h` is replaced by\n"
+"`hP : P `, and in case 2 it is replaced by `hQ : Q`.  In both cases, you must prove\n"
+"the goal."
 msgstr ""
 
 #: Game.Levels.Union.L01or
@@ -1561,7 +1627,19 @@ msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
 msgid "If `P x` represents a statement about an unspecified object `x`, then `∀ x, P x` means\n"
-"\"for all `x`, `P x` is true\".  To enter the symbol `∀`, type `\\forall`."
+"\"for all `x`, `P x` is true\".  To enter the symbol `∀`, type `\\forall`.\n"
+"\n"
+"### If your goal is `∀ x, P x`\n"
+"\n"
+"The tactic `intro t` will introduce a new object `t` into the proof, and set the goal to be `P t`.\n"
+"Be sure to use a variable `t` that is not already being used to stand for some object.\n"
+"\n"
+"### If you have an assumption `h : ∀ x, P x`\n"
+"\n"
+"If `a` stands for some object, then `h a` is a proof of `P a`.  Note that `a` must be the right\n"
+"*type* of object.  For example, if `x` stands for an object in the universe `U`, then `a` must\n"
+"have type `U`; if `x` stands for a set of objects from the universe `U`, then `a` must have\n"
+"type `Set U`."
 msgstr ""
 
 #: Game.Levels.FamInter.L01intersub
@@ -1670,6 +1748,18 @@ msgid "This level shows that family intersections are a generalization of the in
 "this family by `{A, B}`.  And, as usual, we'll need a theorem stating the definition of\n"
 "this notation.  For any `t`, `A`, and `B`, `mem_pair t A B` is a proof of the\n"
 "statement `t ∈ {A, B} ↔ t = A ∨ t = B`."
+msgstr ""
+
+#: Game.Levels.FamInter.L03interpair
+msgid "If `a` denotes some object, then `{a}` denotes the set whose only element is `a`; such a set\n"
+"is called a *singleton* set.  Similarly, if `a` and `b` denote objects, then `{a, b}` denotes\n"
+"the set whose elements are `a` and `b`, and nothing else.  (Similar notation can be used to\n"
+"denote a set containing any finite list of objects.  All of the objects in the list must\n"
+"have the same type; if the objects have type `U`, then the set has type `Set U`.)\n"
+"\n"
+"There is another way to define sets.  If `P x` is a statement about an\n"
+"unspecified object `x`, then `{x | P x}` denotes the set of all values of `x` that make `P x`\n"
+"come out true.  This is often called *set-builder notation*."
 msgstr ""
 
 #: Game.Levels.FamInter.L03interpair
@@ -1842,7 +1932,21 @@ msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
 msgid "If `P x` represents a statement about `x`, then `∃ x, P x` means \"there is at least one\n"
-"`x` such that `P x` is true\".  To enter the symbol `∃`, type `\\exists`."
+"`x` such that `P x` is true\".  To enter the symbol `∃`, type `\\exists`.\n"
+"\n"
+"### If your goal is `∃ x, P x`\n"
+"\n"
+"If you have `h : P a`, for some object `a`, then `Exists.intro a h` is a proof of `∃ x, P x`,\n"
+"so `exact Exists.intro a h` will close the goal.\n"
+"If you think `P a` is true, but you don't yet have a proof of it, then `apply Exists.intro a`\n"
+"will set `P a` as your goal.  The tactic `use a` does the same thing, but it also tries to\n"
+"prove `P a`; if it doesn't succeed, then it leaves `P a` as a goal for you to prove.\n"
+"\n"
+"### If you have an assumption `h : ∃ x, P x`\n"
+"\n"
+"The tactic `obtain ⟨w, hw⟩ := h` will\n"
+"introduce a new object `w` and a new assumption `hw : P w` into the proof.  To enter the\n"
+"angle brackets `⟨ ⟩`, type either `\\<` and `\\>` or `\\langle` and `\\rangle`."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
@@ -1875,7 +1979,8 @@ msgid "Now you can use `Exists.intro` to complete the proof."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists
-msgid "`Exists.intro A «{h}»` proves the goal."
+msgid "`Exists.intro A «{h}»` is a proof of the goal, so `exact Exists.intro A «{h}»`\n"
+"will close the goal."
 msgstr ""
 
 #: Game.Levels.FamUnion.L01proveexists

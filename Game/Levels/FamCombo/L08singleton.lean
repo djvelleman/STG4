@@ -19,11 +19,11 @@ a proof of any statement of the form `x ∈ {a} ↔ x = a`.
 
 /-- Lean will recognize `mem_singleton_iff` is a proof of any statement of the form
 `x ∈ {a} ↔ x = a`.  In Mathlib, the name of this theorem is `Set.mem_singleton_iff`. -/
-TheoremDoc Set.mem_singleton_iff as "mem_singleton_iff" in "{}"
+TheoremDoc Set.mem_singleton_iff as "mem_singleton_iff" in "{ }"
 
 NewTheorem Set.mem_singleton_iff
 
-TheoremTab "{}"
+TheoremTab "{ }"
 
 /-- Suppose $A$ is a set, and for every family of sets $F$, if $\bigcup F = A$ then $A \in F$.
 Then $A$ must be a singleton set.-/

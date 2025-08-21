@@ -24,11 +24,11 @@ And that means that `rewrite [mem_setOf]` will rewrite `a ∈ {x | P x}` as `P a
 
 /-- Lean will recognize `mem_setOf` as a proof of any statement of the form
 `a ∈ {x | P x} ↔ P a`.  In Mathlib, the name of this theorem is `Set.mem_setOf`. -/
-TheoremDoc Set.mem_setOf as "mem_setOf" in "{}"
+TheoremDoc Set.mem_setOf as "mem_setOf" in "{ }"
 
 NewTheorem Set.mem_setOf
 
-TheoremTab "{}"
+TheoremTab "{ }"
 
 /--Suppose $A$ is a set and $F$ is a family of sets.  Then $A \cap (\bigcup F) =
 \bigcup\{s \mid \exists u \in F, s = A \cap u\}$.-/

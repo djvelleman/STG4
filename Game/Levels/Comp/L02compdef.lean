@@ -40,7 +40,22 @@ NewTactic rfl
 by typing `\compl` or `\^c`. -/
 DefinitionDoc comp as "ᶜ"
 
-/-- `P ↔ Q` means "P if and only if Q".  You can enter the symbol `↔` by typing `\iff`. -/
+/-- `P ↔ Q` means "P if and only if Q".  You can enter the symbol `↔` by typing `\iff`.
+
+### If your goal is `P ↔ Q`
+
+If `P` and `Q` are definitionally equivalent, then `rfl` will close the goal.
+If you have `h1 : P → Q` and `h2 : Q → P`, then `Iff.intro h1 h2` is a proof of `P ↔ Q`,
+so `exact Iff.intro h1 h2` will close the goal.
+If you don't yet have proofs of `P → Q` and `Q → P`, then `apply Iff.intro` will set `P → Q`
+and `Q → P` as your goals.  In this situation, the tactic `constructor` has the same effect as
+`apply Iff.intro`.
+
+### If you have an assumption `h : P ↔ Q`
+
+Lean will recognize `h.mp` as a proof of `P → Q` and `h.mpr` as a proof of `Q → P`.  You may
+also find it helpful to use `h` in the `rewrite` tactic.
+-/
 DefinitionDoc iff as "↔"
 
 NewDefinition comp iff

@@ -19,7 +19,18 @@ The most straightforward way to prove a statement of the form `P → Q` is to as
 `P` is true and then prove `Q`.  To do that, we'll need a new tactic: `intro`.
 "
 
-/-- `P → Q` means "if `P` then `Q`".  You can enter the symbol `→` by typing `\imp`. -/
+/-- `P → Q` means "if `P` then `Q`".  You can enter the symbol `→` by typing `\imp`.
+
+### If your goal is `P → Q`
+
+The tactic `intro h` will introduce the new assumption `h : P` into the proof, and set the goal
+to be `Q`.  Be sure to use an identifier `h` that is not already being used to stand for
+some assumption.
+
+### If you have an assumption `h : P → Q`
+
+If you also have `hP : P`, then `h hP` is a proof of `Q`.
+-/
 DefinitionDoc imp as "→"
 
 NewDefinition imp

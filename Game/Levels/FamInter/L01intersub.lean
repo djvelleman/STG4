@@ -35,7 +35,20 @@ In this level, you'll try out these ideas.
 DefinitionDoc famint as "⋂₀"
 
 /-- If `P x` represents a statement about an unspecified object `x`, then `∀ x, P x` means
-"for all `x`, `P x` is true".  To enter the symbol `∀`, type `\forall`. -/
+"for all `x`, `P x` is true".  To enter the symbol `∀`, type `\forall`.
+
+### If your goal is `∀ x, P x`
+
+The tactic `intro t` will introduce a new object `t` into the proof, and set the goal to be `P t`.
+Be sure to use a variable `t` that is not already being used to stand for some object.
+
+### If you have an assumption `h : ∀ x, P x`
+
+If `a` stands for some object, then `h a` is a proof of `P a`.  Note that `a` must be the right
+*type* of object.  For example, if `x` stands for an object in the universe `U`, then `a` must
+have type `U`; if `x` stands for a set of objects from the universe `U`, then `a` must have
+type `Set U`.
+-/
 DefinitionDoc all as "∀"
 
 NewDefinition famint all

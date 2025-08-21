@@ -25,7 +25,22 @@ the existential statement.)  In this level, you'll try out this theorem.
 "
 
 /-- If `P x` represents a statement about `x`, then `∃ x, P x` means "there is at least one
-`x` such that `P x` is true".  To enter the symbol `∃`, type `\exists`.-/
+`x` such that `P x` is true".  To enter the symbol `∃`, type `\exists`.
+
+### If your goal is `∃ x, P x`
+
+If you have `h : P a`, for some object `a`, then `Exists.intro a h` is a proof of `∃ x, P x`,
+so `exact Exists.intro a h` will close the goal.
+If you think `P a` is true, but you don't yet have a proof of it, then `apply Exists.intro a`
+will set `P a` as your goal.  The tactic `use a` does the same thing, but it also tries to
+prove `P a`; if it doesn't succeed, then it leaves `P a` as a goal for you to prove.
+
+### If you have an assumption `h : ∃ x, P x`
+
+The tactic `obtain ⟨w, hw⟩ := h` will
+introduce a new object `w` and a new assumption `hw : P w` into the proof.  To enter the
+angle brackets `⟨ ⟩`, type either `\<` and `\>` or `\langle` and `\rangle`.
+-/
 DefinitionDoc ex as "∃"
 
 NewDefinition ex
@@ -49,7 +64,8 @@ Statement (A : Set U) : ∃ s, s ⊆ A := by
     Go back and try a different choice."
   have h : A ⊆ A := Subset.refl A
   Hint "Now you can use `Exists.intro` to complete the proof."
-  Hint (hidden := true) "`Exists.intro A {h}` proves the goal."
+  Hint (hidden := true) "`Exists.intro A {h}` is a proof of the goal, so `exact Exists.intro A {h}`
+  will close the goal."
   exact Exists.intro A h
 
 Conclusion

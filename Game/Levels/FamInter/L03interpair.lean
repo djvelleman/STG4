@@ -23,15 +23,30 @@ this notation.  For any `t`, `A`, and `B`, `mem_pair t A B` is a proof of the
 statement `t ∈ {A, B} ↔ t = A ∨ t = B`.
 "
 
+/--
+If `a` denotes some object, then `{a}` denotes the set whose only element is `a`; such a set
+is called a *singleton* set.  Similarly, if `a` and `b` denote objects, then `{a, b}` denotes
+the set whose elements are `a` and `b`, and nothing else.  (Similar notation can be used to
+denote a set containing any finite list of objects.  All of the objects in the list must
+have the same type; if the objects have type `U`, then the set has type `Set U`.)
+
+There is another way to define sets.  If `P x` is a statement about an
+unspecified object `x`, then `{x | P x}` denotes the set of all values of `x` that make `P x`
+come out true.  This is often called *set-builder notation*.
+-/
+DefinitionDoc SetDef as "{ }"
+
+NewDefinition SetDef
+
 lemma mem_pair (t A B : U) : t ∈ {A, B} ↔ t = A ∨ t = B := by rfl
 
 /-- For any `t`, `A`, and `B`, `mem_pair t A B` is a proof of the statement
 `t ∈ {A, B} ↔ t = A ∨ t = B`. -/
-TheoremDoc STG4.mem_pair as "mem_pair" in "{}"
+TheoremDoc STG4.mem_pair as "mem_pair" in "{ }"
 
 NewTheorem STG4.mem_pair
 
-TheoremTab "{}"
+TheoremTab "{ }"
 
 /-- Suppose $A$ and $B$ are sets.  Then $A \cap B = \bigcap \{A, B\}$. -/
 Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by

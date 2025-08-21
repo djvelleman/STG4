@@ -45,6 +45,7 @@ Warning: In most browsers, deleting cookies will also clear the local storage
 
 * **Creator:** Daniel J. Velleman; based on the Natural Numbers Game, by Kevin Buzzard
 * **Game Engine:** Alexander Bentkamp, Jon Eugster, Patrick Massot
+* **Spanish Translation:** Miguel Marco
 
 ## Resources
 

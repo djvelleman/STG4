@@ -32,7 +32,7 @@ NewTactic obtain
 
 /-- Suppose $F$ and $G$ are families of sets and $F \subseteq G$.
 Then $\bigcup F \subseteq \bigcup G$. -/
-Statement (F G : Set (Set U)) (h1 : F ⊆ G) : ⋃₀ F ⊆ ⋃₀ G := by
+Statement {U : Type} (F G : Set (Set U)) (h1 : F ⊆ G) : ⋃₀ F ⊆ ⋃₀ G := by
   intro x h2
   rewrite [mem_sUnion]
   rewrite [mem_sUnion] at h2

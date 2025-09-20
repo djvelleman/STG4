@@ -1,4 +1,4 @@
-import Game.Levels.Subset.L04imp
+import Game.Metadata
 
 open Set
 
@@ -15,8 +15,8 @@ Introduction
 How do you prove that one set is a subset of another?  To prove that `A ⊆ B`,
 you have to show that if some object `x` is an element of `A`, then it is also
 an element of `B`.  To do that, you'll have to introduce an object called `x` into
-the proof.  The object denoted by `x` could be anything, so we say that it is
-*arbitrary*.
+the proof.  The object denoted by `x` could be anything, so we say that it
+is *arbitrary*.
 
 In this level, we start with a simple example of this kind of proof.  We're going
 to show that if `A` is a set, then `A ⊆ A`.

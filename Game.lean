@@ -1,4 +1,11 @@
-import Game.Levels.FamCombo  --Everything else needed is imported by this
+import Game.Levels.Subset
+import Game.Levels.Comp
+import Game.Levels.Inter
+import Game.Levels.Union
+import Game.Levels.Combo
+import Game.Levels.FamInter
+import Game.Levels.FamUnion
+import Game.Levels.FamCombo
 
 Title "Set Theory Game"
 Introduction
@@ -62,7 +69,6 @@ looking for somewhere less formal (e.g. you want to post set theory
 game memes) then head on over to the [Lean Discord](https://discord.gg/WZ9bs9UCvx).
 
 Alternatively, if you experience issues / bugs you can also open github issues:
-
 * For issues with the game engine, please open an
 [issue at the lean4game repo](https://github.com/leanprover-community/lean4game/issues).
 * For issues about the game's content, please open an

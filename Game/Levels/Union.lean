@@ -1,4 +1,10 @@
+import Game.Levels.Union.L01or
+import Game.Levels.Union.L02subunion
+import Game.Levels.Union.L03cases
+import Game.Levels.Union.L04union_sub_swap
+import Game.Levels.Union.L05union_comm
 import Game.Levels.Union.L06union_assoc
+
 /-!
 
 # Union world

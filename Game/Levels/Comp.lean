@@ -1,4 +1,9 @@
-import Game.Levels.Comp.L05compsubiff  --It imports all previous levels.
+import Game.Levels.Comp.L01contra
+import Game.Levels.Comp.L02compdef
+import Game.Levels.Comp.L03compsub
+import Game.Levels.Comp.L04compcomp
+import Game.Levels.Comp.L05compsubiff
+
 /-!
 
 # Complement world

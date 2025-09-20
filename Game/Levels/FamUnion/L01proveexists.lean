@@ -1,4 +1,5 @@
-import Game.Levels.FamInter
+import Game.Metadata
+import Game.Levels.Subset
 
 open Set
 
@@ -14,8 +15,8 @@ Introduction
 "
 To work with unions of families, we'll need to know how to work with existential statements.
 If `P x` is a statement about an unspecified object `x`, then `∃ x, P x` means \"there is
-at least one `x` such that `P x` is true\".  The symbol `∃` is called the
-*existential quantifier*, and you can enter it in Lean by typing `\\exists`.
+at least one `x` such that `P x` is true\".  The symbol `∃` is called the *existential
+quantifier*, and you can enter it in Lean by typing `\\exists`.
 
 The easiest way to prove the statement `∃ x, P x` is to specify a value of `x`, and give a
 proof of `P x` for that value of `x`.  The theorem that allows you to do that is called

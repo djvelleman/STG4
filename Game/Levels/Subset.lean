@@ -1,4 +1,9 @@
-import Game.Levels.Subset.L06subtrans  --It imports all previous levels.
+import Game.Levels.Subset.L01exact
+import Game.Levels.Subset.L02subhyp
+import Game.Levels.Subset.L03have
+import Game.Levels.Subset.L04imp
+import Game.Levels.Subset.L05subref
+import Game.Levels.Subset.L06subtrans
 /-!
 
 # Subset world

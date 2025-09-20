@@ -1,8 +1,10 @@
-import Game.Levels.FamUnion.L02subunion
+import Game.Metadata
 
 open Set
 
 namespace STG4
+
+variable {U : Type}
 
 World "FamUnion"
 Level 3

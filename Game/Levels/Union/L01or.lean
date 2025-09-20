@@ -1,4 +1,4 @@
-import Game.Levels.Inter
+import Game.Metadata
 
 open Set
 
@@ -14,14 +14,14 @@ Introduction
 "
 For working with unions, the important logical word is \"or\".
 
-If `P` and `Q` are statements, then `P ∨ Q` means \"P or Q or both\".  To enter the
+If `P` and `Q` are statements, then `P ∨ Q` means \"`P` or `Q` or both\".  To enter the
 symbol `∨`, type `\\or`.  For the statement `P ∨ Q` to be true, either `P` or `Q` must
 be true.  This gives us two ways to prove a statement of this form.  If you have
 `h : P`, then `Or.inl h` can be used to prove `P ∨ Q`.  If you have `h : Q`, then
 `Or.inr h` proves `P ∨ Q`.
 "
 
-/-- `P ∨ Q` means "P or Q or both".  To enter the symbol `∨`, type `\or`.
+/-- `P ∨ Q` means "`P` or `Q` or both".  To enter the symbol `∨`, type `\or`.
 
 ### If your goal is `P ∨ Q`
 

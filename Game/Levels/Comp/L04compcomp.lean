@@ -1,4 +1,5 @@
-import Game.Levels.Comp.L03compsub
+import Game.Metadata
+import Game.Levels.Comp.L02compdef
 
 open Set
 
@@ -41,6 +42,7 @@ TacticDoc apply
 an equivalent positive statement.  Similarly, if an assumption `h` is a negative
 statement, then `push_neg at h` will try to reexpress `h`.  Here are some examples of
 reexpressions performed by the `push_neg` tactic:
+
 * `¬¬P` is converted to `P`.
 * `¬(P ∨ Q)` is converted to `¬P ∧ ¬Q`.
 * `¬(P ∧ Q)` is converted to `P → ¬Q`.

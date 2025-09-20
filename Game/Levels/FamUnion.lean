@@ -1,4 +1,11 @@
-import Game.Levels.FamUnion.L07eltwiseinter --It imports all previous levels.
+import Game.Levels.FamUnion.L01proveexists
+import Game.Levels.FamUnion.L02subunion
+import Game.Levels.FamUnion.L03unionsubunion
+import Game.Levels.FamUnion.L04unionpair
+import Game.Levels.FamUnion.L05unionunion
+import Game.Levels.FamUnion.L06unionsub
+import Game.Levels.FamUnion.L07eltwiseinter
+
 /-!
 
 # FamUnion world

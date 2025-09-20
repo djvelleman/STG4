@@ -1,4 +1,11 @@
-import Game.Levels.FamCombo.L08singleton --It imports all previous levels.
+import Game.Levels.FamCombo.L01compunion
+import Game.Levels.FamCombo.L02compinter
+import Game.Levels.FamCombo.L03commonelt
+import Game.Levels.FamCombo.L04threefam
+import Game.Levels.FamCombo.L05unionintcompunion
+import Game.Levels.FamCombo.L06unionintunion
+import Game.Levels.FamCombo.L07unionintcompint
+import Game.Levels.FamCombo.L08singleton
 /-!
 
 # FamCombo world

@@ -1,4 +1,8 @@
-import Game.Levels.Combo.L05union_sub_inter_sub  --It imports all previous levels.
+import Game.Levels.Combo.L01compunion
+import Game.Levels.Combo.L02compint
+import Game.Levels.Combo.L03inter_distrib_union
+import Game.Levels.Combo.L04union_distrib_inter
+import Game.Levels.Combo.L05union_sub_inter_sub
 /-!
 
 # Combination world

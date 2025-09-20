@@ -1,4 +1,4 @@
-import Game.Levels.Comp
+import Game.Metadata
 
 open Set
 
@@ -14,14 +14,14 @@ Introduction
 "
 To work with intersections, we'll need to understand the word \"and\".
 
-If `P` and `Q` are statements, then `P ∧ Q` means \"P and Q\".  To enter the
+If `P` and `Q` are statements, then `P ∧ Q` means \"`P` and `Q`\".  To enter the
 symbol `∧`, type `\\and`.  For the statement `P ∧ Q` to be true, `P` and `Q` must
 both be true.  If you have `h : P ∧ Q`--that is, `h` is a proof of
 the statement `P ∧ Q`--then in Lean, `h.left` is a proof of `P` and `h.right` is
 a proof of `Q`.  That should be all you need to know to solve this level.
 "
 
-/-- `P ∧ Q` means "P and Q".  To enter the symbol `∧`, type `\and`.
+/-- `P ∧ Q` means "`P` and `Q`".  To enter the symbol `∧`, type `\and`.
 
 ### If your goal is `P ∧ Q`
 

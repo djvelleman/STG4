@@ -1,4 +1,4 @@
-import GameServer.Commands
+import GameServer
 import Mathlib.Tactic.Common
 import Mathlib.Tactic.Have
 import Mathlib.Data.Set.Basic

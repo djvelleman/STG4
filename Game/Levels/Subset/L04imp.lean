@@ -1,4 +1,4 @@
-import Game.Levels.Subset.L03have
+import Game.Metadata
 
 open Set
 
@@ -12,7 +12,7 @@ Title "Implication"
 
 Introduction
 "
-If `P` and `Q` are statements, then `P → Q` means \"if P then Q\".
+If `P` and `Q` are statements, then `P → Q` means \"if `P` then `Q`\".
 To enter the symbol `→`, type `\\imp` (short for \"implies\").
 
 The most straightforward way to prove a statement of the form `P → Q` is to assume that
@@ -38,9 +38,11 @@ NewDefinition imp
 /-- Use `intro` to introduce either a new assumption or a new object into your proof.
 
 There are two situations in which you can use the `intro` tactic:
+
 * If you are proving a statement of the form `P → Q`, then you can use
 the tactic `intro h` to introduce the assumption `h : P` and set `Q` as the goal.  Be
 sure to use an identifier that is not already in use.
+
 * If you are proving a statement of the form `∀ x, P x`, where `P x` is some statement
 about `x`, then you can use the tactic `intro x` to introduce a new object `x` into the proof.
 Be sure to use a variable name that is not already in use.  The goal will then be `P x`.

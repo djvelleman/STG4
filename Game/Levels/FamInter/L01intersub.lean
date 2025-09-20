@@ -1,4 +1,4 @@
-import Game.Levels.Combo
+import Game.Metadata
 
 open Set
 
@@ -44,10 +44,10 @@ Be sure to use a variable `t` that is not already being used to stand for some o
 
 ### If you have an assumption `h : ∀ x, P x`
 
-If `a` stands for some object, then `h a` is a proof of `P a`.  Note that `a` must be the right
-*type* of object.  For example, if `x` stands for an object in the universe `U`, then `a` must
-have type `U`; if `x` stands for a set of objects from the universe `U`, then `a` must have
-type `Set U`.
+If `a` stands for some object, then `h a` is a proof of `P a`.  Note that `a` must be the
+right *type* of object.  For example, if `x` stands for an object in the universe `U`, then
+`a` must have type `U`; if `x` stands for a set of objects from the universe `U`, then `a` must
+have type `Set U`.
 -/
 DefinitionDoc all as "∀"
 

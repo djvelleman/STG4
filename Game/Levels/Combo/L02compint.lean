@@ -1,3 +1,5 @@
+import Game.Metadata
+import Game.Levels.Comp
 import Game.Levels.Combo.L01compunion
 
 open Set

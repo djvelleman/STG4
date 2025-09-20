@@ -1,4 +1,4 @@
-import Game.Levels.Subset
+import Game.Metadata
 
 open Set
 
@@ -15,7 +15,7 @@ Introduction
 To work with complements, we'll need to understand negative statements--that is, statements
 that say that something is *not* the case.
 
-If `P` is a statement, then `¬P` means \"it is not the case that P\".  To enter the symbol
+If `P` is a statement, then `¬P` means \"it is not the case that `P`\".  To enter the symbol
 `¬`, type `\\not`.
 
 A common method of proving a negative statement is *proof by
@@ -38,19 +38,19 @@ TacticDoc by_contra
 
 NewTactic by_contra
 
-/-- `¬P` means \"it is not the case that P\".  To enter the symbol `¬`,
+/-- `¬P` means \"it is not the case that `P`\".  To enter the symbol `¬`,
 type `\not`.
 
-### If your goal is `¬ P`
+### If your goal is `¬P`
 
 You may be able to use the `push_neg` tactic to reexpress the goal as an equivalent
 positive statement.  If not, then a good strategy is to use proof by contradiction.  The
 tactic `by_contra h` will introduce the assumption `h : P`, and set the goal to be `False`.
 
-### If you have an assumption `h : ¬ P`
+### If you have an assumption `h : ¬P`
 
 You may be able to use the tactic `push_neg at h` to reexpress this assumption as an equivalent
-positive statement.  Lean treats `¬ P` as meaning `P → False`, so if you also have `hP : P`,
+positive statement.  Lean treats `¬P` as meaning `P → False`, so if you also have `hP : P`,
 then `h hP` will be a proof of `False`.  That means that if you are doing a proof by
 contradiction, so your goal is `False`, then `exact h hP` will close the goal.
 -/

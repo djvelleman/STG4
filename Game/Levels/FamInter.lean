@@ -1,4 +1,9 @@
-import Game.Levels.FamInter.L06eltwiseunion  --It imports all previous levels.
+import Game.Levels.FamInter.L01intersub
+import Game.Levels.FamInter.L02intersubinter
+import Game.Levels.FamInter.L03interpair
+import Game.Levels.FamInter.L04interunion
+import Game.Levels.FamInter.L05subinter
+import Game.Levels.FamInter.L06eltwiseunion
 /-!
 
 # FamInter world

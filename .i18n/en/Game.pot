@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-02\n"
+"POT-Creation-Date: 2025-10-24\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -464,42 +464,6 @@ msgid "In this level we have two families of sets, §0 and §1, with §2.  That 
 "leads to a smaller result; more precisely, you're going to prove that §5.\n"
 "\n"
 "Of course, by now you know how to start a proof that one set is a subset of another."
-msgstr ""
-
-#. §0: `¬P`
-#. §1: `P`
-#. §2: `¬`
-#. §3: `\\not`
-#. §4: `¬P`
-#. §5: `push_neg`
-#. §6: `by_contra h`
-#. §7: `h : P`
-#. §8: `False`
-#. §9: `h : ¬P`
-#. §10: `push_neg at h`
-#. §11: `¬P`
-#. §12: `P → False`
-#. §13: `hP : P`
-#. §14: `h hP`
-#. §15: `False`
-#. §16: `False`
-#. §17: `exact h hP`
-#: Game.Levels.Comp.L01contra
-msgid "§0 means \\\\\"it is not the case that §1\\\\\".  To enter the symbol §2,\n"
-"type §3.\n"
-"\n"
-"### If your goal is §4\n"
-"\n"
-"You may be able to use the §5 tactic to reexpress the goal as an equivalent\n"
-"positive statement.  If not, then a good strategy is to use proof by contradiction.  The\n"
-"tactic §6 will introduce the assumption §7, and set the goal to be §8.\n"
-"\n"
-"### If you have an assumption §9\n"
-"\n"
-"You may be able to use the tactic §10 to reexpress this assumption as an equivalent\n"
-"positive statement.  Lean treats §11 as meaning §12, so if you also have §13,\n"
-"then §14 will be a proof of §15.  That means that if you are doing a proof by\n"
-"contradiction, so your goal is §16, then §17 will close the goal."
 msgstr ""
 
 #. §0: `mem_inter_iff`
@@ -2420,6 +2384,42 @@ msgid "If your goal has the form §0, then the tactic §1 will replace this\n"
 "§5 will replace this goal with the two goals §6 and §7.  There are other\n"
 "situations in which the §8 tactic can be used, but these two are the ones\n"
 "that are most relevant for the set theory game."
+msgstr ""
+
+#. §0: `¬P`
+#. §1: `P`
+#. §2: `¬`
+#. §3: `\\not`
+#. §4: `¬P`
+#. §5: `push_neg`
+#. §6: `by_contra h`
+#. §7: `h : P`
+#. §8: `False`
+#. §9: `h : ¬P`
+#. §10: `push_neg at h`
+#. §11: `¬P`
+#. §12: `P → False`
+#. §13: `hP : P`
+#. §14: `h hP`
+#. §15: `False`
+#. §16: `False`
+#. §17: `exact h hP`
+#: Game.Levels.Comp.L01contra
+msgid "§0 means \"it is not the case that §1\".  To enter the symbol §2,\n"
+"type §3.\n"
+"\n"
+"### If your goal is §4\n"
+"\n"
+"You may be able to use the §5 tactic to reexpress the goal as an equivalent\n"
+"positive statement.  If not, then a good strategy is to use proof by contradiction.  The\n"
+"tactic §6 will introduce the assumption §7, and set the goal to be §8.\n"
+"\n"
+"### If you have an assumption §9\n"
+"\n"
+"You may be able to use the tactic §10 to reexpress this assumption as an equivalent\n"
+"positive statement.  Lean treats §11 as meaning §12, so if you also have §13,\n"
+"then §14 will be a proof of §15.  That means that if you are doing a proof by\n"
+"contradiction, so your goal is §16, then §17 will close the goal."
 msgstr ""
 
 #: Game.Levels.Union.L02subunion

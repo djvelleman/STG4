@@ -38,7 +38,7 @@ TacticDoc by_contra
 
 NewTactic by_contra
 
-/-- `¬P` means \"it is not the case that `P`\".  To enter the symbol `¬`,
+/-- `¬P` means "it is not the case that `P`".  To enter the symbol `¬`,
 type `\not`.
 
 ### If your goal is `¬P`

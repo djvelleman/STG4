@@ -69,7 +69,12 @@ Statement (A B : Set U) : A ∩ B = ⋂₀ {A, B} := by
   rewrite [mem_sInter] at h1
   apply And.intro
   Hint (strict := true) (hidden := true) "It would be helpful if you knew that `A ∈ \{A, B}`.
-  You can use `have` to assert it."
+  You can use `have` to assert it.  If you don't see right
+  away how to justify this assertion, you can just write `have hAinAB : A ∈ \{A, B}` and Lean will
+  set `A ∈ \{A, B}` as your immediate goal.  Once you achieve that goal, Lean will add
+  `hAinAB : A ∈ \{A, B}` to your list of assumptions, and you can continue with
+  the proof of your original goal.  For further details, click on `have` in the list of tactics
+  on the right."
   have h2 : A ∈ {A, B}
   rewrite [mem_pair]
   apply Or.inl

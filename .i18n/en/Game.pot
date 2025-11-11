@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-24\n"
+"POT-Creation-Date: 2025-11-11\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1179,13 +1179,6 @@ msgstr ""
 msgid "Next we'll prove the associative law for unions."
 msgstr ""
 
-#. §0: `A ∈ {A, B}`
-#. §1: `have`
-#: Game.Levels.FamInter.L03interpair
-msgid "It would be helpful if you knew that §0.\n"
-"You can use §1 to assert it."
-msgstr ""
-
 #. §0: `Subset.refl`
 #. §1: `Set.Subset.refl`
 #. §2: `Set.`
@@ -2012,6 +2005,22 @@ msgstr ""
 #: Game.Levels.Combo.L03inter_distrib_union
 #: Game.Levels.Combo.L04union_distrib_inter
 msgid "For any sets §0, §1, and §2, §3."
+msgstr ""
+
+#. §0: `A ∈ {A, B}`
+#. §1: `have`
+#. §2: `have hAinAB : A ∈ {A, B}`
+#. §3: `A ∈ {A, B}`
+#. §4: `hAinAB : A ∈ {A, B}`
+#. §5: `have`
+#: Game.Levels.FamInter.L03interpair
+msgid "It would be helpful if you knew that §0.\n"
+"You can use §1 to assert it.  If you don't see right\n"
+"away how to justify this assertion, you can just write §2 and Lean will\n"
+"set §3 as your immediate goal.  Once you achieve that goal, Lean will add\n"
+"§4 to your list of assumptions, and you can continue with\n"
+"the proof of your original goal.  For further details, click on §5 in the list of tactics\n"
+"on the right."
 msgstr ""
 
 #. §0: `rfl`

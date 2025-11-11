@@ -375,8 +375,8 @@
  " Lean reconocerá §0 como una prueba de cualquier enunciado de la forma\n§1. En Mathlib, el nombre de este teorema es §2.",
  "Just as you were able to apply §0 to §1 in the last step,\nyou can now apply §2 to §3 to prove the goal.":
  "Igual que pudiste aplicar §0 a §1 en el paso anterior,\n  ahora puedes aplicar §2 a §3 para probar el objetivo.",
- "It would be helpful if you knew that §0.\nYou can use §1 to assert it.":
- " Sería útil tener que §0.\nPuedes utilizar §1 para afirmarlo.",
+ "It would be helpful if you knew that §0.\nYou can use §1 to assert it.  If you don't see right\naway how to justify this assertion, you can just write §2 and Lean will\nset §3 as your immediate goal.  Once you achieve that goal, Lean will add\n§4 to your list of assumptions, and you can continue with\nthe proof of your original goal.  For further details, click on §5 in the list of tactics\non the right.":
+ " Sería útil tener que §0.\nPuedes utilizar §1 para afirmarlo. Si no ves de inmediato cómo justificar esta afirmación, puedes escribir simplemente §2 y Lean establecerá §3 como tu objetivo inmediato. Una vez que hayas logrado ese objetivo, Lean agregará §4 a tu lista de hipótesis y podrás continuar con la prueba de tu objetivo original. Para obtener más detalles, haz clic en §5 en la lista de tácticas a la derecha.",
  "It will help you see how to proceed if you\nwrite out the definition of union in both the assumption §0 and the goal.":
  "Te puede ser útil escribir la definición de unión tanto en la hipótesis §0 como en el objetivo.",
  "It will help you see how to proceed if you\nwrite out the definition of intersection in both the assumption «{h}» and the goal.\nUsing the §0 tactic isn't necessary; you can just do the rewriting in\nyour head rather than asking Lean to do it.  But if it helps you to figure out the\nproof, go ahead and use the §1 tactic.":

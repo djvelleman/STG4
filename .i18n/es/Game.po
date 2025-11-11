@@ -1788,13 +1788,27 @@ msgstr " A continuación probaremos la ley asociativa para las uniones."
 
 #. §0: `A ∈ {A, B}`
 #. §1: `have`
+#. §2: `have hAinAB : A ∈ {A, B}`
+#. §3: `A ∈ {A, B}`
+#. §4: `hAinAB : A ∈ {A, B}`
+#. §5: `have`
 #: Game.Levels.FamInter.L03interpair
-msgid ""
-"It would be helpful if you knew that §0.\n"
-"You can use §1 to assert it."
+msgid "It would be helpful if you knew that §0.\n"
+"You can use §1 to assert it.  If you don't see right\n"
+"away how to justify this assertion, you can just write §2 and Lean will\n"
+"set §3 as your immediate goal.  Once you achieve that goal, Lean will add\n"
+"§4 to your list of assumptions, and you can continue with\n"
+"the proof of your original goal.  For further details, click on §5 in the list of tactics\n"
+"on the right."
 msgstr ""
 " Sería útil tener que §0.\n"
 "Puedes utilizar §1 para afirmarlo."
+"Si no ves de inmediato cómo justificar "
+"esta afirmación, puedes escribir simplemente §2 y Lean establecerá §3 como "
+"tu objetivo inmediato. Una vez que hayas logrado ese objetivo, Lean agregará"
+" §4 a tu lista de hipótesis y podrás continuar con la prueba de tu objetivo "
+"original. Para obtener más detalles, haz clic en §5 en la lista de tácticas "
+"a la derecha."
 
 #. §0: `Subset.refl`
 #. §1: `Set.Subset.refl`

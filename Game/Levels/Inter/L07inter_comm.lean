@@ -1,4 +1,3 @@
-import Game.Metadata
 import Game.Levels.Inter.L06inter_sub_swap
 
 open Set

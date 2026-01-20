@@ -1,7 +1,3 @@
-import Game.Metadata
-import Game.Levels.Comp
-import Game.Levels.Combo.L01compunion
-import Game.Levels.Combo.L02compint
 import Game.Levels.Combo.L03inter_distrib_union
 
 open Set

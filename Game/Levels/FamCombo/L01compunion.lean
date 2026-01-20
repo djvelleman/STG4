@@ -1,5 +1,5 @@
-import Game.Metadata
-import Game.Levels.Comp
+import Game.Levels.Combo
+import Game.Levels.FamUnion
 
 open Set
 

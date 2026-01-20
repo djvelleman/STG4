@@ -1,4 +1,3 @@
-import Game.Metadata
 import Game.Levels.Union.L04union_sub_swap
 
 open Set

@@ -1,5 +1,3 @@
-import Game.Metadata
-import Game.Levels.Comp.L03compsub
 import Game.Levels.Comp.L04compcomp
 
 open Set

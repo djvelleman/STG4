@@ -48,3 +48,17 @@ Note that gitpod is *not* setup to start the game in the background to play.
 ## Creating a new game
 
 In order to create a new game, click "use this template"  above to create your own game. That way there is a github action that can build a docker image from your `main` branch which can be used to add the game to the server at [adam.math.hhu.de](https://adam.math.hhu.de).
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0](LICENSE) or later.
+It is free for anyone, including academics and educators, to use, study, modify, and
+redistribute. Under the GPL's copyleft terms, if you distribute a modified version of
+this game, you must also release your version's source code under the same GPL-3.0
+license.
+
+This repository was originally created from the [hhu-adam/GameSkeleton](https://github.com/hhu-adam/GameSkeleton)
+template, which is MIT-licensed. Portions of the scaffolding (devcontainer, Docker,
+editor, and build configuration) originate from that template and remain subject to
+the MIT License in addition to the GPL-3.0 license above — see [NOTICE](NOTICE) for
+the required MIT attribution.

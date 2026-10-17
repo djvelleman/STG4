@@ -53,6 +53,7 @@ Warning: In most browsers, deleting cookies will also clear the local storage
 * **Creator:** Daniel J. Velleman; based on the Natural Numbers Game, by Kevin Buzzard
 * **Game Engine:** Alexander Bentkamp, Jon Eugster, Patrick Massot
 * **Spanish Translation:** Miguel Marco
+* **Russian Translation:** Konstantin Belyanin
 
 ## Resources
 
@@ -80,7 +81,7 @@ Dependency FamInter → FamUnion
 Dependency Combination → FamCombo
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "en" "es"
+Languages "en" "es" "ru"
 CaptionShort "A game about set theory."
 CaptionLong "In this game you will learn the basics of theorem proving in Lean by proving
 theorems about unions, intersections, and complements of sets."

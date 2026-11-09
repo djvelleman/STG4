@@ -1,8 +1,12 @@
-import GameServer
+import GameApi
 import Mathlib.Tactic.Common
 import Mathlib.Tactic.Have
 import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Lattice
+import Mathlib.Data.Set.Lattice.Bounded
+import Mathlib.Data.Set.Lattice.Disjoint
+import Mathlib.Data.Set.Lattice.Image
+import Mathlib.Data.Set.Lattice.Indexed
+import Mathlib.Data.Set.Lattice.Order
 
 attribute [default_instance] Set.instSingletonSet
 
@@ -18,3 +22,9 @@ a suggestion.
 in a random order. Therefore, you should keep the structure of one file lean file per world
 that imports all its levels.
 -/
+
+-- TODO: `push_neg` ahs been deprecated for `push Not`.
+-- update the game accordingly.
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)

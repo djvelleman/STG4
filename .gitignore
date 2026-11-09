@@ -1,6 +1,5 @@
-build/
-lake-packages/
-.lake/
-**/.DS_Store
-**/*.mo
-Update Procedure.md
+.DS_Store
+
+# Lean
+**/.lake
+**/.i18n/**/*.mo

@@ -1,8 +1,12 @@
-import GameServer
+import GameApi
 import Mathlib.Tactic.Common
 import Mathlib.Tactic.Have
 import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Lattice
+import Mathlib.Data.Set.Lattice.Bounded
+import Mathlib.Data.Set.Lattice.Disjoint
+import Mathlib.Data.Set.Lattice.Image
+import Mathlib.Data.Set.Lattice.Indexed
+import Mathlib.Data.Set.Lattice.Order
 
 attribute [default_instance] Set.instSingletonSet
 

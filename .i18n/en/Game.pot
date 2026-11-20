@@ -365,6 +365,105 @@ msgid "First use §0 to assert that §1, and\n"
 "then prove §2."
 msgstr ""
 
+#. §0: $F$
+#. §1: $(\\bigcup F)^c = \\bigcap \\{s \\mid s^c \\in F\\}$
+#: Game/Levels/FamCombo/L01compunion.lean:25
+#: Game/Levels/FamCombo/L02compinter.lean:19
+msgid "For any family of sets §0, §1."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `inter_subset_swap A B`
+#. §3: `A ∩ B ⊆ B ∩ A`
+#: Game/Levels/Inter/L06inter_sub_swap.lean:21
+#: Game/Levels/Union/L04union_sub_swap.lean:22
+msgid "For any sets §0 and §1, §2 is a proof of\n"
+"§3."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `inter_comm A B`
+#. §3: `A ∩ B = B ∩ A`
+#. §4: `Set.inter_comm`
+#: Game/Levels/Inter/L07inter_comm.lean:23
+#: Game/Levels/Union/L05union_comm.lean:21
+#: Game/Levels/Combo/L01compunion.lean:23
+#: Game/Levels/Combo/L02compint.lean:29
+msgid "For any sets §0 and §1, §2 is a proof of the\n"
+"statement §3.  In Mathlib, the name of this theorem is §4."
+msgstr ""
+
+#. §0: $A$
+#. §1: $B$
+#. §2: $A \\cap B \\subseteq A$
+#: Game/Levels/Inter/L03inter_sub_left.lean:18
+#: Game/Levels/Inter/L06inter_sub_swap.lean:25
+#: Game/Levels/Inter/L07inter_comm.lean:27
+#: Game/Levels/Union/L04union_sub_swap.lean:26
+#: Game/Levels/Union/L05union_comm.lean:25
+#: Game/Levels/Combo/L01compunion.lean:27
+#: Game/Levels/Combo/L02compint.lean:33
+msgid "For any sets §0 and §1, §2."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `inter_assoc A B C`
+#. §4: `(A ∩ B) ∩ C = A ∩ (B ∩ C)`
+#. §5: `Set.inter_assoc`
+#: Game/Levels/Inter/L08inter_assoc.lean:24
+msgid "For any sets §0, §1, and §2, §3 is a proof of the\n"
+"statement §4.  Im Mathlib, the name of this theorem is §5."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `inter_distrib_left A B C`
+#. §4: `A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)`
+#. §5: `Set.inter_distrib_left`
+#: Game/Levels/Combo/L03inter_distrib_union.lean:21
+#: Game/Levels/Combo/L04union_distrib_inter.lean:27
+msgid "For any sets §0, §1, and §2, §3 is a proof of the\n"
+"statement §4.  In Mathlib, the name of this theorem\n"
+"is §5."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `union_assoc A B C`
+#. §4: `(A ∪ B) ∪ C = A ∪ (B ∪ C)`
+#. §5: `Set.union_assoc`
+#: Game/Levels/Union/L06union_assoc.lean:27
+msgid "For any sets §0, §1, and §2, §3 is a proof of the\n"
+"statement §4.  In Mathlib, the name of this theorem is §5."
+msgstr ""
+
+#. §0: $A$
+#. §1: $B$
+#. §2: $C$
+#. §3: $(A \\cap B) \\cap C = A \\cap (B \\cap C)$
+#: Game/Levels/Inter/L08inter_assoc.lean:34
+#: Game/Levels/Union/L06union_assoc.lean:31
+#: Game/Levels/Combo/L03inter_distrib_union.lean:26
+#: Game/Levels/Combo/L04union_distrib_inter.lean:32
+msgid "For any sets §0, §1, and §2, §3."
+msgstr ""
+
+#. §0: `t`
+#. §1: `A`
+#. §2: `B`
+#. §3: `mem_pair t A B`
+#. §4: `t ∈ {A, B} ↔ t = A ∨ t = B`
+#: Game/Levels/FamInter/L03interpair.lean:43
+msgid "For any §0, §1, and §2, §3 is a proof of the statement\n"
+"§4."
+msgstr ""
+
 #. §0: `apply Iff.intro`
 #. §1: `A ⊆ B → Bᶜ ⊆ Aᶜ`
 #. §2: `Bᶜ ⊆ Aᶜ → A ⊆ B`
@@ -539,6 +638,42 @@ msgid "How do you prove that one set is a subset of another?  To prove that §0,
 "to show that if §6 is a set, then §7."
 msgstr ""
 
+#. §0: `t`
+#. §1: `P ↔ Q`
+#. §2: `rewrite [t]`
+#. §3: `P`
+#. §4: `Q`
+#. §5: `Q`
+#. §6: `P`
+#. §7: `rewrite [← t]`
+#. §8: `\\l`
+#. §9: `←`
+#. §10: `h`
+#. §11: `rewrite [t] at h`
+#. §12: `rewrite`
+#. §13: `t`
+#. §14: `p = q`
+#. §15: `rewrite [t]`
+#. §16: `p`
+#. §17: `q`
+#. §18: `rewrite [← t]`
+#. §19: `q`
+#. §20: `p`
+#. §21: `rewrite [t1, t2]`
+#: Game/Levels/Comp/L03compsub.lean:23
+msgid "If the expression §0 is a proof of a statement of the form §1, then the tactic\n"
+"§2 will replace §3 anywhere that it occurs in the goal with §4.  If you want to\n"
+"replace §5 with §6, use §7.  (Type §8 to enter the symbol §9.)  To do the\n"
+"replacement in an assumption §10, use §11.\n"
+"\n"
+"The §12 tactic can also be used with equations.  If §13 is a proof of an equation\n"
+"§14, then §15 will replace §16 with §17 wherever it appears, and §18\n"
+"will replace §19 with §20.\n"
+"\n"
+"To do multiple replacements, one after another, put a list of proofs inside the brackets, like\n"
+"this:  §21."
+msgstr ""
+
 #. §0: `hB : «{x}» ∈ B`
 #. §1: `hC : «{x}» ∈ C`
 #. §2: `And.intro hB hC`
@@ -562,6 +697,71 @@ msgid "If you had §0 and §1, then §2\n"
 "theorem §9 could be applied to prove the goal, if only you had proofs of\n"
 "§10 and §11.  So it will set those two statements as goals, to be proven\n"
 "one after the other."
+msgstr ""
+
+#. §0: `h : ∃ x, P x`
+#. §1: `obtain ⟨w, hw⟩ := h`
+#. §2: `w`
+#. §3: `hw : P w`
+#. §4: `⟨ ⟩`
+#. §5: `\\<`
+#. §6: `\\>`
+#. §7: `\\langle`
+#. §8: `\\rangle`
+#: Game/Levels/FamUnion/L03unionsubunion.lean:28
+msgid "If you have an assumption §0, then the tactic §1 will\n"
+"introduce a new object §2 and a new assumption §3 into the proof.  To enter the\n"
+"angle brackets §4, type either §5 and §6 or §7 and §8."
+msgstr ""
+
+#. §0: `A : Set U`
+#. §1: `x : U`
+#. §2: `mem_compl_iff A x`
+#. §3: `x ∈ Aᶜ ↔ x ∉ A`
+#. §4: `Set.mem_compl_iff`
+#: Game/Levels/Comp/L02compdef.lean:65
+msgid "If you have §0 and §1, then §2 is a proof of the statement\n"
+"§3.  In Mathlib, the name of this theorem is §4."
+msgstr ""
+
+#. §0: `h1 : P → Q`
+#. §1: `h2 : Q → P`
+#. §2: `Iff.intro h1 h2`
+#. §3: `P ↔ Q`
+#: Game/Levels/Comp/L05compsubiff.lean:24
+#: Game/Levels/Inter/L04proveand.lean:22
+msgid "If you have §0 and §1, then §2 is a proof of §3."
+msgstr ""
+
+#. §0: `h1 : A ⊆ B`
+#. §1: `h2 : B ⊆ C`
+#. §2: `Subset.trans h1 h2`
+#. §3: `A ⊆ C`
+#. §4: `Set.Subset.trans`
+#: Game/Levels/Subset/L06subtrans.lean:23
+#: Game/Levels/Comp/L04compcomp.lean:58
+msgid "If you have §0 and §1, then §2 is a proof of §3.\n"
+"In Mathlib, the name of this theorem is §4."
+msgstr ""
+
+#. §0: `h : P`
+#. §1: `Or.inl h`
+#. §2: `P ∨ Q`
+#. §3: `Q`
+#: Game/Levels/Union/L01or.lean:49
+#: Game/Levels/Union/L01or.lean:53
+msgid "If you have §0, then §1 can be used as a proof of §2, for\n"
+"any statement §3."
+msgstr ""
+
+#. §0: `A : Set U`
+#. §1: `Subset.refl A`
+#. §2: `A ⊆ A`
+#. §3: `Set.Subset.refl`
+#: Game/Levels/Subset/L05subref.lean:27
+#: Game/Levels/Comp/L03compsub.lean:40
+msgid "If you have §0, then §1 is a proof of §2.\n"
+"In Mathlib, the name of this theorem is §3."
 msgstr ""
 
 #. §0: `A : Set U`
@@ -605,6 +805,29 @@ msgid "If you have §0, then §1 is defined to be the set of all objects in the 
 "§24 are definitionally equal--that is, equal by virtue of definitions."
 msgstr ""
 
+#. §0: `x : U`
+#. §1: `A : Set U`
+#. §2: `B : Set U`
+#. §3: `mem_inter_iff x A B`
+#. §4: `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`
+#. §5: `Set.mem_inter_iff`
+#: Game/Levels/Inter/L02elt_inter_elt_right.lean:37
+msgid "If you have §0, §1, and §2, then §3 is a proof of the\n"
+"statement §4.\n"
+"In Mathlib, the name of this theorem is §5."
+msgstr ""
+
+#. §0: `x : U`
+#. §1: `A : Set U`
+#. §2: `B : Set U`
+#. §3: `mem_union x A B`
+#. §4: `x ∈ A ∪ B ↔ x ∈ A ∨ x ∈ B`
+#. §5: `Set.mem_union`
+#: Game/Levels/Union/L02subunion.lean:32
+msgid "If you have §0, §1, and §2, then §3 is a proof of the\n"
+"statement §4.  In Mathlib, the name of this theorem is §5."
+msgstr ""
+
 #. §0: `apply Subset.antisymm`
 #. §1: `union_subset_swap`
 #: Game/Levels/Union/L05union_comm.lean:13
@@ -619,6 +842,132 @@ msgid "If you're stuck at this point,\n"
 "it may help you see how to proceed if you separate\n"
 "out the first half of §0 as a separate assumption.\n"
 "You can do this with §1."
+msgstr ""
+
+#. §0: `P ↔ Q`
+#. §1: `constructor`
+#. §2: `P → Q`
+#. §3: `Q → P`
+#. §4: `P ∧ Q`
+#. §5: `constructor`
+#. §6: `P`
+#. §7: `Q`
+#. §8: `constructor`
+#: Game/Levels/Comp/L05compsubiff.lean:61
+msgid "If your goal has the form §0, then the tactic §1 will replace this\n"
+"goal with the two goals §2 and §3.  If your goal has the form §4, then\n"
+"§5 will replace this goal with the two goals §6 and §7.  There are other\n"
+"situations in which the §8 tactic can be used, but these two are the ones\n"
+"that are most relevant for the set theory game."
+msgstr ""
+
+#. §0: `P ∨ Q`
+#. §1: `left`
+#. §2: `P`
+#. §3: `left`
+#: Game/Levels/Union/L06union_assoc.lean:56
+#: Game/Levels/Union/L06union_assoc.lean:61
+msgid "If your goal has the form §0, then the tactic §1 will set your goal to be §2.\n"
+"There are other situations in which the §3 tactic can be used, but this is the one\n"
+"that is most relevant for the set theory game."
+msgstr ""
+
+#. §0: `push_neg`
+#. §1: `h`
+#. §2: `push_neg at h`
+#. §3: `h`
+#. §4: `push_neg`
+#. §5: `¬¬P`
+#. §6: `P`
+#. §7: `¬(P ∨ Q)`
+#. §8: `¬P ∧ ¬Q`
+#. §9: `¬(P ∧ Q)`
+#. §10: `P → ¬Q`
+#. §11: `¬(P → Q)`
+#. §12: `P ∧ ¬Q`
+#. §13: `¬∀ x, P x`
+#. §14: `∃ x, ¬P x`
+#. §15: `¬∃ x, P x`
+#. §16: `∀ x, ¬P x`
+#: Game/Levels/Comp/L04compcomp.lean:40
+msgid "If your goal is a negative statement, then the tactic §0 will try to reexpress it as\n"
+"an equivalent positive statement.  Similarly, if an assumption §1 is a negative\n"
+"statement, then §2 will try to reexpress §3.  Here are some examples of\n"
+"reexpressions performed by the §4 tactic:\n"
+"\n"
+"* §5 is converted to §6.\n"
+"* §7 is converted to §8.\n"
+"* §9 is converted to §10.\n"
+"* §11 is converted to §12.\n"
+"* §13 is converted to §14.\n"
+"* §15 is converted to §16."
+msgstr ""
+
+#. §0: `P ↔ Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `rfl`
+#. §4: `X = Y`
+#. §5: `X`
+#. §6: `Y`
+#: Game/Levels/Comp/L02compdef.lean:30
+msgid "If your goal is a statement of the form §0, and §1 and §2 are definitionally\n"
+"equivalent (that is, equivalent by virtue of the definitions of the symbols occurring in\n"
+"them), then the §3 tactic will close the goal.  It will also close a goal of the form\n"
+"§4, if §5 and §6 are definitionally equal (that is, equal by virtue of definitions)."
+msgstr ""
+
+#. §0: `¬P`
+#. §1: `P`
+#. §2: `by_contra h`
+#. §3: `h : P`
+#. §4: `False`
+#. §5: `P`
+#. §6: `by_contra h`
+#. §7: `h : ¬P`
+#. §8: `h1 : Q`
+#. §9: `h2 : ¬Q`
+#. §10: `Q`
+#. §11: `h2 h1`
+#. §12: `False`
+#. §13: `h1 h2`
+#. §14: `False`
+#: Game/Levels/Comp/L01contra.lean:27
+msgid "If your goal is §0, for some statement §1, then the tactic\n"
+"§2 will introduce the new assumption §3, and set the\n"
+"goal to be §4.  If your goal is a statement §5 that is not a negative\n"
+"statement, then §6 will introduce the new assumption\n"
+"§7.\n"
+"\n"
+"To achieve your new goal, you will need to establish\n"
+"§8 and §9, for some statement §10.  If you can do that,\n"
+"then §11 will prove the goal §12.  Notice that §13 will not be\n"
+"recognized as a proof of §14; the negative statement must come first."
+msgstr ""
+
+#. §0: `A = B`
+#. §1: `A`
+#. §2: `B`
+#. §3: `ext x`
+#. §4: `x`
+#. §5: `x ∈ A ↔ x ∈ B`
+#: Game/Levels/Inter/L08inter_assoc.lean:28
+msgid "If your goal is §0, where §1 and §2 are sets, then the tactic §3 will introduce\n"
+"a new arbitrary object §4 into the proof and set the goal to be §5."
+msgstr ""
+
+#. §0: `∃ x, P x`
+#. §1: `P x`
+#. §2: `x`
+#. §3: `a`
+#. §4: `x`
+#. §5: `use a`
+#. §6: `P a`
+#: Game/Levels/FamUnion/L02subunion.lean:42
+msgid "If your goal is §0, where §1 represents some statement about §2, and §3 is a\n"
+"value that could be assigned to §4, then the tactic §5 will\n"
+"set §6 to be the goal.  It will then see if this new goal follows easily from your\n"
+"assumptions, and if so it will close the goal."
 msgstr ""
 
 #. §0: `F`
@@ -716,6 +1065,31 @@ msgid "If §0 and §1 are sets, then we say that §2 is a *subset* of §3 if\n"
 "\"Show more help!\"."
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ∩ B`
+#. §3: `A`
+#. §4: `B`
+#. §5: `∩`
+#. §6: `\\inter`
+#. §7: `\\cap`
+#: Game/Levels/Inter/L02elt_inter_elt_right.lean:29
+msgid "If §0 and §1 are sets, then §2 is the intersection of §3 and §4.\n"
+"To enter the symbol §5, type §6 or §7."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ∪ B`
+#. §3: `A`
+#. §4: `B`
+#. §5: `∪`
+#. §6: `\\union`
+#: Game/Levels/Union/L02subunion.lean:24
+msgid "If §0 and §1 are sets, then §2 is the union of §3 and §4.\n"
+"To enter the symbol §5, type §6."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `P → Q`
@@ -735,6 +1109,33 @@ msgid "If §0 and §1 are statements, then §2 means \"if §3 then §4\".\n"
 "§8 is true and then prove §9.  To do that, we'll need a new tactic: §10."
 msgstr ""
 
+#. §0: `a`
+#. §1: `{a}`
+#. §2: `a`
+#. §3: `a`
+#. §4: `b`
+#. §5: `{a, b}`
+#. §6: `a`
+#. §7: `b`
+#. §8: `U`
+#. §9: `Set U`
+#. §10: `P x`
+#. §11: `x`
+#. §12: `{x | P x}`
+#. §13: `x`
+#. §14: `P x`
+#: Game/Levels/FamInter/L03interpair.lean:26
+msgid "If §0 denotes some object, then §1 denotes the set whose only element is §2; such a set\n"
+"is called a *singleton* set.  Similarly, if §3 and §4 denote objects, then §5 denotes\n"
+"the set whose elements are §6 and §7, and nothing else.  (Similar notation can be used to\n"
+"denote a set containing any finite list of objects.  All of the objects in the list must\n"
+"have the same type; if the objects have type §8, then the set has type §9.)\n"
+"\n"
+"There is another way to define sets.  If §10 is a statement about an\n"
+"unspecified object §11, then §12 denotes the set of all values of §13 that make §14\n"
+"come out true.  This is often called *set-builder notation*."
+msgstr ""
+
 #. §0: `F`
 #. §1: `U`
 #. §2: `F`
@@ -744,6 +1145,41 @@ msgstr ""
 msgid "If §0 is a family of sets from §1, then the *union* of §2 is the set of all objects from\n"
 "§3 that belong to at least one element of §4.  We'll investigate unions of families in this\n"
 "world."
+msgstr ""
+
+#. §0: `A`
+#. §1: `U`
+#. §2: `Aᶜ`
+#. §3: `A`
+#. §4: `Aᶜ`
+#. §5: `U`
+#. §6: `A`
+#. §7: `ᶜ`
+#. §8: `\\compl`
+#. §9: `\\^c`
+#: Game/Levels/Comp/L02compdef.lean:38
+msgid "If §0 is a of objects from the universe §1, then §2 is the complement of §3; that is,\n"
+"§4 is the set of objects from §5 that are not elements of §6.  You can enter the symbol §7\n"
+"by typing §8 or §9."
+msgstr ""
+
+#. §0: `h`
+#. §1: `P ∨ Q`
+#. §2: `rcases h with h1 | h2`
+#. §3: `h1 : P`
+#. §4: `h2 : Q`
+#. §5: `rcases`
+#. §6: `P ∨ Q`
+#. §7: `rcases`
+#: Game/Levels/Union/L03cases.lean:19
+msgid "If §0 is a proof of a statement of the form §1, then the tactic\n"
+"§2 will break your proof into cases.  In case 1, you'll have the new\n"
+"assumption §3, and in case 2 you'll have §4.  In both cases you have to prove\n"
+"the original goal.\n"
+"\n"
+"The §5 tactic has other uses.  In particular, it can be applied to proofs of statements\n"
+"that do not have the form §6.  However, we will not discuss these other uses of the\n"
+"§7 tactic in this game."
 msgstr ""
 
 #. §0: `A`
@@ -772,6 +1208,113 @@ msgid "If §0 is a set of objects from the universe §1, then the *complement* o
 "6 feet tall, then §8 is the set of all people who are at most 6 feet tall.\n"
 "\n"
 "In this world, we'll see how to prove theorems about complements."
+msgstr ""
+
+#. §0: `A`
+#. §1: `compl_compl A`
+#. §2: `Aᶜᶜ = A`
+#: Game/Levels/Comp/L04compcomp.lean:64
+msgid "If §0 is a set, then §1 is a proof of §2."
+msgstr ""
+
+#. §0: `P x`
+#. §1: `x`
+#. §2: `∀ x, P x`
+#. §3: `x`
+#. §4: `P x`
+#. §5: `∀`
+#. §6: `\\forall`
+#. §7: `∀ x, P x`
+#. §8: `intro t`
+#. §9: `t`
+#. §10: `P t`
+#. §11: `t`
+#. §12: `h : ∀ x, P x`
+#. §13: `a`
+#. §14: `h a`
+#. §15: `P a`
+#. §16: `a`
+#. §17: `x`
+#. §18: `U`
+#. §19: `a`
+#. §20: `U`
+#. §21: `x`
+#. §22: `U`
+#. §23: `a`
+#. §24: `Set U`
+#: Game/Levels/FamInter/L01intersub.lean:37
+msgid "If §0 represents a statement about an unspecified object §1, then §2 means\n"
+"\"for all §3, §4 is true\".  To enter the symbol §5, type §6.\n"
+"\n"
+"### If your goal is §7\n"
+"\n"
+"The tactic §8 will introduce a new object §9 into the proof, and set the goal to be §10.\n"
+"Be sure to use a variable §11 that is not already being used to stand for some object.\n"
+"\n"
+"### If you have an assumption §12\n"
+"\n"
+"If §13 stands for some object, then §14 is a proof of §15.  Note that §16 must be the\n"
+"right *type* of object.  For example, if §17 stands for an object in the universe §18, then\n"
+"§19 must have type §20; if §21 stands for a set of objects from the universe §22, then §23 must\n"
+"have type §24."
+msgstr ""
+
+#. §0: `P x`
+#. §1: `x`
+#. §2: `h : P a`
+#. §3: `a`
+#. §4: `Exists.intro a h`
+#. §5: `∃ x, P x`
+#: Game/Levels/FamUnion/L01proveexists.lean:48
+msgid "If §0 represents a statement about §1 and you have §2, for some object §3, then\n"
+"§4 is a proof of §5."
+msgstr ""
+
+#. §0: `P x`
+#. §1: `x`
+#. §2: `∃ x, P x`
+#. §3: `x`
+#. §4: `P x`
+#. §5: `∃`
+#. §6: `\\exists`
+#. §7: `∃ x, P x`
+#. §8: `h : P a`
+#. §9: `a`
+#. §10: `Exists.intro a h`
+#. §11: `∃ x, P x`
+#. §12: `exact Exists.intro a h`
+#. §13: `P a`
+#. §14: `apply Exists.intro a`
+#. §15: `P a`
+#. §16: `use a`
+#. §17: `P a`
+#. §18: `P a`
+#. §19: `h : ∃ x, P x`
+#. §20: `obtain ⟨w, hw⟩ := h`
+#. §21: `w`
+#. §22: `hw : P w`
+#. §23: `⟨ ⟩`
+#. §24: `\\<`
+#. §25: `\\>`
+#. §26: `\\langle`
+#. §27: `\\rangle`
+#: Game/Levels/FamUnion/L01proveexists.lean:27
+msgid "If §0 represents a statement about §1, then §2 means \"there is at least one\n"
+"§3 such that §4 is true\".  To enter the symbol §5, type §6.\n"
+"\n"
+"### If your goal is §7\n"
+"\n"
+"If you have §8, for some object §9, then §10 is a proof of §11,\n"
+"so §12 will close the goal.\n"
+"If you think §13 is true, but you don't yet have a proof of it, then §14\n"
+"will set §15 as your goal.  The tactic §16 does the same thing, but it also tries to\n"
+"prove §17; if it doesn't succeed, then it leaves §18 as a goal for you to prove.\n"
+"\n"
+"### If you have an assumption §19\n"
+"\n"
+"The tactic §20 will\n"
+"introduce a new object §21 and a new assumption §22 into the proof.  To enter the\n"
+"angle brackets §23, type either §24 and §25 or §26 and §27."
 msgstr ""
 
 #. §0: `«{x}» ∈ A`
@@ -1266,6 +1809,64 @@ msgstr ""
 #: Game/Levels/Subset/L04imp.lean:68
 msgid "Just as you were able to apply §0 to §1 in the last step,\n"
 "you can now apply §2 to §3 to prove the goal."
+msgstr ""
+
+#. §0: `mem_sInter`
+#. §1: `x ∈ ⋂₀ F ↔ ∀ t ∈ F, x ∈ t`
+#. §2: `Set.mem_sInter`
+#: Game/Levels/FamInter/L01intersub.lean:56
+#: Game/Levels/FamUnion/L02subunion.lean:34
+#: Game/Levels/FamUnion/L07eltwiseinter.lean:25
+msgid "Lean will recognize §0 as a proof of any statement of the form\n"
+"§1.  In Mathlib, the name of this theorem is §2."
+msgstr ""
+
+#. §0: `mem_singleton_iff`
+#. §1: `x ∈ {a} ↔ x = a`
+#. §2: `Set.mem_singleton_iff`
+#: Game/Levels/FamCombo/L08singleton.lean:20
+msgid "Lean will recognize §0 is a proof of any statement of the form\n"
+"§1.  In Mathlib, the name of this theorem is §2."
+msgstr ""
+
+#. §0: $x$
+#. §1: $U$
+#. §2: $A$
+#. §3: $B$
+#. §4: $C$
+#. §5: $A \\subseteq B$
+#. §6: $x \\in B \\to x \\in C$
+#. §7: $x \\in A → x \\in C$
+#: Game/Levels/Subset/L04imp.lean:56
+msgid "Let §0 be an object from the universe §1, and let §2, §3, and §4 be sets\n"
+"such that §5 and §6.  Then §7."
+msgstr ""
+
+#. §0: $x$
+#. §1: $U$
+#. §2: $A$
+#. §3: $U$
+#. §4: $x ∈ A$
+#. §5: $x \\in A$
+#: Game/Levels/Subset/L01exact.lean:46
+msgid "Let §0 be an object in the universe §1, and let §2 be a set whose elements\n"
+"come from §3.  Suppose that §4.  Then §5."
+msgstr ""
+
+#. §0: $x$
+#. §1: $U$
+#. §2: $A$
+#. §3: $U$
+#. §4: $x \\in A^c \\leftrightarrow x \\notin A$
+#: Game/Levels/Comp/L02compdef.lean:69
+msgid "Let §0 be an object in the universe §1, and let §2 be a set whose elements\n"
+"come from §3.  Then §4."
+msgstr ""
+
+#. §0: $A$
+#. §1: $A \\subseteq A$
+#: Game/Levels/Subset/L05subref.lean:31
+msgid "Let §0 be any set.  Then §1."
 msgstr ""
 
 #. §0: `«{s}»`
@@ -1841,6 +2442,116 @@ msgstr ""
 msgid "Subset of family union"
 msgstr ""
 
+#. §0: $s \\in F$
+#. §1: $u \\in G$
+#. §2: $s \\cap u \\in H$
+#. §3: $(\\bigcup F) \\cap (\\bigcap G) \\subseteq \\bigcup H$
+#: Game/Levels/FamCombo/L04threefam.lean:18
+msgid "Suppose that for every §0 there is some §1 such that §2.\n"
+"Then §3."
+msgstr ""
+
+#. §0: $F$
+#. §1: $G$
+#. §2: $F \\subseteq G$
+#. §3: $\\bigcap G \\subseteq \\bigcap F$
+#: Game/Levels/FamInter/L02intersubinter.lean:23
+#: Game/Levels/FamUnion/L03unionsubunion.lean:35
+msgid "Suppose §0 and §1 are families of sets and §2.\n"
+"Then §3."
+msgstr ""
+
+#. §0: $F$
+#. §1: $G$
+#. §2: $\\bigcup (F \\cap G^c) \\subseteq (\\bigcup F)
+#. \\cap (\\bigcup G)^c$
+#. §3: $(\\bigcup F) \\cap (\\bigcup G) \\subseteq \\bigcup (F \\cap G)$
+#: Game/Levels/FamCombo/L06unionintunion.lean:18
+msgid "Suppose §0 and §1 are families of sets and §2.  Then §3."
+msgstr ""
+
+#. §0: $F$
+#. §1: $G$
+#. §2: $s \\in F$
+#. §3: $t \\in G$
+#. §4: $s \\subseteq t$
+#. §5: $s \\in F$
+#. §6: $t \\in G$
+#. §7: $t \\subseteq s$
+#. §8: $F$
+#. §9: $G$
+#: Game/Levels/FamCombo/L03commonelt.lean:19
+msgid "Suppose §0 and §1 are families of sets such that for every §2 there is some §3\n"
+"such that §4, and also there is some §5 such that for every §6,\n"
+"§7.  Then §8 and §9 have an element in common."
+msgstr ""
+
+#. §0: $F$
+#. §1: $G$
+#. §2: $\\bigcap (F \\cup G) = (\\bigcap F) \\cap (\\bigcap G)$
+#: Game/Levels/FamInter/L04interunion.lean:18
+msgid "Suppose §0 and §1 are families of sets.  Then\n"
+"§2."
+msgstr ""
+
+#. §0: $F$
+#. §1: $G$
+#. §2: $\\bigcup (F \\cup G) =
+#. (\\bigcup F) \\cup (\\bigcup G)$
+#: Game/Levels/FamUnion/L05unionunion.lean:19
+#: Game/Levels/FamCombo/L05unionintcompunion.lean:18
+#: Game/Levels/FamCombo/L07unionintcompint.lean:18
+msgid "Suppose §0 and §1 are families of sets.  Then §2."
+msgstr ""
+
+#. §0: $A$
+#. §1: $B$
+#. §2: $A \\subseteq B$
+#. §3: $x \\in A$
+#. §4: $x \\in B$
+#: Game/Levels/Subset/L02subhyp.lean:36
+msgid "Suppose §0 and §1 are sets, §2, and §3.\n"
+"Then §4."
+msgstr ""
+
+#. §0: $A$
+#. §1: $B$
+#. §2: $A \\subseteq B$
+#. §3: $B^c \\subseteq A^c$
+#: Game/Levels/Comp/L05compsubiff.lean:29
+msgid "Suppose §0 and §1 are sets.  Then §2 if and only if §3."
+msgstr ""
+
+#. §0: $A$
+#. §1: $B$
+#. §2: $B \\subseteq A \\cup B$
+#: Game/Levels/Union/L02subunion.lean:38
+#: Game/Levels/FamInter/L03interpair.lean:51
+#: Game/Levels/FamUnion/L04unionpair.lean:19
+msgid "Suppose §0 and §1 are sets.  Then §2."
+msgstr ""
+
+#. §0: $A \\subseteq B$
+#. §1: $B \\subseteq C$
+#. §2: $A \\subseteq C$
+#: Game/Levels/Subset/L06subtrans.lean:27
+#: Game/Levels/Comp/L01contra.lean:61
+#: Game/Levels/Inter/L01and.lean:42
+#: Game/Levels/Inter/L04proveand.lean:27
+#: Game/Levels/Inter/L05subint.lean:18
+#: Game/Levels/Union/L03cases.lean:31
+#: Game/Levels/Combo/L05union_sub_inter_sub.lean:18
+msgid "Suppose §0 and §1.  Then §2."
+msgstr ""
+
+#. §0: $F$
+#. §1: $A \\in F$
+#. §2: $\\bigcap F \\subseteq A$
+#: Game/Levels/FamInter/L01intersub.lean:64
+#: Game/Levels/FamUnion/L02subunion.lean:52
+msgid "Suppose §0 is a family of sets and §1.  Then §2."
+msgstr ""
+
 #. §0: `A`
 #. §1: `F`
 #. §2: `⋃₀ F`
@@ -1848,6 +2559,93 @@ msgstr ""
 #: Game/Levels/FamUnion/L06unionsub.lean:13
 msgid "Suppose §0 is a set and §1 is a family of sets.  In this level you'll determine the conditions\n"
 "under which §2 is a subset of §3."
+msgstr ""
+
+#. §0: $A$
+#. §1: $F$
+#. §2: $\\bigcup F$
+#. §3: $A$
+#. §4: $F$
+#. §5: $A$
+#: Game/Levels/FamUnion/L06unionsub.lean:19
+msgid "Suppose §0 is a set and §1 is a family of sets.  Then §2 is a subset of §3\n"
+"if and only if every element of §4 is a subset of §5."
+msgstr ""
+
+#. §0: $A$
+#. §1: $F$
+#. §2: $A$
+#. §3: $\\bigcap F$
+#. §4: $A$
+#. §5: $F$
+#: Game/Levels/FamInter/L05subinter.lean:19
+msgid "Suppose §0 is a set and §1 is a family of sets.  Then §2 is a subset of §3 if\n"
+"and only if §4 is a subset of every element of §5."
+msgstr ""
+
+#. §0: $A$
+#. §1: $F$
+#. §2: $A \\cap (\\bigcup F) =
+#. \\bigcup\\{s \\mid \\exists u \\in F, s = A \\cap u\\}$
+#: Game/Levels/FamUnion/L07eltwiseinter.lean:33
+msgid "Suppose §0 is a set and §1 is a family of sets.  Then §2."
+msgstr ""
+
+#. §0: $A$
+#. §1: $F$
+#. §2: $\\bigcup F = A$
+#. §3: $A \\in F$
+#. §4: $A$
+#: Game/Levels/FamCombo/L08singleton.lean:28
+msgid "Suppose §0 is a set, and for every family of sets §1, if §2 then §3.\n"
+"Then §4 must be a singleton set."
+msgstr ""
+
+#. §0: $A$
+#. §1: $F$
+#. §2: $G$
+#. §3: $s$
+#. §4: $F$
+#. §5: $A \\cup s \\in G$
+#. §6: $\\bigcap G \\subseteq A \\cup (\\bigcap F)$
+#: Game/Levels/FamInter/L06eltwiseunion.lean:29
+msgid "Suppose §0 is a set, §1 and §2 are families of sets, and for every set §3 in §4,\n"
+"§5.  Then §6."
+msgstr ""
+
+#. §0: $A$
+#. §1: $S$
+#. §2: $S \\subseteq A$
+#: Game/Levels/FamUnion/L01proveexists.lean:54
+msgid "Suppose §0 is a set.  Then there is some set §1 such that §2."
+msgstr ""
+
+#. §0: $A$
+#. §1: $(A^c)^c = A$
+#: Game/Levels/Comp/L04compcomp.lean:67
+msgid "Suppose §0 is a set.  Then §1."
+msgstr ""
+
+#. §0: $x \\in A$
+#. §1: $B$
+#. §2: $x \\in A ∨ x ∈ B$
+#: Game/Levels/Union/L01or.lean:59
+msgid "Suppose §0, and §1 is any set.  Then §2."
+msgstr ""
+
+#. §0: $A \\subseteq B$
+#. §1: $B \\subseteq C$
+#. §2: $x \\in A$
+#. §3: $x \\in C$
+#: Game/Levels/Subset/L03have.lean:46
+msgid "Suppose §0, §1, and §2.  Then §3."
+msgstr ""
+
+#. §0: $A \\subseteq B$
+#. §1: $B^c \\subseteq A^c$
+#: Game/Levels/Comp/L03compsub.lean:44
+#: Game/Levels/Inter/L02elt_inter_elt_right.lean:44
+msgid "Suppose §0.  Then §1."
 msgstr ""
 
 #. §0: `«{h2}»`
@@ -1963,6 +2761,15 @@ msgstr ""
 
 #: Game/Levels/Subset/L05subref.lean:42
 msgid "The situation now should remind you of your first proof, in level 1 of this world."
+msgstr ""
+
+#. §0: `by_cases h : P`
+#. §1: `h : P`
+#. §2: `h : ¬P`
+#: Game/Levels/FamInter/L06eltwiseunion.lean:22
+msgid "The tactic §0 breaks the proof into two cases.  In the first case, the\n"
+"assumption §1 is added to the list of assumptions, and in the second case, the\n"
+"assumption §2 is added."
 msgstr ""
 
 #. §0: `Subset.refl`
@@ -2348,6 +3155,88 @@ msgstr ""
 msgid "Use §0 again to introduce the assumption §1."
 msgstr ""
 
+#. §0: `have`
+#. §1: `t`
+#. §2: `P`
+#. §3: `h`
+#. §4: `have h : P := t`
+#. §5: `h : P`
+#. §6: `have`
+#. §7: `P`
+#. §8: `P`
+#. §9: `have h : P`
+#. §10: `P`
+#. §11: `P`
+#. §12: `P`
+#. §13: `h : P`
+#. §14: `have h := t`
+#. §15: `P`
+#. §16: `t`
+#: Game/Levels/Subset/L03have.lean:22
+msgid "Use §0 to assert a statement that you can prove from your current\n"
+"assumptions.  You must give the new assertion an identifier; be sure to\n"
+"use an identifier that is different from those already in use.\n"
+"\n"
+"If some expression §1 is a proof of a statement §2, and §3 is an\n"
+"identifier that is not in use, then §4 will add §5\n"
+"to the list of assumptions.\n"
+"\n"
+"There are two variations on the §6 tactic:\n"
+"\n"
+"* Sometimes you want to assert a statement §7, but the proof of §8 is too\n"
+"difficult to be given in one line.  In that situation, you can simply write\n"
+"§9.  Of course, you must still justify the assertion of §10, so\n"
+"the proof of §11 becomes your immediate goal.\n"
+"Once the goal of proving §12 has been closed, you will be able to return to\n"
+"your original goal, with §13 added to the assumption list.\n"
+"\n"
+"* If you write §14, then Lean will try to figure out what statement\n"
+"§15 is proven by the expression §16 and, if it can figure it out, it will fill\n"
+"it in for you."
+msgstr ""
+
+#. §0: `exact`
+#. §1: `t`
+#. §2: `exact t`
+#: Game/Levels/Subset/L01exact.lean:32
+msgid "Use §0 to close a goal.  If some expression §1 is a proof of\n"
+"the goal, then §2 will close the goal.\n"
+"\n"
+"Think of \"exact\" as meaning \"this is exactly what is needed to prove the goal.\""
+msgstr ""
+
+#. §0: `intro`
+#. §1: `intro`
+#. §2: `P → Q`
+#. §3: `intro h`
+#. §4: `h : P`
+#. §5: `Q`
+#. §6: `∀ x, P x`
+#. §7: `P x`
+#. §8: `x`
+#. §9: `intro x`
+#. §10: `x`
+#. §11: `P x`
+#. §12: `intro x h`
+#. §13: `intro x`
+#. §14: `intro h`
+#: Game/Levels/Subset/L04imp.lean:38
+msgid "Use §0 to introduce either a new assumption or a new object into your proof.\n"
+"\n"
+"There are two situations in which you can use the §1 tactic:\n"
+"\n"
+"* If you are proving a statement of the form §2, then you can use\n"
+"the tactic §3 to introduce the assumption §4 and set §5 as the goal.  Be\n"
+"sure to use an identifier that is not already in use.\n"
+"\n"
+"* If you are proving a statement of the form §6, where §7 is some statement\n"
+"about §8, then you can use the tactic §9 to introduce a new object §10 into the proof.\n"
+"Be sure to use a variable name that is not already in use.  The goal will then be §11.\n"
+"\n"
+"You can do multiple introductions in one step: for example, §12 has the same\n"
+"effect as doing §13 followed by §14."
+msgstr ""
+
 #. §0: `h1`
 #: Game/Levels/Combo/L05union_sub_inter_sub.lean:30
 msgid "Use §0."
@@ -2508,6 +3397,24 @@ msgid "You can use the §0 tactic to add a new statement to your list of\n"
 "information, click on §1 in the list of tactics on the right."
 msgstr ""
 
+#. §0: `apply`
+#. §1: `t`
+#. §2: `t ?`
+#. §3: `P`
+#. §4: `t`
+#. §5: `apply t`
+#. §6: `P`
+#. §7: `t`
+#. §8: `apply t`
+#: Game/Levels/Comp/L04compcomp.lean:32
+msgid "You can use the §0 tactic to work backwards from the goal.  Suppose you think that you\n"
+"will be able to use some theorem §1 to prove the goal.  In other words, you think there\n"
+"is a proof of the goal of the form §2, where the question mark needs to be replaced\n"
+"with a proof of some statement §3 to which the theorem §4 must be applied.  The tactic\n"
+"§5 will then set §6 as your goal.  If §7 must be applied to more than one proof to\n"
+"establish the goal, then §8 will set all of the needed proofs as goals."
+msgstr ""
+
 #. §0: `compl_subset_compl_of_subset «{h1}»`
 #. §1: `Aᶜᶜ ⊆ Bᶜᶜ`
 #: Game/Levels/Comp/L05compsubiff.lean:46
@@ -2664,6 +3571,241 @@ msgstr ""
 #. §0: `«{h2}» «{t}» «{h4}»`
 #: Game/Levels/FamInter/L02intersubinter.lean:43
 msgid "§0 is now a proof of the goal."
+msgstr ""
+
+#. §0: `⋂₀ F`
+#. §1: `F`
+#. §2: `⋂₀`
+#. §3: `\\I0`
+#: Game/Levels/FamInter/L01intersub.lean:34
+msgid "§0 is the intersection of the family of sets §1.  To enter the symbol §2, type §3."
+msgstr ""
+
+#. §0: `⋃₀ F`
+#. §1: `F`
+#. §2: `⋃₀`
+#. §3: `\\U0`
+#: Game/Levels/FamUnion/L02subunion.lean:29
+msgid "§0 is the union of the family of sets §1.  To enter the symbol §2, type §3."
+msgstr ""
+
+#. §0: `P → Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `→`
+#. §4: `\\imp`
+#. §5: `P → Q`
+#. §6: `intro h`
+#. §7: `h : P`
+#. §8: `Q`
+#. §9: `h`
+#. §10: `h : P → Q`
+#. §11: `hP : P`
+#. §12: `h hP`
+#. §13: `Q`
+#: Game/Levels/Subset/L04imp.lean:22
+msgid "§0 means \"if §1 then §2\".  You can enter the symbol §3 by typing §4.\n"
+"\n"
+"### If your goal is §5\n"
+"\n"
+"The tactic §6 will introduce the new assumption §7 into the proof, and set the goal\n"
+"to be §8.  Be sure to use an identifier §9 that is not already being used to stand for\n"
+"some assumption.\n"
+"\n"
+"### If you have an assumption §10\n"
+"\n"
+"If you also have §11, then §12 is a proof of §13."
+msgstr ""
+
+#. §0: `¬P`
+#. §1: `P`
+#. §2: `¬`
+#. §3: `\\not`
+#. §4: `¬P`
+#. §5: `push_neg`
+#. §6: `by_contra h`
+#. §7: `h : P`
+#. §8: `False`
+#. §9: `h : ¬P`
+#. §10: `push_neg at h`
+#. §11: `¬P`
+#. §12: `P → False`
+#. §13: `hP : P`
+#. §14: `h hP`
+#. §15: `False`
+#. §16: `False`
+#. §17: `exact h hP`
+#: Game/Levels/Comp/L01contra.lean:41
+msgid "§0 means \"it is not the case that §1\".  To enter the symbol §2,\n"
+"type §3.\n"
+"\n"
+"### If your goal is §4\n"
+"\n"
+"You may be able to use the §5 tactic to reexpress the goal as an equivalent\n"
+"positive statement.  If not, then a good strategy is to use proof by contradiction.  The\n"
+"tactic §6 will introduce the assumption §7, and set the goal to be §8.\n"
+"\n"
+"### If you have an assumption §9\n"
+"\n"
+"You may be able to use the tactic §10 to reexpress this assumption as an equivalent\n"
+"positive statement.  Lean treats §11 as meaning §12, so if you also have §13,\n"
+"then §14 will be a proof of §15.  That means that if you are doing a proof by\n"
+"contradiction, so your goal is §16, then §17 will close the goal."
+msgstr ""
+
+#. §0: `P ∧ Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `∧`
+#. §4: `\\and`
+#. §5: `P ∧ Q`
+#. §6: `hP : P`
+#. §7: `hQ : Q`
+#. §8: `And.intro hP hQ`
+#. §9: `P ∧ Q`
+#. §10: `exact And.intro hP hQ`
+#. §11: `P`
+#. §12: `Q`
+#. §13: `apply And.intro`
+#. §14: `P`
+#. §15: `Q`
+#. §16: `constructor`
+#. §17: `apply And.intro`
+#. §18: `h : P ∧ Q`
+#. §19: `h.left`
+#. §20: `P`
+#. §21: `h.right`
+#. §22: `Q`
+#: Game/Levels/Inter/L01and.lean:24
+msgid "§0 means \"§1 and §2\".  To enter the symbol §3, type §4.\n"
+"\n"
+"### If your goal is §5\n"
+"\n"
+"If you have §6 and §7, then §8 is a proof of §9,\n"
+"so §10 will close the goal.\n"
+"If you don't yet have proofs of §11 and §12, then §13 will set §14 and §15\n"
+"as separate goals.  In this situation, the tactic §16 has the same effect as\n"
+"§17.\n"
+"\n"
+"### If you have an assumption §18\n"
+"\n"
+"Lean will recognize §19 as a proof of §20 and §21 as a proof of §22."
+msgstr ""
+
+#. §0: `P ↔ Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `↔`
+#. §4: `\\iff`
+#. §5: `P ↔ Q`
+#. §6: `P`
+#. §7: `Q`
+#. §8: `rfl`
+#. §9: `h1 : P → Q`
+#. §10: `h2 : Q → P`
+#. §11: `Iff.intro h1 h2`
+#. §12: `P ↔ Q`
+#. §13: `exact Iff.intro h1 h2`
+#. §14: `P → Q`
+#. §15: `Q → P`
+#. §16: `apply Iff.intro`
+#. §17: `P → Q`
+#. §18: `Q → P`
+#. §19: `constructor`
+#. §20: `apply Iff.intro`
+#. §21: `h : P ↔ Q`
+#. §22: `h.mp`
+#. §23: `P → Q`
+#. §24: `h.mpr`
+#. §25: `Q → P`
+#. §26: `h`
+#. §27: `rewrite`
+#: Game/Levels/Comp/L02compdef.lean:43
+msgid "§0 means \"§1 if and only if §2\".  You can enter the symbol §3 by typing §4.\n"
+"\n"
+"### If your goal is §5\n"
+"\n"
+"If §6 and §7 are definitionally equivalent, then §8 will close the goal.\n"
+"If you have §9 and §10, then §11 is a proof of §12,\n"
+"so §13 will close the goal.\n"
+"If you don't yet have proofs of §14 and §15, then §16 will set §17\n"
+"and §18 as your goals.  In this situation, the tactic §19 has the same effect as\n"
+"§20.\n"
+"\n"
+"### If you have an assumption §21\n"
+"\n"
+"Lean will recognize §22 as a proof of §23 and §24 as a proof of §25.  You may\n"
+"also find it helpful to use §26 in the §27 tactic."
+msgstr ""
+
+#. §0: `P ∨ Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `∨`
+#. §4: `\\or`
+#. §5: `P ∨ Q`
+#. §6: `hP : P`
+#. §7: `Or.inl hP`
+#. §8: `P ∨ Q`
+#. §9: `exact Or.inl hP`
+#. §10: `hQ : Q`
+#. §11: `Or.inr hQ`
+#. §12: `P ∨ Q`
+#. §13: `P`
+#. §14: `Q`
+#. §15: `apply Or.inl`
+#. §16: `P`
+#. §17: `apply Or.inr`
+#. §18: `Q`
+#. §19: `left`
+#. §20: `apply Or.inl`
+#. §21: `right`
+#. §22: `apply Or.inr`
+#. §23: `h : P ∨ Q`
+#. §24: `rcases h with hP | hQ`
+#. §25: `h`
+#. §26: `hP : P `
+#. §27: `hQ : Q`
+#: Game/Levels/Union/L01or.lean:24
+msgid "§0 means \"§1 or §2 or both\".  To enter the symbol §3, type §4.\n"
+"\n"
+"### If your goal is §5\n"
+"\n"
+"If you have §6, then §7 is a proof of §8, so §9\n"
+"will close the goal.  Similarly, if you have §10, then §11 is a proof\n"
+"of §12.  If you don't have a proof of either §13 or §14, but you think you know\n"
+"which one is true, then you can use §15 to set the goal to be §16, or\n"
+"§17 to set the goal to be §18.  Alternatively, the tactic §19 will have\n"
+"the same effect as §20, and §21 will have the same effect as\n"
+"§22.\n"
+"\n"
+"### If you have an assumption §23\n"
+"\n"
+"A good strategy would be to use proof by cases.  The tactic §24\n"
+"will break the proof into two cases.  In case 1, the assumption §25 is replaced by\n"
+"§26, and in case 2 it is replaced by §27.  In both cases, you must prove\n"
+"the goal."
+msgstr ""
+
+#. §0: `A ⊆ B`
+#. §1: `A`
+#. §2: `B`
+#. §3: `⊆`
+#. §4: `\\sub`
+#: Game/Levels/Subset/L02subhyp.lean:30
+msgid "§0 means that §1 is a subset of §2.  To enter the symbol §3,\n"
+"type §4."
+msgstr ""
+
+#. §0: `x ∈ A`
+#. §1: `x`
+#. §2: `A`
+#. §3: `∈`
+#. §4: `\\mem`
+#. §5: `\\in`
+#: Game/Levels/Subset/L01exact.lean:40
+msgid "§0 means that §1 is an element of §2.  To enter the symbol §3, type\n"
+"§4 or §5."
 msgstr ""
 
 #. §0: `rewrite [compl_compl A] at «{h2}»`

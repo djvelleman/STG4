@@ -37,7 +37,7 @@ Statement union_distrib_left (A B C : Set U) : A ∪ (B ∩ C) = (A ∪ B) ∩ (
   in this situation, `rewrite [compl_inter]` is ambiguous, because there are
   two ways that the theorem `compl_inter` could be applied to rewrite the goal: `compl_inter B C`
   is a proof of `(B ∩ C)ᶜ = Bᶜ ∪ Cᶜ` and `compl_inter Aᶜ (B ∩ C)ᶜ` is a proof of
-  `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶝᶜ ∪ (B ∩ C)ᶜᶜ`, and either one of those equations could be used to
+  `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶜᶜ ∪ (B ∩ C)ᶜᶜ`, and either one of those equations could be used to
   rewrite the goal.  If you say `rewrite [compl_inter]`, then Lean will pick one of those two
   rewriting steps, and it might not pick the one you wanted.  So you'd better say explicitly
   what you want Lean to apply the theorem `compl_inter` to."

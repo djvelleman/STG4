@@ -57,3 +57,6 @@ Statement (F : Set (Set U)) : (⋂₀ F)ᶜ = ⋃₀ {s | sᶜ ∈ F} := by
   rewrite [mem_compl_iff]
   push_neg
   exact hu.right
+
+Conclusion
+"You have proved De Morgan's law for the complement of a family intersection."

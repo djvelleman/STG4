@@ -37,3 +37,6 @@ Statement compl_inter (A B : Set U) : (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ := by
   rewrite [compl_union]
   rewrite [compl_compl, compl_compl]
   rfl
+
+Conclusion
+"You have proved De Morgan's law for the complement of an intersection."

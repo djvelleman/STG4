@@ -1206,7 +1206,7 @@ msgstr ""
 #. §3: `compl_inter B C`
 #. §4: `(B ∩ C)ᶜ = Bᶜ ∪ Cᶜ`
 #. §5: `compl_inter Aᶜ (B ∩ C)ᶜ`
-#. §6: `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶝᶜ ∪ (B ∩ C)ᶜᶜ`
+#. §6: `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶜᶜ ∪ (B ∩ C)ᶜᶜ`
 #. §7: `rewrite [compl_inter]`
 #. §8: `compl_inter`
 #: Game.Levels.Combo.L04union_distrib_inter
@@ -5617,3 +5617,19 @@ msgstr "Subconjunto de una unión"
 #: Game.Levels.FamUnion.L07eltwiseinter
 msgid "You can separate out the first half of §0 with §1."
 msgstr " Puedes separar la primera mitad de §0 con §1."
+
+#: Game.Levels.Combo.L01compunion
+msgid "You have proved De Morgan's law for the complement of a union."
+msgstr "Has demostrado la ley de De Morgan para el complementario de una unión."
+
+#: Game.Levels.Combo.L02compint
+msgid "You have proved De Morgan's law for the complement of an intersection."
+msgstr "Has demostrado la ley de De Morgan para el complementario de una intersección."
+
+#: Game.Levels.FamCombo.L01compunion
+msgid "You have proved De Morgan's law for the complement of a family union."
+msgstr "Has demostrado la ley de De Morgan para el complementario de la unión de una familia de conjuntos."
+
+#: Game.Levels.FamCombo.L02compinter
+msgid "You have proved De Morgan's law for the complement of a family intersection."
+msgstr "Has demostrado la ley de De Morgan para el complementario de la intersección de una familia de conjuntos."

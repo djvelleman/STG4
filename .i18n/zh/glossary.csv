@@ -1,0 +1,36 @@
+Set Theory Game,集合论游戏
+Subset World,子集世界
+Complement World,补集世界
+Intersection World,交集世界
+Union World,并集世界
+Combination World,综合世界
+Family Intersection World,集族的交集世界
+Family Union World,集族的并集世界
+Family Combination World,集族综合世界
+set,集合
+element,元素
+universe,全集
+subset,子集
+complement,补集
+intersection,交集
+union,并集
+family of sets,集族
+singleton,单元素集
+empty set,空集
+proposition,命题
+implication,蕴含
+conjunction,合取
+disjunction,析取
+if and only if,当且仅当
+existential quantifier,存在量词
+universal quantifier,全称量词
+witness,见证元
+proof by cases,分情况证明
+proof by contradiction,反证法
+tactic,策略
+goal,目标
+close the goal,完成目标
+assumption,假设
+identifier,标识符
+extensionality,外延性
+definitionally equivalent,定义等价

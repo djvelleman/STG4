@@ -36,3 +36,6 @@ Statement compl_union (A B : Set U) : (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ := by
   intro h
   push_neg
   exact h
+
+Conclusion
+"You have proved De Morgan's law for the complement of a union."

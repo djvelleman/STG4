@@ -57,6 +57,14 @@
  "Вам известно, что §0 и §1. Поэтому с помощью §2\nможно получить §3.",
  "You haven't used §0 yet.  If you don't see how to use it,\nwrite out its definition.":
  "Вы ещё не использовали §0. Если не видите, как его применить,\nраспишите его по определению.",
+ "You have proved De Morgan's law for the complement of an intersection.":
+ "Вы доказали закон де Моргана для дополнения пересечения двух множеств.",
+ "You have proved De Morgan's law for the complement of a union.":
+ "Вы доказали закон де Моргана для дополнения объединения двух множеств.",
+ "You have proved De Morgan's law for the complement of a family union.":
+ "Вы доказали закон де Моргана для дополнения объединения семейства множеств.",
+ "You have proved De Morgan's law for the complement of a family intersection.":
+ "Вы доказали закон де Моргана для дополнения пересечения семейства множеств.",
  "You can use §0 to write out the meaning of the goal.":
  "Вы можете использовать §0, чтобы расписать смысл цели.",
  "You can use §0 to\njustify the assertion §1.":

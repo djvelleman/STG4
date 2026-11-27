@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.36.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-20\n"
+"POT-Creation-Date: 2026-11-27\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -3427,6 +3427,22 @@ msgstr ""
 msgid "You can use §0 to write out the meaning of the goal."
 msgstr ""
 
+#: Game/Levels/FamCombo/L02compinter.lean:61
+msgid "You have proved De Morgan's law for the complement of a family intersection."
+msgstr ""
+
+#: Game/Levels/FamCombo/L01compunion.lean:80
+msgid "You have proved De Morgan's law for the complement of a family union."
+msgstr ""
+
+#: Game/Levels/Combo/L01compunion.lean:40
+msgid "You have proved De Morgan's law for the complement of a union."
+msgstr ""
+
+#: Game/Levels/Combo/L02compint.lean:41
+msgid "You have proved De Morgan's law for the complement of an intersection."
+msgstr ""
+
 #. §0: `«{h2}»`
 #: Game/Levels/FamInter/L06eltwiseunion.lean:49
 msgid "You haven't used §0 yet.  If you don't see how to use it,\n"
@@ -3455,7 +3471,7 @@ msgstr ""
 #. §3: `compl_inter B C`
 #. §4: `(B ∩ C)ᶜ = Bᶜ ∪ Cᶜ`
 #. §5: `compl_inter Aᶜ (B ∩ C)ᶜ`
-#. §6: `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶝᶜ ∪ (B ∩ C)ᶜᶜ`
+#. §6: `(Aᶜ ∩ (B ∩ C)ᶜ)ᶜ = Aᶜᶜ ∪ (B ∩ C)ᶜᶜ`
 #. §7: `rewrite [compl_inter]`
 #. §8: `compl_inter`
 #: Game/Levels/Combo/L04union_distrib_inter.lean:36

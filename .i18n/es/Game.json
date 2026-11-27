@@ -57,6 +57,14 @@
  " Sabes que §0 y que §1. Así que puedes usar §2 para obtener §3.",
  "You haven't used §0 yet.  If you don't see how to use it,\nwrite out its definition.":
  " No has utilizado §0 aún. Si no ves cómo usarlo,\nescribe su definición.",
+ "You have proved De Morgan's law for the complement of an intersection.":
+ "Has demostrado la ley de De Morgan para el complementario de una intersección.",
+ "You have proved De Morgan's law for the complement of a union.":
+ "Has demostrado la ley de De Morgan para el complementario de una unión.",
+ "You have proved De Morgan's law for the complement of a family union.":
+ "Has demostrado la ley de De Morgan para el complementario de la unión de una familia de conjuntos.",
+ "You have proved De Morgan's law for the complement of a family intersection.":
+ "Has demostrado la ley de De Morgan para el complementario de la intersección de una familia de conjuntos.",
  "You can use §0 to write out the meaning of the goal.":
  " Puedes usar §0 para escribir el significado del objetivo.",
  "You can use §0 to\njustify the assertion §1.":

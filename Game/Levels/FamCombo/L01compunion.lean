@@ -76,3 +76,6 @@ Statement (F : Set (Set U)) : (⋃₀ F)ᶜ = ⋂₀ {s | sᶜ ∈ F} := by
   have h4 := h3 h3a
   rewrite [mem_compl_iff] at h4
   exact h4
+
+Conclusion
+"You have proved De Morgan's law for the complement of a family union."
